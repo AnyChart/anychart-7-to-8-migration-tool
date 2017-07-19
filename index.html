@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go to New Enums by AnyChart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-coy.min.css"/>
+
+    <style>
+        #output-code .language-javascript {
+            margin-top: 0;
+            height: 500px;
+        }
+
+        #input-code {
+            height: 500px;
+        }
+
+        #output-code {
+            opacity: 0.3;
+            -webkit-transition: all 0.25s ease-out;
+            -moz-transition: all 0.25s ease-out;
+            -o-transition: all 0.25s ease-out;
+            transition: all 0.25s ease-out;
+        }
+
+        .alert {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 1000;
+        }
+    </style>
+
+    <script>
+        $('pre.copytoclipboard').each(function () {
+            $this = $(this);
+            $button = $('<button style="font-size: 12px;">Copy</button>');
+            $this.wrap('<div/>').removeClass('copytoclipboard');
+            $wrapper = $this.parent();
+            $wrapper.addClass('copytoclipboard-wrapper').css({position: 'relative'});
+            $button.css({
+                position: 'absolute',
+                top: 10,
+                right: 25
+            }).appendTo($wrapper).addClass('copytoclipboard btn btn-default');
+            /* */
+            var copyCode = new Clipboard('button.copytoclipboard', {
+                target: function (trigger) {
+                    return trigger.previousElementSibling;
+                }
+            });
+            copyCode.on('success', function (event) {
+                event.clearSelection();
+                event.trigger.textContent = 'Copied';
+                window.setTimeout(function () {
+                    event.trigger.textContent = 'Copy';
+                }, 2000);
+            });
+            copyCode.on('error', function (event) {
+                event.trigger.textContent = 'Press "Ctrl + C" to copy';
+                window.setTimeout(function () {
+                    event.trigger.textContent = 'Copy';
+                }, 2000);
+            });
+        });
+
+        function send() {
+            $.ajax({
+                type: 'POST',
+                url: '/migrate',
+                data: {
+                    code: $('#input-code').val()
+                },
+                success: function (data) {
+                    var $output = $('#output-code');
+
+                    if (data.code) {
+                        $output.find('code').text(data.code);
+                        // init prism js for source code view
+                        Prism.highlightElement($output.find('code')[0]);
+                        $output.css('opacity', 1);
+                    }
+
+                    if (data.conflict) {
+                        if (Object.keys(data.conflict).length) {
+                            $('#alertConflictEnums').fadeIn('fast', function () {
+                                setTimeout(function () {
+                                    $('#alertConflictEnums').fadeOut('slow');
+                                }, 1000)
+                            });
+
+                            for (var i = 0; i < data.conflict.length; i++) {
+                                console.log('Conflict Enum.\n' + 'Method: "' + data.conflict[i].method +
+                                        '", ' + 'value: ' + '"' + data.conflict[i].value + '"');
+                            }
+                        } else {
+                            $('#alertEnumsNotFound').fadeIn('fast', function () {
+                                setTimeout(function () {
+                                    $('#alertEnumsNotFound').fadeOut('slow');
+                                }, 1000)
+                            });
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+<div id="alertConflictEnums" class="alert alert-warning" style="display: none;">
+    <strong>Warning!</strong> Conflict Enums. See console.
+</div>
+
+<div id="alertEnumsNotFound" class="alert alert-warning" style="display: none;">
+    <strong>Warning!</strong> Enums to replace not found or something went wrong.
+</div>
+
+<div class="container">
+    <h1>Go to New Enums by AnyChart</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="input-code">Input code:</label>
+                <textarea class="form-control" id="input-code"></textarea>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="input-code">Output code:</label>
+                <div id="output-code">
+                    <pre class="copytoclipboard"><code class="language-javascript"></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center hidden-xs">
+        <button id="go" type="button" onclick="send()" class="btn btn-primary">Go</button>
+    </div>
+</div>
+</body>
+</html>
