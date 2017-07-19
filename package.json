@@ -1,6 +1,6 @@
 {
   "name": "anychart-7-to-8-migration-tool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "repository": {
     "type": "git",
@@ -9,7 +9,9 @@
   "bugs": {
     "url": "https://github.com/AnyChart/anychart-7-to-8-migration-tool/issues"
   },
-  "main": "cmd.js",
+  "bin": {
+    "anychart-7-to-8-migration-tool": "./cmd.js"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "commander": "^2.11.0",
