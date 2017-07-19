@@ -9482,10 +9482,13 @@ exports.conflicts = {
     "outside",
     "out",
     "o",
-    "r",
-    "right",
-    "l",
-    "left",
+
+    {"value": "r", "regexp": "anychart.funnel|anychart.pyramid", "negative": "right", "positive": "outside-right"},
+    {"value": "right", "regexp": "anychart.funnel|anychart.pyramid", "negative": "right", "positive": "outside-right"},
+
+    {"value": "l", "regexp": "anychart.funnel|anychart.pyramid", "negative": "right", "positive": "outside-left"},
+    {"value": "left", "regexp": "anychart.funnel|anychart.pyramid", "negative": "right", "positive": "outside-left"},
+
     "outer"
   ],
   "displayMode": [

@@ -70,12 +70,12 @@ function getFiles(dir, isRecursive, files_) {
 
 function createLog(log) {
     if (log.changed.length || log.conflict.length) {
-        if (fs.existsSync('migration.log')) {
-            fs.writeFileSync('migration.log', beautify(JSON.stringify(log), {wrap_line_length: 100}));
+        if (fs.existsSync('migration.log.json')) {
+            fs.writeFileSync('migration.log.json', beautify(JSON.stringify(log), {wrap_line_length: 100}));
         } else {
-            fs.appendFile('migration.log', beautify(JSON.stringify(log), {wrap_line_length: 100}));
+            fs.appendFile('migration.log.json', beautify(JSON.stringify(log), {wrap_line_length: 100}));
         }
     } else {
-        fs.unlink('migration.log');
+        fs.unlink('migration.log.json');
     }
 }
