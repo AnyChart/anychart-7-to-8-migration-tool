@@ -2,6 +2,13 @@
   "name": "anychart-7-to-8-migration-tool",
   "version": "1.0.0",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AnyChart/anychart-7-to-8-migration-tool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnyChart/anychart-7-to-8-migration-tool/issues"
+  },
   "main": "cmd.js",
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -17,6 +24,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "homepage": "https://anychart.com",
+  "author": "AnyChart <contact@anychart.com> (http://anychart.com)",
+  "licenses": [{
+    "type": "Apache-2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  }]
 }

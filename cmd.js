@@ -5,7 +5,7 @@ var argv = require('minimist')(process.argv.slice(2));
 var migration = require('./src/migration');
 
 program
-    .option('-p, --path [value]', 'Path', '.')
+    .option('-p, --path [value]', 'Path', './')
     .option('-r, --recursive [value]', 'recursive or not', false)
     .option('-e, --extensions [items]', 'List of allowed extension', ['html']);
 
@@ -70,12 +70,12 @@ function getFiles(dir, isRecursive, files_) {
 
 function createLog(log) {
     if (log.changed.length || log.conflict.length) {
-        if (fs.existsSync('log.txt')) {
-            fs.writeFileSync('log.txt', beautify(JSON.stringify(log), {wrap_line_length: 100}));
+        if (fs.existsSync('migration.log')) {
+            fs.writeFileSync('migration.log', beautify(JSON.stringify(log), {wrap_line_length: 100}));
         } else {
-            fs.appendFile('log.txt', beautify(JSON.stringify(log), {wrap_line_length: 100}));
+            fs.appendFile('migration.log', beautify(JSON.stringify(log), {wrap_line_length: 100}));
         }
     } else {
-        fs.unlink('log.txt');
+        fs.unlink('migration.log');
     }
 }
