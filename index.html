@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Go to New Enums by AnyChart</title>
+    <title>AnyChart 7.x to 8.x Migration Tool</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
@@ -38,7 +38,7 @@
     </style>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('pre.copytoclipboard').each(function () {
                 $this = $(this);
                 $button = $('<button style="font-size: 12px;">Copy</button>');
@@ -100,7 +100,7 @@
 
                                 for (var i = 0; i < data.conflict.length; i++) {
                                     console.log('Conflict Enum.\n' + 'Method: "' + data.conflict[i].method +
-                                            '", ' + 'value: ' + JSON.stringify( data.conflict[i].value));
+                                            '", ' + 'value: ' + JSON.stringify(data.conflict[i].value));
                                 }
                             }
                         }
@@ -130,17 +130,17 @@
 </div>
 
 <div class="container">
-    <h1>Go to New Enums by AnyChart</h1>
+    <h1>AnyChart 7.x to 8.x Migration Tool</h1>
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group">
-                <label for="input-code">Input code:</label>
+                <label for="input-code">AnyChart 7 code:</label>
                 <textarea class="form-control" id="input-code"></textarea>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group">
-                <label for="input-code">Output code:</label>
+                <label for="input-code">AnyChart 8 code:</label>
                 <div id="output-code">
                     <pre class="copytoclipboard"><code class="language-javascript"></code></pre>
                 </div>
