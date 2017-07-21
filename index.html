@@ -38,78 +38,85 @@
     </style>
 
     <script>
-        $('pre.copytoclipboard').each(function () {
-            $this = $(this);
-            $button = $('<button style="font-size: 12px;">Copy</button>');
-            $this.wrap('<div/>').removeClass('copytoclipboard');
-            $wrapper = $this.parent();
-            $wrapper.addClass('copytoclipboard-wrapper').css({position: 'relative'});
-            $button.css({
-                position: 'absolute',
-                top: 10,
-                right: 25
-            }).appendTo($wrapper).addClass('copytoclipboard btn btn-default');
-            /* */
-            var copyCode = new Clipboard('button.copytoclipboard', {
-                target: function (trigger) {
-                    return trigger.previousElementSibling;
-                }
-            });
-            copyCode.on('success', function (event) {
-                event.clearSelection();
-                event.trigger.textContent = 'Copied';
-                window.setTimeout(function () {
-                    event.trigger.textContent = 'Copy';
-                }, 2000);
-            });
-            copyCode.on('error', function (event) {
-                event.trigger.textContent = 'Press "Ctrl + C" to copy';
-                window.setTimeout(function () {
-                    event.trigger.textContent = 'Copy';
-                }, 2000);
-            });
-        });
-
-        function send() {
-            $.ajax({
-                type: 'POST',
-                url: '/migrate',
-                data: {
-                    code: $('#input-code').val()
-                },
-                success: function (data) {
-                    var $output = $('#output-code');
-
-                    if (data.code) {
-                        $output.find('code').text(data.code);
-                        // init prism js for source code view
-                        Prism.highlightElement($output.find('code')[0]);
-                        $output.css('opacity', 1);
+        $(document).ready(function() {
+            $('pre.copytoclipboard').each(function () {
+                $this = $(this);
+                $button = $('<button style="font-size: 12px;">Copy</button>');
+                $this.wrap('<div/>').removeClass('copytoclipboard');
+                $wrapper = $this.parent();
+                $wrapper.addClass('copytoclipboard-wrapper').css({position: 'relative'});
+                $button.css({
+                    position: 'absolute',
+                    top: 10,
+                    right: 10
+                }).appendTo($wrapper).addClass('copytoclipboard btn btn-default');
+                /* */
+                var copyCode = new Clipboard('button.copytoclipboard', {
+                    target: function (trigger) {
+                        return trigger.previousElementSibling;
                     }
+                });
+                copyCode.on('success', function (event) {
+                    event.clearSelection();
+                    event.trigger.textContent = 'Copied';
+                    window.setTimeout(function () {
+                        event.trigger.textContent = 'Copy';
+                    }, 2000);
+                });
+                copyCode.on('error', function (event) {
+                    event.trigger.textContent = 'Press "Ctrl + C" to copy';
+                    window.setTimeout(function () {
+                        event.trigger.textContent = 'Copy';
+                    }, 2000);
+                });
+            });
 
-                    if (data.conflict) {
-                        if (Object.keys(data.conflict).length) {
-                            $('#alertConflictEnums').fadeIn('fast', function () {
-                                setTimeout(function () {
-                                    $('#alertConflictEnums').fadeOut('slow');
-                                }, 1000)
-                            });
+            $('#go').on('click', send);
 
-                            for (var i = 0; i < data.conflict.length; i++) {
-                                console.log('Conflict Enum.\n' + 'Method: "' + data.conflict[i].method +
-                                        '", ' + 'value: ' + '"' + data.conflict[i].value + '"');
+            function send() {
+                $.ajax({
+                    type: 'POST',
+                    url: '/migrate',
+                    data: {
+                        code: $('#input-code').val()
+                    },
+                    success: function (data) {
+                        var $output = $('#output-code');
+
+                        if (data.code) {
+                            $output.find('code').text(data.code);
+                            // init prism js for source code view
+                            Prism.highlightElement($output.find('code')[0]);
+                            $output.css('opacity', 1);
+                        }
+
+                        if (data.conflict) {
+                            if (Object.keys(data.conflict).length) {
+                                $('#alertConflictEnums').fadeIn('fast', function () {
+                                    setTimeout(function () {
+                                        $('#alertConflictEnums').fadeOut('slow');
+                                    }, 5000)
+                                });
+
+                                for (var i = 0; i < data.conflict.length; i++) {
+                                    console.log('Conflict Enum.\n' + 'Method: "' + data.conflict[i].method +
+                                            '", ' + 'value: ' + JSON.stringify( data.conflict[i].value));
+                                }
                             }
-                        } else {
+                        }
+
+                        if (!data.code) {
                             $('#alertEnumsNotFound').fadeIn('fast', function () {
+                                $output.find('code').text('');
                                 setTimeout(function () {
                                     $('#alertEnumsNotFound').fadeOut('slow');
-                                }, 1000)
+                                }, 5000)
                             });
                         }
                     }
-                }
-            });
-        }
+                });
+            }
+        });
     </script>
 </head>
 <body>
@@ -141,7 +148,7 @@
         </div>
     </div>
     <div class="text-center hidden-xs">
-        <button id="go" type="button" onclick="send()" class="btn btn-primary">Go</button>
+        <button id="go" type="button" class="btn btn-primary">Go</button>
     </div>
 </div>
 </body>

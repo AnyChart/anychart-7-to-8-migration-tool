@@ -3,11 +3,14 @@ var uuid = require('uuid');
 var normalizedEnums = enums.normalized;
 var conflictEnums = enums.conflicts;
 
+String.prototype.replaceAt = function (index, replacement) {
+    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+};
+
 exports.replace = function (code) {
     var inputCode = code;
     var outputCode;
     var i;
-    var timeStampLength = new Date().getTime().toString().length;
 
     var conflictsMsg = {};
 
@@ -32,7 +35,7 @@ exports.replace = function (code) {
     for (i = 0; i < normalizedEnums.length; i++) {
         var replaceByLiteral = new RegExp(normalizedEnums[i].literal, 'g');
 
-        if (inputCode.match(replaceByLiteral) && !inputCode[inputCode.indexOf(normalizedEnums[i].literal) + normalizedEnums[i].literal.length].match(/_|[A-z]]/)) {
+        if (inputCode.match(replaceByLiteral !== null) && !inputCode[inputCode.indexOf(normalizedEnums[i].literal) + normalizedEnums[i].literal.length].match(/_|[A-z]]/)) {
             key = [];
 
             for (k = 0; k < normalizedEnums[i].literal.length; k++) {
@@ -41,8 +44,7 @@ exports.replace = function (code) {
 
             keys[key] = normalizedEnums[i].new;
 
-            outputCode = inputCode.replace(replaceByLiteral, '"' + key + '"');
-            inputCode = outputCode;
+            inputCode = outputCode = inputCode.replace(replaceByLiteral, '"' + key + '"');
         }
     }
 
@@ -62,7 +64,7 @@ exports.replace = function (code) {
                 var checkKey = oldValue.replace(/'|"|\(/g, '').split(',')[0];
 
                 // check, if key
-                if (timeStampLength !== checkKey.length || Number.isNaN(Date.parse(new Date(+checkKey)))) {
+                if (checkKey.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i) === null) {
                     if (oldValue[0] === ':') {
                         for (letterIndex = 0; letterIndex < oldValue.length; letterIndex++) {
                             if (!oldValue[letterIndex].match(/[A-z]|[0-9]/)) {
@@ -83,7 +85,7 @@ exports.replace = function (code) {
 
                     } else if (oldValue[0] === '(') {
                         if (oldValue.match(/,/) !== null) {
-                            var stageOldValue;
+                            var stageOldValue = null;
                             var enumsWithMethodOldValues = enumsWithMethods[i].old;
 
                             enumsWithMethodOldValues.sort(function (a, b) {
@@ -116,38 +118,74 @@ exports.replace = function (code) {
 
                         oldValue = oldValue.replace(/\'|\"|\(|\)/g, '').trim();
                     }
-                }
 
-                if (conflictEnums.hasOwnProperty(methods) && conflictEnums[methods].indexOf(oldValue) !== -1) {
-                    if (conflictsMsg[methods]) {
-                        if (conflictsMsg[methods].indexOf(oldValue) === -1) {
-                            if (!Array.isArray(conflictsMsg[methods])) {
-                                conflictsMsg[methods] = [conflictsMsg[methods]];
-                            } else {
-                                conflictsMsg[methods].push(oldValue);
-                            }
+                    var newValue = enumsWithMethods[i].new;
+
+                    if (conflictEnums.hasOwnProperty(methods)) {
+                        var conflictValues = [];
+                        for (var n = 0; n < conflictEnums[methods].length; n++) {
+                            conflictValues = conflictValues.concat(conflictEnums[methods][n].value);
                         }
-                    } else {
-                        conflictsMsg[methods] = oldValue;
                     }
-                } else {
-                    if (oldValue) {
-                        var newValue = enumsWithMethods[i].new;
 
-                        if (enumsWithMethods[i].old.indexOf(oldValue) !== -1) {
-                            key = [];
-
-                            for (var k = 0; k < oldValue.length; k++) {
-                                key.push(uuid.v4());
+                    // check, if conflict enum replace with conflict method else replace with method
+                    if (conflictEnums.hasOwnProperty(methods) && conflictValues.indexOf(oldValue) !== -1) {
+                        if (conflictsMsg[methods]) {
+                            if ((typeof conflictsMsg[methods] === 'string' && conflictsMsg[methods] !== oldValue) || conflictsMsg[methods].indexOf(oldValue) === -1) {
+                                if (conflictsMsg[methods].indexOf(oldValue) === -1) {
+                                    if (!Array.isArray(conflictsMsg[methods])) {
+                                        conflictsMsg[methods] = [conflictsMsg[methods]];
+                                        conflictsMsg[methods].push(oldValue);
+                                    } else {
+                                        conflictsMsg[methods].push(oldValue);
+                                    }
+                                }
                             }
-
-                            outputCode = inputCode.replaceAt(posToReplace + countExcessSign, key);
-                            if (inputCode[posToReplace + countExcessSign - 1].match(/'|"/) === null) {
-                                newValue = '"' + newValue + '"';
-                            }
-                            keys[key] = newValue;
-                            inputCode = outputCode;
+                        } else {
+                            conflictsMsg[methods] = oldValue;
                         }
+
+                        for (n = 0; n < conflictEnums[methods].length; n++) {
+                            if (conflictEnums[methods][n].value.indexOf(oldValue) !== -1) {
+                                var conflictReg = conflictEnums[methods][n].regexp;
+                                var conflictPositive = conflictEnums[methods][n].positive;
+                                var conflictNegative = conflictEnums[methods][n].negative;
+                                var _checkKey = inputCode.slice(posToReplace, inputCode.indexOf(')', pos)).replace(/'|"|\(/g, '').split(',')[0];
+
+                                if (inputCode.match(conflictReg) === null) {
+                                    newValue = conflictNegative;
+                                } else if (typeof conflictPositive === 'object') {
+                                    newValue = conflictPositive[inputCode.match(conflictReg)];
+                                } else {
+                                    newValue = conflictPositive;
+                                }
+
+                                if (_checkKey.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i) === null && newValue) {
+                                    key = [];
+
+                                    for (var k = 0; k < oldValue.length; k++) {
+                                        key.push(uuid.v4());
+                                    }
+
+                                    inputCode = outputCode = inputCode.replaceAt(posToReplace + countExcessSign, key);
+                                    keys[key] = newValue;
+                                }
+                            }
+                        }
+                    } else if (oldValue && enumsWithMethods[i].old.indexOf(oldValue) !== -1) {
+                        key = [];
+
+                        for (k = 0; k < oldValue.length; k++) {
+                            key.push(uuid.v4());
+                        }
+
+                        outputCode = inputCode.replaceAt(posToReplace + countExcessSign, key);
+                        if (inputCode[posToReplace + countExcessSign - 1].match(/'|"/) === null) {
+                            newValue = "'" + newValue + "'";
+                        }
+                        keys[key] = newValue;
+                        inputCode = outputCode;
+                        oldValue = '';
                     }
                 }
             }
@@ -158,6 +196,7 @@ exports.replace = function (code) {
     for (i = 0; i < enumsWithOutMethods.length; i++) {
         var replaceByOldValue = new RegExp("'" + enumsWithOutMethods[i].old[0] + "'", 'g');
         var _replaceByOldValue = new RegExp('"' + enumsWithOutMethods[i].old[0] + '"', 'g');
+        var q_mark = inputCode.match(replaceByOldValue) ? "'" : '"';
 
         if ((inputCode.match(replaceByOldValue) || inputCode.match(_replaceByOldValue)) &&
             enumsWithOutMethods[i].old[0] && enumsWithOutMethods[i].old[0] !== enumsWithOutMethods[i].new &&
@@ -169,12 +208,9 @@ exports.replace = function (code) {
                 key.push(uuid.v4());
             }
 
-            keys[key] = '"' + enumsWithOutMethods[i].new + '"';
+            keys[key] = q_mark + enumsWithOutMethods[i].new + q_mark;
 
-            outputCode = inputCode
-                .replace(replaceByOldValue, key)
-                .replace(_replaceByOldValue, key);
-            inputCode = outputCode;
+            inputCode = outputCode = inputCode.replace(replaceByOldValue, key).replace(_replaceByOldValue, key);
         }
     }
 
@@ -199,12 +235,5 @@ exports.replace = function (code) {
         code: outputCode,
         conflict: log.conflict
     };
-
-    function getRandomArbitrary(min, max) {
-        return Math.round(Math.random() * (max - min) + min);
-    }
 };
 
-String.prototype.replaceAt = function (index, replacement) {
-    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
-};
