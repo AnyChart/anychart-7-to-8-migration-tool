@@ -10,7 +10,8 @@
     "url": "https://github.com/AnyChart/anychart-7-to-8-migration-tool/issues"
   },
   "bin": {
-    "anychart-7-to-8-migration-tool": "./cmd.js"
+    "anychart-7-to-8-migration-tool-cli": "./cli.js",
+    "anychart-7-to-8-migration-tool-server": "./server.js"
   },
   "dependencies": {
     "body-parser": "^1.17.2",

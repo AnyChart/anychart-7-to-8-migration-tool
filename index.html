@@ -5,14 +5,16 @@
     <title>AnyChart 7.x to 8.x Migration Tool</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-coy.min.css"/>
 
     <style>
-        #output-code .language-javascript {
+        #output-code pre {
             margin-top: 0;
             height: 500px;
         }
@@ -85,8 +87,13 @@
 
                         if (data.code) {
                             $output.find('code').text(data.code);
+
+                            var highlightClass = ~data.code.indexOf('<script>') ? 'language-markup': 'language-javascript';
+                            $output.find('code').attr('class', highlightClass);
+
                             // init prism js for source code view
                             Prism.highlightElement($output.find('code')[0]);
+
                             $output.css('opacity', 1);
                         }
 
@@ -113,6 +120,11 @@
                                 }, 5000)
                             });
                         }
+
+                        // button position
+                        $('button.copytoclipboard').css({
+                            right: $output.find('code')[0].scrollHeight > $output.find('code').height() ? 25 : 10
+                        });
                     }
                 });
             }
@@ -142,7 +154,7 @@
             <div class="form-group">
                 <label for="input-code">AnyChart 8 code:</label>
                 <div id="output-code">
-                    <pre class="copytoclipboard"><code class="language-javascript"></code></pre>
+                    <pre class="copytoclipboard"><code></code></pre>
                 </div>
             </div>
         </div>

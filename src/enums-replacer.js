@@ -7,7 +7,7 @@ String.prototype.replaceAt = function (index, replacement) {
     return this.substr(0, index) + replacement + this.substr(index + replacement.length);
 };
 
-exports.replace = function (code) {
+exports.init = function (code) {
     var inputCode = code;
     var outputCode;
     var i;
@@ -35,16 +35,19 @@ exports.replace = function (code) {
     for (i = 0; i < normalizedEnums.length; i++) {
         var replaceByLiteral = new RegExp(normalizedEnums[i].literal, 'g');
 
-        if (inputCode.match(replaceByLiteral !== null) && !inputCode[inputCode.indexOf(normalizedEnums[i].literal) + normalizedEnums[i].literal.length].match(/_|[A-z]]/)) {
-            key = [];
+        if (~inputCode.indexOf(normalizedEnums[i].literal)) {
+            if (!inputCode[inputCode.indexOf(normalizedEnums[i].literal) + normalizedEnums[i].literal.length] ||
+                (inputCode[inputCode.indexOf(normalizedEnums[i].literal) + normalizedEnums[i].literal.length] && inputCode[inputCode.indexOf(normalizedEnums[i].literal) + normalizedEnums[i].literal.length].match(/\s|\//))) {
+                key = [];
 
-            for (k = 0; k < normalizedEnums[i].literal.length; k++) {
-                key.push(uuid.v4());
+                for (k = 0; k < normalizedEnums[i].literal.length; k++) {
+                    key.push(uuid.v4());
+                }
+
+                keys[key] = normalizedEnums[i].new;
+
+                inputCode = outputCode = inputCode.replace(replaceByLiteral, '"' + key + '"');
             }
-
-            keys[key] = normalizedEnums[i].new;
-
-            inputCode = outputCode = inputCode.replace(replaceByLiteral, '"' + key + '"');
         }
     }
 
@@ -58,13 +61,13 @@ exports.replace = function (code) {
 
             while ((pos = inputCode.indexOf(methods[j], pos + 1)) != -1) {
                 var posToReplace = pos + methods[j].length;
-                var oldValue = inputCode.slice(posToReplace, inputCode.indexOf(')', pos));
+                var oldValue = inputCode.slice(posToReplace, inputCode.indexOf(')', pos)).toLowerCase();
                 var countExcessSign = 0;
                 var letterIndex = 0;
                 var checkKey = oldValue.replace(/'|"|\(/g, '').split(',')[0];
 
                 // check, if key
-                if (checkKey.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i) === null) {
+                if (checkKey.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i) === null && oldValue.match(/'|"/)) {
                     if (oldValue[0] === ':') {
                         for (letterIndex = 0; letterIndex < oldValue.length; letterIndex++) {
                             if (!oldValue[letterIndex].match(/[A-z]|[0-9]/)) {
@@ -131,7 +134,8 @@ exports.replace = function (code) {
                     // check, if conflict enum replace with conflict method else replace with method
                     if (conflictEnums.hasOwnProperty(methods) && conflictValues.indexOf(oldValue) !== -1) {
                         if (conflictsMsg[methods]) {
-                            if ((typeof conflictsMsg[methods] === 'string' && conflictsMsg[methods] !== oldValue) || conflictsMsg[methods].indexOf(oldValue) === -1) {
+                            if ((typeof conflictsMsg[methods] === 'string' && conflictsMsg[methods] !== oldValue) ||
+                                conflictsMsg[methods].indexOf(oldValue) === -1) {
                                 if (conflictsMsg[methods].indexOf(oldValue) === -1) {
                                     if (!Array.isArray(conflictsMsg[methods])) {
                                         conflictsMsg[methods] = [conflictsMsg[methods]];
@@ -232,8 +236,7 @@ exports.replace = function (code) {
     }
 
     return {
-        code: outputCode,
+        code: outputCode ? outputCode : code,
         conflict: log.conflict
     };
 };
-
