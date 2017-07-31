@@ -94,8 +94,8 @@ function createLog(log) {
             fs.appendFile('migration.log.json', beautify(JSON.stringify(log), {wrap_line_length: 100}));
         }
 
-        console.log('See log file: ' + path.resolve('./') + '/migration.log.json');
+        console.log('See log file: ' + path.resolve('./') + '\\migration.log.json');
     } else {
-        fs.unlink(path.resolve('./') + '/migration.log.json');
+        fs.unlink(path.resolve('./') + '\\migration.log.json');
     }
 }
