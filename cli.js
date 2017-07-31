@@ -3,6 +3,7 @@
 var program = require('commander');
 var beautify = require('js-beautify').js_beautify;
 var fs = require('fs');
+var path = require('path');
 var argv = require('minimist')(process.argv.slice(2));
 var migration = require('./src/migration');
 
@@ -86,27 +87,15 @@ function getFiles(dir, isRecursive, files_) {
 }
 
 function createLog(log) {
-    if (log['affected-files'].length || log.conflicts.length) {
+    if (log['affected-files'].length) {
         if (fs.existsSync('migration.log.json')) {
             fs.writeFileSync('migration.log.json', beautify(JSON.stringify(log), {wrap_line_length: 100}));
         } else {
             fs.appendFile('migration.log.json', beautify(JSON.stringify(log), {wrap_line_length: 100}));
         }
 
-        console.log('See log file: migration.log.json');
+        console.log('See log file: ' + path.resolve('./') + '/migration.log.json');
     } else {
-        fs.unlink('migration.log.json');
+        fs.unlink(path.resolve('./') + '/migration.log.json');
     }
-}
-
-function printUsage() {
-    console.log('1');
-/*
-    Object.keys(optionsMeta).forEach(function (option) {
-        console.log('  ' + rpad('-' + option),
-            optionsMeta[option].help,
-            ('default: ' +
-            optionsMeta[option].default).bold
-        );
-    });*/
 }

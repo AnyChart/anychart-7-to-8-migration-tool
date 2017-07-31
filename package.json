@@ -1,6 +1,6 @@
 {
   "name": "anychart-7-to-8-migration-tool",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "fs": "0.0.1-security",
     "js-beautify": "^1.6.14",
     "minimist": "^1.2.0",
+    "path": "^0.12.7",
     "then-request": "^3.2.0",
     "uuid": "^3.1.0"
   },
@@ -29,8 +30,10 @@
   },
   "homepage": "https://anychart.com",
   "author": "AnyChart <contact@anychart.com> (http://anychart.com)",
-  "licenses": [{
-    "type": "Apache-2.0",
-    "url": "http://www.apache.org/licenses/LICENSE-2.0"
-  }]
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ]
 }
