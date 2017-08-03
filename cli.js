@@ -14,7 +14,7 @@ program
     .parse(process.argv);
 
 program.on('--help', function(){
-    console.log('\n    Argument is required! Specify the path to the files that you want to change.    Example - anychart-7-to-8-migration-tool-cli C:/my-samples/');
+    console.log('\n    Argument is required! Specify the path to the files that you want to change.    Example - anychart-v7-to-v8-migration-tool-cli C:/my-samples/');
 });
 
 if (!process.argv.slice(2).length) {

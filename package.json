@@ -1,17 +1,17 @@
 {
-  "name": "anychart-7-to-8-migration-tool",
-  "version": "1.0.4",
+  "name": "anychart-v7-to-v8-migration-tool",
+  "version": "1.0.5",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git@github.com:AnyChart/anychart-7-to-8-migration-tool.git"
+    "url": "git@github.com:AnyChart/anychart-v7-to-v8-migration-tool.git"
   },
   "bugs": {
-    "url": "https://github.com/AnyChart/anychart-7-to-8-migration-tool/issues"
+    "url": "https://github.com/AnyChart/anychart-v7-to-v8-migration-tool/issues"
   },
   "bin": {
-    "anychart-7-to-8-migration-tool-cli": "./cli.js",
-    "anychart-7-to-8-migration-tool-server": "./server.js"
+    "anychart-v7-to-v8-migration-tool-cli": "./cli.js",
+    "anychart-v7-to-v8-migration-tool-server": "./server.js"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
