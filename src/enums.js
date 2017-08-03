@@ -578,7 +578,6 @@ exports.normalized = [
         ],
         "new": "top",
         "methods": [
-            "position",
             "orientation"
         ]
     },
@@ -592,8 +591,7 @@ exports.normalized = [
         ],
         "new": "right",
         "methods": [
-            "position",
-            "orientation"
+              "orientation"
         ]
     },
     {
@@ -608,7 +606,6 @@ exports.normalized = [
         ],
         "new": "bottom",
         "methods": [
-            "position",
             "orientation"
         ]
     },
@@ -622,8 +619,7 @@ exports.normalized = [
         ],
         "new": "left",
         "methods": [
-            "position",
-            "orientation"
+             "orientation"
         ]
     },
     {
@@ -3200,63 +3196,132 @@ exports.normalized = [
         "literal": "anychart.enums.Position.LEFT_TOP",
         "new": "left-top",
         "old": [
+            "lefttop",
+            "topleft",
+            "lt",
+            "tl",
             "leftTop"
+        ],
+        "methods": [
+            "position"
         ]
     },
     {
         "literal": "anychart.enums.Position.LEFT_CENTER",
         "new": "left-center",
         "old": [
+            "leftcenter",
+            "centerleft",
+            "left",
+            "lc",
+            "cl",
+            "l",
             "leftCenter"
+        ],
+        "methods": [
+            "position"
         ]
     },
     {
         "literal": "anychart.enums.Position.LEFT_BOTTOM",
         "new": "left-bottom",
         "old": [
+            "leftbottom",
+            "bottomleft",
+            "lb",
+            "bl",
             "leftBottom"
+        ],
+        "methods": [
+            "position"
         ]
     },
     {
         "literal": "anychart.enums.Position.CENTER_TOP",
         "new": "center-top",
         "old": [
+            "centertop",
+            "topcenter",
+            "top",
+            "ct",
+            "tc",
+            "t",
             "centerTop"
+        ],
+        "methods": [
+            "position"
         ]
     },
     {
         "literal": "anychart.enums.Position.CENTER",
         "new": "center",
         "old": [
+            "centercenter",
+            "c",
             "center"
+        ],
+        "methods": [
+            "position"
         ]
     },
     {
         "literal": "anychart.enums.Position.CENTER_BOTTOM",
         "new": "center-bottom",
         "old": [
+            "centerbottom",
+            "bottomcenter",
+            "bottom",
+            "cb",
+            "bc",
+            "b",
             "centerBottom"
+        ],
+        "methods": [
+            "position"
         ]
     },
     {
         "literal": "anychart.enums.Position.RIGHT_TOP",
         "new": "right-top",
         "old": [
+            "righttop",
+            "topright",
+            "tr",
+            "rt",
             "rightTop"
+        ],
+        "methods": [
+            "position"
         ]
     },
     {
         "literal": "anychart.enums.Position.RIGHT_CENTER",
         "new": "right-center",
         "old": [
+            "rightcenter",
+            "centerright",
+            "right",
+            "rc",
+            "cr",
+            "r",
             "rightCenter"
+        ],
+        "methods": [
+            "position"
         ]
     },
     {
         "literal": "anychart.enums.Position.RIGHT_BOTTOM",
         "new": "right-bottom",
         "old": [
+            "rightbottom",
+            "bottomright",
+            "rb",
+            "br",
             "rightBottom"
+        ],
+        "methods": [
+            "position"
         ]
     },
     {
@@ -10901,6 +10966,18 @@ exports.conflicts = {
             "regexp": "anychart.funnel|anychart.pyramid",
             "negative": "left",
             "positive": "outside-left"
+        },
+        {
+            "value": ["lc"],
+            "regexp": "anychart.funnel|anychart.pyramid",
+            "negative": "left-center",
+            "positive": "outside-left-in-column"
+        },
+        {
+            "value": ["rc"],
+            "regexp": "anychart.funnel|anychart.pyramid",
+            "negative": "right-center",
+            "positive": "outside-right-in-column"
         }
     ],
     "displayMode": [
