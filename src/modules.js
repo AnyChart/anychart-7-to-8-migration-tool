@@ -29,7 +29,7 @@ exports.modules = [
     },
     {
         "module": ["anychart-resource"],
-        "keys": ["anychart.resource("]
+        "keys": ["anychart.resource(", "anychart.standalones.resourceList(", "anychart.standalones.resourceTimeline("]
     },
     {
         "module": ["anychart-sparkline"],
@@ -37,11 +37,11 @@ exports.modules = [
     },
     {
         "module": ["anychart-stock"],
-        "keys": ["anychart.stock("]
+        "keys": ["anychart.stock(", ".cycledQueue("]
     },
     {
         "module": ["anychart-treemap"],
-        "keys": ["anychart.treeMap("]
+        "keys": ["anychart.treeMap(", "anychart.standalones.colorRange("]
     },
     {
         "module": ["anychart-bullet"],
@@ -65,7 +65,7 @@ exports.modules = [
     },
     {
         "module": ["anychart-gantt"],
-        "keys": ["anychart.ganttProject(", "anychart.ganttResource("]
+        "keys": ["anychart.ganttProject(", "anychart.ganttResource(", "anychart.standalones.projectTimeline(", "anychart.standalones.dataGrid("]
     },
     {
         "module": ["anychart-pareto"],
@@ -85,7 +85,7 @@ exports.modules = [
     },
     {
         "module": ["anychart-table"],
-        "keys": ["anychart.standalones.table("]
+        "keys": ["anychart.data.table(", "anychart.standalones.table("]
     },
     {
         "module": ["anychart-chart-editor"],

@@ -9,26 +9,47 @@ if (!String.prototype.splice) {
 }
 
 exports.init = function (code) {
+    var cdnAnyChart = 'https://cdn.anychart.com';
     var scriptFiles = ['anychart-bundle.min.js', 'anychart.min.js', 'anystock.min.js', 'anymap.min.js', 'anygantt.min.js'];
-    var acBase = !argv.l ? '<script src="https://cdn.anychart.com/js/_AC-VERSION_/anychart-base.min.js"></script>' :
+    var acBase = !argv.l ? '<script src="' + cdnAnyChart + '/js/_AC-VERSION_/anychart-base.min.js"></script>' :
         '<script src="_LOCAL-PATH_/anychart-base.min.js"></script>';
     var version = '8.0.0';
     var acModules = [];
     var module;
     var localPath;
+    // modules that work with tree data
+    var modulesTreeData = ['anychart-resource', 'anychart-gantt', 'anychart-treemap'];
+    var treeDataModuleWasAdded = false;
 
     /*get modules list from code*/
     for (var i = 0; i < modules.length; i++) {
         for (var j = 0; j < modules[i].keys.length; j++) {
             if (~code.indexOf(modules[i].keys[j])) {
                 for (var k = 0; k < modules[i].module.length; k++) {
-                    module = !argv.l ? '\n\t<script src="https://cdn.anychart.com/js/_AC-VERSION_/' + modules[i].module[k] + '.min.js"></script>' :
+                    module = !argv.l ? '\n\t<script src="' + cdnAnyChart + '/js/_AC-VERSION_/' + modules[i].module[k] + '.min.js"></script>' :
                     '\n\t<script src="_LOCAL-PATH_/' + modules[i].module[k] + '.min.js"></script>';
                     acModules.push(module);
                 }
                 break;
             }
         }
+    }
+    /**/
+
+    /* add a anychart-treemap module if the construct for tree data has not been added */
+    for (i = 0; i < acModules.length; i++) {
+        for (j = 0; j < modulesTreeData.length; j++) {
+            if (~acModules[i].indexOf(modulesTreeData[j] + '.min.js')) {
+                treeDataModuleWasAdded = true;
+                break;
+            }
+        }
+    }
+
+    if (~code.indexOf('anychart.data.tree') && !treeDataModuleWasAdded) {
+        module = !argv.l ? '\n\t<script src="' + cdnAnyChart + '/js/_AC-VERSION_/' + 'anychart-treemap' + '.min.js"></script>' :
+        '\n\t<script src="_LOCAL-PATH_/' + 'anychart-treemap' + '.min.js"></script>';
+        acModules.push(module);
     }
     /**/
 
@@ -47,7 +68,7 @@ exports.init = function (code) {
 
     if (pos) {
         /*remove old js files*/
-        scriptFiles.push('data-adapter.min.js','anychart-ui.min.js');
+        scriptFiles.push('data-adapter.min.js', 'anychart-ui.min.js');
         for (i = 0; i < scriptFiles.length; i++) {
             if (~code.indexOf(scriptFiles[i])) {
                 scriptToReplace = code.slice(code.lastIndexOf('<script', code.indexOf(scriptFiles[i])), code.indexOf('</script>', code.indexOf(scriptFiles[i])) + '</script>'.length);
@@ -71,5 +92,3 @@ exports.init = function (code) {
 
     return code
 };
-
-
