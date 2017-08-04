@@ -18,7 +18,7 @@ exports.init = function (code) {
     var module;
     var localPath;
     // modules that work with tree data
-    var modulesTreeData = ['anychart-resource', 'anychart-gantt', 'anychart-treemap'];
+    var modulesTreeData = ['anychart-gantt', 'anychart-treemap', 'anychart-pert'];
     var treeDataModuleWasAdded = false;
 
     /*get modules list from code*/
@@ -49,6 +49,10 @@ exports.init = function (code) {
     if (~code.indexOf('anychart.data.tree') && !treeDataModuleWasAdded) {
         module = !argv.l ? '\n\t<script src="' + cdnAnyChart + '/js/_AC-VERSION_/' + 'anychart-treemap' + '.min.js"></script>' :
         '\n\t<script src="_LOCAL-PATH_/' + 'anychart-treemap' + '.min.js"></script>';
+
+        if (~code.indexOf('anychart-resource.min.js')) {
+            acModules[acModules.length -1] = acModules[acModules.length -1].replace('anychart-treemap.min.js', 'anychart-gantt.min.js');
+        }
         acModules.push(module);
     }
     /**/
