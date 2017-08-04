@@ -51,8 +51,9 @@ exports.init = function (code) {
         '\n\t<script src="_LOCAL-PATH_/' + 'anychart-treemap' + '.min.js"></script>';
 
         if (~code.indexOf('anychart-resource.min.js')) {
-            acModules[acModules.length -1] = acModules[acModules.length -1].replace('anychart-treemap.min.js', 'anychart-gantt.min.js');
+            module = module.replace('anychart-treemap.min.js', 'anychart-gantt.min.js');
         }
+
         acModules.push(module);
     }
     /**/
