@@ -2,7 +2,7 @@
 
 var program = require('commander');
 var beautify = require('js-beautify').js_beautify;
-var fs = require('fs');
+var fs = require('fs'); 
 var path = require('path');
 var argv = require('minimist')(process.argv.slice(2));
 var migration = require('./src/migration');
