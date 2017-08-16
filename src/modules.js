@@ -13,7 +13,7 @@ exports.modules = [
     },
     {
         "module": ["anychart-map"],
-        "keys": ["anychart.map(", "anychart.seatMap(", "anychart.markerMap(", "anychart.connector(", "anychart.bubbleMap("]
+        "keys": ["anychart.map(", "anychart.seatMap(", "anychart.markerMap(", "anychart.connector(", "anychart.bubbleMap(", "anychart.choropleth("]
     },
     {
         "module": ["anychart-mekko"],
@@ -29,7 +29,7 @@ exports.modules = [
     },
     {
         "module": ["anychart-resource"],
-        "keys": ["anychart.resource(", "anychart.standalones.resourceList(", "anychart.standalones.resourceTimeline("]
+        "keys": ["anychart.resource(", "anychart.standalones.resourceList("]
     },
     {
         "module": ["anychart-sparkline"],
@@ -65,7 +65,7 @@ exports.modules = [
     },
     {
         "module": ["anychart-gantt"],
-        "keys": ["anychart.ganttProject(", "anychart.ganttResource(", "anychart.standalones.projectTimeline(", "anychart.standalones.dataGrid("]
+        "keys": ["anychart.ganttProject(", "anychart.ganttResource(", "anychart.standalones.projectTimeline(", "anychart.standalones.dataGrid(", "anychart.standalones.resourceTimeline("]
     },
     {
         "module": ["anychart-pareto"],
