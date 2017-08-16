@@ -21,11 +21,11 @@ exports.modules = [
     },
     {
         "module": ["anychart-polar"],
-        "keys": ["anychart.polar("]
+        "keys": ["anychart.polar(", "anychart.standalones.axes.polar("]
     },
     {
         "module": ["anychart-radar"],
-        "keys": ["anychart.radar("]
+        "keys": ["anychart.radar(", "anychart.standalones.axes.radar("]
     },
     {
         "module": ["anychart-resource"],
