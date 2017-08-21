@@ -1,5 +1,4 @@
-var modules_obj = require('./modules.js');
-var modules = modules_obj.modules;
+var modules = require('./modules.js').modules;
 var argv = require('minimist')(process.argv.slice(2));
 
 if (!String.prototype.splice) {

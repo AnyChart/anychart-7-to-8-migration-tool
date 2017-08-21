@@ -1,11 +1,13 @@
-var modules_replacer = require('./modules-replacer');
-var enums_replacer = require('./enums-replacer');
-var mapAs_replacer = require('./mapAs-replacer');
+var modulesReplacer = require('./modules-replacer');
+var enumsReplacer = require('./enums-replacer');
+var mapAsReplacer = require('./mapAs-replacer');
+var interactivityStateReplacer = require('./interactivity-state-replacer');
 
 exports.migrate = function(code) {
-    code = modules_replacer.init(code);
-    code = mapAs_replacer.init(code);
-    code = enums_replacer.init(code);
+    code = modulesReplacer.init(code);
+    code = mapAsReplacer.init(code);
+    code = interactivityStateReplacer.init(code);
+    code = enumsReplacer.init(code);
 
     return code;
 };
