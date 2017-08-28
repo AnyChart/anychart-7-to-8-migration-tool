@@ -22,5 +22,6 @@ exports.normalized = [
     'grid',
     'emptyFill',
     'emptyHatchFill',
-    'labels'
+    'labels',
+    'markers'
 ];

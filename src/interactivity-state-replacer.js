@@ -23,8 +23,12 @@ exports.init = function (code) {
         }
     ];
 
-    var regExp = '';
+    var regExp;
     var i, j;
+
+    // replace selected state in data
+    regExp = new RegExp('selected: true', 'g');
+    code = code.replace(regExp, 'state: \'selected\'');
 
     // replace fill/stroke methods with prefix(.normal())
     for (j = 0; j < imageSettings.length; j++) {
@@ -35,7 +39,7 @@ exports.init = function (code) {
     // replace with method
     for (i = 0; i < interactivityState.length; i++) {
         for (j = 0; j < statePrefix.length; j++) {
-            var state = toCamelCase('.' + statePrefix[j].old, interactivityState[i]);
+            var state = toCamelCase('\\.' + statePrefix[j].old, interactivityState[i]);
             regExp = new RegExp(state, 'g');
 
             code = code.replace(regExp, statePrefix[j].new + interactivityState[i]);

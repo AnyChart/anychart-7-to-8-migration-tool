@@ -8,14 +8,12 @@ var argv = require('minimist')(process.argv.slice(2));
 var migration = require('./src/migration');
 
 program
+    .arguments('<path>')
+    .description('Argument <path> is required.\n  Specify the path to the files that you want to change')
     .option('-r, --recursive [value]', 'recursive or not', false)
     .option('-e, --extensions [items]', 'list of allowed extension', ['html'])
     .option('-p, --path [value]', 'local path to js modules or CDN path', false)
     .parse(process.argv);
-
-program.on('--help', function(){
-    console.log('\n    Argument is required! Specify the path to the files that you want to change.    Example - anychart-v7-to-v8-migration-tool-cli C:/my-samples/');
-});
 
 if (!process.argv.slice(2).length) {
     program.outputHelp();
