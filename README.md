@@ -27,7 +27,8 @@ Improved API of mapAs() method, now it accepts only one parameter instead for fo
   {platform: 'Tablet', views: 200},
   {platform: 'Desktop', views: 300}
 ]);
-var mapping = dataSet.mapAs(undefined, {x: 'platform', value: 'views'});```
+var mapping = dataSet.mapAs(undefined, {x: 'platform', value: 'views'});
+```
 
 #### 8.x Version Code
 ```var dataSet = anychart.data.set([
@@ -35,7 +36,8 @@ var mapping = dataSet.mapAs(undefined, {x: 'platform', value: 'views'});```
   {platform: 'Tablet', views: 200},
   {platform: 'Desktop', views: 300}
 ]);
-var mapping = dataSet.mapAs({x: 'platform', value: 'views'});```
+var mapping = dataSet.mapAs({x: 'platform', value: 'views'});
+```
 
 
 ## License
