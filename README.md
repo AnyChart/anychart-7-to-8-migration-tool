@@ -17,9 +17,25 @@ TODO
 TODO
 
 ## API Changes
-| Changes | 7.x Version Code  | 8.x Version Code |
-| ------------- | ------------- | ------------- |
-| Improved API of mapAs() method, now it accepts only one parameter instead for four (old version). You don't need to pass `undefined` as first parameter for object based data sets. | ```var dataSet = anychart.data.set``` | ```var dataSet = anychart.data.set```  |
+
+### Data Mapping API
+Improved API of mapAs() method, now it accepts only one parameter instead for four (old version). You don't need to pass `undefined` as first parameter for object based data sets.
+
+#### 7.x Version Code
+```var dataSet = anychart.data.set([
+  {platform: 'Mobile', views: 100},
+  {platform: 'Tablet', views: 200},
+  {platform: 'Desktop', views: 300}
+]);
+var mapping = dataSet.mapAs(undefined, {x: 'platform', value: 'views'});```
+
+#### 8.x Version Code
+```var dataSet = anychart.data.set([
+  {platform: 'Mobile', views: 100},
+  {platform: 'Tablet', views: 200},
+  {platform: 'Desktop', views: 300}
+]);
+var mapping = dataSet.mapAs({x: 'platform', value: 'views'});```
 
 
 ## License
