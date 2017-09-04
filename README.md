@@ -22,7 +22,8 @@ TODO
 Improved API of mapAs() method, now it accepts only one parameter instead for four (old version). You don't need to pass `undefined` as first parameter for object based data sets.
 
 #### 7.x Version Code
-```var dataSet = anychart.data.set([
+```
+var dataSet = anychart.data.set([
   {platform: 'Mobile', views: 100},
   {platform: 'Tablet', views: 200},
   {platform: 'Desktop', views: 300}
@@ -31,7 +32,8 @@ var mapping = dataSet.mapAs(undefined, {x: 'platform', value: 'views'});
 ```
 
 #### 8.x Version Code
-```var dataSet = anychart.data.set([
+```
+var dataSet = anychart.data.set([
   {platform: 'Mobile', views: 100},
   {platform: 'Tablet', views: 200},
   {platform: 'Desktop', views: 300}
@@ -39,6 +41,24 @@ var mapping = dataSet.mapAs(undefined, {x: 'platform', value: 'views'});
 var mapping = dataSet.mapAs({x: 'platform', value: 'views'});
 ```
 
+### Dropped Enums API
+There are two changes in enums API:
+1. Больше нельзя задать значение энума как литерал, только как строку 
+2. Enums string values reworked from camel case to dash case.
+
+#### 7.x Version Code
+```chart.legend().itemsLayout(anychart.enums.LegendLayout.HORIZONTAL_EXPANDABLE);
+```
+
+#### 8.x Version Code
+```
+chart.legend().itemsLayout('horizontal-expandable');
+```
+
+### Depricated API Drop
+| Dropped Method  | Method to Use Instead  |
+| ------------- | ------------- |
+| anychart.server()  | anychart.exports.server()  |
 
 ## License
 [© AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart/anychart-v7-to-v8-migration-tool/blob/master/LICENSE).
