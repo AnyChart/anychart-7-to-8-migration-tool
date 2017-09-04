@@ -47,7 +47,8 @@ There are two changes in enums API:
 2. Enums string values reworked from camel case to dash case.
 
 #### 7.x Version Code
-```chart.legend().itemsLayout(anychart.enums.LegendLayout.HORIZONTAL_EXPANDABLE);
+```
+chart.legend().itemsLayout(anychart.enums.LegendLayout.HORIZONTAL_EXPANDABLE);
 ```
 
 #### 8.x Version Code
@@ -59,6 +60,12 @@ chart.legend().itemsLayout('horizontal-expandable');
 | Dropped Method  | Method to Use Instead  |
 | ------------- | ------------- |
 | anychart.server()  | anychart.exports.server()  |
+| anychart.utils.formatDateTime()  | anychart.format.dateTime()  |
+| allowPointsSelect()  | selectionMode()  |
+| cellFill()  | rowFill()  |
+| cellOddFill()  | rowOddFill()  |
+| cellEvenFill()  | rowEvenFill()  |
+| titleHeight()  | hederHeight()  |
 
 ## License
 [© AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart/anychart-v7-to-v8-migration-tool/blob/master/LICENSE).
