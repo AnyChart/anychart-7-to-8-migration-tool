@@ -66,6 +66,15 @@ chart.legend().itemsLayout('horizontal-expandable');
 | cellOddFill()  | rowOddFill()  |
 | cellEvenFill()  | rowEvenFill()  |
 | titleHeight()  | hederHeight()  |
+| textFormatter()  | format()  |
+| itemsTextFormatter()  | itemsFormat()  |
+| titleFormatter()  | titleFormat() |
+| copyFormatter()  | copyFormat() |
+| isFloating() | positionMode() |
+| mouseWheel() | zoomOnMOuseWheel() |
+| getDataValue() | getData() |
+| getTokenValue() | getData() |
+| getSeriesMeta() | getMeta() |
 
 ## License
 [© AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart/anychart-v7-to-v8-migration-tool/blob/master/LICENSE).
