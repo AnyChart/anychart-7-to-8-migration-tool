@@ -8,20 +8,121 @@ AnyChart migration tool предназначен для облегчения п�
 * Console Utility - можно скормить на вход файл или папку, утилита пройдется по всем указанным файлам, будет искать код эничарта и заменять его на новый.
 
 ## Installation
-TODO
+```
+npm install anychart-v7-to-v8-migration-tool -g
+```
 
 ## Running as Web Server
-TODO
+To run web server on port 3000:
+```
+anychart-v7-to-v8-migration-tool-server -p 3000
+```
+
+
+To show help message
+```
+anychart-v7-to-v8-migration-tool-server --help
+```
 
 ## Running as Console Utility
-TODO
+To migrate certain file:
+```
+anychart-v7-to-v8-migration-tool-cli path_to_file
+```
+
+To migrate all files in a directory:
+```
+anychart-v7-to-v8-migration-tool-cli -r path_to_directory
+```
+
+To show help message
+```
+anychart-v7-to-v8-migration-tool-cli --help
+```
 
 ## API Changes
+
+### Stacking Settings
+Изменен порядок стекирования серий по умолчанию, для того чтобы вернуть обратно нужно написать
+```
+chart.yScale().stackDirection('reverse');
+```
+
+### State Settings
+Общий принцип, hoverFill() --> hovered().fill(), selectFill() --> selected().fill()
+
+#### Common API Methods
+| Old Version  | New Version  |
+| ------------- | ------------- |
+| hover/selectFill()    |  hovered/selected().fill()    |
+| hover/selectStroke()  |  hovered/selected().stroke()  |
+| hover/selectLabels()	|  hovered/selected().labels()  |
+| hover/selectMarkers() |  hovered/selected().markers() |
+
+#### Specific API Methods
+| Old Version  | New Version  |
+| ------------- | ------------- |
+|  hover/selectNegativeFill()      |  hovered/selected().negativeFill()       |
+|  hover/selectRisingFill()        |  hovered/selected().risingFill()         |
+|  hover/selectFallingFill()       |  hovered/selected().fallingFill()        |
+|  hover/selectLowStroke()         |  hovered/selected().lowStroke()          |
+|  hover/selectHighStroke()        |  hovered/selected().highStroke()         |
+|  hover/selectNegativeStroke()    |  hovered/selected().negativeStroke()     |
+|  hover/selectRisingStroke()      |  hovered/selected().risingStroke()       |
+|  hover/selectFallingStroke()     |  hovered/selected().fallingStroke()      |
+|  hover/selectMedianStroke()      |  hovered/selected().medianStroke()       |
+|  hover/selectStemStroke()        |  hovered/selected().stemStroke()         |
+|  hover/selectWhiskerStroke()     |  hovered/selected().whiskerStroke()      |
+|  hover/selectHatchFill()         |  hovered/selected().hatchFill()          |
+|  hover/selectNegativeHatchFill() |  hovered/selected().negativeHatchFill()  |
+|  hover/selectRisingHatchFill()   |  hovered/selected().risingHatchFill()    |
+|  hover/selectFallingHatchFill()  |  hovered/selected().fallingHatchFill()   |
+|  hover/selectWhiskerWidth()      |  hovered/selected().whiskerWidth()       |
+|  hover/selectType()	           |  hovered/selected().type()               |
+|  hover/selectSize()              |  hovered/selected().size()               |
+|  hover/selectTrend()             |  hovered/selected().trend()              |
+|  hover/selectGrid()              |  hovered/selected().grid()               |
+|  hover/selectEmptyFill()         |  hovered/selected().emptyFill()          |
+|  hover/selectEmptyHatchFill()    |  hovered/selected().emptyHatchFill()     |
+|  hover/selectFontFamily()        |  hovered/selected().fontFamily()         |
+|  hover/selectFontStyle()         |  hovered/selected().fontStyle()          |
+|  hover/selectFontVariant()       |  hovered/selected().fontVariant()        |
+|  hover/selectFontWeight()        |  hovered/selected().fontWeight()         |
+|  hover/selectFontSize()          |  hovered/selected().fontSize()           |
+|  hover/selectDummyFill()         |  hovered/selected().dummyFill()          |
+|  hover/selectDummyStroke()       |  hovered/selected().dummyStroke()        |
+|  hover/selectHeaders()	       |  hovered/selected().headers()            |
+|  hover/selectLowerLabels()	   |  hovered/selected().lowerLabels()        |
+|  hover/selectUpperLabels()	   |  hovered/selected().upperLabels()        |
+|  hover/selectOutlierMarkers()	   |  hovered/selected().outlierMarkers()     |
+
+### Grids API
+Как создавать:
+1. grid заменен на xGrid/yGrid
+2. minorGrid заменен на yMinorGrid/xMinorGrid
+
+Как красить:
+oddFill/evenFill --> fill, palette
+
+
+### Context Menu Customization
+Раньше были массивы, теперь объекты с ID
+
+#### Old Version Code
+```
+TODO!
+```
+
+#### New Version Code
+```
+TODO!
+```
+
 
 ### Data Mapping API
 Improved API of mapAs() method, now it accepts only one parameter instead for four (old version). You don't need to pass `undefined` as first parameter for object based data sets.
 
-#### 7.x Version Code
+#### Old Version Code
 ```
 var dataSet = anychart.data.set([
   {platform: 'Mobile', views: 100},
@@ -31,7 +132,7 @@ var dataSet = anychart.data.set([
 var mapping = dataSet.mapAs(undefined, {x: 'platform', value: 'views'});
 ```
 
-#### 8.x Version Code
+#### New Version Code
 ```
 var dataSet = anychart.data.set([
   {platform: 'Mobile', views: 100},
@@ -46,12 +147,12 @@ There are two changes in enums API:
 1. Больше нельзя задать значение энума как литерал, только как строку 
 2. Enums string values reworked from camel case to dash case.
 
-#### 7.x Version Code
+#### Old Version Code
 ```
 chart.legend().itemsLayout(anychart.enums.LegendLayout.HORIZONTAL_EXPANDABLE);
 ```
 
-#### 8.x Version Code
+#### New Version
 ```
 chart.legend().itemsLayout('horizontal-expandable');
 ```
@@ -59,7 +160,7 @@ chart.legend().itemsLayout('horizontal-expandable');
 ### Depricated API Drop
 
 #### Text Formatting
-| Dropped Method  | Method to Use Instead  |
+| Old Version  | New Version  |
 | ------------- | ------------- |
 | anychart.utils.formatDateTime()  | anychart.format.dateTime()  |
 | textFormatter()  | format()  |
@@ -73,17 +174,15 @@ chart.legend().itemsLayout('horizontal-expandable');
 | getSeriesMeta() | getMeta() |
 | getSeriesMeta() | getMeta() |
 
-
-
 #### Interactivity Settings
-| Dropped Method  | Method to Use Instead  |
+| Old Version  | New Version  |
 | ------------- | ------------- |
 | allowPointsSelect()  | selectionMode()  |
 | isFloating() | positionMode() |
 | mouseWheel() | zoomOnMOuseWheel() |
 
 #### Palettes
-| Dropped Method  | Method to Use Instead  |
+| Old Version  | New Version  |
 | ------------- | ------------- |
 | colorAt() | itemAt() |
 | colors() | items() |
@@ -92,13 +191,13 @@ chart.legend().itemsLayout('horizontal-expandable');
 
 
 #### Misc
-| Dropped Method  | Method to Use Instead  |
+| Old Version  | New Version  |
 | ------------- | ------------- |
 | anychart.server()  | anychart.exports.server()  |
 | getGroupingUnit() | getCurrentDataInterval() |
 
 #### Gantt Data Grid
-| Dropped Method  | Method to Use Instead  |
+| Old Version  | New Version  |
 | ------------- | ------------- |
 | cellFill()  | rowFill()  |
 | cellOddFill()  | rowOddFill()  |
@@ -107,7 +206,7 @@ chart.legend().itemsLayout('horizontal-expandable');
 
 
 #### Constructors and Standalones 
-| Dropped Method  | Method to Use Instead  |
+| Old Version  | New Version  |
 | ------------- | ------------- |
 | anychart.circularGauge() | anychart.gauges.circular() |
 | anychart.ui.background() | anychart.standalones.background() |
