@@ -7,7 +7,9 @@ if (!String.prototype.splice) {
     };
 }
 
-exports.init = function (code) {
+exports.init = function (res) {
+    var code = res.code;
+
     var cdnAnyChart = 'https://cdn.anychart.com';
     var scriptFiles = ['anychart-bundle.min.js', 'anychart.min.js', 'anystock.min.js', 'anymap.min.js', 'anygantt.min.js'];
     var acBase = !argv.l ? '<script src="' + cdnAnyChart + '/js/_AC-VERSION_/anychart-base.min.js"></script>' :
@@ -94,5 +96,7 @@ exports.init = function (code) {
         /**/
     }
 
-    return code
+    res.code = code;
+
+    return res;
 };

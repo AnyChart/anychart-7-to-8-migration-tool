@@ -1,6 +1,8 @@
 var interactivityState = require('./interactivity-state').normalized;
 
-exports.init = function (code) {
+exports.init = function (res) {
+    var code = res.code;
+
     var statePrefix = [
         {
             old: 'hover',
@@ -46,7 +48,9 @@ exports.init = function (code) {
         }
     }
 
-    return code
+    res.code = code;
+
+    return res;
 };
 
 function toCamelCase(prefix, state) {

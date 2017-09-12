@@ -1,4 +1,6 @@
-exports.init = function (code) {
+exports.init = function (res) {
+    var code = res.code;
+
     var pos;
     var oldValue;
     var newValue;
@@ -13,7 +15,7 @@ exports.init = function (code) {
 
             if (typeof newValue === 'object') {
                 for (key in newValue) {
-                    if (Array.isArray(newValue[key]) && newValue[key].length <= 1) {
+                    if (newValue.hasOwnProperty(key) && Array.isArray(newValue[key]) && newValue[key].length <= 1) {
                         newValue[key] = newValue[key][0];
                     }
                 }
@@ -22,9 +24,13 @@ exports.init = function (code) {
             code = code.replace(oldValue, JSON.stringify(newValue).replace(/\"\:/g, '": ').replace(/\,\"/g, ', "').replace(/\"/g, "'"));
 
         } catch (err) {
-            return code
+            res.code = code;
+
+            return res;
         }
     }
 
-    return code
+    res.code = code;
+
+    return res;
 };

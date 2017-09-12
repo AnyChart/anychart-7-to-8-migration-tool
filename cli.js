@@ -9,7 +9,7 @@ var migration = require('./src/migration');
 
 program
     .arguments('<path>')
-    .description('Argument <path> is required.\n  Specify the path to the files that you want to change')
+    .description('Argument <path> or <file> is required.\n  Specify the path to the files that you want to change')
     .option('-r, --recursive [value]', 'recursive or not', false)
     .option('-e, --extensions [items]', 'list of allowed extension', ['html'])
     .option('-p, --path [value]', 'local path to js modules or CDN path', false)
