@@ -2,40 +2,68 @@
 
 # AnyChart 7.x to 8.x Migration Tool
 
-AnyChart migration tool предназначен для облегчения перехода с AnyChart 7 на AnyChart 8.
-Возможно два варианта использования тулзы:
-* Web-Server - поднимается Web Server который дает доступ к единственной страницы на которой есть поле для ввода кода AnyChart 7 и вывода кода AnyChart 8.
-* Console Utility - можно скормить на вход файл или папку, утилита пройдется по всем указанным файлам, будет искать код эничарта и заменять его на новый.
+AnyChart migration tool is a utility script that helps to migrate JavaScript code of AnyChart 7.14.x to AnyChart 8.x.
+
+*IMPORTANT NOTE 1:*
+
+AnyChart made a number of adjustments moving from version 7 to 8. This migration tool can do a lot but it does not guarantee 100% migration. Some things can not be changes automatically and need manual coding. See the list of such cases in [Manual migration](#manual) section.
+
+*IMPORTANT NOTE 2:*
+
+This migration tool change API methods, enums and parameters of AnyChart API version 7.14.3 to version 8.0. It *may* work on earlier 7.x version but the numer of errors is more likely.
+
+*IMPORTANT NOTE 3:*
+
+We did our best to create this tool but it is not a panacea. If you don't want to change your code automatically, please see the [List of changes](#changes) section and figure out how your code is affected and what needs to be changed.
+
+## Modes
+
+AnyChart migration tool is available in three ways
+
+* Online script at [https://www.anychart.com/migration/7to8/](https://www.anychart.com/migration/7to8/)
+
+* You own Web-Server that does the same as the script above but it is deployed on your side.
+
+* Console Utility script - you can choose a file or a folder, script will look for AnyChart code and replace everything, use with caution.
 
 ## Installation
+
+To install migration tool with npm:
+
 ```
 npm install anychart-v7-to-v8-migration-tool -g
 ```
 
 ## Running as Web Server
-To run web server on port 3000:
+
+To run web server on port 3000 navigate to migration tool folder and run:
+
 ```
 anychart-v7-to-v8-migration-tool-server -p 3000
 ```
 
+To show help message  navigate to migration tool folder and run:
 
-To show help message
 ```
 anychart-v7-to-v8-migration-tool-server --help
 ```
 
 ## Running as Console Utility
-To migrate certain file:
+
+To process a file:
+
 ```
 anychart-v7-to-v8-migration-tool-cli path_to_file
 ```
 
-To migrate all files in a directory:
+To process all files in a folder:
+
 ```
 anychart-v7-to-v8-migration-tool-cli -r path_to_directory
 ```
 
-To show help message
+To show help console script help:
+
 ```
 anychart-v7-to-v8-migration-tool-cli --help
 ```
@@ -43,16 +71,43 @@ anychart-v7-to-v8-migration-tool-cli --help
 ## API Changes
 
 ### Stacking Settings
-Изменен порядок стекирования серий по умолчанию, для того чтобы вернуть обратно нужно написать
+
+The ordering in which the series are stacked is changed and now goes in other direction. To restore the previous behavior *stackDirection()* method has been added. Set *'reverse'* to make the order match 7.x:
+
+```diff
+- ADD SAMPLE
+```
+
+<svg version="1.1" 
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="100" height="50"
+>
+  <text font-size="16" x="10" y="20">
+    <tspan fill="red">ADD SAMPLE</tspan>,
+  </text>
+</svg>
+
+
+#НУЖЕН ПРИМЕР
+
 ```
 chart.yScale().stackDirection('reverse');
 ```
 
 ### State Settings
-Общий принцип, hoverFill() --> hovered().fill(), selectFill() --> selected().fill()
+
+The API for select and hover settings has been refactored: methods like hoverFill() are replaced with hovered().fill(), selectFill() - with selected().fill() and so on. The order of the parameters and behaviour is the same.
+
+These changes allow to clone/copy the settings from the state to state easily.
+
+#НУЖЕН ПРИМЕР
+
+See the full list of replaced methods:
 
 #### Common API Methods
-| Old Version  | New Version  |
+
+| 7.x Version  | 8.x Version  |
 | ------------- | ------------- |
 | hover/selectFill()    |  hovered/selected().fill()    |
 | hover/selectStroke()  |  hovered/selected().stroke()  |
@@ -60,7 +115,8 @@ chart.yScale().stackDirection('reverse');
 | hover/selectMarkers() |  hovered/selected().markers() |
 
 #### Specific API Methods
-| Old Version  | New Version  |
+
+| 7.x Version  | 8.x Version  |
 | ------------- | ------------- |
 |  hover/selectNegativeFill()      |  hovered/selected().negativeFill()       |
 |  hover/selectRisingFill()        |  hovered/selected().risingFill()         |
