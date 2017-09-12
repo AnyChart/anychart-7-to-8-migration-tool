@@ -74,22 +74,7 @@ anychart-v7-to-v8-migration-tool-cli --help
 
 The ordering in which the series are stacked is changed and now goes in other direction. To restore the previous behavior *stackDirection()* method has been added. Set *'reverse'* to make the order match 7.x:
 
-```diff
-- ADD SAMPLE
-```
-
-<svg version="1.1" 
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="100" height="50"
->
-  <text font-size="16" x="10" y="20">
-    <tspan fill="red">ADD SAMPLE</tspan>,
-  </text>
-</svg>
-
-
-#НУЖЕН ПРИМЕР
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
 
 ```
 chart.yScale().stackDirection('reverse');
@@ -101,7 +86,7 @@ The API for select and hover settings has been refactored: methods like hoverFil
 
 These changes allow to clone/copy the settings from the state to state easily.
 
-#НУЖЕН ПРИМЕР
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
 
 See the full list of replaced methods:
 
