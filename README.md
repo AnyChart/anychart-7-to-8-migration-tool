@@ -90,6 +90,8 @@ These changes allow to clone/copy the settings from the state to state easily.
 
 See the full list of replaced methods:
 
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
 #### Common API Methods
 
 | 7.x Version  | 8.x Version  |
@@ -138,32 +140,38 @@ See the full list of replaced methods:
 |  hover/selectOutlierMarkers()	   |  hovered/selected().outlierMarkers()     |
 
 ### Grids API
-Как создавать:
-1. grid заменен на xGrid/yGrid
-2. minorGrid заменен на yMinorGrid/xMinorGrid
 
-Как красить:
-oddFill/evenFill --> fill, palette
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
 
+Grids API has been changed completely and can not be migrated automatically:
+
+1. Single grid() method is replaced with xGrid() and yGrid() methods.
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
+2. Single minorGrid() method is replaced with yMinorGrid() and xMinorGrid() methods.
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
+3. oddFill() and evenFill() methods are replaced with fill() method that now accepts palette()
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
 
 ### Context Menu Customization
-Раньше были массивы, теперь объекты с ID
 
-#### Old Version Code
-```
-TODO!
-```
+Context menu API has been changed completely and can not be migrated automatically. Objects with IDs are now used instead of arrays. Please refer to [Context Menu](https://docs.anychart.com/Common_Settings/UI_Controls/Context_Menu) article to learn how to use the context menu in version 8.x.
 
-#### New Version Code
-```
-TODO!
-```
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
 
+#### 7.14.3 Version Code
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
+
+#### 8.x Version Code
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
 
 ### Data Mapping API
+
 Improved API of mapAs() method, now it accepts only one parameter instead for four (old version). You don't need to pass `undefined` as first parameter for object based data sets.
 
-#### Old Version Code
+#### 7.x Version Code
+
 ```
 var dataSet = anychart.data.set([
   {platform: 'Mobile', views: 100},
@@ -173,7 +181,8 @@ var dataSet = anychart.data.set([
 var mapping = dataSet.mapAs(undefined, {x: 'platform', value: 'views'});
 ```
 
-#### New Version Code
+#### 8.x.x
+
 ```
 var dataSet = anychart.data.set([
   {platform: 'Mobile', views: 100},
@@ -184,24 +193,35 @@ var mapping = dataSet.mapAs({x: 'platform', value: 'views'});
 ```
 
 ### Dropped Enums API
-There are two changes in enums API:
-1. Больше нельзя задать значение энума как литерал, только как строку 
-2. Enums string values reworked from camel case to dash case.
 
-#### Old Version Code
+There are two changes in enums API:
+
+1. Enums no longer can be set by name, only string values can be used.
+2. Enums string values are changed from camel case to dash case.
+
+#### 7.x Version Code
+
 ```
 chart.legend().itemsLayout(anychart.enums.LegendLayout.HORIZONTAL_EXPANDABLE);
 ```
 
-#### New Version
+#### 8.x Version Code
+
 ```
 chart.legend().itemsLayout('horizontal-expandable');
 ```
 
-### Depricated API Drop
+### Deprecated API Drop
+
+Version 8.x drops a number of deprecated methods. Which means that you may have used these methods and the lirary only showed warnings. With upgrading to version 8.x using these methods is no longer possible.
+
+See the list of dropped methods and their replacement below:
 
 #### Text Formatting
-| Old Version  | New Version  |
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
+| 7.x Version  | 8.x Version  |
 | ------------- | ------------- |
 | anychart.utils.formatDateTime()  | anychart.format.dateTime()  |
 | textFormatter()  | format()  |
@@ -216,6 +236,9 @@ chart.legend().itemsLayout('horizontal-expandable');
 | getSeriesMeta() | getMeta() |
 
 #### Interactivity Settings
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
 | Old Version  | New Version  |
 | ------------- | ------------- |
 | allowPointsSelect()  | selectionMode()  |
@@ -223,6 +246,9 @@ chart.legend().itemsLayout('horizontal-expandable');
 | mouseWheel() | zoomOnMOuseWheel() |
 
 #### Palettes
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
 | Old Version  | New Version  |
 | ------------- | ------------- |
 | colorAt() | itemAt() |
@@ -232,12 +258,18 @@ chart.legend().itemsLayout('horizontal-expandable');
 
 
 #### Misc
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
 | Old Version  | New Version  |
 | ------------- | ------------- |
 | anychart.server()  | anychart.exports.server()  |
 | getGroupingUnit() | getCurrentDataInterval() |
 
 #### Gantt Data Grid
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
 | Old Version  | New Version  |
 | ------------- | ------------- |
 | cellFill()  | rowFill()  |
@@ -245,8 +277,10 @@ chart.legend().itemsLayout('horizontal-expandable');
 | cellEvenFill()  | rowEvenFill()  |
 | titleHeight()  | hederHeight()  |
 
-
 #### Constructors and Standalones 
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
 | Old Version  | New Version  |
 | ------------- | ------------- |
 | anychart.circularGauge() | anychart.gauges.circular() |
@@ -276,7 +310,6 @@ chart.legend().itemsLayout('horizontal-expandable');
 | anychart.ganttToolbar() | anychart.ui.ganttToolbar() |
 | anychart.toolbar() | anychart.ui.ganttToolbar() |
 | anychart.toolbar() | anychart.ui.ganttToolbar() |
-
 
 ## License
 [© AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart/anychart-v7-to-v8-migration-tool/blob/master/LICENSE).
