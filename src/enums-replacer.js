@@ -8,9 +8,7 @@ String.prototype.replaceAt = function (index, replacement) {
 };
 
 exports.init = function (res) {
-    var code = res.code;
-
-    var inputCode = code;
+    var inputCode = res.code;
     var outputCode;
     var i;
 
@@ -237,7 +235,7 @@ exports.init = function (res) {
         }
     }
 
-    res.code = code;
+    res.code = outputCode;
     res.conflict = log.conflict;
 
     return res;

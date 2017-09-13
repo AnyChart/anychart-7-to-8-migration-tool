@@ -12,7 +12,9 @@ program
     .description('Argument <path> or <file> is required.\n  Specify the path to the files that you want to change')
     .option('-r, --recursive [value]', 'recursive or not', false)
     .option('-e, --extensions [items]', 'list of allowed extension', ['html'])
-    .option('-p, --path [value]', 'local path to js modules or CDN path', false)
+    .option('-l, --path [value]', 'local path to js modules or CDN path', false)
+    .option('-v, --version [value]', 'AnyChart version', false)
+    .option('-b, --bundle [value]', 'anychart-bundle or anychart-base + modules', false)
     .parse(process.argv);
 
 if (!process.argv.slice(2).length) {
@@ -68,12 +70,20 @@ function init() {
     createLog(log);
 }
 
-function getFiles(dir, isRecursive, files_) {
+init();
+
+function getFiles(path, isRecursive, files_) {
     files_ = files_ || [];
-    var files = fs.readdirSync(dir);
+
+    if (!fs.statSync(path).isDirectory()) {
+        files_.push(path);
+        return files_;
+    }
+
+    var files = fs.readdirSync(path);
 
     for (var i in files) {
-        var name = dir + '/' + files[i];
+        var name = path + '/' + files[i];
 
         if (fs.statSync(name).isDirectory() && isRecursive) {
             getFiles(name, isRecursive, files_);
@@ -81,6 +91,7 @@ function getFiles(dir, isRecursive, files_) {
             files_.push(name);
         }
     }
+
     return files_;
 }
 

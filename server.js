@@ -26,11 +26,32 @@ function init() {
     });
 
     app.post('/migrate', function (req, res) {
-        var code = req.body.code;
-        code = migration.migrate(code);
-        res.send(code);
-    });
+        var optionMaps = {
+            'bundle': '-b',
+            'path': '-l'
+        };
 
+        if (req.body.hasOwnProperty('bundle')) {
+            editProcessArgv('bundle');
+        }
+
+        if (req.body.hasOwnProperty('path')) {
+            editProcessArgv('path');
+        }
+
+        var code = migration.migrate(req.body.code);
+
+        // response
+        res.send(code);
+
+        function editProcessArgv(opt) {
+            if (!~process.argv.indexOf(optionMaps[opt])) {
+                process.argv.push(optionMaps[opt], req.body[opt]);
+            } else {
+                process.argv[process.argv.indexOf(optionMaps[opt]) + 1] = req.body[opt];
+            }
+        }
+    });
 
     app.listen(argv.p, function () {
         console.log('Start server on port: ' + argv.p);

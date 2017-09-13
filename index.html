@@ -10,11 +10,12 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-coy.min.css"/>
 
     <style>
-        #output-code pre {
+        .code {
             margin-top: 0;
             height: 500px;
         }
@@ -36,6 +37,21 @@
             right: 10px;
             top: 10px;
             z-index: 1000;
+        }
+
+        .migrate-form {
+            margin-top: 15px;
+        }
+
+        .settings-container {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .settings-container h3 {
+            margin-top: 0;
         }
     </style>
 
@@ -73,22 +89,41 @@
                 });
             });
 
-            $('#go').on('click', send);
+            var $form = $('#migrate-form');
 
-            function send() {
+            $form.find('input[name="is-cdn"]').on('change', function () {
+                var status = $form.find('input[name="cdn-path"]').prop('disabled');
+                $form.find('input[name="cdn-path"]').prop('disabled', !status);
+            });
+
+            $form.on('submit', function (e) {
+                e.preventDefault();
+
+                var code = $('#input-code').val();
+
+                if (!code) return;
+
+                /*get parametrs*/
+                var isBundle = $(this).find('input[name="is-bundle"]:checked').val() === 'true';
+                var isCdn = $(this).find('input[name="is-cdn"]:checked').val() === 'true';
+                var path = isCdn === true ? true : $(this).find('input[name="cdn-path"]').val();
+                /**/
+
                 $.ajax({
                     type: 'POST',
                     url: '/migrate',
                     data: {
-                        code: $('#input-code').val()
+                        bundle: isBundle,
+                        path: path,
+                        code: code
                     },
-                    success: function (data) {
+                    success: function (res) {
                         var $output = $('#output-code');
 
-                        if (data.code) {
-                            $output.find('code').text(data.code);
+                        if (res.code) {
+                            $output.find('code').text(res.code);
 
-                            var highlightClass = ~data.code.indexOf('<script>') ? 'language-markup': 'language-javascript';
+                            var highlightClass = ~res.code.indexOf('<script>') ? 'language-markup' : 'language-javascript';
                             $output.find('code').attr('class', highlightClass);
 
                             // init prism js for source code view
@@ -97,22 +132,22 @@
                             $output.css('opacity', 1);
                         }
 
-                        if (data.conflict) {
-                            if (Object.keys(data.conflict).length) {
+                        if (res.conflict) {
+                            if (Object.keys(res.conflict).length) {
                                 $('#alertConflictEnums').fadeIn('fast', function () {
                                     setTimeout(function () {
                                         $('#alertConflictEnums').fadeOut('slow');
                                     }, 5000)
                                 });
 
-                                for (var i = 0; i < data.conflict.length; i++) {
-                                    console.log('Conflict Enum.\n' + 'Method: "' + data.conflict[i].method +
-                                            '", ' + 'value: ' + JSON.stringify(data.conflict[i].value));
+                                for (var i = 0; i < res.conflict.length; i++) {
+                                    console.log('Conflict Enum.\n' + 'Method: "' + res.conflict[i].method +
+                                            '", ' + 'value: ' + JSON.stringify(res.conflict[i].value));
                                 }
                             }
                         }
 
-                        if (!data.code) {
+                        if (!res.code) {
                             $('#alertEnumsNotFound').fadeIn('fast', function () {
                                 $output.find('code').text('');
                                 setTimeout(function () {
@@ -127,7 +162,7 @@
                         });
                     }
                 });
-            }
+            });
         });
     </script>
 </head>
@@ -143,25 +178,92 @@
 
 <div class="container">
     <h1>AnyChart 7.x to 8.x Migration Tool</h1>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="input-code">AnyChart 7 code:</label>
-                <textarea class="form-control" id="input-code"></textarea>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="input-code">AnyChart 8 code:</label>
-                <div id="output-code">
-                    <pre class="copytoclipboard"><code></code></pre>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequatur dolore dolorum harum tempora. Commodi
+        consectetur dolor dolorem labore minima non quasi qui quidem temporibus?</p>
+    <form class="migrate-form" action="/migrate" method="POST" id="migrate-form">
+
+
+        <div class="settings-container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="dark-grey">Settings</h3>
+
+                    <div class="form-group col-lg-12">
+                        <label>Bundle or modules?</label>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="radio-inline"><input type="radio" name="is-bundle"
+                                                                   value="true">Bundle</label>
+                                <label class="radio-inline"><input type="radio" name="is-bundle" value="false"
+                                                                   checked>Modules</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-lg-12">
+                        <label>CDN?</label>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="radio-inline"><input type="radio" name="is-cdn" value="true"
+                                                                   checked>Yes</label>
+                                <label class="radio-inline"><input type="radio" name="is-cdn" value="false">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-lg-12">
+                        <label>Path</label>
+                        <input type="text" name="cdn-path" class="form-control" value="" disabled>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h3 class="dark-grey">Description</h3>
+                    <p>
+                        Bundle or modules - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolor
+                        itaque
+                        libero sunt tempore tenetur!
+                    </p>
+                    <p>
+                        Path - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolor dolore illum,
+                        laborum pariatur quos? Adipisci et ipsa iste laboriosam laborum magni nostrum reiciendis
+                        repellendus.
+                    </p>
+                    <p>
+                        lorem - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam autem
+                        excepturi
+                        nisi porro quis quisquam ratione rem sed sequi.
+                    </p>
+                    <p>
+                        lorem - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, debitis dolores eum
+                        eveniet qui voluptate?
+                    </p>
+
+                    <button type="submit" class="btn btn-primary">Migrate!</button>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="text-center hidden-xs">
-        <button id="go" type="button" class="btn btn-primary">Go</button>
-    </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="input-code">AnyChart 7 code:</label>
+                    <textarea class="form-control" id="input-code"></textarea>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="input-code">AnyChart 8 code:</label>
+                    <div id="output-code">
+                        <pre class="copytoclipboard code"><code></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
 </div>
 </body>
 </html>
