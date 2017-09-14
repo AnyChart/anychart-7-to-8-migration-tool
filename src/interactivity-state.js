@@ -16,6 +16,7 @@ exports.normalized = [
     'negativeHatchFill',
     'risingHatchFill',
     'fallingHatchFill',
+    'whiskerWidth',
     'type',
     'size',
     'trend',
@@ -23,5 +24,9 @@ exports.normalized = [
     'emptyFill',
     'emptyHatchFill',
     'labels',
-    'markers'
+    'markers',
+    'headers',
+    'lowerLabels',
+    'upperLabels',
+    'outlierMarkers'
 ];

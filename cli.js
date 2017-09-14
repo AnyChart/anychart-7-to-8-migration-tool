@@ -6,15 +6,16 @@ var fs = require('fs');
 var path = require('path');
 var argv = require('minimist')(process.argv.slice(2));
 var migration = require('./src/migration');
+var optionsMap = require('./src/options-map').options;
 
 program
     .arguments('<path>')
     .description('Argument <path> or <file> is required.\n  Specify the path to the files that you want to change')
-    .option('-r, --recursive [value]', 'recursive or not', false)
-    .option('-e, --extensions [items]', 'list of allowed extension', ['html'])
-    .option('-l, --path [value]', 'local path to js modules or CDN path', false)
-    .option('-v, --version [value]', 'AnyChart version', false)
-    .option('-b, --bundle [value]', 'anychart-bundle or anychart-base + modules', false)
+    .option(optionsMap.recursive + ', --recursive [value]', 'recursive or not', false)
+    .option(optionsMap.extensions + ', --extensions [items]', 'list of allowed extension', ['html'])
+    .option(optionsMap.path + ', --path [value]', 'local path to js modules or CDN path', false)
+    .option(optionsMap.version + ', --version [value]', 'AnyChart version', false)
+    .option(optionsMap.bundle + ', --bundle [value]', 'anychart-bundle or anychart-base + modules', false)
     .parse(process.argv);
 
 if (!process.argv.slice(2).length) {
@@ -51,11 +52,11 @@ function init() {
 
             log['affected-files'].push(files[i]);
 
-            if (data.conflict) {
-                for (var j = 0; j < data.conflict.length; j++) {
+            if (data['enums-warning']) {
+                for (var j = 0; j < data['enums-warning'].length; j++) {
                     log.conflicts = log.conflicts.concat({
-                        method: data.conflict[j].method,
-                        value: data.conflict[j].value,
+                        method: data['enums-warning'][j].method,
+                        value: data['enums-warning'][j].value,
                         path: files[i]
                     });
                 }

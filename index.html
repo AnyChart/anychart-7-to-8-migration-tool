@@ -7,12 +7,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/keep-markup/prism-keep-markup.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-coy.min.css"/>
 
     <style>
@@ -48,20 +48,27 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 20px;
+            padding-top: 0;
             margin-bottom: 20px;
         }
 
         .settings-container h3 {
-            margin-top: 0;
             padding-bottom: 10px;
             border-bottom: 1px solid #ddd;
         }
 
-        :not(pre)>code[class*=language-],
+        .settings-container [class*=col-] .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        :not(pre) > code[class*=language-],
         pre[class*=language-] {
             margin-top: 0;
         }
-
 
         code[class*="language-"] mark,
         pre[class*="language-"] mark {
@@ -114,14 +121,7 @@
             $form.find('input[name="is-cdn"]').on('change', function () {
                 var status = $form.find('input[name="cdn-path"]').prop('disabled');
                 $form.find('input[name="cdn-path"]').prop('disabled', !status);
-            });
-
-            // Optional Prism
-            Prism.plugins.NormalizeWhitespace.setDefaults({
-                'remove-trailing': true,
-                'remove-indent': true,
-                'left-trim': true,
-                'right-trim': true
+                $form.find('select[name="version"]').prop('disabled', status);
             });
 
             $form.on('submit', function (e) {
@@ -135,11 +135,13 @@
                 var isBundle = $(this).find('input[name="is-bundle"]:checked').val() === 'true';
                 var isCdn = $(this).find('input[name="is-cdn"]:checked').val() === 'true';
                 var path = isCdn === true ? false : $(this).find('input[name="cdn-path"]').val();
+                var version = $(this).find('select[name="version"]').val();
                 /**/
 
                 var data = {
                     bundle: isBundle,
-                    code: code
+                    code: code,
+                    version: version
                 };
 
                 if (path) {
@@ -222,14 +224,28 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequatur dolore dolorum harum tempora. Commodi
         consectetur dolor dolorem labore minima non quasi qui quidem temporibus?</p>
     <form class="migrate-form" action="/migrate" method="POST" id="migrate-form">
-
-
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <h3 class="dark-grey">AnyChart 7 Code:</h3>
+                    <textarea class="form-control" id="input-code"></textarea>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <h3 class="dark-grey">AnyChart 8 Code:</h3>
+                    <div id="output-code">
+                        <pre class="copytoclipboard code"><code class="language-javascript"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="settings-container">
             <div class="row">
                 <div class="col-md-6">
                     <h3 class="dark-grey">Settings</h3>
 
-                    <div class="form-group col-lg-12">
+                    <div class="form-group">
                         <label>Bundle or modules?</label>
 
                         <div class="row">
@@ -242,7 +258,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group col-lg-12">
+                    <div class="form-group">
                         <label>CDN?</label>
 
                         <div class="row">
@@ -254,15 +270,16 @@
                         </div>
                     </div>
 
-                    <div class="form-group col-lg-12">
+                    <div class="form-group">
                         <label>Path</label>
                         <input type="text" name="cdn-path" class="form-control" value="" disabled>
                     </div>
 
-                    <div class="form-group col-lg-12">
+                    <div class="form-group">
                         <label for="version-select">Version:</label>
                         <select class="form-control" name="version" id="version-select">
                             <option>8.0.0</option>
+                            <option>8.0.1</option>
                         </select>
                     </div>
                 </div>
@@ -280,7 +297,7 @@
                         repellendus.
                     </p>
                     <p>
-                        lorem - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam autem
+                        Version - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam autem
                         excepturi
                         nisi porro quis quisquam ratione rem sed sequi.
                     </p>
@@ -290,27 +307,6 @@
                     </p>
 
                     <button type="submit" class="btn btn-primary">Migrate!</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <label for="input-code">AnyChart 7 code:</label>
-                    <textarea class="form-control" id="input-code"></textarea>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <label for="input-code">AnyChart 8 code:</label>
-                    <div id="output-code">
-                        <pre class="copytoclipboard code"><code class="language-javascript">
-                   <!--         var container = document.getElementById('container');
-                            container.innerHTML = '<div class="line"><div id="map-container"></div></div>';
-                            <mark>test</mark>-->
-                        </code></pre>
-                    </div>
                 </div>
             </div>
         </div>

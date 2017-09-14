@@ -31,23 +31,24 @@ exports.init = function (res, wrapMark) {
         }
     }
 
+    normalizedEnums.sort(function (a, b) {
+        return b.literal.length - a.literal.length
+    });
+
     // replace by literal
     for (i = 0; i < normalizedEnums.length; i++) {
         var replaceByLiteral = new RegExp(normalizedEnums[i].literal, 'g');
 
         if (~inputCode.indexOf(normalizedEnums[i].literal)) {
-            if (!inputCode[inputCode.indexOf(normalizedEnums[i].literal) + normalizedEnums[i].literal.length] ||
-                (inputCode[inputCode.indexOf(normalizedEnums[i].literal) + normalizedEnums[i].literal.length] && inputCode[inputCode.indexOf(normalizedEnums[i].literal) + normalizedEnums[i].literal.length].match(/\s|\//))) {
-                key = [];
+            key = [];
 
-                for (k = 0; k < normalizedEnums[i].literal.length; k++) {
-                    key.push(uuid.v4());
-                }
-
-                keys[key] = normalizedEnums[i].new;
-
-                inputCode = outputCode = inputCode.replace(replaceByLiteral, '"' + key + '"');
+            for (k = 0; k < normalizedEnums[i].literal.length; k++) {
+                key.push(uuid.v4());
             }
+
+            keys[key] = normalizedEnums[i].new;
+
+            inputCode = outputCode = inputCode.replace(replaceByLiteral, '"' + key + '"');
         }
     }
 
@@ -68,7 +69,7 @@ exports.init = function (res, wrapMark) {
 
                 // check, if key
                 if (checkKey.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i) === null && oldValue.match(/'|"/)) {
-                    if (oldValue[0] === ':') {
+                    if (checkKey[0] === ':') {
                         for (letterIndex = 0; letterIndex < oldValue.length; letterIndex++) {
                             if (!oldValue[letterIndex].match(/[A-z]|[0-9]/)) {
                                 countExcessSign++;
@@ -197,6 +198,7 @@ exports.init = function (res, wrapMark) {
     }
 
     // replace with out methods
+
     for (i = 0; i < enumsWithOutMethods.length; i++) {
         var replaceByOldValue = new RegExp("'" + enumsWithOutMethods[i].old[0] + "'", 'g');
         var _replaceByOldValue = new RegExp('"' + enumsWithOutMethods[i].old[0] + '"', 'g');
@@ -236,7 +238,7 @@ exports.init = function (res, wrapMark) {
     }
 
     res.code = outputCode;
-    res.conflict = log.conflict;
+    res['enums-warning'] = log.conflict;
 
     return res;
 };

@@ -27,6 +27,7 @@ exports.init = function (res, wrapMark) {
 
     var regExp;
     var i, j;
+    var log = [];
 
     // replace selected state in data
     regExp = new RegExp('selected: true', 'g');
@@ -44,11 +45,17 @@ exports.init = function (res, wrapMark) {
             var state = toCamelCase('\\.' + statePrefix[j].old, interactivityState[i]);
             regExp = new RegExp(state, 'g');
 
+            // add method to log
+            if (code.match(regExp)) {
+                log.push(state);
+            }
+
             code = code.replace(regExp, wrapMark(statePrefix[j].new + interactivityState[i]));
         }
     }
 
     res.code = code;
+    res['interactivity-state-warning'] = log;
 
     return res;
 };

@@ -3,6 +3,7 @@ var mapAsReplacer = require('./mapAs-replacer');
 var interactivityStateReplacer = require('./interactivity-state-replacer');
 var gridReplacer = require('./grid-replacer');
 var enumsReplacer = require('./enums-replacer');
+var deprecatedApiReplacer = require('./deprecated-api-replacer');
 
 exports.migrate = function (code) {
     code = {
@@ -10,10 +11,11 @@ exports.migrate = function (code) {
     };
 
     code = enumsReplacer.init(code, wrapMark);
-    // code = modulesReplacer.init(code, wrapMark);
-    // code = mapAsReplacer.init(code, wrapMark);
-    // code = gridReplacer.init(code);
-    // code = interactivityStateReplacer.init(code, wrapMark);
+    code = modulesReplacer.init(code, wrapMark);
+    code = mapAsReplacer.init(code, wrapMark);
+    code = deprecatedApiReplacer.init(code, wrapMark);
+    code = gridReplacer.init(code, wrapMark);
+    code = interactivityStateReplacer.init(code, wrapMark);
 
     return code;
 
