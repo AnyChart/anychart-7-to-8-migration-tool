@@ -6,12 +6,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/keep-markup/prism-keep-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css"/>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-coy.min.css"/>
 
     <style>
@@ -52,7 +53,26 @@
 
         .settings-container h3 {
             margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
         }
+
+        :not(pre)>code[class*=language-],
+        pre[class*=language-] {
+            margin-top: 0;
+        }
+
+
+        code[class*="language-"] mark,
+        pre[class*="language-"] mark {
+            display: inline-block;
+            color: inherit;
+            background: none;
+            box-shadow: 0 0 2px #fff;
+            padding: 1px;
+            background: rgba(255, 255, 0, 0.75);
+        }
+
     </style>
 
     <script>
@@ -96,6 +116,14 @@
                 $form.find('input[name="cdn-path"]').prop('disabled', !status);
             });
 
+            // Optional Prism
+            Prism.plugins.NormalizeWhitespace.setDefaults({
+                'remove-trailing': true,
+                'remove-indent': true,
+                'left-trim': true,
+                'right-trim': true
+            });
+
             $form.on('submit', function (e) {
                 e.preventDefault();
 
@@ -106,24 +134,37 @@
                 /*get parametrs*/
                 var isBundle = $(this).find('input[name="is-bundle"]:checked').val() === 'true';
                 var isCdn = $(this).find('input[name="is-cdn"]:checked').val() === 'true';
-                var path = isCdn === true ? true : $(this).find('input[name="cdn-path"]').val();
+                var path = isCdn === true ? false : $(this).find('input[name="cdn-path"]').val();
                 /**/
+
+                var data = {
+                    bundle: isBundle,
+                    code: code
+                };
+
+                if (path) {
+                    data.path = path;
+                }
 
                 $.ajax({
                     type: 'POST',
                     url: '/migrate',
-                    data: {
-                        bundle: isBundle,
-                        path: path,
-                        code: code
-                    },
+                    data: data,
                     success: function (res) {
                         var $output = $('#output-code');
 
                         if (res.code) {
-                            $output.find('code').text(res.code);
+                            var regExp = new RegExp('&lt;mark>', 'g');
+                            var _regExp = new RegExp('&lt;/mark>', 'g');
+
+                            var code = res.code.replace(/</g, '&lt;')
+                                    .replace(regExp, '<mark>')
+                                    .replace(_regExp, '</mark>');
+
+                            $output.find('code').html(code);
 
                             var highlightClass = ~res.code.indexOf('<script>') ? 'language-markup' : 'language-javascript';
+
                             $output.find('code').attr('class', highlightClass);
 
                             // init prism js for source code view
@@ -217,6 +258,13 @@
                         <label>Path</label>
                         <input type="text" name="cdn-path" class="form-control" value="" disabled>
                     </div>
+
+                    <div class="form-group col-lg-12">
+                        <label for="version-select">Version:</label>
+                        <select class="form-control" name="version" id="version-select">
+                            <option>8.0.0</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="col-md-6">
@@ -257,12 +305,15 @@
                 <div class="form-group">
                     <label for="input-code">AnyChart 8 code:</label>
                     <div id="output-code">
-                        <pre class="copytoclipboard code"><code></code></pre>
+                        <pre class="copytoclipboard code"><code class="language-javascript">
+                   <!--         var container = document.getElementById('container');
+                            container.innerHTML = '<div class="line"><div id="map-container"></div></div>';
+                            <mark>test</mark>-->
+                        </code></pre>
                     </div>
                 </div>
             </div>
         </div>
-
     </form>
 </div>
 </body>

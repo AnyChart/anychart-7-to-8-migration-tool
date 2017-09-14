@@ -1,11 +1,11 @@
-exports.init = function (res) {
+exports.init = function (res, wrapMark) {
     var code = res.code;
 
     var pos;
     var oldValue;
     var newValue;
 
-    code = code.replace(/\.mapAs\(\s*(undefined|null)\,\s*/g, '.mapAs(');
+    code = code.replace(/\.mapAs\(\s*(undefined|null)\,\s*/g, wrapMark('.mapAs('));
 
     while (~(pos = code.indexOf('.mapAs(', pos + 1))) {
         oldValue = code.substring(code.indexOf(')', pos), pos + '.mapAs('.length);
@@ -21,7 +21,7 @@ exports.init = function (res) {
                 }
             }
 
-            code = code.replace(oldValue, JSON.stringify(newValue).replace(/\"\:/g, '": ').replace(/\,\"/g, ', "').replace(/\"/g, "'"));
+            code = code.replace(oldValue, wrapMark(JSON.stringify(newValue).replace(/\"\:/g, '": ').replace(/\,\"/g, ', "').replace(/\"/g, "'")));
 
         } catch (err) {
             res.code = code;

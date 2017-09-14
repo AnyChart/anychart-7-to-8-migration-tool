@@ -32,11 +32,13 @@ function init() {
         };
 
         if (req.body.hasOwnProperty('bundle')) {
-            editProcessArgv('bundle');
+            addProcessArgv('bundle');
         }
 
         if (req.body.hasOwnProperty('path')) {
-            editProcessArgv('path');
+            addProcessArgv('path');
+        } else {
+            removeProcessArgv('path');
         }
 
         var code = migration.migrate(req.body.code);
@@ -44,11 +46,20 @@ function init() {
         // response
         res.send(code);
 
-        function editProcessArgv(opt) {
+        function addProcessArgv(opt) {
             if (!~process.argv.indexOf(optionMaps[opt])) {
                 process.argv.push(optionMaps[opt], req.body[opt]);
             } else {
                 process.argv[process.argv.indexOf(optionMaps[opt]) + 1] = req.body[opt];
+            }
+        }
+
+        function removeProcessArgv(opt) {
+            var pos = process.argv.indexOf(optionMaps[opt]);
+
+            if (~pos) {
+                process.argv.splice(pos - 1, 2);
+                console.log(process.argv);
             }
         }
     });

@@ -6,7 +6,7 @@ if (!String.prototype.splice) {
     };
 }
 
-exports.init = function (res) {
+exports.init = function (res, wrapMark) {
     var argv = require('minimist')(process.argv.slice(2));
 
     var code = res.code;
@@ -47,10 +47,8 @@ exports.init = function (res) {
     ];
 
     var path = argv.l;
-    console.log(argv);
 
-
-    var script = !path ? '<script src="' + cdnAnyChart + '/js/_AC-VERSION_/_COMPONENT_"></script>' :
+    var scriptComponent = !path ? '<script src="' + cdnAnyChart + '/js/_AC-VERSION_/_COMPONENT_"></script>' :
         '<script src="_LOCAL-PATH_/_COMPONENT_"></script>';
 
     var scriptTheme =!path ? '<script src="' + cdnAnyChart + '/themes/_AC-VERSION_/_COMPONENT_"></script>' :
@@ -115,7 +113,7 @@ exports.init = function (res) {
             var partToReplace = code.slice(code.lastIndexOf('<script', pos), code.indexOf('</script>', pos) + '</script>'.length);
 
             localPath = partToReplace.substring(partToReplace.lastIndexOf('src=', partToReplace.indexOf(acProductScripts[i])) + 'src='.length + 1, partToReplace.indexOf(acProductScripts[i]));
-            code = code.replace(partToReplace, script.replace('_COMPONENT_', acBase));
+            code = code.replace(partToReplace, wrapMark(scriptComponent.replace('_COMPONENT_', acBase)));
             break;
         }
     }
@@ -149,7 +147,7 @@ exports.init = function (res) {
             pos = code.indexOf(acThemeScripts[i]);
             partToReplace = code.slice(code.lastIndexOf('<script', pos), code.indexOf('</script>', pos) + '</script>'.length);
 
-            code = code.replace(partToReplace, scriptTheme.replace('_COMPONENT_', acThemeScripts[i]));
+            code = code.replace(partToReplace, wrapMark(scriptTheme.replace('_COMPONENT_', acThemeScripts[i])));
         }
     }
     /**/
@@ -160,7 +158,7 @@ exports.init = function (res) {
             pos = code.indexOf(acPartLinks[i]);
             partToReplace = code.slice(code.lastIndexOf('<link', pos), code.indexOf('>', pos) + 1);
 
-            code = code.replace(partToReplace, link.replace('_COMPONENT_', acPartLinks[i]));
+            code = code.replace(partToReplace, wrapMark(link.replace('_COMPONENT_', acPartLinks[i])));
         }
     }
     /**/

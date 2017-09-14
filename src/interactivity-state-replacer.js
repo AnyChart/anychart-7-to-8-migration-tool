@@ -1,6 +1,6 @@
 var interactivityState = require('./interactivity-state').normalized;
 
-exports.init = function (res) {
+exports.init = function (res, wrapMark) {
     var code = res.code;
 
     var statePrefix = [
@@ -30,12 +30,12 @@ exports.init = function (res) {
 
     // replace selected state in data
     regExp = new RegExp('selected: true', 'g');
-    code = code.replace(regExp, 'state: \'selected\'');
+    code = code.replace(regExp,  wrapMark('state: \'selected\''));
 
     // replace fill/stroke methods with prefix(.normal())
     for (j = 0; j < imageSettings.length; j++) {
         regExp = new RegExp(imageSettings[j].old, 'g');
-        code = code.replace(regExp, imageSettings[j].new);
+        code = code.replace(regExp, wrapMark(imageSettings[j].new));
     }
 
     // replace with method
@@ -44,7 +44,7 @@ exports.init = function (res) {
             var state = toCamelCase('\\.' + statePrefix[j].old, interactivityState[i]);
             regExp = new RegExp(state, 'g');
 
-            code = code.replace(regExp, statePrefix[j].new + interactivityState[i]);
+            code = code.replace(regExp, wrapMark(statePrefix[j].new + interactivityState[i]));
         }
     }
 

@@ -7,7 +7,7 @@ String.prototype.replaceAt = function (index, replacement) {
     return this.substr(0, index) + replacement + this.substr(index + replacement.length);
 };
 
-exports.init = function (res) {
+exports.init = function (res, wrapMark) {
     var inputCode = res.code;
     var outputCode;
     var i;
@@ -222,7 +222,7 @@ exports.init = function (res) {
     for (key in keys) {
         if (keys.hasOwnProperty(key)) {
             var replaceByKey = new RegExp(key, 'g');
-            outputCode = outputCode.replace(replaceByKey, keys[key]);
+            outputCode = outputCode.replace(replaceByKey, wrapMark(keys[key]));
         }
     }
 
