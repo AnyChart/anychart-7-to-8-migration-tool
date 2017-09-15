@@ -2,7 +2,7 @@
 
 var program = require('commander');
 var beautify = require('js-beautify').js_beautify;
-var fs = require('fs'); 
+var fs = require('fs');
 var path = require('path');
 var argv = require('minimist')(process.argv.slice(2));
 var migration = require('./src/migration');
@@ -44,11 +44,7 @@ function init() {
 
             data = migration.migrate(data);
 
-            if (data.code) {
-                fs.writeFileSync(files[i], data.code, 'utf8');
-            } else {
-                fs.writeFileSync(files[i], data, 'utf8');
-            }
+            fs.writeFileSync(files[i], data.code, 'utf8');
 
             log['affected-files'].push(files[i]);
 
@@ -70,8 +66,6 @@ function init() {
 
     createLog(log);
 }
-
-init();
 
 function getFiles(path, isRecursive, files_) {
     files_ = files_ || [];

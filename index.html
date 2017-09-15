@@ -127,9 +127,13 @@
             $form.on('submit', function (e) {
                 e.preventDefault();
 
+                var $output = $('#output-code');
                 var code = $('#input-code').val();
 
-                if (!code) return;
+                if (!code) {
+                    $output.find('code').text('');
+                    return
+                }
 
                 /*get parametrs*/
                 var isBundle = $(this).find('input[name="is-bundle"]:checked').val() === 'true';
@@ -153,21 +157,21 @@
                     url: '/migrate',
                     data: data,
                     success: function (res) {
-                        var $output = $('#output-code');
+                        var code = res.code;
+                        var enumsWarning = res['enums-warning'];
 
-                        if (res.code) {
+                        if (code) {
                             var regExp = new RegExp('&lt;mark>', 'g');
                             var _regExp = new RegExp('&lt;/mark>', 'g');
+                            var highlightClass = ~code.indexOf('<script>') ? 'language-markup' : 'language-javascript';
 
-                            var code = res.code.replace(/</g, '&lt;')
+                            $output.find('code').attr('class', highlightClass);
+
+                            code = code.replace(/</g, '&lt;')
                                     .replace(regExp, '<mark>')
                                     .replace(_regExp, '</mark>');
 
                             $output.find('code').html(code);
-
-                            var highlightClass = ~res.code.indexOf('<script>') ? 'language-markup' : 'language-javascript';
-
-                            $output.find('code').attr('class', highlightClass);
 
                             // init prism js for source code view
                             Prism.highlightElement($output.find('code')[0]);
@@ -175,29 +179,27 @@
                             $output.css('opacity', 1);
                         }
 
-                        if (res.conflict) {
-                            if (Object.keys(res.conflict).length) {
-                                $('#alertConflictEnums').fadeIn('fast', function () {
-                                    setTimeout(function () {
-                                        $('#alertConflictEnums').fadeOut('slow');
-                                    }, 5000)
-                                });
+                        if (enumsWarning && Object.keys(enumsWarning).length) {
+                            $('#alertConflictEnums').fadeIn('fast', function () {
+                                setTimeout(function () {
+                                    $('#alertConflictEnums').fadeOut('slow');
+                                }, 5000)
+                            });
 
-                                for (var i = 0; i < res.conflict.length; i++) {
-                                    console.log('Conflict Enum.\n' + 'Method: "' + res.conflict[i].method +
-                                            '", ' + 'value: ' + JSON.stringify(res.conflict[i].value));
-                                }
+                            for (var i = 0; i < enumsWarning.length; i++) {
+                                console.log('Conflict Enum.\n' + 'Method: "' + enumsWarning[i].method +
+                                        '", ' + 'value: ' + JSON.stringify(enumsWarning[i].value));
                             }
                         }
 
-                        if (!res.code) {
-                            $('#alertEnumsNotFound').fadeIn('fast', function () {
-                                $output.find('code').text('');
-                                setTimeout(function () {
-                                    $('#alertEnumsNotFound').fadeOut('slow');
-                                }, 5000)
-                            });
-                        }
+                        /*         if (!res.code) {
+                         $('#alertEnumsNotFound').fadeIn('fast', function () {
+                         $output.find('code').text('');
+                         setTimeout(function () {
+                         $('#alertEnumsNotFound').fadeOut('slow');
+                         }, 5000)
+                         });
+                         }*/
 
                         // button position
                         $('button.copytoclipboard').css({
@@ -251,8 +253,8 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <label class="radio-inline"><input type="radio" name="is-bundle"
-                                                                   value="true">Bundle</label>
-                                <label class="radio-inline"><input type="radio" name="is-bundle" value="false"
+                                                                   value="false">Bundle</label>
+                                <label class="radio-inline"><input type="radio" name="is-bundle" value="true"
                                                                    checked>Modules</label>
                             </div>
                         </div>

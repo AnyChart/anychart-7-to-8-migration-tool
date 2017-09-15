@@ -31,6 +31,8 @@ exports.init = function (res, wrapMark) {
         }
     }
 
+    // sort by literal
+    // long literal must be first replaced
     normalizedEnums.sort(function (a, b) {
         return b.literal.length - a.literal.length
     });
@@ -198,7 +200,6 @@ exports.init = function (res, wrapMark) {
     }
 
     // replace with out methods
-
     for (i = 0; i < enumsWithOutMethods.length; i++) {
         var replaceByOldValue = new RegExp("'" + enumsWithOutMethods[i].old[0] + "'", 'g');
         var _replaceByOldValue = new RegExp('"' + enumsWithOutMethods[i].old[0] + '"', 'g');

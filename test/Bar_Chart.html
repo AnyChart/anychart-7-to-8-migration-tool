@@ -1,81 +1,94 @@
 <html>
 <head>
-    <meta name="x-cat-tags" content="anyMap"/>
+    <meta name="x-cat-tags" content="anyChart"/>
     <meta charset="UTF-8"/>
-    <meta name="tags" content="['map']"/>
+    <meta name="tags" content="['bar']"/>
     <meta name="index" content="1000"/>
     <meta name="is-new" content="false"/>
-    <script src="https://cdn.anychart.com/samples-data/maps-projections/countries-by-population-with-august-projection/data.js"
-            data-export="true"></script>
-    <script src="../../anychart-base.min.js"></script>
-	<script src="../../anychart-map.min.js"></script>
-	<script src="../../anychart-ui.min.js"></script>
-    <script src="https://cdn.anychart.com/geodata/1.2.0/custom/world_source/world_source.js"
-            data-export="true"></script>
 
-    <link rel="stylesheet" href="https://cdn.anychart.com/fonts/2.7.3/anychart.css"/>
-    <script x-export="map">
+    <short_description>
+        Bar chart consists of rectangular bars that represent the changes over a period of time or for comparing data
+        values of some objects. This simple bar chart displays the revenue a company gets selling its products.
+    </short_description>
+
+    <description>
+        <p>
+            <a href="https://docs.anychart.com/latest/Basic_Charts_Types/Bar_Chart" target="_blank">Bar Charts</a> are
+            good for showing the changes over a period of time or for comparing data values of some objects. Its
+            coordinate system is a bit different from standart cartesian system we are used to: the X axis that
+            represent categories is vertical and the Y axis that is responsible for values is horizontal.
+        </p>
+
+        <p>
+            This Bar Chart shows the revenue in dollars of some company, only 10 most popular products are shown. The
+            products’ names are used as <a href="https://docs.anychart.com/latest/Axes_and_Grids/Axes_Labels_Formatting"
+                                           target="_blank">labels of the X axis</a> and of the bars. In the bottom of
+            the chart you can see the Y axis representing the revenue made by selling this or that product.
+        </p>
+
+    </description>
+
+    <script src="https://cdn.anychart.com/js/8.0.0/anychart-base.min.js"></script>
+    <script x-export="chart">
         anychart.onDocumentReady(function () {
-            map = anychart.map();
+            // create bar chart
+            chart = anychart.bar();
 
-            map.credits()
-                    .enabled(true)
-                    .url('https://en.wikipedia.org/wiki/List_of_sovereign_states_and_dependent_territories_by_population_density')
-                    .text('Data source: https://en.wikipedia.org/wiki/List_of_sovereign_states_and_dependent_territories_by_population_density')
-                    .logoSrc('https://en.wikipedia.org/static/favicon/wikipedia.ico');
+            chart.animation(true);
 
-            map.title()
-                    .enabled(true)
-                    .useHtml(true)
-                    .padding([10, 0, 10, 0])
-                    .text('Countries by Population<br/><span  style="color:#929292; font-size: 12px;">' +
-                            '(Data was collected from Wikipedia, 2015)</span>');
+            chart.padding([10, 40, 5, 20]);
 
-            map.geoData('anychart.maps.world_source');
+            chart.title('Top 10 Cosmetic Products by Revenue');
 
-            // sets projection
-            map.crs('august')
-                    .padding(0);
+            // create area series with passed data
+            var series = chart.bar([
+                ['Eyeshadows', '249980'],
+                ['Eyeliner', '213210'],
+                ['Eyebrow pencil', '170670'],
+                ['Nail polish', '143760'],
+                ['Pomade', '128000'],
+                ['Lip gloss', '110430'],
+                ['Mascara', '102610'],
+                ['Foundation', '94190'],
+                ['Rouge', '80540'],
+                ['Powder', '53540']
+            ]);
 
-            map.interactivity().selectionMode(false);
+            var a = anychart.format.dateTime();
 
-            // The data used in this sample can be obtained from the CDN
-            // https://cdn.anychart.com/samples-data/maps-projections/countries-by-population-with-august-projection/data.js
-            var dataSet = anychart.data.set(getData());
-            var density_data = dataSet.mapAs(undefined, {'value': 'population'});
-            var series = map.choropleth(density_data);
-            series.stroke('"#eceff1"');
+            var series = map.bubble(anychart.data.set(general_data).mapAs({'size': 'value'}))
+                    .fill('#00b8d4')
+                    .stroke('3 #fafafa');
+
+            a.fill('red').hoverRisingFill('red');
+
+            // set tooltip settings
             series.tooltip()
-                    .useHtml(true)
-                    .format(function () {
-                        return '<span style="color: #d9d9d9">Density</span>: ' +
-                                parseFloat(this.getData('density')).toLocaleString() + ' people per km&#178 <br/>' +
-                                '<span style="color: #d9d9d9">Population</span>: ' +
-                                parseInt(this.getData('population')).toLocaleString() + '<br/>' +
-                                '<span style="color: #d9d9d9">Area</span>: ' +
-                                parseInt(this.getData('area')).toLocaleString() + ' km&#178';
-                    });
-            series.colorScale(anychart.scales.linearColor("#a9e1d4", "#207fbf"));
-            map.colorRange().enabled(true);
-            map.colorRange().labels().format(function () {
-                return anychart.format.number(this.value, {
-                    groupsSeparator: ',',
-                    scale: true,
-                    zeroFillDecimals: true
-                })
-            });
+                    .position('right')
+                    .anchor('left-center')
+                    .offsetX(5)
+                    .offsetY(0)
+                    .titleFormat('{%X}')
+                    .format('${%Value}');
 
-            // create zoom controls
-            var zoomController = anychart.ui.zoom();
-            zoomController.render(map);
+            // set yAxis labels formatter
+            chart.yAxis().labels().format('{%Value}{groupsSeparator: }');
 
-            // Sets container id for the chart
-            map.container('container');
-            // Initiates chart drawing
-            map.draw();
+            // set titles for axises
+            chart.xAxis().title('Products by Revenue');
+            chart.yAxis().title('Revenue in Dollars');
+            chart.interactivity().hoverMode('by-x');
+            chart.tooltip().positionMode('point');
+            // set scale minimum
+            chart.yScale().minimum(0);
+
+            // set container id for the chart
+            chart.container('container');
+            // initiate chart drawing
+            chart.draw();
         });
     </script>
-    <link rel="stylesheet" href="../../anychart-ui.min.css">
+    <link href="https://cdn.anychart.com/css/8.0.0/anychart-ui.min.css">
 </head>
 <body>
 <div id="container" style="width: 100%; height: 100%"></div>

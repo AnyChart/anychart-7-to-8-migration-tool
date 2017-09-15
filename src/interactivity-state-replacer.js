@@ -14,17 +14,6 @@ exports.init = function (res, wrapMark) {
         }
     ];
 
-    var imageSettings = [
-        {
-            old: '\\.fill\\(',
-            new: '.normal().fill('
-        },
-        {
-            old: '\\.stroke\\(',
-            new: '.normal().stroke('
-        }
-    ];
-
     var regExp;
     var i, j;
     var log = [];
@@ -32,12 +21,6 @@ exports.init = function (res, wrapMark) {
     // replace selected state in data
     regExp = new RegExp('selected: true', 'g');
     code = code.replace(regExp,  wrapMark('state: \'selected\''));
-
-    // replace fill/stroke methods with prefix(.normal())
-    for (j = 0; j < imageSettings.length; j++) {
-        regExp = new RegExp(imageSettings[j].old, 'g');
-        code = code.replace(regExp, wrapMark(imageSettings[j].new));
-    }
 
     // replace with method
     for (i = 0; i < interactivityState.length; i++) {

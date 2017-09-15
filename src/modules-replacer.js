@@ -48,14 +48,14 @@ exports.init = function (res, wrapMark) {
 
     var path = argv.l;
 
-    var scriptComponent = !path ? '<script src="' + cdnAnyChart + '/js/_AC-VERSION_/_COMPONENT_"></script>' :
-        '<script src="_LOCAL-PATH_/_COMPONENT_"></script>';
+    var scriptComponent = !path ? '<script src="' + cdnAnyChart + '/js/_AC-VERSION_/_FILE_"></script>' :
+        '<script src="_LOCAL-PATH_/_FILE_"></script>';
 
-    var scriptTheme =!path ? '<script src="' + cdnAnyChart + '/themes/_AC-VERSION_/_COMPONENT_"></script>' :
-        '<script src="_LOCAL-PATH_/_COMPONENT_"></script>';
+    var scriptTheme =!path ? '<script src="' + cdnAnyChart + '/themes/_AC-VERSION_/_FILE_"></script>' :
+        '<script src="_LOCAL-PATH_/_FILE_"></script>';
 
-    var link  = !path ? '<link href="' + cdnAnyChart + '/css/_AC-VERSION_/_COMPONENT_">' :
-        '<link rel="stylesheet" href="_LOCAL-PATH_/_COMPONENT_">';
+    var link  = !path ? '<link href="' + cdnAnyChart + '/css/_AC-VERSION_/_FILE_">' :
+        '<link rel="stylesheet" href="_LOCAL-PATH_/_FILE_">';
 
     var acBase = 'anychart-base.min.js';
     var version = argv.v || '8.0.0';
@@ -63,7 +63,7 @@ exports.init = function (res, wrapMark) {
     var module;
     var localPath;
 
-    var isBundleJs = argv.b !== 'false';
+    var isBundleJs = argv.b === 'false';
 
     // modules that work with tree data
     var modulesTreeData = ['anychart-gantt', 'anychart-treemap', 'anychart-pert'];
@@ -113,7 +113,7 @@ exports.init = function (res, wrapMark) {
             var partToReplace = code.slice(code.lastIndexOf('<script', pos), code.indexOf('</script>', pos) + '</script>'.length);
 
             localPath = partToReplace.substring(partToReplace.lastIndexOf('src=', partToReplace.indexOf(acProductScripts[i])) + 'src='.length + 1, partToReplace.indexOf(acProductScripts[i]));
-            code = code.replace(partToReplace, wrapMark(scriptComponent.replace('_COMPONENT_', acBase)));
+            code = code.replace(partToReplace, wrapMark(scriptComponent.replace('_FILE_', acBase)));
             break;
         }
     }
@@ -147,7 +147,7 @@ exports.init = function (res, wrapMark) {
             pos = code.indexOf(acThemeScripts[i]);
             partToReplace = code.slice(code.lastIndexOf('<script', pos), code.indexOf('</script>', pos) + '</script>'.length);
 
-            code = code.replace(partToReplace, wrapMark(scriptTheme.replace('_COMPONENT_', acThemeScripts[i])));
+            code = code.replace(partToReplace, wrapMark(scriptTheme.replace('_FILE_', acThemeScripts[i])));
         }
     }
     /**/
@@ -158,7 +158,7 @@ exports.init = function (res, wrapMark) {
             pos = code.indexOf(acPartLinks[i]);
             partToReplace = code.slice(code.lastIndexOf('<link', pos), code.indexOf('>', pos) + 1);
 
-            code = code.replace(partToReplace, wrapMark(link.replace('_COMPONENT_', acPartLinks[i])));
+            code = code.replace(partToReplace, wrapMark(link.replace('_FILE_', acPartLinks[i])));
         }
     }
     /**/
