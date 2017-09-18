@@ -2,40 +2,68 @@
 
 # AnyChart 7.x to 8.x Migration Tool
 
-AnyChart migration tool предназначен для облегчения перехода с AnyChart 7 на AnyChart 8.
-Возможно два варианта использования тулзы:
-* Web-Server - поднимается Web Server который дает доступ к единственной страницы на которой есть поле для ввода кода AnyChart 7 и вывода кода AnyChart 8.
-* Console Utility - можно скормить на вход файл или папку, утилита пройдется по всем указанным файлам, будет искать код эничарта и заменять его на новый.
+AnyChart migration tool is a utility script that helps to migrate JavaScript code of AnyChart 7.14.x to AnyChart 8.x.
+
+*IMPORTANT NOTE 1:*
+
+AnyChart made a number of adjustments moving from version 7 to 8. This migration tool can do a lot but it does not guarantee 100% migration. Some things can not be changes automatically and need manual coding. See the list of such cases in [Manual migration](#manual) section.
+
+*IMPORTANT NOTE 2:*
+
+This migration tool change API methods, enums and parameters of AnyChart API version 7.14.3 to version 8.0. It *may* work on earlier 7.x version but the numer of errors is more likely.
+
+*IMPORTANT NOTE 3:*
+
+We did our best to create this tool but it is not a panacea. If you don't want to change your code automatically, please see the [List of changes](#changes) section and figure out how your code is affected and what needs to be changed.
+
+## Modes
+
+AnyChart migration tool is available in three ways
+
+* Online script at [https://www.anychart.com/migration/7to8/](https://www.anychart.com/migration/7to8/)
+
+* You own Web-Server that does the same as the script above but it is deployed on your side.
+
+* Console Utility script - you can choose a file or a folder, script will look for AnyChart code and replace everything, use with caution.
 
 ## Installation
+
+To install migration tool with npm:
+
 ```
 npm install anychart-v7-to-v8-migration-tool -g
 ```
 
 ## Running as Web Server
-To run web server on port 3000:
+
+To run web server on port 3000 navigate to migration tool folder and run:
+
 ```
 anychart-v7-to-v8-migration-tool-server -p 3000
 ```
 
+To show help message  navigate to migration tool folder and run:
 
-To show help message
 ```
 anychart-v7-to-v8-migration-tool-server --help
 ```
 
 ## Running as Console Utility
-To migrate certain file:
+
+To process a file:
+
 ```
 anychart-v7-to-v8-migration-tool-cli path_to_file
 ```
 
-To migrate all files in a directory:
+To process all files in a folder:
+
 ```
 anychart-v7-to-v8-migration-tool-cli -r path_to_directory
 ```
 
-To show help message
+To show help console script help:
+
 ```
 anychart-v7-to-v8-migration-tool-cli --help
 ```
@@ -43,16 +71,30 @@ anychart-v7-to-v8-migration-tool-cli --help
 ## API Changes
 
 ### Stacking Settings
-Изменен порядок стекирования серий по умолчанию, для того чтобы вернуть обратно нужно написать
+
+The ordering in which the series are stacked is changed and now goes in other direction. To restore the previous behavior *stackDirection()* method has been added. Set *'reverse'* to make the order match 7.x:
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
+
 ```
 chart.yScale().stackDirection('reverse');
 ```
 
 ### State Settings
-Общий принцип, hoverFill() --> hovered().fill(), selectFill() --> selected().fill()
+
+The API for select and hover settings has been refactored: methods like hoverFill() are replaced with hovered().fill(), selectFill() - with selected().fill() and so on. The order of the parameters and behaviour is the same.
+
+These changes allow to clone/copy the settings from the state to state easily.
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
+
+See the full list of replaced methods:
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
 
 #### Common API Methods
-| Old Version  | New Version  |
+
+| 7.x Version  | 8.x Version  |
 | ------------- | ------------- |
 | hover/selectFill()    |  hovered/selected().fill()    |
 | hover/selectStroke()  |  hovered/selected().stroke()  |
@@ -60,7 +102,8 @@ chart.yScale().stackDirection('reverse');
 | hover/selectMarkers() |  hovered/selected().markers() |
 
 #### Specific API Methods
-| Old Version  | New Version  |
+
+| 7.x Version  | 8.x Version  |
 | ------------- | ------------- |
 |  hover/selectNegativeFill()      |  hovered/selected().negativeFill()       |
 |  hover/selectRisingFill()        |  hovered/selected().risingFill()         |
@@ -97,32 +140,38 @@ chart.yScale().stackDirection('reverse');
 |  hover/selectOutlierMarkers()	   |  hovered/selected().outlierMarkers()     |
 
 ### Grids API
-Как создавать:
-1. grid заменен на xGrid/yGrid
-2. minorGrid заменен на yMinorGrid/xMinorGrid
 
-Как красить:
-oddFill/evenFill --> fill, palette
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
 
+Grids API has been changed completely and can not be migrated automatically:
+
+1. Single grid() method is replaced with xGrid() and yGrid() methods.
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
+2. Single minorGrid() method is replaced with yMinorGrid() and xMinorGrid() methods.
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
+3. oddFill() and evenFill() methods are replaced with fill() method that now accepts palette()
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
 
 ### Context Menu Customization
-Раньше были массивы, теперь объекты с ID
 
-#### Old Version Code
-```
-TODO!
-```
+Context menu API has been changed completely and can not be migrated automatically. Objects with IDs are now used instead of arrays. Please refer to [Context Menu](https://docs.anychart.com/Common_Settings/UI_Controls/Context_Menu) article to learn how to use the context menu in version 8.x.
 
-#### New Version Code
-```
-TODO!
-```
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
 
+#### 7.14.3 Version Code
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
+
+#### 8.x Version Code
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE` 
 
 ### Data Mapping API
+
 Improved API of mapAs() method, now it accepts only one parameter instead for four (old version). You don't need to pass `undefined` as first parameter for object based data sets.
 
-#### Old Version Code
+#### 7.x Version Code
+
 ```
 var dataSet = anychart.data.set([
   {platform: 'Mobile', views: 100},
@@ -132,7 +181,8 @@ var dataSet = anychart.data.set([
 var mapping = dataSet.mapAs(undefined, {x: 'platform', value: 'views'});
 ```
 
-#### New Version Code
+#### 8.x.x
+
 ```
 var dataSet = anychart.data.set([
   {platform: 'Mobile', views: 100},
@@ -143,24 +193,35 @@ var mapping = dataSet.mapAs({x: 'platform', value: 'views'});
 ```
 
 ### Dropped Enums API
-There are two changes in enums API:
-1. Больше нельзя задать значение энума как литерал, только как строку 
-2. Enums string values reworked from camel case to dash case.
 
-#### Old Version Code
+There are two changes in enums API:
+
+1. Enums no longer can be set by name, only string values can be used.
+2. Enums string values are changed from camel case to dash case.
+
+#### 7.x Version Code
+
 ```
 chart.legend().itemsLayout(anychart.enums.LegendLayout.HORIZONTAL_EXPANDABLE);
 ```
 
-#### New Version
+#### 8.x Version Code
+
 ```
 chart.legend().itemsLayout('horizontal-expandable');
 ```
 
-### Depricated API Drop
+### Deprecated API Drop
+
+Version 8.x drops a number of deprecated methods. Which means that you may have used these methods and the lirary only showed warnings. With upgrading to version 8.x using these methods is no longer possible.
+
+See the list of dropped methods and their replacement below:
 
 #### Text Formatting
-| Old Version  | New Version  |
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
+| 7.x Version  | 8.x Version  |
 | ------------- | ------------- |
 | anychart.utils.formatDateTime()  | anychart.format.dateTime()  |
 | textFormatter()  | format()  |
@@ -175,6 +236,9 @@ chart.legend().itemsLayout('horizontal-expandable');
 | getSeriesMeta() | getMeta() |
 
 #### Interactivity Settings
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
 | Old Version  | New Version  |
 | ------------- | ------------- |
 | allowPointsSelect()  | selectionMode()  |
@@ -182,6 +246,9 @@ chart.legend().itemsLayout('horizontal-expandable');
 | mouseWheel() | zoomOnMOuseWheel() |
 
 #### Palettes
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
 | Old Version  | New Version  |
 | ------------- | ------------- |
 | colorAt() | itemAt() |
@@ -191,12 +258,18 @@ chart.legend().itemsLayout('horizontal-expandable');
 
 
 #### Misc
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
 | Old Version  | New Version  |
 | ------------- | ------------- |
 | anychart.server()  | anychart.exports.server()  |
 | getGroupingUnit() | getCurrentDataInterval() |
 
 #### Gantt Data Grid
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
 | Old Version  | New Version  |
 | ------------- | ------------- |
 | cellFill()  | rowFill()  |
@@ -204,8 +277,10 @@ chart.legend().itemsLayout('horizontal-expandable');
 | cellEvenFill()  | rowEvenFill()  |
 | titleHeight()  | hederHeight()  |
 
-
 #### Constructors and Standalones 
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
+
 | Old Version  | New Version  |
 | ------------- | ------------- |
 | anychart.circularGauge() | anychart.gauges.circular() |
@@ -235,7 +310,6 @@ chart.legend().itemsLayout('horizontal-expandable');
 | anychart.ganttToolbar() | anychart.ui.ganttToolbar() |
 | anychart.toolbar() | anychart.ui.ganttToolbar() |
 | anychart.toolbar() | anychart.ui.ganttToolbar() |
-
 
 ## License
 [© AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart/anychart-v7-to-v8-migration-tool/blob/master/LICENSE).
