@@ -12,7 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css"/>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.css"/>
@@ -62,6 +63,17 @@
 
         .settings-container [class*=col-] .form-group:last-child {
             margin-bottom: 0;
+        }
+
+        .part-settings {
+            -webkit-transition: all 0.25s ease-out;
+            -moz-transition: all 0.25s ease-out;
+            -o-transition: all 0.25s ease-out;
+            transition: all 0.25s ease-out;
+        }
+
+        .part-settings.disabled {
+            opacity: 0.65;
         }
 
         textarea {
@@ -126,6 +138,29 @@
                 $form.find('input[name="cdn-path"]').prop('disabled', !status);
                 $form.find('select[name="version"]').prop('disabled', status);
             });
+
+            $form.find('select[name="replacer-select"]').on('change', function () {
+                var $modulesSettings = $('#modules-settings');
+                if (~$(this).val().indexOf('modules') || $(this).val().length === 0) {
+                    $modulesSettings.removeClass('disabled');
+                    $modulesSettings.find('input').removeAttr('disabled');
+                    $modulesSettings.find('select').removeAttr('disabled');
+
+                    checkCdnPathProp();
+                } else {
+                    $modulesSettings.addClass('disabled');
+                    $modulesSettings.find('input').attr('disabled', 'disabled');
+                    $modulesSettings.find('select').attr('disabled', 'disabled');
+
+                    checkCdnPathProp();
+                }
+            });
+
+            function checkCdnPathProp() {
+                if ($form.find('input[name="is-cdn"]:checked').val() === 'true') {
+                    $form.find('input[name="cdn-path"]').attr('disabled', 'disabled');
+                }
+            }
 
             $form.on('submit', function (e) {
                 e.preventDefault();
@@ -200,15 +235,6 @@
                             }
                         }
 
-                        /*         if (!res.code) {
-                         $('#alertEnumsNotFound').fadeIn('fast', function () {
-                         $output.find('code').text('');
-                         setTimeout(function () {
-                         $('#alertEnumsNotFound').fadeOut('slow');
-                         }, 5000)
-                         });
-                         }*/
-
                         // button position
                         $('button.copytoclipboard').css({
                             right: $output.find('code')[0].scrollHeight > $output.find('code').height() ? 25 : 10
@@ -256,44 +282,6 @@
                     <h3 class="dark-grey">Settings</h3>
 
                     <div class="form-group">
-                        <label>Bundle or modules?</label>
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label class="radio-inline"><input type="radio" name="is-bundle"
-                                                                   value="false">Bundle</label>
-                                <label class="radio-inline"><input type="radio" name="is-bundle" value="true"
-                                                                   checked>Modules</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>CDN?</label>
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label class="radio-inline"><input type="radio" name="is-cdn" value="true"
-                                                                   checked>Yes</label>
-                                <label class="radio-inline"><input type="radio" name="is-cdn" value="false">No</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Path</label>
-                        <input type="text" name="cdn-path" class="form-control" value="" disabled>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="version-select">Version:</label>
-                        <select class="form-control selectpicker" name="version" id="version-select">
-                            <option>8.0.0</option>
-                            <option>8.0.1</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
                         <label for="version-select">Replacers:</label>
                         <select class="form-control selectpicker" name="replacer-select" multiple>
                             <option value="enums">Enums</option>
@@ -303,6 +291,47 @@
                             <option value="grid">Grid Changes</option>
                             <option value="mapping">Data Mapping</option>
                         </select>
+                    </div>
+
+                    <div class="part-settings" id="modules-settings">
+                        <div class="form-group">
+                            <label>Bundle or modules?</label>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label class="radio-inline"><input type="radio" name="is-bundle"
+                                                                       value="false">Bundle</label>
+                                    <label class="radio-inline"><input type="radio" name="is-bundle" value="true"
+                                                                       checked>Modules</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>CDN?</label>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label class="radio-inline"><input type="radio" name="is-cdn" value="true"
+                                                                       checked>Yes</label>
+                                    <label class="radio-inline"><input type="radio" name="is-cdn"
+                                                                       value="false">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Path</label>
+                            <input type="text" name="cdn-path" class="form-control" value="" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="version-select">Version:</label>
+                            <select class="form-control selectpicker" name="version" id="version-select">
+                                <option>8.0.0</option>
+                                <option>8.0.1</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
