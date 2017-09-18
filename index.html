@@ -248,17 +248,13 @@
 <body>
 
 <div id="alertConflictEnums" class="alert alert-warning" style="display: none;">
-    <strong>Warning!</strong> Conflict Enums. See console.
-</div>
-
-<div id="alertEnumsNotFound" class="alert alert-warning" style="display: none;">
-    <strong>Warning!</strong> Code to replace not found or something went wrong.
+    <strong>Warning!</strong> See warning <a href="">section</a>.
 </div>
 
 <div class="container">
     <h1>AnyChart 7.x to 8.x Migration Tool</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequatur dolore dolorum harum tempora. Commodi
-        consectetur dolor dolorem labore minima non quasi qui quidem temporibus?</p>
+    <p> AnyChart migration tool is a utility script that helps to migrate JavaScript code of AnyChart 7.14.x to AnyChart
+        8.x.</p>
     <form class="migrate-form" action="/migrate" method="POST" id="migrate-form">
         <div class="row">
             <div class="col-sm-6">
@@ -278,12 +274,12 @@
         </div>
         <div class="settings-container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <h3 class="dark-grey">Settings</h3>
 
                     <div class="form-group">
                         <label for="version-select">Replacers:</label>
-                        <select class="form-control selectpicker" name="replacer-select" multiple>
+                        <select class="form-control selectpicker" title="Apply all API changes" name="replacer-select" multiple>
                             <option value="enums">Enums</option>
                             <option value="modules">Modules</option>
                             <option value="state">Interactivity State</option>
@@ -295,20 +291,20 @@
 
                     <div class="part-settings" id="modules-settings">
                         <div class="form-group">
-                            <label>Bundle or modules?</label>
+                            <label>Use Bundle or Modules</label>
 
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <label class="radio-inline"><input type="radio" name="is-bundle"
-                                                                       value="false">Bundle</label>
                                     <label class="radio-inline"><input type="radio" name="is-bundle" value="true"
                                                                        checked>Modules</label>
+                                    <label class="radio-inline"><input type="radio" name="is-bundle"
+                                                                       value="false">Bundle</label>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label>CDN?</label>
+                            <label>Use CDN or Local path</label>
 
                             <div class="row">
                                 <div class="col-sm-6">
@@ -320,32 +316,38 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label>Path</label>
-                            <input type="text" name="cdn-path" class="form-control" value="" disabled>
+                        <div class="row">
+                            <div class="form-group col-xs-6">
+                                <label>Path</label>
+                                <input type="text" name="cdn-path" class="form-control" value="" disabled>
+                            </div>
+
+                            <div class="form-group col-xs-6">
+                                <label for="version-select">Version:</label>
+                                <select class="form-control selectpicker" name="version" id="version-select">
+                                    <option>8.0.0</option>
+                                    <option>8.0.1</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="version-select">Version:</label>
-                            <select class="form-control selectpicker" name="version" id="version-select">
-                                <option>8.0.0</option>
-                                <option>8.0.1</option>
-                            </select>
-                        </div>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <h3 class="dark-grey">Description</h3>
-                    <p>
-                        Bundle or modules - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolor
-                        itaque
-                        libero sunt tempore tenetur!
+                    <br>
+                    <p><b>Replacers</b> - В данном поле Вы можете выбрать по каким пунктам(замена enums, переход на модульность и т.д)
+                        будет происходить миграция кода.
+                        По умолчанию миграция будет происходить по всем пунктам.
                     </p>
                     <p>
-                        Path - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolor dolore illum,
-                        laborum pariatur quos? Adipisci et ipsa iste laboriosam laborum magni nostrum reiciendis
-                        repellendus.
+                        <b>Use Bundle or Modules</b> - В данном поле Вы можете ...
+                    </p>
+                    <p>
+                        Path - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolor
+                        itaque
+                        libero sunt tempore tenetur!
                     </p>
                     <p>
                         Version - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam autem
