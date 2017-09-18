@@ -7,8 +7,8 @@ String.prototype.replaceAt = function (index, replacement) {
     return this.substr(0, index) + replacement + this.substr(index + replacement.length);
 };
 
-exports.init = function (code) {
-    var inputCode = code;
+exports.init = function (res, wrapMark) {
+    var inputCode = res.code;
     var outputCode;
     var i;
 
@@ -31,23 +31,26 @@ exports.init = function (code) {
         }
     }
 
+    // sort by literal
+    // long literal must be first replaced
+    normalizedEnums.sort(function (a, b) {
+        return b.literal.length - a.literal.length
+    });
+
     // replace by literal
     for (i = 0; i < normalizedEnums.length; i++) {
         var replaceByLiteral = new RegExp(normalizedEnums[i].literal, 'g');
 
         if (~inputCode.indexOf(normalizedEnums[i].literal)) {
-            if (!inputCode[inputCode.indexOf(normalizedEnums[i].literal) + normalizedEnums[i].literal.length] ||
-                (inputCode[inputCode.indexOf(normalizedEnums[i].literal) + normalizedEnums[i].literal.length] && inputCode[inputCode.indexOf(normalizedEnums[i].literal) + normalizedEnums[i].literal.length].match(/\s|\//))) {
-                key = [];
+            key = [];
 
-                for (k = 0; k < normalizedEnums[i].literal.length; k++) {
-                    key.push(uuid.v4());
-                }
-
-                keys[key] = normalizedEnums[i].new;
-
-                inputCode = outputCode = inputCode.replace(replaceByLiteral, '"' + key + '"');
+            for (k = 0; k < normalizedEnums[i].literal.length; k++) {
+                key.push(uuid.v4());
             }
+
+            keys[key] = normalizedEnums[i].new;
+
+            inputCode = outputCode = inputCode.replace(replaceByLiteral, '"' + key + '"');
         }
     }
 
@@ -68,7 +71,7 @@ exports.init = function (code) {
 
                 // check, if key
                 if (checkKey.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i) === null && oldValue.match(/'|"/)) {
-                    if (oldValue[0] === ':') {
+                    if (checkKey[0] === ':') {
                         for (letterIndex = 0; letterIndex < oldValue.length; letterIndex++) {
                             if (!oldValue[letterIndex].match(/[A-z]|[0-9]/)) {
                                 countExcessSign++;
@@ -222,7 +225,7 @@ exports.init = function (code) {
     for (key in keys) {
         if (keys.hasOwnProperty(key)) {
             var replaceByKey = new RegExp(key, 'g');
-            outputCode = outputCode.replace(replaceByKey, keys[key]);
+            outputCode = outputCode.replace(replaceByKey, wrapMark(keys[key]));
         }
     }
 
@@ -235,8 +238,8 @@ exports.init = function (code) {
         }
     }
 
-    return {
-        code: outputCode ? outputCode : code,
-        conflict: log.conflict
-    };
+    res.code = outputCode;
+    res['enums-warning'] = log.conflict;
+
+    return res;
 };

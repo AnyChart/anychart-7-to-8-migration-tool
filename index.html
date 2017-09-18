@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <title>AnyChart 7.x to 8.x Migration Tool</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/keep-markup/prism-keep-markup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-coy.min.css"/>
 
     <style>
-        #output-code pre {
+        .code {
             margin-top: 0;
             height: 500px;
         }
@@ -37,6 +43,58 @@
             top: 10px;
             z-index: 1000;
         }
+
+        .migrate-form {
+            margin-top: 15px;
+        }
+
+        .settings-container {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            padding-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .settings-container h3 {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .settings-container [class*=col-] .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .part-settings {
+            -webkit-transition: all 0.25s ease-out;
+            -moz-transition: all 0.25s ease-out;
+            -o-transition: all 0.25s ease-out;
+            transition: all 0.25s ease-out;
+        }
+
+        .part-settings.disabled {
+            opacity: 0.65;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        :not(pre) > code[class*=language-],
+        pre[class*=language-] {
+            margin-top: 0;
+        }
+
+        code[class*="language-"] mark,
+        pre[class*="language-"] mark {
+            display: inline-block;
+            color: inherit;
+            background: none;
+            box-shadow: 0 0 2px #fff;
+            padding: 1px;
+            background: rgba(255, 255, 0, 0.75);
+        }
+
     </style>
 
     <script>
@@ -73,23 +131,90 @@
                 });
             });
 
-            $('#go').on('click', send);
+            var $form = $('#migrate-form');
 
-            function send() {
+            $form.find('input[name="is-cdn"]').on('change', function () {
+                var status = $form.find('input[name="cdn-path"]').prop('disabled');
+                $form.find('input[name="cdn-path"]').prop('disabled', !status);
+                $form.find('select[name="version"]').prop('disabled', status);
+            });
+
+            $form.find('select[name="replacer-select"]').on('change', function () {
+                var $modulesSettings = $('#modules-settings');
+                if (~$(this).val().indexOf('modules') || $(this).val().length === 0) {
+                    $modulesSettings.removeClass('disabled');
+                    $modulesSettings.find('input').removeAttr('disabled');
+                    $modulesSettings.find('select').removeAttr('disabled');
+
+                    checkCdnPathProp();
+                } else {
+                    $modulesSettings.addClass('disabled');
+                    $modulesSettings.find('input').attr('disabled', 'disabled');
+                    $modulesSettings.find('select').attr('disabled', 'disabled');
+
+                    checkCdnPathProp();
+                }
+            });
+
+            function checkCdnPathProp() {
+                if ($form.find('input[name="is-cdn"]:checked').val() === 'true') {
+                    $form.find('input[name="cdn-path"]').attr('disabled', 'disabled');
+                }
+            }
+
+            $form.on('submit', function (e) {
+                e.preventDefault();
+
+                var $output = $('#output-code');
+                var code = $('#input-code').val();
+
+                if (!code) {
+                    $output.find('code').text('');
+                    return
+                }
+
+                /*get parametrs*/
+                var isBundle = $(this).find('input[name="is-bundle"]:checked').val() === 'true';
+                var isCdn = $(this).find('input[name="is-cdn"]:checked').val() === 'true';
+                var path = isCdn === true ? false : $(this).find('input[name="cdn-path"]').val();
+                var version = $(this).find('select[name="version"]').val();
+                var $replacerSelect = $(this).find('select[name="replacer-select"]');
+                /**/
+
+                var data = {
+                    bundle: isBundle,
+                    code: code,
+                    version: version
+                };
+
+                if (path) {
+                    data.path = path;
+                }
+
+                if ($replacerSelect.val().length && $replacerSelect.val().length !== $replacerSelect.find('option').length) {
+                    data.replacer = JSON.stringify($replacerSelect.val());
+                }
+
                 $.ajax({
                     type: 'POST',
                     url: '/migrate',
-                    data: {
-                        code: $('#input-code').val()
-                    },
-                    success: function (data) {
-                        var $output = $('#output-code');
+                    data: data,
+                    success: function (res) {
+                        var code = res.code;
+                        var enumsWarning = res['enums-warning'];
 
-                        if (data.code) {
-                            $output.find('code').text(data.code);
+                        if (code) {
+                            var regExp = new RegExp('&lt;mark>', 'g');
+                            var _regExp = new RegExp('&lt;/mark>', 'g');
+                            var highlightClass = ~code.indexOf('<script>') ? 'language-markup' : 'language-javascript';
 
-                            var highlightClass = ~data.code.indexOf('<script>') ? 'language-markup': 'language-javascript';
                             $output.find('code').attr('class', highlightClass);
+
+                            code = code.replace(/</g, '&lt;')
+                                    .replace(regExp, '<mark>')
+                                    .replace(_regExp, '</mark>');
+
+                            $output.find('code').html(code);
 
                             // init prism js for source code view
                             Prism.highlightElement($output.find('code')[0]);
@@ -97,28 +222,17 @@
                             $output.css('opacity', 1);
                         }
 
-                        if (data.conflict) {
-                            if (Object.keys(data.conflict).length) {
-                                $('#alertConflictEnums').fadeIn('fast', function () {
-                                    setTimeout(function () {
-                                        $('#alertConflictEnums').fadeOut('slow');
-                                    }, 5000)
-                                });
-
-                                for (var i = 0; i < data.conflict.length; i++) {
-                                    console.log('Conflict Enum.\n' + 'Method: "' + data.conflict[i].method +
-                                            '", ' + 'value: ' + JSON.stringify(data.conflict[i].value));
-                                }
-                            }
-                        }
-
-                        if (!data.code) {
-                            $('#alertEnumsNotFound').fadeIn('fast', function () {
-                                $output.find('code').text('');
+                        if (enumsWarning && Object.keys(enumsWarning).length) {
+                            $('#alertConflictEnums').fadeIn('fast', function () {
                                 setTimeout(function () {
-                                    $('#alertEnumsNotFound').fadeOut('slow');
+                                    $('#alertConflictEnums').fadeOut('slow');
                                 }, 5000)
                             });
+
+                            for (var i = 0; i < enumsWarning.length; i++) {
+                                console.log('Conflict Enum.\n' + 'Method: "' + enumsWarning[i].method +
+                                        '", ' + 'value: ' + JSON.stringify(enumsWarning[i].value));
+                            }
                         }
 
                         // button position
@@ -127,7 +241,7 @@
                         });
                     }
                 });
-            }
+            });
         });
     </script>
 </head>
@@ -143,25 +257,111 @@
 
 <div class="container">
     <h1>AnyChart 7.x to 8.x Migration Tool</h1>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="input-code">AnyChart 7 code:</label>
-                <textarea class="form-control" id="input-code"></textarea>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequatur dolore dolorum harum tempora. Commodi
+        consectetur dolor dolorem labore minima non quasi qui quidem temporibus?</p>
+    <form class="migrate-form" action="/migrate" method="POST" id="migrate-form">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <h3 class="dark-grey">AnyChart 7 Code:</h3>
+                    <textarea class="form-control" id="input-code"></textarea>
+                </div>
             </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="input-code">AnyChart 8 code:</label>
-                <div id="output-code">
-                    <pre class="copytoclipboard"><code></code></pre>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <h3 class="dark-grey">AnyChart 8 Code:</h3>
+                    <div id="output-code">
+                        <pre class="copytoclipboard code"><code class="language-javascript"></code></pre>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="text-center hidden-xs">
-        <button id="go" type="button" class="btn btn-primary">Go</button>
-    </div>
+        <div class="settings-container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="dark-grey">Settings</h3>
+
+                    <div class="form-group">
+                        <label for="version-select">Replacers:</label>
+                        <select class="form-control selectpicker" name="replacer-select" multiple>
+                            <option value="enums">Enums</option>
+                            <option value="modules">Modules</option>
+                            <option value="state">Interactivity State</option>
+                            <option value="api">API Changes</option>
+                            <option value="grid">Grid Changes</option>
+                            <option value="mapping">Data Mapping</option>
+                        </select>
+                    </div>
+
+                    <div class="part-settings" id="modules-settings">
+                        <div class="form-group">
+                            <label>Bundle or modules?</label>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label class="radio-inline"><input type="radio" name="is-bundle"
+                                                                       value="false">Bundle</label>
+                                    <label class="radio-inline"><input type="radio" name="is-bundle" value="true"
+                                                                       checked>Modules</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>CDN?</label>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label class="radio-inline"><input type="radio" name="is-cdn" value="true"
+                                                                       checked>Yes</label>
+                                    <label class="radio-inline"><input type="radio" name="is-cdn"
+                                                                       value="false">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Path</label>
+                            <input type="text" name="cdn-path" class="form-control" value="" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="version-select">Version:</label>
+                            <select class="form-control selectpicker" name="version" id="version-select">
+                                <option>8.0.0</option>
+                                <option>8.0.1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h3 class="dark-grey">Description</h3>
+                    <p>
+                        Bundle or modules - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolor
+                        itaque
+                        libero sunt tempore tenetur!
+                    </p>
+                    <p>
+                        Path - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolor dolore illum,
+                        laborum pariatur quos? Adipisci et ipsa iste laboriosam laborum magni nostrum reiciendis
+                        repellendus.
+                    </p>
+                    <p>
+                        Version - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam autem
+                        excepturi
+                        nisi porro quis quisquam ratione rem sed sequi.
+                    </p>
+                    <p>
+                        lorem - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, debitis dolores eum
+                        eveniet qui voluptate?
+                    </p>
+
+                    <button type="submit" class="btn btn-primary">Migrate!</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 </body>
 </html>

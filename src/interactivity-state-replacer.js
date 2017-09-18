@@ -1,6 +1,8 @@
 var interactivityState = require('./interactivity-state').normalized;
 
-exports.init = function (code) {
+exports.init = function (res, wrapMark) {
+    var code = res.code;
+
     var statePrefix = [
         {
             old: 'hover',
@@ -12,29 +14,13 @@ exports.init = function (code) {
         }
     ];
 
-    var imageSettings = [
-        {
-            old: '\\.fill\\(',
-            new: '.normal().fill('
-        },
-        {
-            old: '\\.stroke\\(',
-            new: '.normal().stroke('
-        }
-    ];
-
     var regExp;
     var i, j;
+    var log = [];
 
     // replace selected state in data
     regExp = new RegExp('selected: true', 'g');
-    code = code.replace(regExp, 'state: \'selected\'');
-
-    // replace fill/stroke methods with prefix(.normal())
-    for (j = 0; j < imageSettings.length; j++) {
-        regExp = new RegExp(imageSettings[j].old, 'g');
-        code = code.replace(regExp, imageSettings[j].new);
-    }
+    code = code.replace(regExp,  wrapMark('state: \'selected\''));
 
     // replace with method
     for (i = 0; i < interactivityState.length; i++) {
@@ -42,11 +28,19 @@ exports.init = function (code) {
             var state = toCamelCase('\\.' + statePrefix[j].old, interactivityState[i]);
             regExp = new RegExp(state, 'g');
 
-            code = code.replace(regExp, statePrefix[j].new + interactivityState[i]);
+            // add method to log
+            if (code.match(regExp)) {
+                log.push(state);
+            }
+
+            code = code.replace(regExp, wrapMark(statePrefix[j].new + interactivityState[i]));
         }
     }
 
-    return code
+    res.code = code;
+    res['interactivity-state-warning'] = log;
+
+    return res;
 };
 
 function toCamelCase(prefix, state) {

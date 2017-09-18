@@ -2,17 +2,20 @@
 
 var program = require('commander');
 var beautify = require('js-beautify').js_beautify;
-var fs = require('fs'); 
+var fs = require('fs');
 var path = require('path');
 var argv = require('minimist')(process.argv.slice(2));
 var migration = require('./src/migration');
 
 program
     .arguments('<path>')
-    .description('Argument <path> is required.\n  Specify the path to the files that you want to change')
-    .option('-r, --recursive [value]', 'recursive or not', false)
+    .description('Argument <path> or <file> is required.\n  Specify the path to the files that you want to change')
+    .option('-r, --recursive [value]', 'recursive or not')
     .option('-e, --extensions [items]', 'list of allowed extension', ['html'])
-    .option('-p, --path [value]', 'local path to js modules or CDN path', false)
+    .option('-l, --path [value]', 'local path to js modules or CDN path')
+    .option('-v, --version [value]', 'AnyChart version')
+    .option('-b, --bundle [value]', 'anychart-bundle or anychart-base + modules')
+    .option('-t, --replacer [value]', '')
     .parse(process.argv);
 
 if (!process.argv.slice(2).length) {
@@ -41,19 +44,15 @@ function init() {
 
             data = migration.migrate(data);
 
-            if (data.code) {
-                fs.writeFileSync(files[i], data.code, 'utf8');
-            } else {
-                fs.writeFileSync(files[i], data, 'utf8');
-            }
+            fs.writeFileSync(files[i], data.code, 'utf8');
 
             log['affected-files'].push(files[i]);
 
-            if (data.conflict) {
-                for (var j = 0; j < data.conflict.length; j++) {
+            if (data['enums-warning']) {
+                for (var j = 0; j < data['enums-warning'].length; j++) {
                     log.conflicts = log.conflicts.concat({
-                        method: data.conflict[j].method,
-                        value: data.conflict[j].value,
+                        method: data['enums-warning'][j].method,
+                        value: data['enums-warning'][j].value,
                         path: files[i]
                     });
                 }
@@ -68,12 +67,18 @@ function init() {
     createLog(log);
 }
 
-function getFiles(dir, isRecursive, files_) {
+function getFiles(path, isRecursive, files_) {
     files_ = files_ || [];
-    var files = fs.readdirSync(dir);
+
+    if (!fs.statSync(path).isDirectory()) {
+        files_.push(path);
+        return files_;
+    }
+
+    var files = fs.readdirSync(path);
 
     for (var i in files) {
-        var name = dir + '/' + files[i];
+        var name = path + '/' + files[i];
 
         if (fs.statSync(name).isDirectory() && isRecursive) {
             getFiles(name, isRecursive, files_);
@@ -81,6 +86,7 @@ function getFiles(dir, isRecursive, files_) {
             files_.push(name);
         }
     }
+
     return files_;
 }
 

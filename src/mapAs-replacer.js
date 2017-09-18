@@ -1,9 +1,11 @@
-exports.init = function (code) {
+exports.init = function (res, wrapMark) {
+    var code = res.code;
+
     var pos;
     var oldValue;
     var newValue;
 
-    code = code.replace(/\.mapAs\(\s*(undefined|null)\,\s*/g, '.mapAs(');
+    code = code.replace(/\.mapAs\(\s*(undefined|null)\,\s*/g, wrapMark('.mapAs('));
 
     while (~(pos = code.indexOf('.mapAs(', pos + 1))) {
         oldValue = code.substring(code.indexOf(')', pos), pos + '.mapAs('.length);
@@ -13,18 +15,22 @@ exports.init = function (code) {
 
             if (typeof newValue === 'object') {
                 for (key in newValue) {
-                    if (Array.isArray(newValue[key]) && newValue[key].length <= 1) {
+                    if (newValue.hasOwnProperty(key) && Array.isArray(newValue[key]) && newValue[key].length <= 1) {
                         newValue[key] = newValue[key][0];
                     }
                 }
             }
 
-            code = code.replace(oldValue, JSON.stringify(newValue).replace(/\"\:/g, '": ').replace(/\,\"/g, ', "').replace(/\"/g, "'"));
+            code = code.replace(oldValue, wrapMark(JSON.stringify(newValue).replace(/\"\:/g, '": ').replace(/\,\"/g, ', "').replace(/\"/g, "'")));
 
         } catch (err) {
-            return code
+            res.code = code;
+
+            return res;
         }
     }
 
-    return code
+    res.code = code;
+
+    return res;
 };
