@@ -6,16 +6,16 @@ var fs = require('fs');
 var path = require('path');
 var argv = require('minimist')(process.argv.slice(2));
 var migration = require('./src/migration');
-var optionsMap = require('./src/options-map').options;
 
 program
     .arguments('<path>')
     .description('Argument <path> or <file> is required.\n  Specify the path to the files that you want to change')
-    .option(optionsMap.recursive + ', --recursive [value]', 'recursive or not', false)
-    .option(optionsMap.extensions + ', --extensions [items]', 'list of allowed extension', ['html'])
-    .option(optionsMap.path + ', --path [value]', 'local path to js modules or CDN path', false)
-    .option(optionsMap.version + ', --version [value]', 'AnyChart version', false)
-    .option(optionsMap.bundle + ', --bundle [value]', 'anychart-bundle or anychart-base + modules', false)
+    .option('-r, --recursive [value]', 'recursive or not')
+    .option('-e, --extensions [items]', 'list of allowed extension', ['html'])
+    .option('-l, --path [value]', 'local path to js modules or CDN path')
+    .option('-v, --version [value]', 'AnyChart version')
+    .option('-b, --bundle [value]', 'anychart-bundle or anychart-base + modules')
+    .option('-t, --replacer [value]', '')
     .parse(process.argv);
 
 if (!process.argv.slice(2).length) {

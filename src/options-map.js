@@ -4,5 +4,6 @@ exports.options = {
     'version': '-v',
     'recursive': '-r',
     'extensions': '-e',
-    'port': '-p'
+    'port': '-p',
+    'replacer': '-t'
 };

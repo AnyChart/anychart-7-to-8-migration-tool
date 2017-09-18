@@ -2,97 +2,93 @@
 <head>
     <meta name="x-cat-tags" content="anyChart"/>
     <meta charset="UTF-8"/>
-    <meta name="tags" content="['heatMap']"/>
+    <meta name="tags" content="['bar']"/>
     <meta name="index" content="1000"/>
     <meta name="is-new" content="false"/>
-    <script src="https://cdn.anychart.com/samples-data/heat-map-charts/periodic-table/data.js" data-export="true"></script>
-    <script src="../anychart-bundle.min.js"></script>
+
+    <short_description>
+        Bar chart consists of rectangular bars that represent the changes over a period of time or for comparing data
+        values of some objects. This simple bar chart displays the revenue a company gets selling its products.
+    </short_description>
+
+    <description>
+        <p>
+            <a href="https://docs.anychart.com/latest/Basic_Charts_Types/Bar_Chart" target="_blank">Bar Charts</a> are
+            good for showing the changes over a period of time or for comparing data values of some objects. Its
+            coordinate system is a bit different from standart cartesian system we are used to: the X axis that
+            represent categories is vertical and the Y axis that is responsible for values is horizontal.
+        </p>
+
+        <p>
+            This Bar Chart shows the revenue in dollars of some company, only 10 most popular products are shown. The
+            products’ names are used as <a href="https://docs.anychart.com/latest/Axes_and_Grids/Axes_Labels_Formatting"
+                                           target="_blank">labels of the X axis</a> and of the bars. In the bottom of
+            the chart you can see the Y axis representing the revenue made by selling this or that product.
+        </p>
+
+    </description>
+
+    <script src="../../../anychart-base.min.js"></script>
     <script x-export="chart">
         anychart.onDocumentReady(function () {
-            // The data used in this sample can be obtained from the CDN
-            // https://cdn.anychart.com/samples-data/heat-map-charts/periodic-table/data.js
-            // Sets data for Periodic Table
-            var dataSet = anychart.data.set(getData());
-            var heatMapData = dataSet.mapAs(undefined, {x: 'column', y: 'row', heat: 'ElementCategory'});
+            // create bar chart
+            chart = anychart.bar();
 
-            // Creates Heat Map
-            chart = anychart.heatMap(heatMapData);
+            chart.animation(true);
 
-            // Sets selection mode for single selection.
-            chart.interactivity().selectionMode("none");
+            chart.padding([10, 40, 5, 20]);
 
-            // Sets colorScale
-            var colorScale = anychart.scales.ordinalColor();
-            // Sets colors for all points
-            colorScale.ranges([
-                {equal: 'Alkali metals', color: '#ef6c00 0.8'},
-                {equal: 'Alkaline earth metals', color: '#ffa000 0.8'},
-                {equal: 'Transition elements', color: '#ffd54f 0.8'},
-                {equal: 'Other metals', color: '#00bfa5 0.8'},
-                {equal: 'Metalloids', color: '#00838f 0.8'},
-                {equal: 'Other nonmetals', color: '#64b5f6 0.8'},
-                {equal: 'Halogens', color: '#1976d2 0.8'},
-                {equal: 'Noble gases', color: '#01579b 0.8'},
-                {equal: 'Unknown', color: '#96a6a6 0.8'}
+            chart.title('Top 10 Cosmetic Products by Revenue');
+
+            // create area series with passed data
+            var series = chart.bar([
+                ['Eyeshadows', '249980'],
+                ['Eyeliner', '213210'],
+                ['Eyebrow pencil', '170670'],
+                ['Nail polish', '143760'],
+                ['Pomade', '128000'],
+                ['Lip gloss', '110430'],
+                ['Mascara', '102610'],
+                ['Foundation', '94190'],
+                ['Rouge', '80540'],
+                ['Powder', '53540']
             ]);
-            chart.colorScale(colorScale);
 
-            // Sets chart settings and hover chart settings
-            chart.stroke('#fff')
-                    .hoverStroke('6 #fff')
-                    .hoverFill('#545f69')
-                    .hoverLabels({'fontColor': '#fff'});
+            var a = anychart.format.dateTime();
 
-            // Sets chart title
-            chart.padding([10, 10, 10, 10]);
-            chart.title()
-                    .enabled(true)
-                    .text('Periodic Table of Elements')
-                    .padding([0, 0, 10, 2])
-                    .align('left');
+            var series = map.bubble(anychart.data.set(general_data).mapAs({'size': 'value'}))
+                    .fill('#00b8d4')
+                    .stroke('3 #fafafa');
 
-            // Sets tooltip formatter and tooltip title formatter
-            chart.tooltip()
-                    .title({'useHtml': true})
-                    .useHtml(true)
-                    .titleFormat(function () {
-                        return '<span style="color: #CECECE">' +
-                                this.getData('Symbol') + ': </span>' +
-                                '<span style="font-size: 16px">' + this.getData('name') + '</span>';
-                    })
-                    .format(function () {
-                        return '<span style="color: #CECECE">Category: </span>' +
-                                this.getData('ElementCategory') + '<br/>' +
-                                '<span style="color: #CECECE">Atomic number: </span>' +
-                                this.getData('Number') + '<br/>' +
-                                '<span style="color: #CECECE">Group: </span>' + this.x + '<br/>' +
-                                '<span style="color: #CECECE">Period: </span>' + this.y;
-                    });
+            a.fill().hovered().fill('red');
 
-            // Sets labels for chart
-            chart.labels()
-                    .enabled(true)
-                    .fontSize(16)
-                    .format('{%Symbol}');
-
-            // Sets legend
-            chart.legend()
-                    .align('top')
+            // set tooltip settings
+            series.tooltip()
                     .position('right')
-                    .itemsLayout('v')
-                    .padding([2, 10, 0, 20])
-                    .enabled(true)
-                    .tooltip(false);
+                    .anchor('left-center')
+                    .offsetX(5)
+                    .offsetY(0)
+                    .titleFormat('{%X}')
+                    .format('${%Value}');
 
-            // Turns off axes
-            chart.yAxis(false);
-            chart.xAxis(false);
+            // set yAxis labels formatter
+            chart.yAxis().labels().format('{%Value}{groupsSeparator: }');
 
-            // Draws chart
-            chart.container('container').draw();
+            // set titles for axises
+            chart.xAxis().title('Products by Revenue');
+            chart.yAxis().title('Revenue in Dollars');
+            chart.interactivity().hoverMode('by-x');
+            chart.tooltip().positionMode('point');
+            // set scale minimum
+            chart.yScale().minimum(0);
+
+            // set container id for the chart
+            chart.container('container');
+            // initiate chart drawing
+            chart.draw();
         });
     </script>
-    <link rel="stylesheet" href="https://cdn.anychart.com/css/latest/anychart-ui.min.css" />
+    <link rel="stylesheet" href="../../../anychart-ui.min.css">
 </head>
 <body>
 <div id="container" style="width: 100%; height: 100%"></div>

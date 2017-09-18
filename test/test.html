@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <head>
-    <script src="../../anychart-base.min.js"></script>
-    <link rel="stylesheet" href="../../anychart-ui.min.css">
+    <script src="https://cdn.anychart.com/js/7.14.3/anychart-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.anychart.com/css/7.14.3/anychart-ui.min.css" />
     <style>
         html, body, #container {
             width: 100%;
@@ -52,11 +52,19 @@
         // set tooltip settings
         series.tooltip()
                 .position('right')
-                .anchor('left-center')
+                .anchor('left')
                 .offsetX(5)
                 .offsetY(0)
                 .titleFormat('{%X}')
                 .format('${%Value}');
+
+        var plot = chart.plot();
+        plot.grid(0).enabled(true);
+        plot.grid(1).enabled(true)
+                .layout('vertical');
+        plot.minorGrid(0).enabled(true);
+        plot.minorGrid(1).enabled(true)
+                .layout('vertical');
 
         // set yAxis labels formatter
         chart.yAxis().labels().format('{%Value}{groupsSeparator: }');
@@ -64,7 +72,7 @@
         // set titles for axises
         chart.xAxis().title('Products by Revenue');
         chart.yAxis().title('Revenue in Dollars');
-        chart.interactivity().hoverMode('by-x');
+        chart.interactivity().hoverMode('byX');
         chart.tooltip().positionMode('point');
         // set scale minimum
         chart.yScale().minimum(0);

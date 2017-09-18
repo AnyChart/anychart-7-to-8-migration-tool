@@ -3,12 +3,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-var migration = require('./src/migration');
+var migrate = require('./src/migration').migrate;
 var program = require('commander');
 var argv = require('minimist')(process.argv.slice(2));
 var optionsMap = require('./src/options-map').options;
 
-program.option(optionsMap.port + ', --port [value]', 'Server port', 3000)
+program.option('-p, --port [value]', 'Server port', 3000)
     .parse(process.argv);
 
 if (!process.argv.slice(2).length) {
@@ -31,13 +31,13 @@ function init() {
             if (optionsMap.hasOwnProperty(option)) {
                 if (req.body.hasOwnProperty(option)) {
                     addProcessArgv(option);
-                } else if (option === 'path') {
+                } else if (option === 'path' || option === 'replacer') {
                     removeProcessArgv(option);
                 }
             }
         }
 
-        var code = migration.migrate(req.body.code);
+        var code = migrate(req.body.code);
 
         // response
         res.send(code);
@@ -54,8 +54,7 @@ function init() {
             var pos = process.argv.indexOf(optionsMap[opt]);
 
             if (~pos) {
-                process.argv.splice(pos - 1, 2);
-                console.log(process.argv);
+                process.argv.splice(pos, 2);
             }
         }
     });
