@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <head>
-    <script src="https://cdn.anychart.com/js/7.14.3/anychart-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.anychart.com/css/7.14.3/anychart-ui.min.css" />
+    <script src="https://cdn.anychart.com/js/8.0.0/anychart-bundle.min.js"></script>
+    <link href="https://cdn.anychart.com/css/8.0.0/anychart-ui.min.css">
     <style>
         html, body, #container {
             width: 100%;
@@ -25,15 +25,15 @@
 
         chart.title('Top 10 Cosmetic Products by Revenue');
 
-        chart.data(dateSet.mapAs(undefined, {'description': 'city'}));
+        chart.data(dateSet.mapAs({'description': 'city'}));
 
-        chart.unionTextFormatter(function () {
+        chart.unionFormat(function () {
             return 'Opa!';
         });
 
         chartSecond.getSeries(0)
-                .hoverFill('orange')
-                .hoverStroke('#EF6C00');
+                .hovered().fill('orange')
+                .hovered().stroke('#EF6C00');
 
         // create area series with passed data
         var series = chart.bar([
@@ -52,18 +52,18 @@
         // set tooltip settings
         series.tooltip()
                 .position('right')
-                .anchor('left')
+                .anchor('left-center')
                 .offsetX(5)
                 .offsetY(0)
                 .titleFormat('{%X}')
                 .format('${%Value}');
 
         var plot = chart.plot();
-        plot.grid(0).enabled(true);
-        plot.grid(1).enabled(true)
+        plot.yGrid(0).enabled(true);
+        plot.yGrid(1).enabled(true)
                 .layout('vertical');
-        plot.minorGrid(0).enabled(true);
-        plot.minorGrid(1).enabled(true)
+        plot.xMinorGrid(0).enabled(true);
+        plot.xMinorGrid(1).enabled(true)
                 .layout('vertical');
 
         // set yAxis labels formatter
@@ -72,7 +72,7 @@
         // set titles for axises
         chart.xAxis().title('Products by Revenue');
         chart.yAxis().title('Revenue in Dollars');
-        chart.interactivity().hoverMode('byX');
+        chart.interactivity().hoverMode('by-x');
         chart.tooltip().positionMode('point');
         // set scale minimum
         chart.yScale().minimum(0);
