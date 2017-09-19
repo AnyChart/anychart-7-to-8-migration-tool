@@ -238,7 +238,7 @@ exports.init = function (res, wrapMark) {
         }
     }
 
-    res.code = outputCode;
+    res.code = outputCode ? outputCode : inputCode;
     res['enums-warning'] = log.conflict;
 
     return res;
