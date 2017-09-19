@@ -111,7 +111,15 @@ exports.init = function (res, wrapMark) {
     /*force add exports and ui modules*/
     if (argv.f) {
         for (i = 0; i < forceModules.length; i++) {
-            if (acModules.indexOf(forceModules[i]) === -1) {
+            var isAddedModule = false;
+
+            for (j = 0; j < acModules.length; j++) {
+                if (acModules[j].indexOf(forceModules[i]) !== -1) {
+                    isAddedModule = true;
+                }
+            }
+
+            if (!isAddedModule) {
                 module = !path ? '\n\t<script src="' + cdnAnyChart + '/js/_AC-VERSION_/' + forceModules[i] + '.min.js"></script>' :
                 '\n\t<script src="_LOCAL-PATH_/' + forceModules[i] + '.min.js"></script>';
 
@@ -193,3 +201,5 @@ exports.init = function (res, wrapMark) {
 
     return res;
 };
+
+exports.init({code: 'anychart.exports.filename('});
