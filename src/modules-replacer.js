@@ -51,8 +51,16 @@ exports.init = function (res, wrapMark) {
     var scriptComponent = !path ? '<script src="' + cdnAnyChart + '/js/_AC-VERSION_/_FILE_"></script>' :
         '<script src="_LOCAL-PATH_/_FILE_"></script>';
 
+    if (argv.f) {
+        scriptComponent = scriptComponent.replace('></script>', ' data-export="true"></script>');
+    }
+
     var scriptTheme =!path ? '<script src="' + cdnAnyChart + '/themes/_AC-VERSION_/_FILE_"></script>' :
         '<script src="_LOCAL-PATH_/_FILE_"></script>';
+
+    if (argv.f) {
+        scriptTheme = scriptTheme.replace('></script>', ' data-export="true"></script>');
+    }
 
     var link  = !path ? '<link href="' + cdnAnyChart + '/css/_AC-VERSION_/_FILE_">' :
         '<link rel="stylesheet" href="_LOCAL-PATH_/_FILE_">';
@@ -78,6 +86,11 @@ exports.init = function (res, wrapMark) {
                 for (var k = 0; k < modules[i].module.length; k++) {
                     module = !path ? '\n\t<script src="' + cdnAnyChart + '/js/_AC-VERSION_/' + modules[i].module[k] + '.min.js"></script>' :
                     '\n\t<script src="_LOCAL-PATH_/' + modules[i].module[k] + '.min.js"></script>';
+
+                    if (argv.f) {
+                        module = module.replace('></script>', ' data-export="true"></script>');
+                    }
+
                     acModules.push(module);
                 }
                 break;
@@ -99,6 +112,10 @@ exports.init = function (res, wrapMark) {
     if (~code.indexOf('anychart.data.tree') && !treeDataModuleWasAdded) {
         module = !path ? '\n\t<script src="' + cdnAnyChart + '/js/_AC-VERSION_/' + 'anychart-treemap' + '.min.js"></script>' :
         '\n\t<script src="_LOCAL-PATH_/' + 'anychart-treemap' + '.min.js"></script>';
+
+        if (argv.f) {
+            module = module.replace('></script>', ' data-export="true"></script>');
+        }
 
         if (~code.indexOf('anychart-resource.min.js')) {
             module = module.replace('anychart-treemap.min.js', 'anychart-gantt.min.js');
@@ -122,6 +139,10 @@ exports.init = function (res, wrapMark) {
             if (!isAddedModule) {
                 module = !path ? '\n\t<script src="' + cdnAnyChart + '/js/_AC-VERSION_/' + forceModules[i] + '.min.js"></script>' :
                 '\n\t<script src="_LOCAL-PATH_/' + forceModules[i] + '.min.js"></script>';
+
+                if (argv.f) {
+                    module = module.replace('></script>', ' data-export="true"></script>');
+                }
 
                 acModules.push(module);
             }
