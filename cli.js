@@ -16,6 +16,7 @@ program
     .option('-v, --version [value]', 'AnyChart version')
     .option('-b, --bundle [value]', 'anychart-bundle or anychart-base + modules')
     .option('-t, --replacer [value]', '')
+    .option('-f, --modules [value]', 'force add modules, anychart-exports and anychart-ui')
     .parse(process.argv);
 
 if (!process.argv.slice(2).length) {

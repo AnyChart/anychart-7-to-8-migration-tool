@@ -60,6 +60,8 @@ exports.init = function (res, wrapMark) {
     var acBase = 'anychart-base.min.js';
     var version = argv.v || '8.0.0';
     var acModules = [];
+    var forceModules = ['anychart-exports', 'anychart-ui'];
+
     var module;
     var localPath;
 
@@ -103,6 +105,19 @@ exports.init = function (res, wrapMark) {
         }
 
         acModules.push(module);
+    }
+    /**/
+
+    /*force add exports and ui modules*/
+    if (argv.f) {
+        for (i = 0; i < forceModules.length; i++) {
+            if (acModules.indexOf(forceModules[i]) === -1) {
+                module = !path ? '\n\t<script src="' + cdnAnyChart + '/js/_AC-VERSION_/' + forceModules[i] + '.min.js"></script>' :
+                '\n\t<script src="_LOCAL-PATH_/' + forceModules[i] + '.min.js"></script>';
+
+                acModules.push(module);
+            }
+        }
     }
     /**/
 
