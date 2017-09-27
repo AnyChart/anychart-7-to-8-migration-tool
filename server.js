@@ -29,7 +29,7 @@ function init() {
     app.post('/migrate', function (req, res) {
         for (option in optionsMap) {
             if (optionsMap.hasOwnProperty(option)) {
-                if (req.body.hasOwnProperty(option)) {
+                if (req.body[option]) {
                     addProcessArgv(option);
                 } else if (option === 'path' || option === 'replacer' || option === 'bundle') {
                     removeProcessArgv(option);
