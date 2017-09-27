@@ -13,7 +13,7 @@ program
     .option('-r, --recursive [value]', 'recursive or not')
     .option('-e, --extensions [items]', 'list of allowed extension', ['html'])
     .option('-l, --path [value]', 'local path to js modules or CDN path')
-    .option('-v, --version [value]', 'AnyChart version')
+    .option('-v, --version [value]', 'anyChart version')
     .option('-b, --bundle [value]', 'anychart-bundle or anychart-base + modules')
     .option('-t, --replacer [value]', '')
     .option('-f, --modules [value]', 'force add modules, anychart-exports and anychart-ui')
@@ -28,7 +28,9 @@ if (!process.argv.slice(2).length) {
 function init() {
     var log = {
         'affected-files': [],
-        'conflicts': []
+        'enums-warning': [],
+        'grid-warning': [],
+        'state-warning': []
     };
 
     var files = getFiles(argv._[0], argv.r);
@@ -39,6 +41,7 @@ function init() {
 
     for (var i = 0; i < files.length; i++) {
         var reg = new RegExp(extensions);
+        var j;
 
         if (reg.test(files[i])) {
             var data = fs.readFileSync(files[i], 'utf8');
@@ -47,13 +50,46 @@ function init() {
 
             fs.writeFileSync(files[i], data.code, 'utf8');
 
+            files[i] = files[i].replace(/\/\//g, '/');
+
             log['affected-files'].push(files[i]);
 
             if (data['enums-warning']) {
-                for (var j = 0; j < data['enums-warning'].length; j++) {
-                    log.conflicts = log.conflicts.concat({
+                for (j = 0; j < data['enums-warning'].length; j++) {
+                    log['enums-warning'] = log['enums-warning'].concat({
                         method: data['enums-warning'][j].method,
-                        value: data['enums-warning'][j].value,
+                        old: data['enums-warning'][j].old,
+                        new: data['enums-warning'][j].new,
+                        line: data['enums-warning'][j].line,
+                        path: files[i]
+                    });
+                }
+            }
+
+            if (data['grid-warning']) {
+                for (j = 0; j < data['grid-warning'].length; j++) {
+                    if (!data['grid-warning'][j].exceptions) {
+                        log['grid-warning'] = log['grid-warning'].concat({
+                            old: data['grid-warning'][j].old,
+                            new: data['grid-warning'][j].new,
+                            line: data['grid-warning'][j].line,
+                            path: files[i]
+                        });
+                    } else {
+                        log['grid-warning'] = log['grid-warning'].concat({
+                            exceptions: data['grid-warning'][j].exceptions,
+                            path: files[i]
+                        });
+                    }
+                }
+            }
+
+            if (data['state-warning']) {
+                for (j = 0; j < data['state-warning'].length; j++) {
+                    log['state-warning'] = log['state-warning'].concat({
+                        old: data['state-warning'][j].old,
+                        new: data['state-warning'][j].new,
+                        line: data['state-warning'][j].line,
                         path: files[i]
                     });
                 }
@@ -61,8 +97,11 @@ function init() {
         }
     }
 
-    if (!log.conflicts.length) {
-        delete log.conflicts
+    // clear log
+    for (key in log) {
+        if (!log[key].length) {
+            delete log[key]
+        }
     }
 
     createLog(log);
@@ -101,6 +140,6 @@ function createLog(log) {
 
         console.log('See log file: ' + path.resolve('./') + '\\migration.log.json');
     } else {
-        fs.unlink(path.resolve('./') + '\\migration.log.json');
+        fs.unlink(path.resolve('./') + '\/migration.log.json');
     }
 }

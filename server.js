@@ -8,11 +8,11 @@ var program = require('commander');
 var argv = require('minimist')(process.argv.slice(2));
 var optionsMap = require('./src/options-map').options;
 
-program.option('-p, --port [value]', 'Server port', 3000)
+program.option('-p, --port <number>', 'server port')
     .parse(process.argv);
 
 if (!process.argv.slice(2).length) {
-    program.outputHelp();
+    program.outputHelp()
 } else {
     init();
 }
@@ -31,7 +31,7 @@ function init() {
             if (optionsMap.hasOwnProperty(option)) {
                 if (req.body.hasOwnProperty(option)) {
                     addProcessArgv(option);
-                } else if (option === 'path' || option === 'replacer') {
+                } else if (option === 'path' || option === 'replacer' || option === 'bundle') {
                     removeProcessArgv(option);
                 }
             }

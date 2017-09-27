@@ -12,16 +12,13 @@ exports.init = function (res, wrapMark) {
     var outputCode;
     var i;
 
-    var conflictsMsg = {};
-
     var enumsWithMethods = [];
     var enumsWithOutMethods = [];
 
     var keys = {};
     var key = [];
 
-    var log = {};
-    log.conflict = [];
+    var conflictEnumMap = [];
 
     for (i = 0; i < normalizedEnums.length; i++) {
         if (normalizedEnums[i].methods) {
@@ -136,22 +133,6 @@ exports.init = function (res, wrapMark) {
 
                     // check, if conflict enum replace with conflict method else replace with method
                     if (conflictEnums.hasOwnProperty(methods) && conflictValues.indexOf(oldValue) !== -1) {
-                        if (conflictsMsg[methods]) {
-                            if ((typeof conflictsMsg[methods] === 'string' && conflictsMsg[methods] !== oldValue) ||
-                                conflictsMsg[methods].indexOf(oldValue) === -1) {
-                                if (conflictsMsg[methods].indexOf(oldValue) === -1) {
-                                    if (!Array.isArray(conflictsMsg[methods])) {
-                                        conflictsMsg[methods] = [conflictsMsg[methods]];
-                                        conflictsMsg[methods].push(oldValue);
-                                    } else {
-                                        conflictsMsg[methods].push(oldValue);
-                                    }
-                                }
-                            }
-                        } else {
-                            conflictsMsg[methods] = oldValue;
-                        }
-
                         for (n = 0; n < conflictEnums[methods].length; n++) {
                             if (conflictEnums[methods][n].value.indexOf(oldValue) !== -1) {
                                 var conflictReg = conflictEnums[methods][n].regexp;
@@ -176,6 +157,20 @@ exports.init = function (res, wrapMark) {
 
                                     inputCode = outputCode = inputCode.replaceAt(posToReplace + countExcessSign, key);
                                     keys[key] = newValue;
+
+                                    var lines = outputCode.split('\n');
+                                    var line = 0;
+                                    lines.map(function (item, index) {
+                                        if (~item.indexOf(key)) {
+                                            line = ++index;
+                                        }
+                                    });
+                                    conflictEnumMap.push({
+                                        new: newValue,
+                                        old: oldValue,
+                                        method: methods,
+                                        line: line
+                                    })
                                 }
                             }
                         }
@@ -225,21 +220,16 @@ exports.init = function (res, wrapMark) {
     for (key in keys) {
         if (keys.hasOwnProperty(key)) {
             var replaceByKey = new RegExp(key, 'g');
+
             outputCode = outputCode.replace(replaceByKey, wrapMark(keys[key]));
         }
     }
 
-    if (Object.keys(conflictsMsg).length) {
-        for (method in conflictsMsg) {
-            log.conflict.push({
-                method: method,
-                value: conflictsMsg[method]
-            });
-        }
-    }
-
     res.code = outputCode ? outputCode : inputCode;
-    res['enums-warning'] = log.conflict;
+
+    if (conflictEnumMap.length) {
+        res['enums-warning'] = conflictEnumMap;
+    }
 
     return res;
 };

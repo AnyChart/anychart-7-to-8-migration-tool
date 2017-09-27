@@ -73,7 +73,7 @@ exports.init = function (res, wrapMark) {
     var module;
     var localPath;
 
-    var isBundleJs = argv.b === 'false';
+    var isBundleJs = argv.b;
 
     // modules that work with tree data
     var modulesTreeData = ['anychart-gantt', 'anychart-treemap', 'anychart-pert'];
@@ -222,5 +222,3 @@ exports.init = function (res, wrapMark) {
 
     return res;
 };
-
-exports.init({code: 'anychart.exports.filename('});

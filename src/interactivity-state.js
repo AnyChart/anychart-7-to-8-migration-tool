@@ -24,6 +24,7 @@ exports.normalized = [
     'emptyFill',
     'emptyHatchFill',
     'labels',
+    'label',
     'markers',
     'headers',
     'lowerLabels',

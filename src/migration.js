@@ -13,12 +13,12 @@ exports.migrate = function (code) {
     };
 
     if (argv.t && argv.t.length) {
-        if (~argv.t.indexOf('enums')) {
-            code = enumsReplacer.init(code, wrapMark);
-        }
-
         if (~argv.t.indexOf('modules')) {
             code = modulesReplacer.init(code, wrapMark);
+        }
+        
+        if (~argv.t.indexOf('enums')) {
+            code = enumsReplacer.init(code, wrapMark);
         }
 
         if (~argv.t.indexOf('state')) {
@@ -38,8 +38,8 @@ exports.migrate = function (code) {
         }
 
     } else {
-        code = enumsReplacer.init(code, wrapMark);
         code = modulesReplacer.init(code, wrapMark);
+        code = enumsReplacer.init(code, wrapMark);
         code = mapAsReplacer.init(code, wrapMark);
         code = deprecatedApiReplacer.init(code, wrapMark);
         code = gridReplacer.init(code, wrapMark);

@@ -10865,7 +10865,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.graphics.vector.ImageFillMode.FIT_MAX",
-        "new": "fitMax",
+        "new": "fit-max",
         "old": [
             "fitMax"
         ]

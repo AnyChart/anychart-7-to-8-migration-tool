@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/keep-markup/prism-keep-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
@@ -17,6 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css"/>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autolinker/prism-autolinker.css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/line-numbers/prism-line-numbers.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-coy.min.css"/>
 
     <style>
@@ -37,8 +40,8 @@
             transition: all 0.25s ease-out;
         }
 
-        .alert {
-            position: absolute;
+        #alert-message {
+            position: fixed;
             right: 10px;
             top: 10px;
             z-index: 1000;
@@ -91,8 +94,13 @@
             color: inherit;
             background: none;
             box-shadow: 0 0 2px #fff;
-            padding: 1px;
+            padding: 0;
+            border: none;
             background: rgba(255, 255, 0, 0.75);
+        }
+
+        .log-section > div {
+            margin-bottom: 20px;
         }
 
     </style>
@@ -182,10 +190,13 @@
                 /**/
 
                 var data = {
-                    bundle: isBundle,
                     code: code,
                     version: version
                 };
+
+                if (isBundle) {
+                    data.bundle = isBundle;
+                }
 
                 if (path) {
                     data.path = path;
@@ -202,6 +213,10 @@
                     success: function (res) {
                         var code = res.code;
                         var enumsWarning = res['enums-warning'];
+                        var gridWarning = res['grid-warning'];
+                        var stateWarning = res['state-warning'];
+
+                        var $log = $('#log');
 
                         if (code) {
                             var regExp = new RegExp('&lt;mark>', 'g');
@@ -222,16 +237,76 @@
                             $output.css('opacity', 1);
                         }
 
-                        if (enumsWarning && Object.keys(enumsWarning).length) {
-                            $('#alertConflictEnums').fadeIn('fast', function () {
+                        // clear log section
+                        $log.empty();
+
+                        var i;
+
+                        if (enumsWarning || gridWarning || stateWarning) {
+                            $('#alert-message').fadeIn('fast', function () {
                                 setTimeout(function () {
-                                    $('#alertConflictEnums').fadeOut('slow');
+                                    $('#alert-message').fadeOut('slow');
                                 }, 5000)
                             });
 
-                            for (var i = 0; i < enumsWarning.length; i++) {
-                                console.log('Conflict Enum.\n' + 'Method: "' + enumsWarning[i].method +
-                                        '", ' + 'value: ' + JSON.stringify(enumsWarning[i].value));
+                            if (enumsWarning) {
+                                $log.append('<div class="alert alert-warning enums-warning"><strong>Be Careful!</strong> Enums Warning.</div>');
+
+                                enumsWarning.sort(function (a, b) {
+                                    return a.line - b.line
+                                });
+
+                                for (i = 0; i < enumsWarning.length; i++) {
+                                    if (enumsWarning[i].method) {
+
+                                        $('.enums-warning').append('<span>' +
+                                                '<br>' + 'Method: "' + enumsWarning[i].method +
+                                                '", ' + '' + JSON.stringify(enumsWarning[i].old) + ' => ' + JSON.stringify(enumsWarning[i].new) +
+                                                ', line: ' + enumsWarning[i].line +
+                                                '</span>');
+                                    }
+                                }
+                            }
+
+                            if (gridWarning) {
+                                $log.append('<div class="alert alert-warning grid-warning"><strong>Be Careful!</strong> Grid Warning.</div>');
+
+                                if (!gridWarning.exceptions) {
+                                    $('.grid-warning').html('<strong>Be Careful!</strong> Grid Warning.');
+                                } else {
+                                    $('.grid-warning').html('<strong>Be Careful!</strong> Exceptions, method grid not be replaced.');
+                                }
+
+                                if (!gridWarning[0].exceptions) {
+                                    gridWarning.sort(function (a, b) {
+                                        return a.line - b.line
+                                    });
+
+                                    for (i = 0; i < gridWarning.length; i++) {
+                                        $('.grid-warning').append('<span>' +
+                                                '<br>' + gridWarning[i].old + ' => ' + gridWarning[i].new + ', line: ' + gridWarning[i].line +
+                                                '</span>')
+                                    }
+                                } else {
+                                    $('.grid-warning').append('<span>' +
+                                            '<br>' + 'Exceptions: "' +
+                                            gridWarning[0].exceptions +
+                                            '</span>')
+                                }
+                            }
+
+                            if (stateWarning) {
+                                $log.append('<div class="alert alert-warning state-warning"><strong>Be Careful!</strong> State Interactivity Warning.</div>');
+
+                                stateWarning.sort(function (a, b) {
+                                    return a.line - b.line
+                                });
+
+                                for (i = 0; i < stateWarning.length; i++) {
+                                    $('.state-warning').append('<span>' +
+                                            '<br>' + stateWarning[i].old + ' => ' + stateWarning[i].new + ', line: ' + stateWarning[i].line +
+                                            '</span>')
+                                }
                             }
                         }
 
@@ -247,8 +322,8 @@
 </head>
 <body>
 
-<div id="alertConflictEnums" class="alert alert-warning" style="display: none;">
-    <strong>Warning!</strong> See warning <a href="">section</a>.
+<div id="alert-message" class="alert alert-warning" style="display: none;">
+    <strong>Warning!</strong> See warning <a href="#log">section</a>.
 </div>
 
 <div class="container">
@@ -267,7 +342,7 @@
                 <div class="form-group">
                     <h3 class="dark-grey">AnyChart 8 Code:</h3>
                     <div id="output-code">
-                        <pre class="copytoclipboard code"><code class="language-javascript"></code></pre>
+                        <pre class="copytoclipboard code line-numbers"><code class="language-javascript"></code></pre>
                     </div>
                 </div>
             </div>
@@ -279,7 +354,8 @@
 
                     <div class="form-group">
                         <label for="version-select">Replacers:</label>
-                        <select class="form-control selectpicker" title="Apply all API changes" name="replacer-select" multiple>
+                        <select class="form-control selectpicker" title="Apply all API changes" name="replacer-select"
+                                multiple>
                             <option value="enums">Enums</option>
                             <option value="modules">Modules</option>
                             <option value="state">Interactivity State</option>
@@ -295,10 +371,10 @@
 
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <label class="radio-inline"><input type="radio" name="is-bundle" value="true"
+                                    <label class="radio-inline"><input type="radio" name="is-bundle" value="false"
                                                                        checked>Modules</label>
                                     <label class="radio-inline"><input type="radio" name="is-bundle"
-                                                                       value="false">Bundle</label>
+                                                                       value="true">Bundle</label>
                                 </div>
                             </div>
                         </div>
@@ -337,22 +413,20 @@
                 <div class="col-md-6">
                     <h3 class="dark-grey">Description</h3>
                     <br>
-                    <p><b>Replacers</b> - В данном поле Вы можете выбрать по каким пунктам(замена enums, переход на модульность и т.д)
+                    <p><b>Replacers</b> - В данном поле Вы можете выбрать по каким пунктам(замена enums, переход на
+                        модульность и т.д)
                         будет происходить миграция кода.
                         По умолчанию миграция будет происходить по всем пунктам.
                     </p>
                     <p>
-                        <b>Use Bundle or Modules</b> - В данном поле Вы можете ...
+                        <b>Use Bundle or Modules</b> - Это опциональное поле. Либо модули, либо bundle.
                     </p>
                     <p>
-                        Path - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolor
-                        itaque
-                        libero sunt tempore tenetur!
+                        Path - Опция работает только в том случае, если выбираем "Local path". В input можно указать
+                        путь до файлов, который подхватит migration tool.
                     </p>
                     <p>
-                        Version - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam autem
-                        excepturi
-                        nisi porro quis quisquam ratione rem sed sequi.
+                        Version - Версия bundle.
                     </p>
                     <p>
                         lorem - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, debitis dolores eum
@@ -364,6 +438,7 @@
             </div>
         </div>
     </form>
+    <div class="log-section" id="log"></div>
 </div>
 </body>
 </html>

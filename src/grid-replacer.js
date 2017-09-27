@@ -1,24 +1,33 @@
 exports.init = function (res, wrapMark) {
     var code = res.code;
+    var inputCode = code;
 
     var exceptions = ['.annotations(', '.resource(', '.resourceList('];
 
     var gridNormalize = [
         {
-            "old": ["\\.grid\\(", "\\.grid\\(0"],
-            "new": ".yGrid("
+            "old": ["\\.grid\\(1\\)", "\\.grid\\(2\\)"],
+            "new": ".xGrid()"
         },
         {
-            "old": ["\\.grid\\(1", "\\.grid\\(2"],
+            "old": ["\\.grid\\(\\)", "\\.grid\\(0\\)"],
+            "new": ".yGrid()"
+        },
+        {
+            "old": ["\\.minorGrid\\(1\\)", "\\.minorGrid\\(2\\)"],
+            "new": ".yMinorGrid()"
+        },
+        {
+            "old": ["\\.minorGrid\\(\\)", "\\.minorGrid\\(0\\)"],
+            "new": ".xMinorGrid()"
+        },
+        {
+            "old": ["\\.grid\\("],
             "new": ".xGrid("
         },
         {
-            "old": ["\\.minorGrid\\(", "\\.minorGrid\\(0"],
+            "old": ["\\.minorGrid\\("],
             "new": ".xMinorGrid("
-        },
-        {
-            "old": ["\\.minorGrid\\(1", "\\.minorGrid\\(2"],
-            "new": ".yMinorGrid("
         }
     ];
 
@@ -28,8 +37,10 @@ exports.init = function (res, wrapMark) {
     var log = [];
 
     for (i = 0; i < exceptions.length; i++) {
-        if (~code.indexOf(exceptions[i])) {
-            log.push(exceptions[i]);
+        if (~code.indexOf(exceptions[i]) && (~code.indexOf('.grid(') || ~code.indexOf('.minorGrid('))) {
+            log.push({
+                exceptions: exceptions[i]
+            });
             isExceptions = true;
             break;
         }
@@ -42,20 +53,54 @@ exports.init = function (res, wrapMark) {
                 var oldValue = gridNormalize[i].old[j];
                 var newValue = gridNormalize[i].new;
 
-                regExp = new RegExp(oldValue, 'g');
+                regExp = new RegExp(oldValue);
 
-                // add method to log
-                if (code.match(regExp)) {
-                    log.push(oldValue, newValue);
+                while (code.match(regExp)) {
+                    code = code.replace(regExp, wrapMark(newValue));
+
+                    log.push({
+                        old: oldValue.replace(/\\/g, ''),
+                        new: newValue
+                    });
                 }
-
-                code = code.replace(regExp, wrapMark(newValue));
             }
         }
     }
 
+    var inputCodeLines = inputCode.split('\n');
+    var outputCodeLines = code.split('\n');
+    var isAdded = false;
+    inputCodeLines.map(function (item, index) {
+        for (i = 0; i < log.length; i++) {
+            isAdded = false;
+
+            if (item.indexOf(log[i].old) !== -1 && outputCodeLines[index].indexOf(log[i].new) !== -1) {
+                for (var j = 0; j < log.length; j++) {
+                    if (log[j].line === index + 1) {
+                        isAdded = true;
+                        break;
+                    }
+                }
+
+                if (!log[i].hasOwnProperty('line') && !isAdded) {
+                    log[i].line = index + 1;
+                }
+            }
+        }
+    });
+
+    log = log.filter(function (item) {
+        if (item.line) {
+            return item
+        }
+    });
+
     res.code = code;
-    res['grid-warning'] = log;
+
+    if (log.length) {
+        res['grid-warning'] = log;
+    }
 
     return res;
 };
+
