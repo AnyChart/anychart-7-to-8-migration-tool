@@ -2874,12 +2874,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ChartTypes.AREA",
-        "new": "area",
-        "old": [
-            "area",
-            "Area",
-            "AREA"
-        ]
+        "new": "area"
     },
     {
         "literal": "anychart.enums.ChartTypes.VERTICAL_AREA",
@@ -2902,12 +2897,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ChartTypes.BAR",
-        "new": "bar",
-        "old": [
-            "bar",
-            "Bar",
-            "BAR"
-        ]
+        "new": "bar"
     },
     {
         "literal": "anychart.enums.ChartTypes.BAR_3D",
@@ -2920,39 +2910,19 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ChartTypes.BOX",
-        "new": "box",
-        "old": [
-            "box",
-            "Box",
-            "BOX"
-        ]
+        "new": "box"
     },
     {
         "literal": "anychart.enums.ChartTypes.BUBBLE",
-        "new": "bubble",
-        "old": [
-            "bubble",
-            "Bubble",
-            "BUBBLE"
-        ]
+        "new": "bubble"
     },
     {
         "literal": "anychart.enums.ChartTypes.BULLET",
-        "new": "bullet",
-        "old": [
-            "bullet",
-            "Bullet",
-            "BULLET"
-        ]
+        "new": "bullet"
     },
     {
         "literal": "anychart.enums.ChartTypes.CARTESIAN",
-        "new": "cartesian",
-        "old": [
-            "cartesian",
-            "Cartesian",
-            "CARTESIAN"
-        ]
+        "new": "cartesian"
     },
     {
         "literal": "anychart.enums.ChartTypes.CARTESIAN_3D",
@@ -2965,12 +2935,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ChartTypes.COLUMN",
-        "new": "column",
-        "old": [
-            "column",
-            "Column",
-            "COLUMN"
-        ]
+        "new": "column"
     },
     {
         "literal": "anychart.enums.ChartTypes.COLUMN_3D",
@@ -2983,30 +2948,15 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ChartTypes.FINANCIAL",
-        "new": "financial",
-        "old": [
-            "financial",
-            "Financial",
-            "FINANCIAL"
-        ]
+        "new": "financial"
     },
     {
         "literal": "anychart.enums.ChartTypes.FUNNEL",
-        "new": "funnel",
-        "old": [
-            "funnel",
-            "Funnel",
-            "FUNNEL"
-        ]
+        "new": "funnel"
     },
     {
         "literal": "anychart.enums.ChartTypes.LINE",
-        "new": "line",
-        "old": [
-            "line",
-            "Line",
-            "LINE"
-        ]
+        "new": "line"
     },
     {
         "literal": "anychart.enums.ChartTypes.VERTICAL_LINE",
@@ -3020,21 +2970,11 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ChartTypes.MARKER",
-        "new": "marker",
-        "old": [
-            "marker",
-            "Marker",
-            "MARKER"
-        ]
+        "new": "marker"
     },
     {
         "literal": "anychart.enums.ChartTypes.PIE",
-        "new": "pie",
-        "old": [
-            "pie",
-            "Pie",
-            "PIE"
-        ]
+        "new": "pie"
     },
     {
         "literal": "anychart.enums.ChartTypes.PIE_3D",
@@ -3047,48 +2987,23 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ChartTypes.POLAR",
-        "new": "polar",
-        "old": [
-            "polar",
-            "Polar",
-            "POLAR"
-        ]
+        "new": "polar"
     },
     {
         "literal": "anychart.enums.ChartTypes.PYRAMID",
-        "new": "pyramid",
-        "old": [
-            "pyramid",
-            "Pyramid",
-            "PYRAMID"
-        ]
+        "new": "pyramid"
     },
     {
         "literal": "anychart.enums.ChartTypes.RADAR",
-        "new": "radar",
-        "old": [
-            "radar",
-            "Radar",
-            "RADAR"
-        ]
+        "new": "radar"
     },
     {
         "literal": "anychart.enums.ChartTypes.SCATTER",
-        "new": "scatter",
-        "old": [
-            "scatter",
-            "Scatter",
-            "SCATTER"
-        ]
+        "new": "scatter"
     },
     {
         "literal": "anychart.enums.ChartTypes.SPARKLINE",
-        "new": "sparkline",
-        "old": [
-            "sparkline",
-            "Sparkline",
-            "SPARKLINE"
-        ]
+        "new": "sparkline"
     },
     {
         "literal": "anychart.enums.ChartTypes.HEAT_MAP",
@@ -3112,21 +3027,11 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ChartTypes.STOCK",
-        "new": "stock",
-        "old": [
-            "stock",
-            "Stock",
-            "STOCK"
-        ]
+        "new": "stock"
     },
     {
         "literal": "anychart.enums.ChartTypes.PERT",
-        "new": "pert",
-        "old": [
-            "pert",
-            "Pert",
-            "PERT"
-        ]
+        "new": "pert"
     },
     {
         "literal": "anychart.enums.ChartTypes.GANTT_RESOURCE",
@@ -3150,12 +3055,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ChartTypes.RESOURCE",
-        "new": "resource",
-        "old": [
-            "resource",
-            "Resource",
-            "RESOURCE"
-        ]
+        "new": "resource"
     },
     {
         "literal": "anychart.enums.ChartTypes.JUMP_LINE",
@@ -3169,57 +3069,27 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ChartTypes.STICK",
-        "new": "stick",
-        "old": [
-            "stick",
-            "Stick",
-            "STICK"
-        ]
+        "new": "stick"
     },
     {
         "literal": "anychart.enums.ChartTypes.PARETO",
-        "new": "pareto",
-        "old": [
-            "pareto",
-            "Pareto",
-            "PARETO"
-        ]
+        "new": "pareto"
     },
     {
         "literal": "anychart.enums.ChartTypes.QUADRANT",
-        "new": "quadrant",
-        "old": [
-            "quadrant",
-            "Quadrant",
-            "QUADRANT"
-        ]
+        "new": "quadrant"
     },
     {
         "literal": "anychart.enums.ChartTypes.MEKKO",
-        "new": "mekko",
-        "old": [
-            "mekko",
-            "Mekko",
-            "MEKKO"
-        ]
+        "new": "mekko"
     },
     {
         "literal": "anychart.enums.ChartTypes.MOSAIC",
-        "new": "mosaic",
-        "old": [
-            "mosaic",
-            "Mosaic",
-            "MOSAIC"
-        ]
+        "new": "mosaic"
     },
     {
         "literal": "anychart.enums.ChartTypes.BARMEKKO",
-        "new": "barmekko",
-        "old": [
-            "barmekko",
-            "Barmekko",
-            "BARMEKKO"
-        ]
+        "new": "barmekko"
     },
     {
         "literal": "anychart.enums.ChartTypes.TAG_CLOUD",
@@ -3233,30 +3103,15 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ChartTypes.VENN",
-        "new": "venn",
-        "old": [
-            "venn",
-            "Venn",
-            "VENN"
-        ]
+        "new": "venn"
     },
     {
         "literal": "anychart.enums.ChartTypes.HILO",
-        "new": "hilo",
-        "old": [
-            "hilo",
-            "Hilo",
-            "HILO"
-        ]
+        "new": "hilo"
     },
     {
         "literal": "anychart.enums.ChartTypes.WATERFALL",
-        "new": "waterfall",
-        "old": [
-            "waterfall",
-            "Waterfall",
-            "WATERFALL"
-        ]
+        "new": "waterfall"
     },
     {
         "literal": "anychart.enums.GaugeTypes.CIRCULAR",
@@ -3281,87 +3136,48 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.GaugeTypes.BULLET",
-        "new": "bullet",
-        "old": [
-            "bullet",
-            "Bullet",
-            "BULLET"
-        ]
+        "new": "bullet"
     },
     {
         "literal": "anychart.enums.GaugeTypes.THERMOMETER",
         "new": "thermometer",
         "old": [
-            "thermometerGauge",
-            "thermometer",
-            "Thermometer",
-            "THERMOMETER"
+            "thermometerGauge"
         ]
     },
     {
         "literal": "anychart.enums.GaugeTypes.TANK",
         "new": "tank",
         "old": [
-            "tankGauge",
-            "tank",
-            "Tank",
-            "TANK"
+            "tankGauge"
         ]
     },
     {
         "literal": "anychart.enums.GaugeTypes.LED",
         "new": "led",
         "old": [
-            "ledGauge",
-            "led",
-            "Led",
-            "LED"
+            "ledGauge"
         ]
     },
     {
         "literal": "anychart.enums.MapTypes.MAP",
-        "new": "map",
-        "old": [
-            "map",
-            "Map",
-            "MAP"
-        ]
+        "new": "map"
     },
     {
         "literal": "anychart.enums.MapTypes.CHOROPLETH",
-        "new": "choropleth",
-        "old": [
-            "choropleth",
-            "Choropleth",
-            "CHOROPLETH"
-        ]
+        "new": "choropleth"
     },
     {
         "literal": "anychart.enums.MapTypes.BUBBLE",
-        "new": "bubble",
-        "old": [
-            "bubble",
-            "Bubble",
-            "BUBBLE"
-        ]
+        "new": "bubble"
     },
     {
         "literal": "anychart.enums.MapTypes.MARKER",
-        "new": "marker",
-        "old": [
-            "marker",
-            "Marker",
-            "MARKER"
-        ]
+        "new": "marker"
     },
     {
         "literal": "anychart.enums.MapTypes.CONNECTOR",
-        "new": "connector",
-        "old": [
-            "connector",
-            "Connector",
-            "CONNECTOR"
-        ]
+        "new": "connector"
     },
     {
         "literal": "anychart.enums.MapTypes.SEAT_MAP",
@@ -3375,12 +3191,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.MapGeoDataTypes.SVG",
-        "new": "svg",
-        "old": [
-            "svg",
-            "Svg",
-            "SVG"
-        ]
+        "new": "svg"
     },
     {
         "literal": "anychart.enums.MapGeoDataTypes.TOPO_JSON",
@@ -3404,39 +3215,19 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.Cursor.MOVE",
-        "new": "move",
-        "old": [
-            "move",
-            "Move",
-            "MOVE"
-        ]
+        "new": "move"
     },
     {
         "literal": "anychart.enums.Cursor.TEXT",
-        "new": "text",
-        "old": [
-            "text",
-            "Text",
-            "TEXT"
-        ]
+        "new": "text"
     },
     {
         "literal": "anychart.enums.Cursor.WAIT",
-        "new": "wait",
-        "old": [
-            "wait",
-            "Wait",
-            "WAIT"
-        ]
+        "new": "wait"
     },
     {
         "literal": "anychart.enums.Cursor.HELP",
-        "new": "help",
-        "old": [
-            "help",
-            "Help",
-            "HELP"
-        ]
+        "new": "help"
     },
     {
         "literal": "anychart.enums.Cursor.NS_RESIZE",
@@ -3616,84 +3407,39 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.Align.LEFT",
-        "new": "left",
-        "old": [
-            "left",
-            "Left",
-            "LEFT"
-        ]
+        "new": "left"
     },
     {
         "literal": "anychart.enums.Align.RIGHT",
-        "new": "right",
-        "old": [
-            "right",
-            "Right",
-            "RIGHT"
-        ]
+        "new": "right"
     },
     {
         "literal": "anychart.enums.Align.TOP",
-        "new": "top",
-        "old": [
-            "top",
-            "Top",
-            "TOP"
-        ]
+        "new": "top"
     },
     {
         "literal": "anychart.enums.Align.BOTTOM",
-        "new": "bottom",
-        "old": [
-            "bottom",
-            "Bottom",
-            "BOTTOM"
-        ]
+        "new": "bottom"
     },
     {
         "literal": "anychart.enums.LegendPositionMode.INSIDE",
-        "new": "inside",
-        "old": [
-            "inside",
-            "Inside",
-            "INSIDE"
-        ]
+        "new": "inside"
     },
     {
         "literal": "anychart.enums.LegendPositionMode.OUTSIDE",
-        "new": "outside",
-        "old": [
-            "outside",
-            "Outside",
-            "OUTSIDE"
-        ]
+        "new": "outside"
     },
     {
         "literal": "anychart.enums.MarkerType.CIRCLE",
-        "new": "circle",
-        "old": [
-            "circle",
-            "Circle",
-            "CIRCLE"
-        ]
+        "new": "circle"
     },
     {
         "literal": "anychart.enums.MarkerType.SQUARE",
-        "new": "square",
-        "old": [
-            "square",
-            "Square",
-            "SQUARE"
-        ]
+        "new": "square"
     },
     {
         "literal": "anychart.enums.MarkerType.DIAMOND",
-        "new": "diamond",
-        "old": [
-            "diamond",
-            "Diamond",
-            "DIAMOND"
-        ]
+        "new": "diamond"
     },
     {
         "literal": "anychart.enums.MarkerType.TRIANGLE_UP",
@@ -3737,12 +3483,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.MarkerType.CROSS",
-        "new": "cross",
-        "old": [
-            "cross",
-            "Cross",
-            "CROSS"
-        ]
+        "new": "cross"
     },
     {
         "literal": "anychart.enums.MarkerType.DIAGONAL_CROSS",
@@ -3756,66 +3497,31 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.MarkerType.STAR4",
-        "new": "star4",
-        "old": [
-            "star4",
-            "Star4",
-            "STAR4"
-        ]
+        "new": "star4"
     },
     {
         "literal": "anychart.enums.MarkerType.STAR5",
-        "new": "star5",
-        "old": [
-            "star5",
-            "Star5",
-            "STAR5"
-        ]
+        "new": "star5"
     },
     {
         "literal": "anychart.enums.MarkerType.STAR6",
-        "new": "star6",
-        "old": [
-            "star6",
-            "Star6",
-            "STAR6"
-        ]
+        "new": "star6"
     },
     {
         "literal": "anychart.enums.MarkerType.STAR7",
-        "new": "star7",
-        "old": [
-            "star7",
-            "Star7",
-            "STAR7"
-        ]
+        "new": "star7"
     },
     {
         "literal": "anychart.enums.MarkerType.STAR10",
-        "new": "star10",
-        "old": [
-            "star10",
-            "Star10",
-            "STAR10"
-        ]
+        "new": "star10"
     },
     {
         "literal": "anychart.enums.MarkerType.PENTAGON",
-        "new": "pentagon",
-        "old": [
-            "pentagon",
-            "Pentagon",
-            "PENTAGON"
-        ]
+        "new": "pentagon"
     },
     {
         "literal": "anychart.enums.MarkerType.LINE",
-        "new": "line",
-        "old": [
-            "line",
-            "Line",
-            "LINE"
-        ]
+        "new": "line"
     },
     {
         "literal": "anychart.enums.MarkerType.V_LINE",
@@ -3829,30 +3535,15 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.MapAsTableMode.VALUE",
-        "new": "value",
-        "old": [
-            "value",
-            "Value",
-            "VALUE"
-        ]
+        "new": "value"
     },
     {
         "literal": "anychart.enums.MapAsTableMode.RANGE",
-        "new": "range",
-        "old": [
-            "range",
-            "Range",
-            "RANGE"
-        ]
+        "new": "range"
     },
     {
         "literal": "anychart.enums.MapAsTableMode.OHLC",
-        "new": "ohlc",
-        "old": [
-            "ohlc",
-            "Ohlc",
-            "OHLC"
-        ]
+        "new": "ohlc"
     },
     {
         "literal": "anychart.enums.TreeFillingMethod.AS_TREE",
@@ -3886,48 +3577,23 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.TagCloudMode.SPIRAL",
-        "new": "spiral",
-        "old": [
-            "spiral",
-            "Spiral",
-            "SPIRAL"
-        ]
+        "new": "spiral"
     },
     {
         "literal": "anychart.enums.TagCloudMode.RECT",
-        "new": "rect",
-        "old": [
-            "rect",
-            "Rect",
-            "RECT"
-        ]
+        "new": "rect"
     },
     {
         "literal": "anychart.enums.BackgroundCornersType.NONE",
-        "new": "none",
-        "old": [
-            "none",
-            "None",
-            "NONE"
-        ]
+        "new": "none"
     },
     {
         "literal": "anychart.enums.BackgroundCornersType.ROUND",
-        "new": "round",
-        "old": [
-            "round",
-            "Round",
-            "ROUND"
-        ]
+        "new": "round"
     },
     {
         "literal": "anychart.enums.BackgroundCornersType.CUT",
-        "new": "cut",
-        "old": [
-            "cut",
-            "Cut",
-            "CUT"
-        ]
+        "new": "cut"
     },
     {
         "literal": "anychart.enums.BackgroundCornersType.ROUND_INNER",
@@ -3941,66 +3607,31 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LegendItemIconType.AREA",
-        "new": "area",
-        "old": [
-            "area",
-            "Area",
-            "AREA"
-        ]
+        "new": "area"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.BAR",
-        "new": "bar",
-        "old": [
-            "bar",
-            "Bar",
-            "BAR"
-        ]
+        "new": "bar"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.BUBBLE",
-        "new": "bubble",
-        "old": [
-            "bubble",
-            "Bubble",
-            "BUBBLE"
-        ]
+        "new": "bubble"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.CANDLESTICK",
-        "new": "candlestick",
-        "old": [
-            "candlestick",
-            "Candlestick",
-            "CANDLESTICK"
-        ]
+        "new": "candlestick"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.COLUMN",
-        "new": "column",
-        "old": [
-            "column",
-            "Column",
-            "COLUMN"
-        ]
+        "new": "column"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.LINE",
-        "new": "line",
-        "old": [
-            "line",
-            "Line",
-            "LINE"
-        ]
+        "new": "line"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.OHLC",
-        "new": "ohlc",
-        "old": [
-            "ohlc",
-            "Ohlc",
-            "OHLC"
-        ]
+        "new": "ohlc"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.RANGE_AREA",
@@ -4054,12 +3685,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LegendItemIconType.SPLINE",
-        "new": "spline",
-        "old": [
-            "spline",
-            "Spline",
-            "SPLINE"
-        ]
+        "new": "spline"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.SPLINE_AREA",
@@ -4093,21 +3719,11 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LegendItemIconType.CIRCLE",
-        "new": "circle",
-        "old": [
-            "circle",
-            "Circle",
-            "CIRCLE"
-        ]
+        "new": "circle"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.SQUARE",
-        "new": "square",
-        "old": [
-            "square",
-            "Square",
-            "SQUARE"
-        ]
+        "new": "square"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.TRIANGLE_UP",
@@ -4131,21 +3747,11 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LegendItemIconType.DIAMOND",
-        "new": "diamond",
-        "old": [
-            "diamond",
-            "Diamond",
-            "DIAMOND"
-        ]
+        "new": "diamond"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.CROSS",
-        "new": "cross",
-        "old": [
-            "cross",
-            "Cross",
-            "CROSS"
-        ]
+        "new": "cross"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.DIAGONAL_CROSS",
@@ -4159,57 +3765,27 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LegendItemIconType.STAR4",
-        "new": "star4",
-        "old": [
-            "star4",
-            "Star4",
-            "STAR4"
-        ]
+        "new": "star4"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.STAR5",
-        "new": "star5",
-        "old": [
-            "star5",
-            "Star5",
-            "STAR5"
-        ]
+        "new": "star5"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.STAR6",
-        "new": "star6",
-        "old": [
-            "star6",
-            "Star6",
-            "STAR6"
-        ]
+        "new": "star6"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.STAR7",
-        "new": "star7",
-        "old": [
-            "star7",
-            "Star7",
-            "STAR7"
-        ]
+        "new": "star7"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.STAR10",
-        "new": "star10",
-        "old": [
-            "star10",
-            "Star10",
-            "STAR10"
-        ]
+        "new": "star10"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.PENTAGON",
-        "new": "pentagon",
-        "old": [
-            "pentagon",
-            "Pentagon",
-            "PENTAGON"
-        ]
+        "new": "pentagon"
     },
     {
         "literal": "anychart.enums.LegendItemIconType.V_LINE",
@@ -4223,1027 +3799,451 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LegendItemIconType.MARKER",
-        "new": "marker",
-        "old": [
-            "marker",
-            "Marker",
-            "MARKER"
-        ]
+        "new": "marker"
     },
     {
         "literal": "anychart.enums.BulletMarkerType.X",
-        "new": "x",
-        "old": [
-            "x",
-            "X"
-        ]
+        "new": "x"
     },
     {
         "literal": "anychart.enums.BulletMarkerType.LINE",
-        "new": "line",
-        "old": [
-            "line",
-            "Line",
-            "LINE"
-        ]
+        "new": "line"
     },
     {
         "literal": "anychart.enums.BulletMarkerType.ELLIPSE",
-        "new": "ellipse",
-        "old": [
-            "ellipse",
-            "Ellipse",
-            "ELLIPSE"
-        ]
+        "new": "ellipse"
     },
     {
         "literal": "anychart.enums.BulletMarkerType.BAR",
-        "new": "bar",
-        "old": [
-            "bar",
-            "Bar",
-            "BAR"
-        ]
+        "new": "bar"
     },
     {
         "literal": "anychart.enums.LabelsPosition.INSIDE",
-        "new": "inside",
-        "old": [
-            "",
-            "inside",
-            "Inside",
-            "INSIDE"
-        ]
+        "new": "inside"
     },
     {
         "literal": "anychart.enums.LabelsPosition.OUTSIDE",
-        "new": "outside",
-        "old": [
-            "",
-            "outside",
-            "Outside",
-            "OUTSIDE"
-        ]
+        "new": "outside"
     },
     {
         "literal": "anychart.enums.EventType.POINT_MOUSE_OUT",
-        "new": "pointmouseout",
-        "old": [
-            "pointmouseout",
-            "Pointmouseout",
-            "POINTMOUSEOUT"
-        ]
+        "new": "pointmouseout"
     },
     {
         "literal": "anychart.enums.EventType.POINT_MOUSE_OVER",
-        "new": "pointmouseover",
-        "old": [
-            "pointmouseover",
-            "Pointmouseover",
-            "POINTMOUSEOVER"
-        ]
+        "new": "pointmouseover"
     },
     {
         "literal": "anychart.enums.EventType.POINT_MOUSE_MOVE",
-        "new": "pointmousemove",
-        "old": [
-            "pointmousemove",
-            "Pointmousemove",
-            "POINTMOUSEMOVE"
-        ]
+        "new": "pointmousemove"
     },
     {
         "literal": "anychart.enums.EventType.POINT_MOUSE_DOWN",
-        "new": "pointmousedown",
-        "old": [
-            "pointmousedown",
-            "Pointmousedown",
-            "POINTMOUSEDOWN"
-        ]
+        "new": "pointmousedown"
     },
     {
         "literal": "anychart.enums.EventType.POINT_MOUSE_UP",
-        "new": "pointmouseup",
-        "old": [
-            "pointmouseup",
-            "Pointmouseup",
-            "POINTMOUSEUP"
-        ]
+        "new": "pointmouseup"
     },
     {
         "literal": "anychart.enums.EventType.POINT_CLICK",
-        "new": "pointclick",
-        "old": [
-            "pointclick",
-            "Pointclick",
-            "POINTCLICK"
-        ]
+        "new": "pointclick"
     },
     {
         "literal": "anychart.enums.EventType.POINT_DBLCLICK",
-        "new": "pointdblclick",
-        "old": [
-            "pointdblclick",
-            "Pointdblclick",
-            "POINTDBLCLICK"
-        ]
+        "new": "pointdblclick"
     },
     {
         "literal": "anychart.enums.EventType.POINT_HOVER",
-        "new": "pointhover",
-        "old": [
-            "pointhover",
-            "Pointhover",
-            "POINTHOVER"
-        ]
+        "new": "pointhover"
     },
     {
         "literal": "anychart.enums.EventType.POINTS_SELECT",
-        "new": "pointsselect",
-        "old": [
-            "pointsselect",
-            "Pointsselect",
-            "POINTSSELECT"
-        ]
+        "new": "pointsselect"
     },
     {
         "literal": "anychart.enums.EventType.POINTS_HOVER",
-        "new": "pointshover",
-        "old": [
-            "pointshover",
-            "Pointshover",
-            "POINTSHOVER"
-        ]
+        "new": "pointshover"
     },
     {
         "literal": "anychart.enums.EventType.CHART_DRAW",
-        "new": "chartdraw",
-        "old": [
-            "chartdraw",
-            "Chartdraw",
-            "CHARTDRAW"
-        ]
+        "new": "chartdraw"
     },
     {
         "literal": "anychart.enums.EventType.ANIMATION_START",
-        "new": "animationstart",
-        "old": [
-            "animationstart",
-            "Animationstart",
-            "ANIMATIONSTART"
-        ]
+        "new": "animationstart"
     },
     {
         "literal": "anychart.enums.EventType.ANIMATION_END",
-        "new": "animationend",
-        "old": [
-            "animationend",
-            "Animationend",
-            "ANIMATIONEND"
-        ]
+        "new": "animationend"
     },
     {
         "literal": "anychart.enums.EventType.DRILL_CHANGE",
-        "new": "drillchange",
-        "old": [
-            "drillchange",
-            "Drillchange",
-            "DRILLCHANGE"
-        ]
+        "new": "drillchange"
     },
     {
         "literal": "anychart.enums.EventType.ZOOM_START",
-        "new": "zoomstart",
-        "old": [
-            "zoomstart",
-            "Zoomstart",
-            "ZOOMSTART"
-        ]
+        "new": "zoomstart"
     },
     {
         "literal": "anychart.enums.EventType.ZOOM",
-        "new": "zoom",
-        "old": [
-            "zoom",
-            "Zoom",
-            "ZOOM"
-        ]
+        "new": "zoom"
     },
     {
         "literal": "anychart.enums.EventType.ZOOM_END",
-        "new": "zoomend",
-        "old": [
-            "zoomend",
-            "Zoomend",
-            "ZOOMEND"
-        ]
+        "new": "zoomend"
     },
     {
         "literal": "anychart.enums.EventType.LEGEND_ITEM_MOUSE_OUT",
-        "new": "legenditemmouseout",
-        "old": [
-            "legenditemmouseout",
-            "Legenditemmouseout",
-            "LEGENDITEMMOUSEOUT"
-        ]
+        "new": "legenditemmouseout"
     },
     {
         "literal": "anychart.enums.EventType.LEGEND_ITEM_MOUSE_OVER",
-        "new": "legenditemmouseover",
-        "old": [
-            "legenditemmouseover",
-            "Legenditemmouseover",
-            "LEGENDITEMMOUSEOVER"
-        ]
+        "new": "legenditemmouseover"
     },
     {
         "literal": "anychart.enums.EventType.LEGEND_ITEM_MOUSE_MOVE",
-        "new": "legenditemmousemove",
-        "old": [
-            "legenditemmousemove",
-            "Legenditemmousemove",
-            "LEGENDITEMMOUSEMOVE"
-        ]
+        "new": "legenditemmousemove"
     },
     {
         "literal": "anychart.enums.EventType.LEGEND_ITEM_MOUSE_DOWN",
-        "new": "legenditemmousedown",
-        "old": [
-            "legenditemmousedown",
-            "Legenditemmousedown",
-            "LEGENDITEMMOUSEDOWN"
-        ]
+        "new": "legenditemmousedown"
     },
     {
         "literal": "anychart.enums.EventType.LEGEND_ITEM_MOUSE_UP",
-        "new": "legenditemmouseup",
-        "old": [
-            "legenditemmouseup",
-            "Legenditemmouseup",
-            "LEGENDITEMMOUSEUP"
-        ]
+        "new": "legenditemmouseup"
     },
     {
         "literal": "anychart.enums.EventType.LEGEND_ITEM_CLICK",
-        "new": "legenditemclick",
-        "old": [
-            "legenditemclick",
-            "Legenditemclick",
-            "LEGENDITEMCLICK"
-        ]
+        "new": "legenditemclick"
     },
     {
         "literal": "anychart.enums.EventType.LEGEND_ITEM_DBLCLICK",
-        "new": "legenditemdblclick",
-        "old": [
-            "legenditemdblclick",
-            "Legenditemdblclick",
-            "LEGENDITEMDBLCLICK"
-        ]
+        "new": "legenditemdblclick"
     },
     {
         "literal": "anychart.enums.EventType.DRAG",
-        "new": "drag",
-        "old": [
-            "drag",
-            "Drag",
-            "DRAG"
-        ]
+        "new": "drag"
     },
     {
         "literal": "anychart.enums.EventType.DRAG_START",
-        "new": "dragstart",
-        "old": [
-            "dragstart",
-            "Dragstart",
-            "DRAGSTART"
-        ]
+        "new": "dragstart"
     },
     {
         "literal": "anychart.enums.EventType.DRAG_END",
-        "new": "dragend",
-        "old": [
-            "dragend",
-            "Dragend",
-            "DRAGEND"
-        ]
+        "new": "dragend"
     },
     {
         "literal": "anychart.enums.EventType.SCROLL_CHANGE",
-        "new": "scrollchange",
-        "old": [
-            "scrollchange",
-            "Scrollchange",
-            "SCROLLCHANGE"
-        ]
+        "new": "scrollchange"
     },
     {
         "literal": "anychart.enums.EventType.SPLITTER_CHANGE",
-        "new": "splitterchange",
-        "old": [
-            "splitterchange",
-            "Splitterchange",
-            "SPLITTERCHANGE"
-        ]
+        "new": "splitterchange"
     },
     {
         "literal": "anychart.enums.EventType.SCROLLER_CHANGE_START",
-        "new": "scrollerchangestart",
-        "old": [
-            "scrollerchangestart",
-            "Scrollerchangestart",
-            "SCROLLERCHANGESTART"
-        ]
+        "new": "scrollerchangestart"
     },
     {
         "literal": "anychart.enums.EventType.SCROLLER_CHANGE",
-        "new": "scrollerchange",
-        "old": [
-            "scrollerchange",
-            "Scrollerchange",
-            "SCROLLERCHANGE"
-        ]
+        "new": "scrollerchange"
     },
     {
         "literal": "anychart.enums.EventType.SCROLLER_CHANGE_FINISH",
-        "new": "scrollerchangefinish",
-        "old": [
-            "scrollerchangefinish",
-            "Scrollerchangefinish",
-            "SCROLLERCHANGEFINISH"
-        ]
+        "new": "scrollerchangefinish"
     },
     {
         "literal": "anychart.enums.EventType.SELECTED_RANGE_CHANGE_START",
-        "new": "selectedrangechangestart",
-        "old": [
-            "selectedrangechangestart",
-            "Selectedrangechangestart",
-            "SELECTEDRANGECHANGESTART"
-        ]
+        "new": "selectedrangechangestart"
     },
     {
         "literal": "anychart.enums.EventType.SELECTED_RANGE_BEFORE_CHANGE",
-        "new": "selectedrangebeforechange",
-        "old": [
-            "selectedrangebeforechange",
-            "Selectedrangebeforechange",
-            "SELECTEDRANGEBEFORECHANGE"
-        ]
+        "new": "selectedrangebeforechange"
     },
     {
         "literal": "anychart.enums.EventType.SELECTED_RANGE_CHANGE",
-        "new": "selectedrangechange",
-        "old": [
-            "selectedrangechange",
-            "Selectedrangechange",
-            "SELECTEDRANGECHANGE"
-        ]
+        "new": "selectedrangechange"
     },
     {
         "literal": "anychart.enums.EventType.SELECTED_RANGE_CHANGE_FINISH",
-        "new": "selectedrangechangefinish",
-        "old": [
-            "selectedrangechangefinish",
-            "Selectedrangechangefinish",
-            "SELECTEDRANGECHANGEFINISH"
-        ]
+        "new": "selectedrangechangefinish"
     },
     {
         "literal": "anychart.enums.EventType.SIGNAL",
-        "new": "signal",
-        "old": [
-            "signal",
-            "Signal",
-            "SIGNAL"
-        ]
+        "new": "signal"
     },
     {
         "literal": "anychart.enums.EventType.ROW_SELECT",
-        "new": "rowSelect",
-        "old": [
-            "rowSelect",
-            "rowselect",
-            "Rowselect",
-            "ROWSELECT"
-        ]
+        "new": "rowSelect"
     },
     {
         "literal": "anychart.enums.EventType.ROW_CLICK",
-        "new": "rowClick",
-        "old": [
-            "rowClick",
-            "rowclick",
-            "Rowclick",
-            "ROWCLICK"
-        ]
+        "new": "rowClick"
     },
     {
         "literal": "anychart.enums.EventType.ROW_DBL_CLICK",
-        "new": "rowDblClick",
-        "old": [
-            "rowDblClick",
-            "rowdblclick",
-            "Rowdblclick",
-            "ROWDBLCLICK"
-        ]
+        "new": "rowDblClick"
     },
     {
         "literal": "anychart.enums.EventType.ROW_MOUSE_OVER",
-        "new": "rowMouseOver",
-        "old": [
-            "rowMouseOver",
-            "rowmouseover",
-            "Rowmouseover",
-            "ROWMOUSEOVER"
-        ]
+        "new": "rowMouseOver"
     },
     {
         "literal": "anychart.enums.EventType.ROW_MOUSE_OUT",
-        "new": "rowMouseOut",
-        "old": [
-            "rowMouseOut",
-            "rowmouseout",
-            "Rowmouseout",
-            "ROWMOUSEOUT"
-        ]
+        "new": "rowMouseOut"
     },
     {
         "literal": "anychart.enums.EventType.ROW_MOUSE_MOVE",
-        "new": "rowMouseMove",
-        "old": [
-            "rowMouseMove",
-            "rowmousemove",
-            "Rowmousemove",
-            "ROWMOUSEMOVE"
-        ]
+        "new": "rowMouseMove"
     },
     {
         "literal": "anychart.enums.EventType.ROW_MOUSE_DOWN",
-        "new": "rowMouseDown",
-        "old": [
-            "rowMouseDown",
-            "rowmousedown",
-            "Rowmousedown",
-            "ROWMOUSEDOWN"
-        ]
+        "new": "rowMouseDown"
     },
     {
         "literal": "anychart.enums.EventType.ROW_MOUSE_UP",
-        "new": "rowMouseUp",
-        "old": [
-            "rowMouseUp",
-            "rowmouseup",
-            "Rowmouseup",
-            "ROWMOUSEUP"
-        ]
+        "new": "rowMouseUp"
     },
     {
         "literal": "anychart.enums.EventType.BEFORE_CREATE_CONNECTOR",
-        "new": "beforeCreateConnector",
-        "old": [
-            "beforeCreateConnector",
-            "beforecreateconnector",
-            "Beforecreateconnector",
-            "BEFORECREATECONNECTOR"
-        ]
+        "new": "beforeCreateConnector"
     },
     {
         "literal": "anychart.enums.EventType.ROW_COLLAPSE_EXPAND",
-        "new": "rowcollapseexpand",
-        "old": [
-            "rowcollapseexpand",
-            "Rowcollapseexpand",
-            "ROWCOLLAPSEEXPAND"
-        ]
+        "new": "rowcollapseexpand"
     },
     {
         "literal": "anychart.enums.EventType.CONNECTOR_SELECT",
-        "new": "connectorselect",
-        "old": [
-            "connectorselect",
-            "Connectorselect",
-            "CONNECTORSELECT"
-        ]
+        "new": "connectorselect"
     },
     {
         "literal": "anychart.enums.EventType.CONNECTOR_CLICK",
-        "new": "connectorclick",
-        "old": [
-            "connectorclick",
-            "Connectorclick",
-            "CONNECTORCLICK"
-        ]
+        "new": "connectorclick"
     },
     {
         "literal": "anychart.enums.EventType.CONNECTOR_DBL_CLICK",
-        "new": "connectordblclick",
-        "old": [
-            "connectordblclick",
-            "Connectordblclick",
-            "CONNECTORDBLCLICK"
-        ]
+        "new": "connectordblclick"
     },
     {
         "literal": "anychart.enums.EventType.CONNECTOR_MOUSE_OVER",
-        "new": "connectormouseover",
-        "old": [
-            "connectormouseover",
-            "Connectormouseover",
-            "CONNECTORMOUSEOVER"
-        ]
+        "new": "connectormouseover"
     },
     {
         "literal": "anychart.enums.EventType.CONNECTOR_MOUSE_OUT",
-        "new": "connectormouseout",
-        "old": [
-            "connectormouseout",
-            "Connectormouseout",
-            "CONNECTORMOUSEOUT"
-        ]
+        "new": "connectormouseout"
     },
     {
         "literal": "anychart.enums.EventType.CONNECTOR_MOUSE_MOVE",
-        "new": "connectormousemove",
-        "old": [
-            "connectormousemove",
-            "Connectormousemove",
-            "CONNECTORMOUSEMOVE"
-        ]
+        "new": "connectormousemove"
     },
     {
         "literal": "anychart.enums.EventType.CONNECTOR_MOUSE_DOWN",
-        "new": "connectormousedown",
-        "old": [
-            "connectormousedown",
-            "Connectormousedown",
-            "CONNECTORMOUSEDOWN"
-        ]
+        "new": "connectormousedown"
     },
     {
         "literal": "anychart.enums.EventType.CONNECTOR_MOUSE_UP",
-        "new": "connectormouseup",
-        "old": [
-            "connectormouseup",
-            "Connectormouseup",
-            "CONNECTORMOUSEUP"
-        ]
+        "new": "connectormouseup"
     },
     {
         "literal": "anychart.enums.EventType.TREE_ITEM_MOVE",
-        "new": "treeItemMove",
-        "old": [
-            "treeItemMove",
-            "treeitemmove",
-            "Treeitemmove",
-            "TREEITEMMOVE"
-        ]
+        "new": "treeItemMove"
     },
     {
         "literal": "anychart.enums.EventType.TREE_ITEM_UPDATE",
-        "new": "treeItemUpdate",
-        "old": [
-            "treeItemUpdate",
-            "treeitemupdate",
-            "Treeitemupdate",
-            "TREEITEMUPDATE"
-        ]
+        "new": "treeItemUpdate"
     },
     {
         "literal": "anychart.enums.EventType.TREE_ITEM_CREATE",
-        "new": "treeItemCreate",
-        "old": [
-            "treeItemCreate",
-            "treeitemcreate",
-            "Treeitemcreate",
-            "TREEITEMCREATE"
-        ]
+        "new": "treeItemCreate"
     },
     {
         "literal": "anychart.enums.EventType.TREE_ITEM_REMOVE",
-        "new": "treeItemRemove",
-        "old": [
-            "treeItemRemove",
-            "treeitemremove",
-            "Treeitemremove",
-            "TREEITEMREMOVE"
-        ]
+        "new": "treeItemRemove"
     },
     {
         "literal": "anychart.enums.EventType.ANNOTATION_SELECT",
-        "new": "annotationSelect",
-        "old": [
-            "annotationSelect",
-            "annotationselect",
-            "Annotationselect",
-            "ANNOTATIONSELECT"
-        ]
+        "new": "annotationSelect"
     },
     {
         "literal": "anychart.enums.EventType.ANNOTATION_UNSELECT",
-        "new": "annotationUnselect",
-        "old": [
-            "annotationUnselect",
-            "annotationunselect",
-            "Annotationunselect",
-            "ANNOTATIONUNSELECT"
-        ]
+        "new": "annotationUnselect"
     },
     {
         "literal": "anychart.enums.EventType.ANNOTATION_DRAWING_FINISH",
-        "new": "annotationDrawingFinish",
-        "old": [
-            "annotationDrawingFinish",
-            "annotationdrawingfinish",
-            "Annotationdrawingfinish",
-            "ANNOTATIONDRAWINGFINISH"
-        ]
+        "new": "annotationDrawingFinish"
     },
     {
         "literal": "anychart.enums.EventType.ANNOTATION_CHANGE_START",
-        "new": "annotationChangeStart",
-        "old": [
-            "annotationChangeStart",
-            "annotationchangestart",
-            "Annotationchangestart",
-            "ANNOTATIONCHANGESTART"
-        ]
+        "new": "annotationChangeStart"
     },
     {
         "literal": "anychart.enums.EventType.ANNOTATION_CHANGE",
-        "new": "annotationChange",
-        "old": [
-            "annotationChange",
-            "annotationchange",
-            "Annotationchange",
-            "ANNOTATIONCHANGE"
-        ]
+        "new": "annotationChange"
     },
     {
         "literal": "anychart.enums.EventType.ANNOTATION_CHANGE_FINISH",
-        "new": "annotationChangeFinish",
-        "old": [
-            "annotationChangeFinish",
-            "annotationchangefinish",
-            "Annotationchangefinish",
-            "ANNOTATIONCHANGEFINISH"
-        ]
+        "new": "annotationChangeFinish"
     },
     {
         "literal": "anychart.enums.EventType.CLOSE",
-        "new": "close",
-        "old": [
-            "close",
-            "Close",
-            "CLOSE"
-        ]
+        "new": "close"
     },
     {
         "literal": "anychart.enums.EventType.COMPLETE",
-        "new": "complete",
-        "old": [
-            "complete",
-            "Complete",
-            "COMPLETE"
-        ]
+        "new": "complete"
     },
     {
         "literal": "anychart.enums.EventType.SELECT_MARQUEE_START",
-        "new": "selectmarqueestart",
-        "old": [
-            "selectmarqueestart",
-            "Selectmarqueestart",
-            "SELECTMARQUEESTART"
-        ]
+        "new": "selectmarqueestart"
     },
     {
         "literal": "anychart.enums.EventType.SELECT_MARQUEE_CHANGE",
-        "new": "selectmarqueechange",
-        "old": [
-            "selectmarqueechange",
-            "Selectmarqueechange",
-            "SELECTMARQUEECHANGE"
-        ]
+        "new": "selectmarqueechange"
     },
     {
         "literal": "anychart.enums.EventType.SELECT_MARQUEE_FINISH",
-        "new": "selectmarqueefinish",
-        "old": [
-            "selectmarqueefinish",
-            "Selectmarqueefinish",
-            "SELECTMARQUEEFINISH"
-        ]
+        "new": "selectmarqueefinish"
     },
     {
         "literal": "anychart.enums.ScaleComparisonMode.NONE",
-        "new": "none",
-        "old": [
-            "none",
-            "None",
-            "NONE"
-        ]
+        "new": "none"
     },
     {
         "literal": "anychart.enums.ScaleComparisonMode.VALUE",
-        "new": "value",
-        "old": [
-            "value",
-            "Value",
-            "VALUE"
-        ]
+        "new": "value"
     },
     {
         "literal": "anychart.enums.ScaleComparisonMode.PERCENT",
-        "new": "percent",
-        "old": [
-            "percent",
-            "Percent",
-            "PERCENT"
-        ]
+        "new": "percent"
     },
     {
         "literal": "anychart.enums.ScatterTicksMode.LINEAR",
-        "new": "linear",
-        "old": [
-            "linear",
-            "Linear",
-            "LINEAR"
-        ]
+        "new": "linear"
     },
     {
         "literal": "anychart.enums.ScatterTicksMode.LOGARITHMIC",
-        "new": "logarithmic",
-        "old": [
-            "logarithmic",
-            "Logarithmic",
-            "LOGARITHMIC"
-        ]
+        "new": "logarithmic"
     },
     {
         "literal": "anychart.enums.MapSeriesType.CHOROPLETH",
-        "new": "choropleth",
-        "old": [
-            "choropleth",
-            "Choropleth",
-            "CHOROPLETH"
-        ]
+        "new": "choropleth"
     },
     {
         "literal": "anychart.enums.MapSeriesType.BUBBLE",
-        "new": "bubble",
-        "old": [
-            "bubble",
-            "Bubble",
-            "BUBBLE"
-        ]
+        "new": "bubble"
     },
     {
         "literal": "anychart.enums.MapSeriesType.MARKER",
-        "new": "marker",
-        "old": [
-            "marker",
-            "Marker",
-            "MARKER"
-        ]
+        "new": "marker"
     },
     {
         "literal": "anychart.enums.MapSeriesType.CONNECTOR",
-        "new": "connector",
-        "old": [
-            "connector",
-            "Connector",
-            "CONNECTOR"
-        ]
+        "new": "connector"
     },
     {
         "literal": "anychart.enums.MapProjections.BONNE",
-        "new": "bonne",
-        "old": [
-            "bonne",
-            "Bonne",
-            "BONNE"
-        ]
+        "new": "bonne"
     },
     {
         "literal": "anychart.enums.MapProjections.ECKERT1",
-        "new": "eckert1",
-        "old": [
-            "eckert1",
-            "Eckert1",
-            "ECKERT1"
-        ]
+        "new": "eckert1"
     },
     {
         "literal": "anychart.enums.MapProjections.ECKERT3",
-        "new": "eckert3",
-        "old": [
-            "eckert3",
-            "Eckert3",
-            "ECKERT3"
-        ]
+        "new": "eckert3"
     },
     {
         "literal": "anychart.enums.MapProjections.FAHEY",
-        "new": "fahey",
-        "old": [
-            "fahey",
-            "Fahey",
-            "FAHEY"
-        ]
+        "new": "fahey"
     },
     {
         "literal": "anychart.enums.MapProjections.HAMMER",
-        "new": "hammer",
-        "old": [
-            "hammer",
-            "Hammer",
-            "HAMMER"
-        ]
+        "new": "hammer"
     },
     {
         "literal": "anychart.enums.MapProjections.AITOFF",
-        "new": "aitoff",
-        "old": [
-            "aitoff",
-            "Aitoff",
-            "AITOFF"
-        ]
+        "new": "aitoff"
     },
     {
         "literal": "anychart.enums.MapProjections.MERCATOR",
-        "new": "mercator",
-        "old": [
-            "mercator",
-            "Mercator",
-            "MERCATOR"
-        ]
+        "new": "mercator"
     },
     {
         "literal": "anychart.enums.MapProjections.ORTHOGRAPHIC",
-        "new": "orthographic",
-        "old": [
-            "orthographic",
-            "Orthographic",
-            "ORTHOGRAPHIC"
-        ]
+        "new": "orthographic"
     },
     {
         "literal": "anychart.enums.MapProjections.ROBINSON",
-        "new": "robinson",
-        "old": [
-            "robinson",
-            "Robinson",
-            "ROBINSON"
-        ]
+        "new": "robinson"
     },
     {
         "literal": "anychart.enums.MapProjections.WAGNER6",
-        "new": "wagner6",
-        "old": [
-            "wagner6",
-            "Wagner6",
-            "WAGNER6"
-        ]
+        "new": "wagner6"
     },
     {
         "literal": "anychart.enums.MapProjections.WSG84",
-        "new": "wsg84",
-        "old": [
-            "wsg84",
-            "Wsg84",
-            "WSG84"
-        ]
+        "new": "wsg84"
     },
     {
         "literal": "anychart.enums.MapProjections.EQUIRECTANGULAR",
-        "new": "equirectangular",
-        "old": [
-            "equirectangular",
-            "Equirectangular",
-            "EQUIRECTANGULAR"
-        ]
+        "new": "equirectangular"
     },
     {
         "literal": "anychart.enums.MapProjections.AUGUST",
-        "new": "august",
-        "old": [
-            "august",
-            "August",
-            "AUGUST"
-        ]
+        "new": "august"
     },
     {
         "literal": "anychart.enums.MapGridZIndex.UNDER_MAP",
-        "new": 5,
-        "old": [
-            5
-        ]
+        "new": 5
     },
     {
         "literal": "anychart.enums.MapGridZIndex.OVER_MAP",
-        "new": 45,
-        "old": [
-            45
-        ]
+        "new": 45
     },
     {
         "literal": "anychart.enums.MapPointMiddlePositionMode.ABSOLUTE",
-        "new": "absolute",
-        "old": [
-            "absolute",
-            "Absolute",
-            "ABSOLUTE"
-        ]
+        "new": "absolute"
     },
     {
         "literal": "anychart.enums.MapPointMiddlePositionMode.RELATIVE",
-        "new": "relative",
-        "old": [
-            "relative",
-            "Relative",
-            "RELATIVE"
-        ]
+        "new": "relative"
     },
     {
         "literal": "anychart.enums.MapPointOutsidePositionMode.ABSOLUTE",
-        "new": "absolute",
-        "old": [
-            "absolute",
-            "Absolute",
-            "ABSOLUTE"
-        ]
+        "new": "absolute"
     },
     {
         "literal": "anychart.enums.MapPointOutsidePositionMode.RELATIVE",
-        "new": "relative",
-        "old": [
-            "relative",
-            "Relative",
-            "RELATIVE"
-        ]
+        "new": "relative"
     },
     {
         "literal": "anychart.enums.MapPointOutsidePositionMode.OFFSET",
-        "new": "offset",
-        "old": [
-            "offset",
-            "Offset",
-            "OFFSET"
-        ]
+        "new": "offset"
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.AREA",
-        "new": "area",
-        "old": [
-            "area",
-            "Area",
-            "AREA"
-        ]
+        "new": "area"
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.BAR",
-        "new": "bar",
-        "old": [
-            "bar",
-            "Bar",
-            "BAR"
-        ]
+        "new": "bar"
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.BOX",
-        "new": "box",
-        "old": [
-            "box",
-            "Box",
-            "BOX"
-        ]
+        "new": "box"
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.BUBBLE",
-        "new": "bubble",
-        "old": [
-            "bubble",
-            "Bubble",
-            "BUBBLE"
-        ]
+        "new": "bubble"
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.CANDLESTICK",
-        "new": "candlestick",
-        "old": [
-            "candlestick",
-            "Candlestick",
-            "CANDLESTICK"
-        ]
+        "new": "candlestick"
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.COLUMN",
-        "new": "column",
-        "old": [
-            "column",
-            "Column",
-            "COLUMN"
-        ]
+        "new": "column"
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.JUMP_LINE",
@@ -5257,30 +4257,15 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.LINE",
-        "new": "line",
-        "old": [
-            "line",
-            "Line",
-            "LINE"
-        ]
+        "new": "line"
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.MARKER",
-        "new": "marker",
-        "old": [
-            "marker",
-            "Marker",
-            "MARKER"
-        ]
+        "new": "marker"
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.OHLC",
-        "new": "ohlc",
-        "old": [
-            "ohlc",
-            "Ohlc",
-            "OHLC"
-        ]
+        "new": "ohlc"
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.RANGE_AREA",
@@ -5334,12 +4319,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.SPLINE",
-        "new": "spline",
-        "old": [
-            "spline",
-            "Spline",
-            "SPLINE"
-        ]
+        "new": "spline"
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.SPLINE_AREA",
@@ -5373,102 +4353,47 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.STICK",
-        "new": "stick",
-        "old": [
-            "stick",
-            "Stick",
-            "STICK"
-        ]
+        "new": "stick"
     },
     {
         "literal": "anychart.enums.CartesianSeriesType.HILO",
-        "new": "hilo",
-        "old": [
-            "hilo",
-            "Hilo",
-            "HILO"
-        ]
+        "new": "hilo"
     },
     {
         "literal": "anychart.enums.Cartesian3dSeriesType.AREA",
-        "new": "area",
-        "old": [
-            "area",
-            "Area",
-            "AREA"
-        ]
+        "new": "area"
     },
     {
         "literal": "anychart.enums.Cartesian3dSeriesType.BAR",
-        "new": "bar",
-        "old": [
-            "bar",
-            "Bar",
-            "BAR"
-        ]
+        "new": "bar"
     },
     {
         "literal": "anychart.enums.Cartesian3dSeriesType.COLUMN",
-        "new": "column",
-        "old": [
-            "column",
-            "Column",
-            "COLUMN"
-        ]
+        "new": "column"
     },
     {
         "literal": "anychart.enums.StockSeriesType.AREA",
-        "new": "area",
-        "old": [
-            "area",
-            "Area",
-            "AREA"
-        ]
+        "new": "area"
     },
     {
         "literal": "anychart.enums.StockSeriesType.CANDLESTICK",
-        "new": "candlestick",
-        "old": [
-            "candlestick",
-            "Candlestick",
-            "CANDLESTICK"
-        ]
+        "new": "candlestick"
     },
     {
         "literal": "anychart.enums.StockSeriesType.COLUMN",
-        "new": "column",
-        "old": [
-            "column",
-            "Column",
-            "COLUMN"
-        ]
+        "new": "column"
     },
     {
         "literal": "anychart.enums.StockSeriesType.LINE",
-        "new": "line",
-        "old": [
-            "line",
-            "Line",
-            "LINE"
-        ]
+        "new": "line"
     },
     {
         "literal": "anychart.enums.StockSeriesType.MARKER",
-        "new": "marker",
-        "old": [
-            "marker",
-            "Marker",
-            "MARKER"
-        ]
+        "new": "marker"
     },
     {
         "literal": "anychart.enums.StockSeriesType.OHLC",
-        "new": "ohlc",
-        "old": [
-            "ohlc",
-            "Ohlc",
-            "OHLC"
-        ]
+        "new": "ohlc"
     },
     {
         "literal": "anychart.enums.StockSeriesType.RANGE_AREA",
@@ -5512,12 +4437,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.StockSeriesType.SPLINE",
-        "new": "spline",
-        "old": [
-            "spline",
-            "Spline",
-            "SPLINE"
-        ]
+        "new": "spline"
     },
     {
         "literal": "anychart.enums.StockSeriesType.SPLINE_AREA",
@@ -5561,361 +4481,163 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.StockSeriesType.STICK",
-        "new": "stick",
-        "old": [
-            "stick",
-            "Stick",
-            "STICK"
-        ]
+        "new": "stick"
     },
     {
         "literal": "anychart.enums.StockSeriesType.HILO",
-        "new": "hilo",
-        "old": [
-            "hilo",
-            "Hilo",
-            "HILO"
-        ]
+        "new": "hilo"
     },
     {
         "literal": "anychart.enums.MovingAverageType.SMA",
-        "new": "sma",
-        "old": [
-            "sma",
-            "Sma",
-            "SMA"
-        ]
+        "new": "sma"
     },
     {
         "literal": "anychart.enums.MovingAverageType.EMA",
-        "new": "ema",
-        "old": [
-            "ema",
-            "Ema",
-            "EMA"
-        ]
+        "new": "ema"
     },
     {
         "literal": "anychart.enums.GanttDataFields.ID",
-        "new": "id",
-        "old": [
-            "id",
-            "Id",
-            "ID"
-        ]
+        "new": "id"
     },
     {
         "literal": "anychart.enums.GanttDataFields.CHILDREN",
-        "new": "children",
-        "old": [
-            "children",
-            "Children",
-            "CHILDREN"
-        ]
+        "new": "children"
     },
     {
         "literal": "anychart.enums.GanttDataFields.ACTUAL",
-        "new": "actual",
-        "old": [
-            "actual",
-            "Actual",
-            "ACTUAL"
-        ]
+        "new": "actual"
     },
     {
         "literal": "anychart.enums.GanttDataFields.ACTUAL_START",
-        "new": "actualStart",
-        "old": [
-            "actualStart",
-            "actualstart",
-            "Actualstart",
-            "ACTUALSTART"
-        ]
+        "new": "actualStart"
     },
     {
         "literal": "anychart.enums.GanttDataFields.ACTUAL_END",
-        "new": "actualEnd",
-        "old": [
-            "actualEnd",
-            "actualend",
-            "Actualend",
-            "ACTUALEND"
-        ]
+        "new": "actualEnd"
     },
     {
         "literal": "anychart.enums.GanttDataFields.BASELINE",
-        "new": "baseline",
-        "old": [
-            "baseline",
-            "Baseline",
-            "BASELINE"
-        ]
+        "new": "baseline"
     },
     {
         "literal": "anychart.enums.GanttDataFields.BASELINE_START",
-        "new": "baselineStart",
-        "old": [
-            "baselineStart",
-            "baselinestart",
-            "Baselinestart",
-            "BASELINESTART"
-        ]
+        "new": "baselineStart"
     },
     {
         "literal": "anychart.enums.GanttDataFields.BASELINE_END",
-        "new": "baselineEnd",
-        "old": [
-            "baselineEnd",
-            "baselineend",
-            "Baselineend",
-            "BASELINEEND"
-        ]
+        "new": "baselineEnd"
     },
     {
         "literal": "anychart.enums.GanttDataFields.PROGRESS",
-        "new": "progress",
-        "old": [
-            "progress",
-            "Progress",
-            "PROGRESS"
-        ]
+        "new": "progress"
     },
     {
         "literal": "anychart.enums.GanttDataFields.PROGRESS_VALUE",
-        "new": "progressValue",
-        "old": [
-            "progressValue",
-            "progressvalue",
-            "Progressvalue",
-            "PROGRESSVALUE"
-        ]
+        "new": "progressValue"
     },
     {
         "literal": "anychart.enums.GanttDataFields.MILESTONE",
-        "new": "milestone",
-        "old": [
-            "milestone",
-            "Milestone",
-            "MILESTONE"
-        ]
+        "new": "milestone"
     },
     {
         "literal": "anychart.enums.GanttDataFields.NAME",
-        "new": "name",
-        "old": [
-            "name",
-            "Name",
-            "NAME"
-        ]
+        "new": "name"
     },
     {
         "literal": "anychart.enums.GanttDataFields.COLLAPSED",
-        "new": "collapsed",
-        "old": [
-            "collapsed",
-            "Collapsed",
-            "COLLAPSED"
-        ]
+        "new": "collapsed"
     },
     {
         "literal": "anychart.enums.GanttDataFields.ROW_HEIGHT",
-        "new": "rowHeight",
-        "old": [
-            "rowHeight",
-            "rowheight",
-            "Rowheight",
-            "ROWHEIGHT"
-        ]
+        "new": "rowHeight"
     },
     {
         "literal": "anychart.enums.GanttDataFields.PERIODS",
-        "new": "periods",
-        "old": [
-            "periods",
-            "Periods",
-            "PERIODS"
-        ]
+        "new": "periods"
     },
     {
         "literal": "anychart.enums.GanttDataFields.PARENT",
-        "new": "parent",
-        "old": [
-            "parent",
-            "Parent",
-            "PARENT"
-        ]
+        "new": "parent"
     },
     {
         "literal": "anychart.enums.GanttDataFields.START",
-        "new": "start",
-        "old": [
-            "start",
-            "Start",
-            "START"
-        ]
+        "new": "start"
     },
     {
         "literal": "anychart.enums.GanttDataFields.END",
-        "new": "end",
-        "old": [
-            "end",
-            "End",
-            "END"
-        ]
+        "new": "end"
     },
     {
         "literal": "anychart.enums.GanttDataFields.FILL",
-        "new": "fill",
-        "old": [
-            "fill",
-            "Fill",
-            "FILL"
-        ]
+        "new": "fill"
     },
     {
         "literal": "anychart.enums.GanttDataFields.STROKE",
-        "new": "stroke",
-        "old": [
-            "stroke",
-            "Stroke",
-            "STROKE"
-        ]
+        "new": "stroke"
     },
     {
         "literal": "anychart.enums.GanttDataFields.HOVER_FILL",
-        "new": "hoverFill",
-        "old": [
-            "hoverFill",
-            "hoverfill",
-            "Hoverfill",
-            "HOVERFILL"
-        ]
+        "new": "hoverFill"
     },
     {
         "literal": "anychart.enums.GanttDataFields.HOVER_STROKE",
-        "new": "hoverStroke",
-        "old": [
-            "hoverStroke",
-            "hoverstroke",
-            "Hoverstroke",
-            "HOVERSTROKE"
-        ]
+        "new": "hoverStroke"
     },
     {
         "literal": "anychart.enums.GanttDataFields.CONNECTOR",
-        "new": "connector",
-        "old": [
-            "connector",
-            "Connector",
-            "CONNECTOR"
-        ]
+        "new": "connector"
     },
     {
         "literal": "anychart.enums.GanttDataFields.CONNECT_TO",
-        "new": "connectTo",
-        "old": [
-            "connectTo",
-            "connectto",
-            "Connectto",
-            "CONNECTTO"
-        ]
+        "new": "connectTo"
     },
     {
         "literal": "anychart.enums.GanttDataFields.CONNECTOR_TYPE",
-        "new": "connectorType",
-        "old": [
-            "connectorType",
-            "connectortype",
-            "Connectortype",
-            "CONNECTORTYPE"
-        ]
+        "new": "connectorType"
     },
     {
         "literal": "anychart.enums.GanttDataFields.START_MARKER",
-        "new": "startMarker",
-        "old": [
-            "startMarker",
-            "startmarker",
-            "Startmarker",
-            "STARTMARKER"
-        ]
+        "new": "startMarker"
     },
     {
         "literal": "anychart.enums.GanttDataFields.END_MARKER",
-        "new": "endMarker",
-        "old": [
-            "endMarker",
-            "endmarker",
-            "Endmarker",
-            "ENDMARKER"
-        ]
+        "new": "endMarker"
     },
     {
         "literal": "anychart.enums.GanttDataFields.LABEL",
-        "new": "label",
-        "old": [
-            "label",
-            "Label",
-            "LABEL"
-        ]
+        "new": "label"
     },
     {
         "literal": "anychart.enums.GanttDataFields.MARKERS",
-        "new": "markers",
-        "old": [
-            "markers",
-            "Markers",
-            "MARKERS"
-        ]
+        "new": "markers"
     },
     {
         "literal": "anychart.enums.TLElementTypes.PARENT",
-        "new": 0,
-        "old": [
-            0
-        ]
+        "new": 0
     },
     {
         "literal": "anychart.enums.TLElementTypes.BASE",
-        "new": 1,
-        "old": [
-            1
-        ]
+        "new": 1
     },
     {
         "literal": "anychart.enums.TLElementTypes.PROGRESS",
-        "new": 2,
-        "old": [
-            2
-        ]
+        "new": 2
     },
     {
         "literal": "anychart.enums.TLElementTypes.BASELINE",
-        "new": 3,
-        "old": [
-            3
-        ]
+        "new": 3
     },
     {
         "literal": "anychart.enums.TLElementTypes.MILESTONE",
-        "new": 4,
-        "old": [
-            4
-        ]
+        "new": 4
     },
     {
         "literal": "anychart.enums.TLElementTypes.PERIOD",
-        "new": 5,
-        "old": [
-            5
-        ]
+        "new": 5
     },
     {
         "literal": "anychart.enums.TLElementTypes.CONNECTOR",
-        "new": 6,
-        "old": [
-            6
-        ]
+        "new": 6
     },
     {
         "literal": "anychart.enums.ConnectorType.FINISH_START",
@@ -5969,12 +4691,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ColumnFormats.TEXT",
-        "new": "text",
-        "old": [
-            "text",
-            "Text",
-            "TEXT"
-        ]
+        "new": "text"
     },
     {
         "literal": "anychart.enums.ColumnFormats.SHORT_TEXT",
@@ -5988,12 +4705,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ColumnFormats.PERCENT",
-        "new": "percent",
-        "old": [
-            "percent",
-            "Percent",
-            "PERCENT"
-        ]
+        "new": "percent"
     },
     {
         "literal": "anychart.enums.ColumnFormats.DATE_COMMON_LOG",
@@ -6037,212 +4749,95 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ColumnFormats.FINANCIAL",
-        "new": "financial",
-        "old": [
-            "financial",
-            "Financial",
-            "FINANCIAL"
-        ]
+        "new": "financial"
     },
     {
         "literal": "anychart.enums.GanttDateTimeMarkers.START",
-        "new": "start",
-        "old": [
-            "start",
-            "Start",
-            "START"
-        ]
+        "new": "start"
     },
     {
         "literal": "anychart.enums.GanttDateTimeMarkers.END",
-        "new": "end",
-        "old": [
-            "end",
-            "End",
-            "END"
-        ]
+        "new": "end"
     },
     {
         "literal": "anychart.enums.GanttDateTimeMarkers.CURRENT",
-        "new": "current",
-        "old": [
-            "current",
-            "Current",
-            "CURRENT"
-        ]
+        "new": "current"
     },
     {
         "literal": "anychart.enums.DataField.DEPENDS_ON",
-        "new": "dependsOn",
-        "old": [
-            "dependsOn",
-            "dependson",
-            "Dependson",
-            "DEPENDSON"
-        ]
+        "new": "dependsOn"
     },
     {
         "literal": "anychart.enums.DataField.OPTIMISTIC",
-        "new": "optimistic",
-        "old": [
-            "optimistic",
-            "Optimistic",
-            "OPTIMISTIC"
-        ]
+        "new": "optimistic"
     },
     {
         "literal": "anychart.enums.DataField.PESSIMISTIC",
-        "new": "pessimistic",
-        "old": [
-            "pessimistic",
-            "Pessimistic",
-            "PESSIMISTIC"
-        ]
+        "new": "pessimistic"
     },
     {
         "literal": "anychart.enums.DataField.MOST_LIKELY",
-        "new": "mostLikely",
-        "old": [
-            "mostLikely",
-            "mostlikely",
-            "Mostlikely",
-            "MOSTLIKELY"
-        ]
+        "new": "mostLikely"
     },
     {
         "literal": "anychart.enums.DataField.EXPECTED",
-        "new": "expected",
-        "old": [
-            "expected",
-            "Expected",
-            "EXPECTED"
-        ]
+        "new": "expected"
     },
     {
         "literal": "anychart.enums.DataField.DURATION",
-        "new": "duration",
-        "old": [
-            "duration",
-            "Duration",
-            "DURATION"
-        ]
+        "new": "duration"
     },
     {
         "literal": "anychart.enums.DataField.FROM",
-        "new": "from",
-        "old": [
-            "from",
-            "From",
-            "FROM"
-        ]
+        "new": "from"
     },
     {
         "literal": "anychart.enums.DataField.TO",
-        "new": "to",
-        "old": [
-            "to",
-            "To",
-            "TO"
-        ]
+        "new": "to"
     },
     {
         "literal": "anychart.enums.DataField.ID",
-        "new": "id",
-        "old": [
-            "id",
-            "Id",
-            "ID"
-        ]
+        "new": "id"
     },
     {
         "literal": "anychart.enums.DataField.NAME",
-        "new": "name",
-        "old": [
-            "name",
-            "Name",
-            "NAME"
-        ]
+        "new": "name"
     },
     {
         "literal": "anychart.enums.RadarSeriesType.AREA",
-        "new": "area",
-        "old": [
-            "area",
-            "Area",
-            "AREA"
-        ]
+        "new": "area"
     },
     {
         "literal": "anychart.enums.RadarSeriesType.LINE",
-        "new": "line",
-        "old": [
-            "line",
-            "Line",
-            "LINE"
-        ]
+        "new": "line"
     },
     {
         "literal": "anychart.enums.RadarSeriesType.MARKER",
-        "new": "marker",
-        "old": [
-            "marker",
-            "Marker",
-            "MARKER"
-        ]
+        "new": "marker"
     },
     {
         "literal": "anychart.enums.PolarSeriesType.AREA",
-        "new": "area",
-        "old": [
-            "area",
-            "Area",
-            "AREA"
-        ]
+        "new": "area"
     },
     {
         "literal": "anychart.enums.PolarSeriesType.LINE",
-        "new": "line",
-        "old": [
-            "line",
-            "Line",
-            "LINE"
-        ]
+        "new": "line"
     },
     {
         "literal": "anychart.enums.PolarSeriesType.MARKER",
-        "new": "marker",
-        "old": [
-            "marker",
-            "Marker",
-            "MARKER"
-        ]
+        "new": "marker"
     },
     {
         "literal": "anychart.enums.PolarSeriesType.POLYGON",
-        "new": "polygon",
-        "old": [
-            "polygon",
-            "Polygon",
-            "POLYGON"
-        ]
+        "new": "polygon"
     },
     {
         "literal": "anychart.enums.PolarSeriesType.POLYLINE",
-        "new": "polyline",
-        "old": [
-            "polyline",
-            "Polyline",
-            "POLYLINE"
-        ]
+        "new": "polyline"
     },
     {
         "literal": "anychart.enums.PolarSeriesType.COLUMN",
-        "new": "column",
-        "old": [
-            "column",
-            "Column",
-            "COLUMN"
-        ]
+        "new": "column"
     },
     {
         "literal": "anychart.enums.PolarSeriesType.RANGE_COLUMN",
@@ -6256,30 +4851,15 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ScatterSeriesType.BUBBLE",
-        "new": "bubble",
-        "old": [
-            "bubble",
-            "Bubble",
-            "BUBBLE"
-        ]
+        "new": "bubble"
     },
     {
         "literal": "anychart.enums.ScatterSeriesType.LINE",
-        "new": "line",
-        "old": [
-            "line",
-            "Line",
-            "LINE"
-        ]
+        "new": "line"
     },
     {
         "literal": "anychart.enums.ScatterSeriesType.MARKER",
-        "new": "marker",
-        "old": [
-            "marker",
-            "Marker",
-            "MARKER"
-        ]
+        "new": "marker"
     },
     {
         "literal": "anychart.enums.HeatMapSeriesType.HEAT_MAP",
@@ -6293,57 +4873,27 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.MekkoSeriesType.MEKKO",
-        "new": "mekko",
-        "old": [
-            "mekko",
-            "Mekko",
-            "MEKKO"
-        ]
+        "new": "mekko"
     },
     {
         "literal": "anychart.enums.WaterfallSeriesType.WATERFALL",
-        "new": "waterfall",
-        "old": [
-            "waterfall",
-            "Waterfall",
-            "WATERFALL"
-        ]
+        "new": "waterfall"
     },
     {
         "literal": "anychart.enums.WaterfallDataMode.ABSOLUTE",
-        "new": "absolute",
-        "old": [
-            "absolute",
-            "Absolute",
-            "ABSOLUTE"
-        ]
+        "new": "absolute"
     },
     {
         "literal": "anychart.enums.WaterfallDataMode.DIFF",
-        "new": "diff",
-        "old": [
-            "diff",
-            "Diff",
-            "DIFF"
-        ]
+        "new": "diff"
     },
     {
         "literal": "anychart.enums.ScaleTypes.LINEAR",
-        "new": "linear",
-        "old": [
-            "linear",
-            "Linear",
-            "LINEAR"
-        ]
+        "new": "linear"
     },
     {
         "literal": "anychart.enums.ScaleTypes.LOG",
-        "new": "log",
-        "old": [
-            "log",
-            "Log",
-            "LOG"
-        ]
+        "new": "log"
     },
     {
         "literal": "anychart.enums.ScaleTypes.DATE_TIME",
@@ -6367,12 +4917,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ScaleTypes.ORDINAL",
-        "new": "ordinal",
-        "old": [
-            "ordinal",
-            "Ordinal",
-            "ORDINAL"
-        ]
+        "new": "ordinal"
     },
     {
         "literal": "anychart.enums.ScaleTypes.ORDINAL_COLOR",
@@ -6396,21 +4941,11 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.ScatterScaleTypes.LINEAR",
-        "new": "linear",
-        "old": [
-            "linear",
-            "Linear",
-            "LINEAR"
-        ]
+        "new": "linear"
     },
     {
         "literal": "anychart.enums.ScatterScaleTypes.LOG",
-        "new": "log",
-        "old": [
-            "log",
-            "Log",
-            "LOG"
-        ]
+        "new": "log"
     },
     {
         "literal": "anychart.enums.ScatterScaleTypes.DATE_TIME",
@@ -6424,418 +4959,231 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.MapsScaleTypes.GEO",
-        "new": "geo",
-        "old": [
-            "geo",
-            "Geo",
-            "GEO"
-        ]
+        "new": "geo"
     },
     {
         "literal": "anychart.enums.ChartDataExportMode.RAW",
-        "new": "raw",
-        "old": [
-            "raw",
-            "Raw",
-            "RAW"
-        ]
+        "new": "raw"
     },
     {
         "literal": "anychart.enums.ChartDataExportMode.SPECIFIC",
-        "new": "specific",
-        "old": [
-            "specific",
-            "Specific",
-            "SPECIFIC"
-        ]
+        "new": "specific"
     },
     {
         "literal": "anychart.enums.ChartDataExportMode.GROUPED",
-        "new": "grouped",
-        "old": [
-            "grouped",
-            "Grouped",
-            "GROUPED"
-        ]
+        "new": "grouped"
     },
     {
         "literal": "anychart.enums.ErrorCode.CONTAINER_NOT_SET",
-        "new": 1,
-        "old": [
-            1
-        ]
+        "new": 1
     },
     {
         "literal": "anychart.enums.ErrorCode.SCALE_NOT_SET",
-        "new": 2,
-        "old": [
-            2
-        ]
+        "new": 2
     },
     {
         "literal": "anychart.enums.ErrorCode.WRONG_TABLE_CONTENTS",
-        "new": 3,
-        "old": [
-            3
-        ]
+        "new": 3
     },
     {
         "literal": "anychart.enums.ErrorCode.NO_FEATURE_IN_MODULE",
-        "new": 4,
-        "old": [
-            4
-        ]
+        "new": 4
     },
     {
         "literal": "anychart.enums.ErrorCode.INCORRECT_SCALE_TYPE",
-        "new": 5,
-        "old": [
-            5
-        ]
+        "new": 5
     },
     {
         "literal": "anychart.enums.ErrorCode.EMPTY_CONFIG",
-        "new": 7,
-        "old": [
-            7
-        ]
+        "new": 7
     },
     {
         "literal": "anychart.enums.ErrorCode.NO_LEGEND_IN_CHART",
-        "new": 8,
-        "old": [
-            8
-        ]
+        "new": 8
     },
     {
         "literal": "anychart.enums.ErrorCode.NO_CREDITS_IN_CHART",
-        "new": 9,
-        "old": [
-            9
-        ]
+        "new": 9
     },
     {
         "literal": "anychart.enums.ErrorCode.INVALID_GEO_JSON_OBJECT",
-        "new": 10,
-        "old": [
-            10
-        ]
+        "new": 10
     },
     {
         "literal": "anychart.enums.ErrorCode.FEATURE_NOT_SUPPORTED",
-        "new": 11,
-        "old": [
-            11
-        ]
+        "new": 11
     },
     {
         "literal": "anychart.enums.ErrorCode.NO_LEGEND_IN_STOCK",
-        "new": 51,
-        "old": [
-            51
-        ]
+        "new": 51
     },
     {
         "literal": "anychart.enums.ErrorCode.CSV_DOUBLE_QUOTE_IN_SEPARATOR",
-        "new": 100,
-        "old": [
-            100
-        ]
+        "new": 100
     },
     {
         "literal": "anychart.enums.ErrorCode.CSV_PARSING_FAILED",
-        "new": 101,
-        "old": [
-            101
-        ]
+        "new": 101
     },
     {
         "literal": "anychart.enums.ErrorCode.TABLE_MAPPING_DIFFERENT_TABLE",
-        "new": 200,
-        "old": [
-            200
-        ]
+        "new": 200
     },
     {
         "literal": "anychart.enums.ErrorCode.TABLE_FIELD_NAME_DUPLICATE",
-        "new": 201,
-        "old": [
-            201
-        ]
+        "new": 201
     },
     {
         "literal": "anychart.enums.ErrorCode.TABLE_COMPUTER_OUTPUT_FIELD_DUPLICATE",
-        "new": 202,
-        "old": [
-            202
-        ]
+        "new": 202
     },
     {
         "literal": "anychart.enums.ErrorCode.WRONG_SHAPES_CONFIG",
-        "new": 300,
-        "old": [
-            300
-        ]
+        "new": 300
     },
     {
         "literal": "anychart.enums.InfoCode.PERFORMANCE_REPORT",
-        "new": 0,
-        "old": [
-            0
-        ]
+        "new": 0
     },
     {
         "literal": "anychart.enums.InfoCode.BULLET_TOO_MUCH_RANGES",
-        "new": 1,
-        "old": [
-            1
-        ]
+        "new": 1
     },
     {
         "literal": "anychart.enums.InfoCode.BULLET_TOO_MUCH_MEASURES",
-        "new": 2,
-        "old": [
-            2
-        ]
+        "new": 2
     },
     {
         "literal": "anychart.enums.InfoCode.PIE_TOO_MUCH_POINTS",
-        "new": 3,
-        "old": [
-            3
-        ]
+        "new": 3
     },
     {
         "literal": "anychart.enums.WarningCode.DUPLICATED_DATA_ITEM",
-        "new": 1,
-        "old": [
-            1
-        ]
+        "new": 1
     },
     {
         "literal": "anychart.enums.WarningCode.REFERENCE_IS_NOT_UNIQUE",
-        "new": 2,
-        "old": [
-            2
-        ]
+        "new": 2
     },
     {
         "literal": "anychart.enums.WarningCode.MISSING_PARENT_ID",
-        "new": 3,
-        "old": [
-            3
-        ]
+        "new": 3
     },
     {
         "literal": "anychart.enums.WarningCode.CYCLE_REFERENCE",
-        "new": 4,
-        "old": [
-            4
-        ]
+        "new": 4
     },
     {
         "literal": "anychart.enums.WarningCode.NOT_MAPPED_FIELD",
-        "new": 5,
-        "old": [
-            5
-        ]
+        "new": 5
     },
     {
         "literal": "anychart.enums.WarningCode.COMPLEX_VALUE_TO_DEFAULT_FIELD",
-        "new": 6,
-        "old": [
-            6
-        ]
+        "new": 6
     },
     {
         "literal": "anychart.enums.WarningCode.NOT_OBJECT_OR_ARRAY",
-        "new": 7,
-        "old": [
-            7
-        ]
+        "new": 7
     },
     {
         "literal": "anychart.enums.WarningCode.CANT_SERIALIZE_FUNCTION",
-        "new": 8,
-        "old": [
-            8
-        ]
+        "new": 8
     },
     {
         "literal": "anychart.enums.WarningCode.DG_INCORRECT_METHOD_USAGE",
-        "new": 9,
-        "old": [
-            9
-        ]
+        "new": 9
     },
     {
         "literal": "anychart.enums.WarningCode.GANTT_FIT_TO_TASK",
-        "new": 11,
-        "old": [
-            11
-        ]
+        "new": 11
     },
     {
         "literal": "anychart.enums.WarningCode.SERIES_DOESNT_SUPPORT_ERROR",
-        "new": 12,
-        "old": [
-            12
-        ]
+        "new": 12
     },
     {
         "literal": "anychart.enums.WarningCode.TOOLBAR_CONTAINER",
-        "new": 13,
-        "old": [
-            13
-        ]
+        "new": 13
     },
     {
         "literal": "anychart.enums.WarningCode.TOOLBAR_METHOD_IS_NOT_DEFINED",
-        "new": 14,
-        "old": [
-            14
-        ]
+        "new": 14
     },
     {
         "literal": "anychart.enums.WarningCode.TOOLBAR_CHART_IS_NOT_SET",
-        "new": 15,
-        "old": [
-            15
-        ]
+        "new": 15
     },
     {
         "literal": "anychart.enums.WarningCode.DATA_ITEM_SET_PATH",
-        "new": 17,
-        "old": [
-            17
-        ]
+        "new": 17
     },
     {
         "literal": "anychart.enums.WarningCode.TREEMAP_MANY_ROOTS",
-        "new": 18,
-        "old": [
-            18
-        ]
+        "new": 18
     },
     {
         "literal": "anychart.enums.WarningCode.MISSING_PROJ4",
-        "new": 19,
-        "old": [
-            19
-        ]
+        "new": 19
     },
     {
         "literal": "anychart.enums.WarningCode.TOO_MANY_TICKS",
-        "new": 20,
-        "old": [
-            20
-        ]
+        "new": 20
     },
     {
         "literal": "anychart.enums.WarningCode.OBJECT_KEY_COLLISION",
-        "new": 21,
-        "old": [
-            21
-        ]
+        "new": 21
     },
     {
         "literal": "anychart.enums.WarningCode.VENN_AREA_NOT_REPRESENTED_ON_SCREEN",
-        "new": 22,
-        "old": [
-            22
-        ]
+        "new": 22
     },
     {
         "literal": "anychart.enums.WarningCode.TABLE_ALREADY_IN_TRANSACTION",
-        "new": 101,
-        "old": [
-            101
-        ]
+        "new": 101
     },
     {
         "literal": "anychart.enums.WarningCode.STOCK_WRONG_MAPPING",
-        "new": 201,
-        "old": [
-            201
-        ]
+        "new": 201
     },
     {
         "literal": "anychart.enums.WarningCode.FEATURE_ID_NOT_FOUND",
-        "new": 301,
-        "old": [
-            301
-        ]
+        "new": 301
     },
     {
         "literal": "anychart.enums.WarningCode.NOT_FOUND",
-        "new": 404,
-        "old": [
-            404
-        ]
+        "new": 404
     },
     {
         "literal": "anychart.enums.WarningCode.DEPRECATED",
-        "new": 405,
-        "old": [
-            405
-        ]
+        "new": 405
     },
     {
         "literal": "anychart.enums.WarningCode.PARSE_DATETIME",
-        "new": 406,
-        "old": [
-            406
-        ]
+        "new": 406
     },
     {
         "literal": "anychart.enums.WarningCode.IMMUTABLE_MARKER_SCALE",
-        "new": 500,
-        "old": [
-            500
-        ]
+        "new": 500
     },
     {
         "literal": "anychart.enums.WarningCode.IMMUTABLE_MARKER_LAYOUT",
-        "new": 501,
-        "old": [
-            501
-        ]
+        "new": 501
     },
     {
         "literal": "anychart.enums.Interval.YEAR",
-        "new": "year",
-        "old": [
-            "year",
-            "Year",
-            "YEAR"
-        ]
+        "new": "year"
     },
     {
         "literal": "anychart.enums.Interval.SEMESTER",
-        "new": "semester",
-        "old": [
-            "semester",
-            "Semester",
-            "SEMESTER"
-        ]
+        "new": "semester"
     },
     {
         "literal": "anychart.enums.Interval.QUARTER",
-        "new": "quarter",
-        "old": [
-            "quarter",
-            "Quarter",
-            "QUARTER"
-        ]
+        "new": "quarter"
     },
     {
         "literal": "anychart.enums.Interval.MONTH",
-        "new": "month",
-        "old": [
-            "month",
-            "Month",
-            "MONTH"
-        ]
+        "new": "month"
     },
     {
         "literal": "anychart.enums.Interval.THIRD_OF_MONTH",
@@ -6849,74 +5197,35 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.Interval.WEEK",
-        "new": "week",
-        "old": [
-            "week",
-            "Week",
-            "WEEK"
-        ]
+        "new": "week"
     },
     {
         "literal": "anychart.enums.Interval.DAY",
-        "new": "day",
-        "old": [
-            "day",
-            "Day",
-            "DAY"
-        ]
+        "new": "day"
     },
     {
         "literal": "anychart.enums.Interval.HOUR",
-        "new": "hour",
-        "old": [
-            "hour",
-            "Hour",
-            "HOUR"
-        ]
+        "new": "hour"
     },
     {
         "literal": "anychart.enums.Interval.MINUTE",
-        "new": "minute",
-        "old": [
-            "minute",
-            "Minute",
-            "MINUTE"
-        ]
+        "new": "minute"
     },
     {
         "literal": "anychart.enums.Interval.SECOND",
-        "new": "second",
-        "old": [
-            "second",
-            "Second",
-            "SECOND"
-        ]
+        "new": "second"
     },
     {
         "literal": "anychart.enums.Interval.MILLISECOND",
-        "new": "millisecond",
-        "old": [
-            "millisecond",
-            "Millisecond",
-            "MILLISECOND"
-        ]
+        "new": "millisecond"
     },
     {
         "literal": "anychart.enums.ErrorMode.X",
-        "new": "x",
-        "old": [
-            "x",
-            "X"
-        ]
+        "new": "x"
     },
     {
         "literal": "anychart.enums.TextParsingMode.CSV",
-        "new": "csv",
-        "old": [
-            "csv",
-            "Csv",
-            "CSV"
-        ]
+        "new": "csv"
     },
     {
         "literal": "anychart.enums.TextParsingMode.BY_WORD",
@@ -6940,19 +5249,12 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.WordBreak.NORMAL",
-        "new": "normal",
-        "old": [
-            "",
-            "normal",
-            "Normal",
-            "NORMAL"
-        ]
+        "new": "normal"
     },
     {
         "literal": "anychart.enums.WordBreak.KEEP_ALL",
         "new": "keep-all",
         "old": [
-            "",
             "keepAll",
             "KeepAll",
             "keepall",
@@ -6963,7 +5265,6 @@ exports.normalized = [
         "literal": "anychart.enums.WordBreak.BREAK_ALL",
         "new": "break-all",
         "old": [
-            "",
             "breakAll",
             "BreakAll",
             "breakall",
@@ -6972,19 +5273,12 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.WordWrap.NORMAL",
-        "new": "normal",
-        "old": [
-            "",
-            "normal",
-            "Normal",
-            "NORMAL"
-        ]
+        "new": "normal"
     },
     {
         "literal": "anychart.enums.WordWrap.BREAK_WORD",
         "new": "break-word",
         "old": [
-            "",
             "breakWord",
             "BreakWord",
             "breakword",
@@ -6993,48 +5287,23 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.AggregationType.FIRST",
-        "new": "first",
-        "old": [
-            "first",
-            "First",
-            "FIRST"
-        ]
+        "new": "first"
     },
     {
         "literal": "anychart.enums.AggregationType.LAST",
-        "new": "last",
-        "old": [
-            "last",
-            "Last",
-            "LAST"
-        ]
+        "new": "last"
     },
     {
         "literal": "anychart.enums.AggregationType.MAX",
-        "new": "max",
-        "old": [
-            "max",
-            "Max",
-            "MAX"
-        ]
+        "new": "max"
     },
     {
         "literal": "anychart.enums.AggregationType.MIN",
-        "new": "min",
-        "old": [
-            "min",
-            "Min",
-            "MIN"
-        ]
+        "new": "min"
     },
     {
         "literal": "anychart.enums.AggregationType.AVERAGE",
-        "new": "average",
-        "old": [
-            "average",
-            "Average",
-            "AVERAGE"
-        ]
+        "new": "average"
     },
     {
         "literal": "anychart.enums.AggregationType.WEIGHTED_AVERAGE",
@@ -7068,21 +5337,11 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.AggregationType.SUM",
-        "new": "sum",
-        "old": [
-            "sum",
-            "Sum",
-            "SUM"
-        ]
+        "new": "sum"
     },
     {
         "literal": "anychart.enums.AggregationType.LIST",
-        "new": "list",
-        "old": [
-            "list",
-            "List",
-            "LIST"
-        ]
+        "new": "list"
     },
     {
         "literal": "anychart.enums.ScrollerRangeChangeSource.THUMB_DRAG",
@@ -7176,12 +5435,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.StockRangeChangeSource.MARQUEE",
-        "new": "marquee",
-        "old": [
-            "marquee",
-            "Marquee",
-            "MARQUEE"
-        ]
+        "new": "marquee"
     },
     {
         "literal": "anychart.enums.StockRangeChangeSource.MOUSE_WHEEL",
@@ -7195,73 +5449,35 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.StockRangeType.YTD",
-        "new": "ytd",
-        "old": [
-            "YTD",
-            "ytd",
-            "Ytd"
-        ]
+        "new": "ytd"
     },
     {
         "literal": "anychart.enums.StockRangeType.QTD",
-        "new": "qtd",
-        "old": [
-            "QTD",
-            "qtd",
-            "Qtd"
-        ]
+        "new": "qtd"
     },
     {
         "literal": "anychart.enums.StockRangeType.MTD",
-        "new": "mtd",
-        "old": [
-            "MTD",
-            "mtd",
-            "Mtd"
-        ]
+        "new": "mtd"
     },
     {
         "literal": "anychart.enums.StockRangeType.MAX",
-        "new": "max",
-        "old": [
-            "Max",
-            "max",
-            "MAX"
-        ]
+        "new": "max"
     },
     {
         "literal": "anychart.enums.StepDirection.CENTER",
-        "new": "center",
-        "old": [
-            "center",
-            "Center",
-            "CENTER"
-        ]
+        "new": "center"
     },
     {
         "literal": "anychart.enums.TokenType.UNKNOWN",
-        "new": "",
-        "old": [
-            ""
-        ]
+        "new": ""
     },
     {
         "literal": "anychart.enums.TokenType.NUMBER",
-        "new": "number",
-        "old": [
-            "number",
-            "Number",
-            "NUMBER"
-        ]
+        "new": "number"
     },
     {
         "literal": "anychart.enums.TokenType.STRING",
-        "new": "string",
-        "old": [
-            "string",
-            "String",
-            "STRING"
-        ]
+        "new": "string"
     },
     {
         "literal": "anychart.enums.TokenType.DATE_TIME",
@@ -7275,3589 +5491,1602 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.TokenType.PERCENT",
-        "new": "percent",
-        "old": [
-            "percent",
-            "Percent",
-            "PERCENT"
-        ]
+        "new": "percent"
     },
     {
         "literal": "anychart.enums.StringToken.AVERAGE",
-        "new": "%Average",
-        "old": [
-            "%Average",
-            "%average",
-            "%AVERAGE"
-        ]
+        "new": "%Average"
     },
     {
         "literal": "anychart.enums.StringToken.AXIS_NAME",
-        "new": "%AxisName",
-        "old": [
-            "%AxisName",
-            "%axisname",
-            "%AXISNAME"
-        ]
+        "new": "%AxisName"
     },
     {
         "literal": "anychart.enums.StringToken.AXIS_SCALE_MAX",
-        "new": "%AxisScaleMax",
-        "old": [
-            "%AxisScaleMax",
-            "%axisscalemax",
-            "%AXISSCALEMAX"
-        ]
+        "new": "%AxisScaleMax"
     },
     {
         "literal": "anychart.enums.StringToken.AXIS_SCALE_MIN",
-        "new": "%AxisScaleMin",
-        "old": [
-            "%AxisScaleMin",
-            "%axisscalemin",
-            "%AXISSCALEMIN"
-        ]
+        "new": "%AxisScaleMin"
     },
     {
         "literal": "anychart.enums.StringToken.BUBBLE_SIZE",
-        "new": "%BubbleSize",
-        "old": [
-            "%BubbleSize",
-            "%bubblesize",
-            "%BUBBLESIZE"
-        ]
+        "new": "%BubbleSize"
     },
     {
         "literal": "anychart.enums.StringToken.BUBBLE_SIZE_PERCENT_OF_CATEGORY",
-        "new": "%BubbleSizePercentOfCategory",
-        "old": [
-            "%BubbleSizePercentOfCategory",
-            "%bubblesizepercentofcategory",
-            "%BUBBLESIZEPERCENTOFCATEGORY"
-        ]
+        "new": "%BubbleSizePercentOfCategory"
     },
     {
         "literal": "anychart.enums.StringToken.BUBBLE_SIZE_PERCENT_OF_SERIES",
-        "new": "%BubbleSizePercentOfSeries",
-        "old": [
-            "%BubbleSizePercentOfSeries",
-            "%bubblesizepercentofseries",
-            "%BUBBLESIZEPERCENTOFSERIES"
-        ]
+        "new": "%BubbleSizePercentOfSeries"
     },
     {
         "literal": "anychart.enums.StringToken.BUBBLE_SIZE_PERCENT_OF_TOTAL",
-        "new": "%BubbleSizePercentOfTotal",
-        "old": [
-            "%BubbleSizePercentOfTotal",
-            "%bubblesizepercentoftotal",
-            "%BUBBLESIZEPERCENTOFTOTAL"
-        ]
+        "new": "%BubbleSizePercentOfTotal"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_NAME",
-        "new": "%CategoryName",
-        "old": [
-            "%CategoryName",
-            "%categoryname",
-            "%CATEGORYNAME"
-        ]
+        "new": "%CategoryName"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_Y_AVERAGE",
-        "new": "%CategoryYAverage",
-        "old": [
-            "%CategoryYAverage",
-            "%categoryyaverage",
-            "%CATEGORYYAVERAGE"
-        ]
+        "new": "%CategoryYAverage"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_Y_MEDIAN",
-        "new": "%CategoryYMedian",
-        "old": [
-            "%CategoryYMedian",
-            "%categoryymedian",
-            "%CATEGORYYMEDIAN"
-        ]
+        "new": "%CategoryYMedian"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_Y_MODE",
-        "new": "%CategoryYMode",
-        "old": [
-            "%CategoryYMode",
-            "%categoryymode",
-            "%CATEGORYYMODE"
-        ]
+        "new": "%CategoryYMode"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_Y_PERCENT_OF_TOTAL",
-        "new": "%CategoryYPercentOfTotal",
-        "old": [
-            "%CategoryYPercentOfTotal",
-            "%categoryypercentoftotal",
-            "%CATEGORYYPERCENTOFTOTAL"
-        ]
+        "new": "%CategoryYPercentOfTotal"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_Y_RANGE_AVERAGE",
-        "new": "%CategoryYRangeAverage",
-        "old": [
-            "%CategoryYRangeAverage",
-            "%categoryyrangeaverage",
-            "%CATEGORYYRANGEAVERAGE"
-        ]
+        "new": "%CategoryYRangeAverage"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_Y_RANGE_MAX",
-        "new": "%CategoryYRangeMax",
-        "old": [
-            "%CategoryYRangeMax",
-            "%categoryyrangemax",
-            "%CATEGORYYRANGEMAX"
-        ]
+        "new": "%CategoryYRangeMax"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_Y_RANGE_MIN",
-        "new": "%CategoryYRangeMin",
-        "old": [
-            "%CategoryYRangeMin",
-            "%categoryyrangemin",
-            "%CATEGORYYRANGEMIN"
-        ]
+        "new": "%CategoryYRangeMin"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_Y_RANGE_MEDIAN",
-        "new": "%CategoryYRangeMedian",
-        "old": [
-            "%CategoryYRangeMedian",
-            "%categoryyrangemedian",
-            "%CATEGORYYRANGEMEDIAN"
-        ]
+        "new": "%CategoryYRangeMedian"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_Y_RANGE_MODE",
-        "new": "%CategoryYRangeMode",
-        "old": [
-            "%CategoryYRangeMode",
-            "%categoryyrangemode",
-            "%CATEGORYYRANGEMODE"
-        ]
+        "new": "%CategoryYRangeMode"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_Y_RANGE_SUM",
-        "new": "%CategoryYRangeSum",
-        "old": [
-            "%CategoryYRangeSum",
-            "%categoryyrangesum",
-            "%CATEGORYYRANGESUM"
-        ]
+        "new": "%CategoryYRangeSum"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_Y_RANGE_PERCENT_OF_TOTAL",
-        "new": "%CategoryYRangePercentOfTotal",
-        "old": [
-            "%CategoryYRangePercentOfTotal",
-            "%categoryyrangepercentoftotal",
-            "%CATEGORYYRANGEPERCENTOFTOTAL"
-        ]
+        "new": "%CategoryYRangePercentOfTotal"
     },
     {
         "literal": "anychart.enums.StringToken.CATEGORY_Y_SUM",
-        "new": "%CategoryYSum",
-        "old": [
-            "%CategoryYSum",
-            "%categoryysum",
-            "%CATEGORYYSUM"
-        ]
+        "new": "%CategoryYSum"
     },
     {
         "literal": "anychart.enums.StringToken.CLOSE",
-        "new": "%Close",
-        "old": [
-            "%Close",
-            "%close",
-            "%CLOSE"
-        ]
+        "new": "%Close"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_BUBBLE_MAX_SIZE",
-        "new": "%DataPlotBubbleMaxSize",
-        "old": [
-            "%DataPlotBubbleMaxSize",
-            "%dataplotbubblemaxsize",
-            "%DATAPLOTBUBBLEMAXSIZE"
-        ]
+        "new": "%DataPlotBubbleMaxSize"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_BUBBLE_MIN_SIZE",
-        "new": "%DataPlotBubbleMinSize",
-        "old": [
-            "%DataPlotBubbleMinSize",
-            "%dataplotbubbleminsize",
-            "%DATAPLOTBUBBLEMINSIZE"
-        ]
+        "new": "%DataPlotBubbleMinSize"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_BUBBLE_SIZE_AVERAGE",
-        "new": "%DataPlotBubbleSizeAverage",
-        "old": [
-            "%DataPlotBubbleSizeAverage",
-            "%dataplotbubblesizeaverage",
-            "%DATAPLOTBUBBLESIZEAVERAGE"
-        ]
+        "new": "%DataPlotBubbleSizeAverage"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_BUBBLE_SIZE_SUM",
-        "new": "%DataPlotBubbleSizeSum",
-        "old": [
-            "%DataPlotBubbleSizeSum",
-            "%dataplotbubblesizesum",
-            "%DATAPLOTBUBBLESIZESUM"
-        ]
+        "new": "%DataPlotBubbleSizeSum"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_MAX_Y_SUM_SERIES_NAME",
-        "new": "%DataPlotMaxYSumSeriesName",
-        "old": [
-            "%DataPlotMaxYSumSeriesName",
-            "%dataplotmaxysumseriesname",
-            "%DATAPLOTMAXYSUMSERIESNAME"
-        ]
+        "new": "%DataPlotMaxYSumSeriesName"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_MAX_Y_VALUE_POINT_NAME",
-        "new": "%DataPlotMaxYValuePointName",
-        "old": [
-            "%DataPlotMaxYValuePointName",
-            "%dataplotmaxyvaluepointname",
-            "%DATAPLOTMAXYVALUEPOINTNAME"
-        ]
+        "new": "%DataPlotMaxYValuePointName"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_MAX_Y_VALUE_POINT_SERIES_NAME",
-        "new": "%DataPlotMaxYValuePointSeriesName",
-        "old": [
-            "%DataPlotMaxYValuePointSeriesName",
-            "%dataplotmaxyvaluepointseriesname",
-            "%DATAPLOTMAXYVALUEPOINTSERIESNAME"
-        ]
+        "new": "%DataPlotMaxYValuePointSeriesName"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_MIN_Y_SUM_SERIES_NAME",
-        "new": "%DataPlotMinYSumSeriesName",
-        "old": [
-            "%DataPlotMinYSumSeriesName",
-            "%dataplotminysumseriesname",
-            "%DATAPLOTMINYSUMSERIESNAME"
-        ]
+        "new": "%DataPlotMinYSumSeriesName"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_MIN_Y_VALUE_POINT_NAME",
-        "new": "%DataPlotMinYValuePointName",
-        "old": [
-            "%DataPlotMinYValuePointName",
-            "%dataplotminyvaluepointname",
-            "%DATAPLOTMINYVALUEPOINTNAME"
-        ]
+        "new": "%DataPlotMinYValuePointName"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_MIN_Y_VALUE_POINT_SERIES_NAME",
-        "new": "%DataPlotMinYValuePointSeriesName",
-        "old": [
-            "%DataPlotMinYValuePointSeriesName",
-            "%dataplotminyvaluepointseriesname",
-            "%DATAPLOTMINYVALUEPOINTSERIESNAME"
-        ]
+        "new": "%DataPlotMinYValuePointSeriesName"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_POINT_COUNT",
-        "new": "%DataPlotPointCount",
-        "old": [
-            "%DataPlotPointCount",
-            "%dataplotpointcount",
-            "%DATAPLOTPOINTCOUNT"
-        ]
+        "new": "%DataPlotPointCount"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_SERIES_COUNT",
-        "new": "%DataPlotSeriesCount",
-        "old": [
-            "%DataPlotSeriesCount",
-            "%dataplotseriescount",
-            "%DATAPLOTSERIESCOUNT"
-        ]
+        "new": "%DataPlotSeriesCount"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_X_AVERAGE",
-        "new": "%DataPlotXAverage",
-        "old": [
-            "%DataPlotXAverage",
-            "%dataplotxaverage",
-            "%DATAPLOTXAVERAGE"
-        ]
+        "new": "%DataPlotXAverage"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_X_MAX",
-        "new": "%DataPlotXMax",
-        "old": [
-            "%DataPlotXMax",
-            "%dataplotxmax",
-            "%DATAPLOTXMAX"
-        ]
+        "new": "%DataPlotXMax"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_X_MIN",
-        "new": "%DataPlotXMin",
-        "old": [
-            "%DataPlotXMin",
-            "%dataplotxmin",
-            "%DATAPLOTXMIN"
-        ]
+        "new": "%DataPlotXMin"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_X_SUM",
-        "new": "%DataPlotXSum",
-        "old": [
-            "%DataPlotXSum",
-            "%dataplotxsum",
-            "%DATAPLOTXSUM"
-        ]
+        "new": "%DataPlotXSum"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_Y_AVERAGE",
-        "new": "%DataPlotYAverage",
-        "old": [
-            "%DataPlotYAverage",
-            "%dataplotyaverage",
-            "%DATAPLOTYAVERAGE"
-        ]
+        "new": "%DataPlotYAverage"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_Y_MAX",
-        "new": "%DataPlotYMax",
-        "old": [
-            "%DataPlotYMax",
-            "%dataplotymax",
-            "%DATAPLOTYMAX"
-        ]
+        "new": "%DataPlotYMax"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_Y_MIN",
-        "new": "%DataPlotYMin",
-        "old": [
-            "%DataPlotYMin",
-            "%dataplotymin",
-            "%DATAPLOTYMIN"
-        ]
+        "new": "%DataPlotYMin"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_Y_RANGE_MAX",
-        "new": "%DataPlotYRangeMax",
-        "old": [
-            "%DataPlotYRangeMax",
-            "%dataplotyrangemax",
-            "%DATAPLOTYRANGEMAX"
-        ]
+        "new": "%DataPlotYRangeMax"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_Y_RANGE_MIN",
-        "new": "%DataPlotYRangeMin",
-        "old": [
-            "%DataPlotYRangeMin",
-            "%dataplotyrangemin",
-            "%DATAPLOTYRANGEMIN"
-        ]
+        "new": "%DataPlotYRangeMin"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_Y_RANGE_SUM",
-        "new": "%DataPlotYRangeSum",
-        "old": [
-            "%DataPlotYRangeSum",
-            "%dataplotyrangesum",
-            "%DATAPLOTYRANGESUM"
-        ]
+        "new": "%DataPlotYRangeSum"
     },
     {
         "literal": "anychart.enums.StringToken.DATA_PLOT_Y_SUM",
-        "new": "%DataPlotYSum",
-        "old": [
-            "%DataPlotYSum",
-            "%dataplotysum",
-            "%DATAPLOTYSUM"
-        ]
+        "new": "%DataPlotYSum"
     },
     {
         "literal": "anychart.enums.StringToken.HIGH",
-        "new": "%High",
-        "old": [
-            "%High",
-            "%high",
-            "%HIGH"
-        ]
+        "new": "%High"
     },
     {
         "literal": "anychart.enums.StringToken.INDEX",
-        "new": "%Index",
-        "old": [
-            "%Index",
-            "%index",
-            "%INDEX"
-        ]
+        "new": "%Index"
     },
     {
         "literal": "anychart.enums.StringToken.LOW",
-        "new": "%Low",
-        "old": [
-            "%Low",
-            "%low",
-            "%LOW"
-        ]
+        "new": "%Low"
     },
     {
         "literal": "anychart.enums.StringToken.NAME",
-        "new": "%Name",
-        "old": [
-            "%Name",
-            "%name",
-            "%NAME"
-        ]
+        "new": "%Name"
     },
     {
         "literal": "anychart.enums.StringToken.OPEN",
-        "new": "%Open",
-        "old": [
-            "%Open",
-            "%open",
-            "%OPEN"
-        ]
+        "new": "%Open"
     },
     {
         "literal": "anychart.enums.StringToken.PERT_CHART_CRITICAL_PATH_STANDARD_DEVIATION",
-        "new": "%PertChartCriticalPathStandardDeviation",
-        "old": [
-            "%PertChartCriticalPathStandardDeviation",
-            "%pertchartcriticalpathstandarddeviation",
-            "%PERTCHARTCRITICALPATHSTANDARDDEVIATION"
-        ]
+        "new": "%PertChartCriticalPathStandardDeviation"
     },
     {
         "literal": "anychart.enums.StringToken.PERT_CHART_PROJECT_DURATION",
-        "new": "%PertChartProjectDuration",
-        "old": [
-            "%PertChartProjectDuration",
-            "%pertchartprojectduration",
-            "%PERTCHARTPROJECTDURATION"
-        ]
+        "new": "%PertChartProjectDuration"
     },
     {
         "literal": "anychart.enums.StringToken.RANGE",
-        "new": "%Range",
-        "old": [
-            "%Range",
-            "%range",
-            "%RANGE"
-        ]
+        "new": "%Range"
     },
     {
         "literal": "anychart.enums.StringToken.RANGE_END",
-        "new": "%RangeEnd",
-        "old": [
-            "%RangeEnd",
-            "%rangeend",
-            "%RANGEEND"
-        ]
+        "new": "%RangeEnd"
     },
     {
         "literal": "anychart.enums.StringToken.RANGE_START",
-        "new": "%RangeStart",
-        "old": [
-            "%RangeStart",
-            "%rangestart",
-            "%RANGESTART"
-        ]
+        "new": "%RangeStart"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_BUBBLE_MAX_SIZE",
-        "new": "%SeriesBubbleMaxSize",
-        "old": [
-            "%SeriesBubbleMaxSize",
-            "%seriesbubblemaxsize",
-            "%SERIESBUBBLEMAXSIZE"
-        ]
+        "new": "%SeriesBubbleMaxSize"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_BUBBLE_MIN_SIZE",
-        "new": "%SeriesBubbleMinSize",
-        "old": [
-            "%SeriesBubbleMinSize",
-            "%seriesbubbleminsize",
-            "%SERIESBUBBLEMINSIZE"
-        ]
+        "new": "%SeriesBubbleMinSize"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_BUBBLE_SIZE_AVERAGE",
-        "new": "%SeriesBubbleSizeAverage",
-        "old": [
-            "%SeriesBubbleSizeAverage",
-            "%seriesbubblesizeaverage",
-            "%SERIESBUBBLESIZEAVERAGE"
-        ]
+        "new": "%SeriesBubbleSizeAverage"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_BUBBLE_SIZE_MEDIAN",
-        "new": "%SeriesBubbleSizeMedian",
-        "old": [
-            "%SeriesBubbleSizeMedian",
-            "%seriesbubblesizemedian",
-            "%SERIESBUBBLESIZEMEDIAN"
-        ]
+        "new": "%SeriesBubbleSizeMedian"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_BUBBLE_SIZE_MODE",
-        "new": "%SeriesBubbleSizeMode",
-        "old": [
-            "%SeriesBubbleSizeMode",
-            "%seriesbubblesizemode",
-            "%SERIESBUBBLESIZEMODE"
-        ]
+        "new": "%SeriesBubbleSizeMode"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_BUBBLE_SIZE_SUM",
-        "new": "%SeriesBubbleSizeSum",
-        "old": [
-            "%SeriesBubbleSizeSum",
-            "%seriesbubblesizesum",
-            "%SERIESBUBBLESIZESUM"
-        ]
+        "new": "%SeriesBubbleSizeSum"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_FIRST_X_VALUE",
-        "new": "%SeriesFirstXValue",
-        "old": [
-            "%SeriesFirstXValue",
-            "%seriesfirstxvalue",
-            "%SERIESFIRSTXVALUE"
-        ]
+        "new": "%SeriesFirstXValue"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_FIRST_Y_VALUE",
-        "new": "%SeriesFirstYValue",
-        "old": [
-            "%SeriesFirstYValue",
-            "%seriesfirstyvalue",
-            "%SERIESFIRSTYVALUE"
-        ]
+        "new": "%SeriesFirstYValue"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_LAST_X_VALUE",
-        "new": "%SeriesLastXValue",
-        "old": [
-            "%SeriesLastXValue",
-            "%serieslastxvalue",
-            "%SERIESLASTXVALUE"
-        ]
+        "new": "%SeriesLastXValue"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_LAST_Y_VALUE",
-        "new": "%SeriesLastYValue",
-        "old": [
-            "%SeriesLastYValue",
-            "%serieslastyvalue",
-            "%SERIESLASTYVALUE"
-        ]
+        "new": "%SeriesLastYValue"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_MIN",
-        "new": "%SeriesMin",
-        "old": [
-            "%SeriesMin",
-            "%seriesmin",
-            "%SERIESMIN"
-        ]
+        "new": "%SeriesMin"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_MAX",
-        "new": "%SeriesMax",
-        "old": [
-            "%SeriesMax",
-            "%seriesmax",
-            "%SERIESMAX"
-        ]
+        "new": "%SeriesMax"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_NAME",
-        "new": "%SeriesName",
-        "old": [
-            "%SeriesName",
-            "%seriesname",
-            "%SERIESNAME"
-        ]
+        "new": "%SeriesName"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_POINT_COUNT",
-        "new": "%SeriesPointCount",
-        "old": [
-            "%SeriesPointCount",
-            "%seriespointcount",
-            "%SERIESPOINTCOUNT"
-        ]
+        "new": "%SeriesPointCount"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_POINTS_COUNT",
-        "new": "%SeriesPointsCount",
-        "old": [
-            "%SeriesPointsCount",
-            "%seriespointscount",
-            "%SERIESPOINTSCOUNT"
-        ]
+        "new": "%SeriesPointsCount"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_X_AVERAGE",
-        "new": "%SeriesXAverage",
-        "old": [
-            "%SeriesXAverage",
-            "%seriesxaverage",
-            "%SERIESXAVERAGE"
-        ]
+        "new": "%SeriesXAverage"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_X_AXIS_NAME",
-        "new": "%SeriesXAxisName",
-        "old": [
-            "%SeriesXAxisName",
-            "%seriesxaxisname",
-            "%SERIESXAXISNAME"
-        ]
+        "new": "%SeriesXAxisName"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_X_MAX",
-        "new": "%SeriesXMax",
-        "old": [
-            "%SeriesXMax",
-            "%seriesxmax",
-            "%SERIESXMAX"
-        ]
+        "new": "%SeriesXMax"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_X_MEDIAN",
-        "new": "%SeriesXMedian",
-        "old": [
-            "%SeriesXMedian",
-            "%seriesxmedian",
-            "%SERIESXMEDIAN"
-        ]
+        "new": "%SeriesXMedian"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_X_MIN",
-        "new": "%SeriesXMin",
-        "old": [
-            "%SeriesXMin",
-            "%seriesxmin",
-            "%SERIESXMIN"
-        ]
+        "new": "%SeriesXMin"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_X_MODE",
-        "new": "%SeriesXMode",
-        "old": [
-            "%SeriesXMode",
-            "%seriesxmode",
-            "%SERIESXMODE"
-        ]
+        "new": "%SeriesXMode"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_X_SUM",
-        "new": "%SeriesXSum",
-        "old": [
-            "%SeriesXSum",
-            "%seriesxsum",
-            "%SERIESXSUM"
-        ]
+        "new": "%SeriesXSum"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_Y_AVERAGE",
-        "new": "%SeriesYAverage",
-        "old": [
-            "%SeriesYAverage",
-            "%seriesyaverage",
-            "%SERIESYAVERAGE"
-        ]
+        "new": "%SeriesYAverage"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_Y_AXIS_NAME",
-        "new": "%SeriesYAxisName",
-        "old": [
-            "%SeriesYAxisName",
-            "%seriesyaxisname",
-            "%SERIESYAXISNAME"
-        ]
+        "new": "%SeriesYAxisName"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_Y_MAX",
-        "new": "%SeriesYMax",
-        "old": [
-            "%SeriesYMax",
-            "%seriesymax",
-            "%SERIESYMAX"
-        ]
+        "new": "%SeriesYMax"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_Y_MEDIAN",
-        "new": "%SeriesYMedian",
-        "old": [
-            "%SeriesYMedian",
-            "%seriesymedian",
-            "%SERIESYMEDIAN"
-        ]
+        "new": "%SeriesYMedian"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_Y_MIN",
-        "new": "%SeriesYMin",
-        "old": [
-            "%SeriesYMin",
-            "%seriesymin",
-            "%SERIESYMIN"
-        ]
+        "new": "%SeriesYMin"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_Y_MODE",
-        "new": "%SeriesYMode",
-        "old": [
-            "%SeriesYMode",
-            "%seriesymode",
-            "%SERIESYMODE"
-        ]
+        "new": "%SeriesYMode"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_Y_RANGE_MAX",
-        "new": "%SeriesYRangeMax",
-        "old": [
-            "%SeriesYRangeMax",
-            "%seriesyrangemax",
-            "%SERIESYRANGEMAX"
-        ]
+        "new": "%SeriesYRangeMax"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_Y_RANGE_MIN",
-        "new": "%SeriesYRangeMin",
-        "old": [
-            "%SeriesYRangeMin",
-            "%seriesyrangemin",
-            "%SERIESYRANGEMIN"
-        ]
+        "new": "%SeriesYRangeMin"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_Y_RANGE_SUM",
-        "new": "%SeriesYRangeSum",
-        "old": [
-            "%SeriesYRangeSum",
-            "%seriesyrangesum",
-            "%SERIESYRANGESUM"
-        ]
+        "new": "%SeriesYRangeSum"
     },
     {
         "literal": "anychart.enums.StringToken.SERIES_Y_SUM",
-        "new": "%SeriesYSum",
-        "old": [
-            "%SeriesYSum",
-            "%seriesysum",
-            "%SERIESYSUM"
-        ]
+        "new": "%SeriesYSum"
     },
     {
         "literal": "anychart.enums.StringToken.VALUE",
-        "new": "%Value",
-        "old": [
-            "%Value",
-            "%value",
-            "%VALUE"
-        ]
+        "new": "%Value"
     },
     {
         "literal": "anychart.enums.StringToken.PERCENT_VALUE",
-        "new": "%PercentValue",
-        "old": [
-            "%PercentValue",
-            "%percentvalue",
-            "%PERCENTVALUE"
-        ]
+        "new": "%PercentValue"
     },
     {
         "literal": "anychart.enums.StringToken.X_PERCENT_OF_SERIES",
-        "new": "%XPercentOfSeries",
-        "old": [
-            "%XPercentOfSeries",
-            "%xpercentofseries",
-            "%XPERCENTOFSERIES"
-        ]
+        "new": "%XPercentOfSeries"
     },
     {
         "literal": "anychart.enums.StringToken.X_PERCENT_OF_TOTAL",
-        "new": "%XPercentOfTotal",
-        "old": [
-            "%XPercentOfTotal",
-            "%xpercentoftotal",
-            "%XPERCENTOFTOTAL"
-        ]
+        "new": "%XPercentOfTotal"
     },
     {
         "literal": "anychart.enums.StringToken.X_VALUE",
-        "new": "%XValue",
-        "old": [
-            "%XValue",
-            "%xvalue",
-            "%XVALUE"
-        ]
+        "new": "%XValue"
     },
     {
         "literal": "anychart.enums.StringToken.Y_PERCENT_OF_CATEGORY",
-        "new": "%YPercentOfCategory",
-        "old": [
-            "%YPercentOfCategory",
-            "%ypercentofcategory",
-            "%YPERCENTOFCATEGORY"
-        ]
+        "new": "%YPercentOfCategory"
     },
     {
         "literal": "anychart.enums.StringToken.Y_PERCENT_OF_SERIES",
-        "new": "%YPercentOfSeries",
-        "old": [
-            "%YPercentOfSeries",
-            "%ypercentofseries",
-            "%YPERCENTOFSERIES"
-        ]
+        "new": "%YPercentOfSeries"
     },
     {
         "literal": "anychart.enums.StringToken.Y_PERCENT_OF_TOTAL",
-        "new": "%YPercentOfTotal",
-        "old": [
-            "%YPercentOfTotal",
-            "%ypercentoftotal",
-            "%YPERCENTOFTOTAL"
-        ]
+        "new": "%YPercentOfTotal"
     },
     {
         "literal": "anychart.enums.StringToken.Y_VALUE",
-        "new": "%YValue",
-        "old": [
-            "%YValue",
-            "%yvalue",
-            "%YVALUE"
-        ]
+        "new": "%YValue"
     },
     {
         "literal": "anychart.enums.StringToken.CUMULATIVE_FREQUENCY",
-        "new": "%CF",
-        "old": [
-            "%CF",
-            "%cf"
-        ]
+        "new": "%CF"
     },
     {
         "literal": "anychart.enums.StringToken.RELATIVE_FREQUENCY",
-        "new": "%RF",
-        "old": [
-            "%RF",
-            "%rf"
-        ]
+        "new": "%RF"
     },
     {
         "literal": "anychart.enums.StringToken.DIFF",
-        "new": "%Diff",
-        "old": [
-            "%Diff",
-            "%diff",
-            "%DIFF"
-        ]
+        "new": "%Diff"
     },
     {
         "literal": "anychart.enums.StringToken.ABSOLUTE",
-        "new": "%Absolute",
-        "old": [
-            "%Absolute",
-            "%absolute",
-            "%ABSOLUTE"
-        ]
+        "new": "%Absolute"
     },
     {
         "literal": "anychart.enums.StringToken.IS_TOTAL",
-        "new": "%IsTotal",
-        "old": [
-            "%IsTotal",
-            "%istotal",
-            "%ISTOTAL"
-        ]
+        "new": "%IsTotal"
     },
     {
         "literal": "anychart.enums.StringToken.RESOURCE_INDEX",
         "new": "%resourceIndex",
         "old": [
-            "resourceIndex",
-            "%resourceindex",
-            "%RESOURCEINDEX"
+            "resourceIndex"
         ]
     },
     {
         "literal": "anychart.enums.StringToken.ACTIVITY_INDEX",
         "new": "%activityIndex",
         "old": [
-            "activityIndex",
-            "%activityindex",
-            "%ACTIVITYINDEX"
+            "activityIndex"
         ]
     },
     {
         "literal": "anychart.enums.StringToken.START",
         "new": "%start",
         "old": [
-            "start",
-            "%start",
-            "%START"
+            "start"
         ]
     },
     {
         "literal": "anychart.enums.StringToken.END",
         "new": "%end",
         "old": [
-            "end",
-            "%end",
-            "%END"
+            "end"
         ]
     },
     {
         "literal": "anychart.enums.StringToken.MINUTES_PER_DAY",
         "new": "%minutesPerDay",
         "old": [
-            "minutesPerDay",
-            "%minutesperday",
-            "%MINUTESPERDAY"
+            "minutesPerDay"
         ]
     },
     {
         "literal": "anychart.enums.Statistics.AVERAGE",
-        "new": "average",
-        "old": [
-            "average",
-            "Average",
-            "AVERAGE"
-        ]
+        "new": "average"
     },
     {
         "literal": "anychart.enums.Statistics.BUBBLE_SIZE",
-        "new": "bubbleSize",
-        "old": [
-            "bubbleSize",
-            "bubblesize",
-            "Bubblesize",
-            "BUBBLESIZE"
-        ]
+        "new": "bubbleSize"
     },
     {
         "literal": "anychart.enums.Statistics.BUBBLE_SIZE_PERCENT_OF_CATEGORY",
-        "new": "bubbleSizePercentOfCategory",
-        "old": [
-            "bubbleSizePercentOfCategory",
-            "bubblesizepercentofcategory",
-            "Bubblesizepercentofcategory",
-            "BUBBLESIZEPERCENTOFCATEGORY"
-        ]
+        "new": "bubbleSizePercentOfCategory"
     },
     {
         "literal": "anychart.enums.Statistics.BUBBLE_SIZE_PERCENT_OF_SERIES",
-        "new": "bubbleSizePercentOfSeries",
-        "old": [
-            "bubbleSizePercentOfSeries",
-            "bubblesizepercentofseries",
-            "Bubblesizepercentofseries",
-            "BUBBLESIZEPERCENTOFSERIES"
-        ]
+        "new": "bubbleSizePercentOfSeries"
     },
     {
         "literal": "anychart.enums.Statistics.BUBBLE_SIZE_PERCENT_OF_TOTAL",
-        "new": "bubbleSizePercentOfTotal",
-        "old": [
-            "bubbleSizePercentOfTotal",
-            "bubblesizepercentoftotal",
-            "Bubblesizepercentoftotal",
-            "BUBBLESIZEPERCENTOFTOTAL"
-        ]
+        "new": "bubbleSizePercentOfTotal"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_NAME",
-        "new": "categoryName",
-        "old": [
-            "categoryName",
-            "categoryname",
-            "Categoryname",
-            "CATEGORYNAME"
-        ]
+        "new": "categoryName"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_AVERAGE",
-        "new": "categoryYAverage",
-        "old": [
-            "categoryYAverage",
-            "categoryyaverage",
-            "Categoryyaverage",
-            "CATEGORYYAVERAGE"
-        ]
+        "new": "categoryYAverage"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_MAX",
-        "new": "categoryYMax",
-        "old": [
-            "categoryYMax",
-            "categoryymax",
-            "Categoryymax",
-            "CATEGORYYMAX"
-        ]
+        "new": "categoryYMax"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_MEDIAN",
-        "new": "categoryYMedian",
-        "old": [
-            "categoryYMedian",
-            "categoryymedian",
-            "Categoryymedian",
-            "CATEGORYYMEDIAN"
-        ]
+        "new": "categoryYMedian"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_MIN",
-        "new": "categoryYMin",
-        "old": [
-            "categoryYMin",
-            "categoryymin",
-            "Categoryymin",
-            "CATEGORYYMIN"
-        ]
+        "new": "categoryYMin"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_MODE",
-        "new": "categoryYMode",
-        "old": [
-            "categoryYMode",
-            "categoryymode",
-            "Categoryymode",
-            "CATEGORYYMODE"
-        ]
+        "new": "categoryYMode"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_PERCENT_OF_TOTAL",
-        "new": "categoryYPercentOfTotal",
-        "old": [
-            "categoryYPercentOfTotal",
-            "categoryypercentoftotal",
-            "Categoryypercentoftotal",
-            "CATEGORYYPERCENTOFTOTAL"
-        ]
+        "new": "categoryYPercentOfTotal"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_AVERAGE",
-        "new": "categoryYRangeAverage",
-        "old": [
-            "categoryYRangeAverage",
-            "categoryyrangeaverage",
-            "Categoryyrangeaverage",
-            "CATEGORYYRANGEAVERAGE"
-        ]
+        "new": "categoryYRangeAverage"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_MAX",
-        "new": "categoryYRangeMax",
-        "old": [
-            "categoryYRangeMax",
-            "categoryyrangemax",
-            "Categoryyrangemax",
-            "CATEGORYYRANGEMAX"
-        ]
+        "new": "categoryYRangeMax"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_MEDIAN",
-        "new": "categoryYRangeMedian",
-        "old": [
-            "categoryYRangeMedian",
-            "categoryyrangemedian",
-            "Categoryyrangemedian",
-            "CATEGORYYRANGEMEDIAN"
-        ]
+        "new": "categoryYRangeMedian"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_MIN",
-        "new": "categoryYRangeMin",
-        "old": [
-            "categoryYRangeMin",
-            "categoryyrangemin",
-            "Categoryyrangemin",
-            "CATEGORYYRANGEMIN"
-        ]
+        "new": "categoryYRangeMin"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_MODE",
-        "new": "categoryYRangeMode",
-        "old": [
-            "categoryYRangeMode",
-            "categoryyrangemode",
-            "Categoryyrangemode",
-            "CATEGORYYRANGEMODE"
-        ]
+        "new": "categoryYRangeMode"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_PERCENT_OF_TOTAL",
-        "new": "categoryYRangePercentOfTotal",
-        "old": [
-            "categoryYRangePercentOfTotal",
-            "categoryyrangepercentoftotal",
-            "Categoryyrangepercentoftotal",
-            "CATEGORYYRANGEPERCENTOFTOTAL"
-        ]
+        "new": "categoryYRangePercentOfTotal"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_SUM",
-        "new": "categoryYRangeSum",
-        "old": [
-            "categoryYRangeSum",
-            "categoryyrangesum",
-            "Categoryyrangesum",
-            "CATEGORYYRANGESUM"
-        ]
+        "new": "categoryYRangeSum"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_SUM",
-        "new": "categoryYSum",
-        "old": [
-            "categoryYSum",
-            "categoryysum",
-            "Categoryysum",
-            "CATEGORYYSUM"
-        ]
+        "new": "categoryYSum"
     },
     {
         "literal": "anychart.enums.Statistics.CLOSE",
-        "new": "close",
-        "old": [
-            "close",
-            "Close",
-            "CLOSE"
-        ]
+        "new": "close"
     },
     {
         "literal": "anychart.enums.Statistics.COUNT",
-        "new": "count",
-        "old": [
-            "count",
-            "Count",
-            "COUNT"
-        ]
+        "new": "count"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_BUBBLE_MAX_SIZE",
-        "new": "dataPlotBubbleMaxSize",
-        "old": [
-            "dataPlotBubbleMaxSize",
-            "dataplotbubblemaxsize",
-            "Dataplotbubblemaxsize",
-            "DATAPLOTBUBBLEMAXSIZE"
-        ]
+        "new": "dataPlotBubbleMaxSize"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_BUBBLE_MIN_SIZE",
-        "new": "dataPlotBubbleMinSize",
-        "old": [
-            "dataPlotBubbleMinSize",
-            "dataplotbubbleminsize",
-            "Dataplotbubbleminsize",
-            "DATAPLOTBUBBLEMINSIZE"
-        ]
+        "new": "dataPlotBubbleMinSize"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_BUBBLE_SIZE_AVERAGE",
-        "new": "dataPlotBubbleSizeAverage",
-        "old": [
-            "dataPlotBubbleSizeAverage",
-            "dataplotbubblesizeaverage",
-            "Dataplotbubblesizeaverage",
-            "DATAPLOTBUBBLESIZEAVERAGE"
-        ]
+        "new": "dataPlotBubbleSizeAverage"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_BUBBLE_SIZE_SUM",
-        "new": "dataPlotBubbleSizeSum",
-        "old": [
-            "dataPlotBubbleSizeSum",
-            "dataplotbubblesizesum",
-            "Dataplotbubblesizesum",
-            "DATAPLOTBUBBLESIZESUM"
-        ]
+        "new": "dataPlotBubbleSizeSum"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_MAX_X_SUM_SERIES_NAME",
-        "new": "dataPlotMaxXSumSeriesName",
-        "old": [
-            "dataPlotMaxXSumSeriesName",
-            "dataplotmaxxsumseriesname",
-            "Dataplotmaxxsumseriesname",
-            "DATAPLOTMAXXSUMSERIESNAME"
-        ]
+        "new": "dataPlotMaxXSumSeriesName"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_MAX_Y_SUM_SERIES_NAME",
-        "new": "dataPlotMaxYSumSeriesName",
-        "old": [
-            "dataPlotMaxYSumSeriesName",
-            "dataplotmaxysumseriesname",
-            "Dataplotmaxysumseriesname",
-            "DATAPLOTMAXYSUMSERIESNAME"
-        ]
+        "new": "dataPlotMaxYSumSeriesName"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_MAX_X_VALUE_POINT_SERIES_NAME",
-        "new": "dataPlotMaxXValuePointSeriesName",
-        "old": [
-            "dataPlotMaxXValuePointSeriesName",
-            "dataplotmaxxvaluepointseriesname",
-            "Dataplotmaxxvaluepointseriesname",
-            "DATAPLOTMAXXVALUEPOINTSERIESNAME"
-        ]
+        "new": "dataPlotMaxXValuePointSeriesName"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_MAX_Y_VALUE_POINT_SERIES_NAME",
-        "new": "dataPlotMaxYValuePointSeriesName",
-        "old": [
-            "dataPlotMaxYValuePointSeriesName",
-            "dataplotmaxyvaluepointseriesname",
-            "Dataplotmaxyvaluepointseriesname",
-            "DATAPLOTMAXYVALUEPOINTSERIESNAME"
-        ]
+        "new": "dataPlotMaxYValuePointSeriesName"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_MIN_X_SUM_SERIES_NAME",
-        "new": "dataPlotMinXSumSeriesName",
-        "old": [
-            "dataPlotMinXSumSeriesName",
-            "dataplotminxsumseriesname",
-            "Dataplotminxsumseriesname",
-            "DATAPLOTMINXSUMSERIESNAME"
-        ]
+        "new": "dataPlotMinXSumSeriesName"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_MIN_Y_SUM_SERIES_NAME",
-        "new": "dataPlotMinYSumSeriesName",
-        "old": [
-            "dataPlotMinYSumSeriesName",
-            "dataplotminysumseriesname",
-            "Dataplotminysumseriesname",
-            "DATAPLOTMINYSUMSERIESNAME"
-        ]
+        "new": "dataPlotMinYSumSeriesName"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_MIN_X_VALUE_POINT_SERIES_NAME",
-        "new": "dataPlotMinXValuePointSeriesName",
-        "old": [
-            "dataPlotMinXValuePointSeriesName",
-            "dataplotminxvaluepointseriesname",
-            "Dataplotminxvaluepointseriesname",
-            "DATAPLOTMINXVALUEPOINTSERIESNAME"
-        ]
+        "new": "dataPlotMinXValuePointSeriesName"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_MIN_Y_VALUE_POINT_SERIES_NAME",
-        "new": "dataPlotMinYValuePointSeriesName",
-        "old": [
-            "dataPlotMinYValuePointSeriesName",
-            "dataplotminyvaluepointseriesname",
-            "Dataplotminyvaluepointseriesname",
-            "DATAPLOTMINYVALUEPOINTSERIESNAME"
-        ]
+        "new": "dataPlotMinYValuePointSeriesName"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_POINT_COUNT",
-        "new": "dataPlotPointCount",
-        "old": [
-            "dataPlotPointCount",
-            "dataplotpointcount",
-            "Dataplotpointcount",
-            "DATAPLOTPOINTCOUNT"
-        ]
+        "new": "dataPlotPointCount"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_SERIES_COUNT",
-        "new": "dataPlotSeriesCount",
-        "old": [
-            "dataPlotSeriesCount",
-            "dataplotseriescount",
-            "Dataplotseriescount",
-            "DATAPLOTSERIESCOUNT"
-        ]
+        "new": "dataPlotSeriesCount"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_X_AVERAGE",
-        "new": "dataPlotXAverage",
-        "old": [
-            "dataPlotXAverage",
-            "dataplotxaverage",
-            "Dataplotxaverage",
-            "DATAPLOTXAVERAGE"
-        ]
+        "new": "dataPlotXAverage"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_X_MAX",
-        "new": "dataPlotXMax",
-        "old": [
-            "dataPlotXMax",
-            "dataplotxmax",
-            "Dataplotxmax",
-            "DATAPLOTXMAX"
-        ]
+        "new": "dataPlotXMax"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_X_MIN",
-        "new": "dataPlotXMin",
-        "old": [
-            "dataPlotXMin",
-            "dataplotxmin",
-            "Dataplotxmin",
-            "DATAPLOTXMIN"
-        ]
+        "new": "dataPlotXMin"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_X_SUM",
-        "new": "dataPlotXSum",
-        "old": [
-            "dataPlotXSum",
-            "dataplotxsum",
-            "Dataplotxsum",
-            "DATAPLOTXSUM"
-        ]
+        "new": "dataPlotXSum"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_Y_AVERAGE",
-        "new": "dataPlotYAverage",
-        "old": [
-            "dataPlotYAverage",
-            "dataplotyaverage",
-            "Dataplotyaverage",
-            "DATAPLOTYAVERAGE"
-        ]
+        "new": "dataPlotYAverage"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_Y_MAX",
-        "new": "dataPlotYMax",
-        "old": [
-            "dataPlotYMax",
-            "dataplotymax",
-            "Dataplotymax",
-            "DATAPLOTYMAX"
-        ]
+        "new": "dataPlotYMax"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_Y_MIN",
-        "new": "dataPlotYMin",
-        "old": [
-            "dataPlotYMin",
-            "dataplotymin",
-            "Dataplotymin",
-            "DATAPLOTYMIN"
-        ]
+        "new": "dataPlotYMin"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_Y_RANGE_MAX",
-        "new": "dataPlotYRangeMax",
-        "old": [
-            "dataPlotYRangeMax",
-            "dataplotyrangemax",
-            "Dataplotyrangemax",
-            "DATAPLOTYRANGEMAX"
-        ]
+        "new": "dataPlotYRangeMax"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_Y_RANGE_MIN",
-        "new": "dataPlotYRangeMin",
-        "old": [
-            "dataPlotYRangeMin",
-            "dataplotyrangemin",
-            "Dataplotyrangemin",
-            "DATAPLOTYRANGEMIN"
-        ]
+        "new": "dataPlotYRangeMin"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_Y_RANGE_SUM",
-        "new": "dataPlotYRangeSum",
-        "old": [
-            "dataPlotYRangeSum",
-            "dataplotyrangesum",
-            "Dataplotyrangesum",
-            "DATAPLOTYRANGESUM"
-        ]
+        "new": "dataPlotYRangeSum"
     },
     {
         "literal": "anychart.enums.Statistics.DATA_PLOT_Y_SUM",
-        "new": "dataPlotYSum",
-        "old": [
-            "dataPlotYSum",
-            "dataplotysum",
-            "Dataplotysum",
-            "DATAPLOTYSUM"
-        ]
+        "new": "dataPlotYSum"
     },
     {
         "literal": "anychart.enums.Statistics.HIGH",
-        "new": "high",
-        "old": [
-            "high",
-            "High",
-            "HIGH"
-        ]
+        "new": "high"
     },
     {
         "literal": "anychart.enums.Statistics.INDEX",
-        "new": "index",
-        "old": [
-            "index",
-            "Index",
-            "INDEX"
-        ]
+        "new": "index"
     },
     {
         "literal": "anychart.enums.Statistics.LOW",
-        "new": "low",
-        "old": [
-            "low",
-            "Low",
-            "LOW"
-        ]
+        "new": "low"
     },
     {
         "literal": "anychart.enums.Statistics.MAX",
-        "new": "max",
-        "old": [
-            "max",
-            "Max",
-            "MAX"
-        ]
+        "new": "max"
     },
     {
         "literal": "anychart.enums.Statistics.MIN",
-        "new": "min",
-        "old": [
-            "min",
-            "Min",
-            "MIN"
-        ]
+        "new": "min"
     },
     {
         "literal": "anychart.enums.Statistics.NAME",
-        "new": "name",
-        "old": [
-            "name",
-            "Name",
-            "NAME"
-        ]
+        "new": "name"
     },
     {
         "literal": "anychart.enums.Statistics.OPEN",
-        "new": "open",
-        "old": [
-            "open",
-            "Open",
-            "OPEN"
-        ]
+        "new": "open"
     },
     {
         "literal": "anychart.enums.Statistics.POINTS_COUNT",
-        "new": "pointsCount",
-        "old": [
-            "pointsCount",
-            "pointscount",
-            "Pointscount",
-            "POINTSCOUNT"
-        ]
+        "new": "pointsCount"
     },
     {
         "literal": "anychart.enums.Statistics.PERT_CHART_CRITICAL_PATH_STANDARD_DEVIATION",
-        "new": "pertChartCriticalPathStandardDeviation",
-        "old": [
-            "pertChartCriticalPathStandardDeviation",
-            "pertchartcriticalpathstandarddeviation",
-            "Pertchartcriticalpathstandarddeviation",
-            "PERTCHARTCRITICALPATHSTANDARDDEVIATION"
-        ]
+        "new": "pertChartCriticalPathStandardDeviation"
     },
     {
         "literal": "anychart.enums.Statistics.PERT_CHART_PROJECT_DURATION",
-        "new": "pertChartProjectDuration",
-        "old": [
-            "pertChartProjectDuration",
-            "pertchartprojectduration",
-            "Pertchartprojectduration",
-            "PERTCHARTPROJECTDURATION"
-        ]
+        "new": "pertChartProjectDuration"
     },
     {
         "literal": "anychart.enums.Statistics.RANGE",
-        "new": "range",
-        "old": [
-            "range",
-            "Range",
-            "RANGE"
-        ]
+        "new": "range"
     },
     {
         "literal": "anychart.enums.Statistics.RANGE_END",
-        "new": "rangeEnd",
-        "old": [
-            "rangeEnd",
-            "rangeend",
-            "Rangeend",
-            "RANGEEND"
-        ]
+        "new": "rangeEnd"
     },
     {
         "literal": "anychart.enums.Statistics.RANGE_START",
-        "new": "rangeStart",
-        "old": [
-            "rangeStart",
-            "rangestart",
-            "Rangestart",
-            "RANGESTART"
-        ]
+        "new": "rangeStart"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_AVERAGE",
-        "new": "seriesAverage",
-        "old": [
-            "seriesAverage",
-            "seriesaverage",
-            "Seriesaverage",
-            "SERIESAVERAGE"
-        ]
+        "new": "seriesAverage"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_BUBBLE_MAX_SIZE",
-        "new": "seriesBubbleMaxSize",
-        "old": [
-            "seriesBubbleMaxSize",
-            "seriesbubblemaxsize",
-            "Seriesbubblemaxsize",
-            "SERIESBUBBLEMAXSIZE"
-        ]
+        "new": "seriesBubbleMaxSize"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_BUBBLE_MIN_SIZE",
-        "new": "seriesBubbleMinSize",
-        "old": [
-            "seriesBubbleMinSize",
-            "seriesbubbleminsize",
-            "Seriesbubbleminsize",
-            "SERIESBUBBLEMINSIZE"
-        ]
+        "new": "seriesBubbleMinSize"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_BUBBLE_SIZE_AVERAGE",
-        "new": "seriesBubbleSizeAverage",
-        "old": [
-            "seriesBubbleSizeAverage",
-            "seriesbubblesizeaverage",
-            "Seriesbubblesizeaverage",
-            "SERIESBUBBLESIZEAVERAGE"
-        ]
+        "new": "seriesBubbleSizeAverage"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_BUBBLE_SIZE_MEDIAN",
-        "new": "seriesBubbleSizeMedian",
-        "old": [
-            "seriesBubbleSizeMedian",
-            "seriesbubblesizemedian",
-            "Seriesbubblesizemedian",
-            "SERIESBUBBLESIZEMEDIAN"
-        ]
+        "new": "seriesBubbleSizeMedian"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_BUBBLE_SIZE_MODE",
-        "new": "seriesBubbleSizeMode",
-        "old": [
-            "seriesBubbleSizeMode",
-            "seriesbubblesizemode",
-            "Seriesbubblesizemode",
-            "SERIESBUBBLESIZEMODE"
-        ]
+        "new": "seriesBubbleSizeMode"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_BUBBLE_SIZE_SUM",
-        "new": "seriesBubbleSizeSum",
-        "old": [
-            "seriesBubbleSizeSum",
-            "seriesbubblesizesum",
-            "Seriesbubblesizesum",
-            "SERIESBUBBLESIZESUM"
-        ]
+        "new": "seriesBubbleSizeSum"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_FIRST_X_VALUE",
-        "new": "seriesFirstXValue",
-        "old": [
-            "seriesFirstXValue",
-            "seriesfirstxvalue",
-            "Seriesfirstxvalue",
-            "SERIESFIRSTXVALUE"
-        ]
+        "new": "seriesFirstXValue"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_FIRST_Y_VALUE",
-        "new": "seriesFirstYValue",
-        "old": [
-            "seriesFirstYValue",
-            "seriesfirstyvalue",
-            "Seriesfirstyvalue",
-            "SERIESFIRSTYVALUE"
-        ]
+        "new": "seriesFirstYValue"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_LAST_X_VALUE",
-        "new": "seriesLastXValue",
-        "old": [
-            "seriesLastXValue",
-            "serieslastxvalue",
-            "Serieslastxvalue",
-            "SERIESLASTXVALUE"
-        ]
+        "new": "seriesLastXValue"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_LAST_Y_VALUE",
-        "new": "seriesLastYValue",
-        "old": [
-            "seriesLastYValue",
-            "serieslastyvalue",
-            "Serieslastyvalue",
-            "SERIESLASTYVALUE"
-        ]
+        "new": "seriesLastYValue"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_MAX",
-        "new": "seriesMax",
-        "old": [
-            "seriesMax",
-            "seriesmax",
-            "Seriesmax",
-            "SERIESMAX"
-        ]
+        "new": "seriesMax"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_MIN",
-        "new": "seriesMin",
-        "old": [
-            "seriesMin",
-            "seriesmin",
-            "Seriesmin",
-            "SERIESMIN"
-        ]
+        "new": "seriesMin"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_NAME",
-        "new": "seriesName",
-        "old": [
-            "seriesName",
-            "seriesname",
-            "Seriesname",
-            "SERIESNAME"
-        ]
+        "new": "seriesName"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_POINT_COUNT",
-        "new": "seriesPointCount",
-        "old": [
-            "seriesPointCount",
-            "seriespointcount",
-            "Seriespointcount",
-            "SERIESPOINTCOUNT"
-        ]
+        "new": "seriesPointCount"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_POINTS_COUNT",
-        "new": "seriesPointsCount",
-        "old": [
-            "seriesPointsCount",
-            "seriespointscount",
-            "Seriespointscount",
-            "SERIESPOINTSCOUNT"
-        ]
+        "new": "seriesPointsCount"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_SUM",
-        "new": "seriesSum",
-        "old": [
-            "seriesSum",
-            "seriessum",
-            "Seriessum",
-            "SERIESSUM"
-        ]
+        "new": "seriesSum"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_X_AVERAGE",
-        "new": "seriesXAverage",
-        "old": [
-            "seriesXAverage",
-            "seriesxaverage",
-            "Seriesxaverage",
-            "SERIESXAVERAGE"
-        ]
+        "new": "seriesXAverage"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_X_MAX",
-        "new": "seriesXMax",
-        "old": [
-            "seriesXMax",
-            "seriesxmax",
-            "Seriesxmax",
-            "SERIESXMAX"
-        ]
+        "new": "seriesXMax"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_X_MEDIAN",
-        "new": "seriesXMedian",
-        "old": [
-            "seriesXMedian",
-            "seriesxmedian",
-            "Seriesxmedian",
-            "SERIESXMEDIAN"
-        ]
+        "new": "seriesXMedian"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_X_MIN",
-        "new": "seriesXMin",
-        "old": [
-            "seriesXMin",
-            "seriesxmin",
-            "Seriesxmin",
-            "SERIESXMIN"
-        ]
+        "new": "seriesXMin"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_X_MODE",
-        "new": "seriesXMode",
-        "old": [
-            "seriesXMode",
-            "seriesxmode",
-            "Seriesxmode",
-            "SERIESXMODE"
-        ]
+        "new": "seriesXMode"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_X_SUM",
-        "new": "seriesXSum",
-        "old": [
-            "seriesXSum",
-            "seriesxsum",
-            "Seriesxsum",
-            "SERIESXSUM"
-        ]
+        "new": "seriesXSum"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_Y_AVERAGE",
-        "new": "seriesYAverage",
-        "old": [
-            "seriesYAverage",
-            "seriesyaverage",
-            "Seriesyaverage",
-            "SERIESYAVERAGE"
-        ]
+        "new": "seriesYAverage"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_Y_MAX",
-        "new": "seriesYMax",
-        "old": [
-            "seriesYMax",
-            "seriesymax",
-            "Seriesymax",
-            "SERIESYMAX"
-        ]
+        "new": "seriesYMax"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_Y_MEDIAN",
-        "new": "seriesYMedian",
-        "old": [
-            "seriesYMedian",
-            "seriesymedian",
-            "Seriesymedian",
-            "SERIESYMEDIAN"
-        ]
+        "new": "seriesYMedian"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_Y_MIN",
-        "new": "seriesYMin",
-        "old": [
-            "seriesYMin",
-            "seriesymin",
-            "Seriesymin",
-            "SERIESYMIN"
-        ]
+        "new": "seriesYMin"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_Y_MODE",
-        "new": "seriesYMode",
-        "old": [
-            "seriesYMode",
-            "seriesymode",
-            "Seriesymode",
-            "SERIESYMODE"
-        ]
+        "new": "seriesYMode"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_Y_RANGE_AVERAGE",
-        "new": "seriesYRangeAverage",
-        "old": [
-            "seriesYRangeAverage",
-            "seriesyrangeaverage",
-            "Seriesyrangeaverage",
-            "SERIESYRANGEAVERAGE"
-        ]
+        "new": "seriesYRangeAverage"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_Y_RANGE_MAX",
-        "new": "seriesYRangeMax",
-        "old": [
-            "seriesYRangeMax",
-            "seriesyrangemax",
-            "Seriesyrangemax",
-            "SERIESYRANGEMAX"
-        ]
+        "new": "seriesYRangeMax"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_Y_RANGE_MEDIAN",
-        "new": "seriesYRangeMedian",
-        "old": [
-            "seriesYRangeMedian",
-            "seriesyrangemedian",
-            "Seriesyrangemedian",
-            "SERIESYRANGEMEDIAN"
-        ]
+        "new": "seriesYRangeMedian"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_Y_RANGE_MIN",
-        "new": "seriesYRangeMin",
-        "old": [
-            "seriesYRangeMin",
-            "seriesyrangemin",
-            "Seriesyrangemin",
-            "SERIESYRANGEMIN"
-        ]
+        "new": "seriesYRangeMin"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_Y_RANGE_MODE",
-        "new": "seriesYRangeMode",
-        "old": [
-            "seriesYRangeMode",
-            "seriesyrangemode",
-            "Seriesyrangemode",
-            "SERIESYRANGEMODE"
-        ]
+        "new": "seriesYRangeMode"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_Y_RANGE_SUM",
-        "new": "seriesYRangeSum",
-        "old": [
-            "seriesYRangeSum",
-            "seriesyrangesum",
-            "Seriesyrangesum",
-            "SERIESYRANGESUM"
-        ]
+        "new": "seriesYRangeSum"
     },
     {
         "literal": "anychart.enums.Statistics.SERIES_Y_SUM",
-        "new": "seriesYSum",
-        "old": [
-            "seriesYSum",
-            "seriesysum",
-            "Seriesysum",
-            "SERIESYSUM"
-        ]
+        "new": "seriesYSum"
     },
     {
         "literal": "anychart.enums.Statistics.SUM",
-        "new": "sum",
-        "old": [
-            "sum",
-            "Sum",
-            "SUM"
-        ]
+        "new": "sum"
     },
     {
         "literal": "anychart.enums.Statistics.VALUE",
-        "new": "value",
-        "old": [
-            "value",
-            "Value",
-            "VALUE"
-        ]
+        "new": "value"
     },
     {
         "literal": "anychart.enums.Statistics.PERCENT_VALUE",
-        "new": "percentValue",
-        "old": [
-            "percentValue",
-            "percentvalue",
-            "Percentvalue",
-            "PERCENTVALUE"
-        ]
+        "new": "percentValue"
     },
     {
         "literal": "anychart.enums.Statistics.X_PERCENT_OF_SERIES",
-        "new": "xPercentOfSeries",
-        "old": [
-            "xPercentOfSeries",
-            "xpercentofseries",
-            "Xpercentofseries",
-            "XPERCENTOFSERIES"
-        ]
+        "new": "xPercentOfSeries"
     },
     {
         "literal": "anychart.enums.Statistics.X_PERCENT_OF_TOTAL",
-        "new": "xPercentOfTotal",
-        "old": [
-            "xPercentOfTotal",
-            "xpercentoftotal",
-            "Xpercentoftotal",
-            "XPERCENTOFTOTAL"
-        ]
+        "new": "xPercentOfTotal"
     },
     {
         "literal": "anychart.enums.Statistics.X_VALUE",
-        "new": "xValue",
-        "old": [
-            "xValue",
-            "xvalue",
-            "Xvalue",
-            "XVALUE"
-        ]
+        "new": "xValue"
     },
     {
         "literal": "anychart.enums.Statistics.Y_PERCENT_OF_CATEGORY",
-        "new": "yPercentOfCategory",
-        "old": [
-            "yPercentOfCategory",
-            "ypercentofcategory",
-            "Ypercentofcategory",
-            "YPERCENTOFCATEGORY"
-        ]
+        "new": "yPercentOfCategory"
     },
     {
         "literal": "anychart.enums.Statistics.Y_PERCENT_OF_SERIES",
-        "new": "yPercentOfSeries",
-        "old": [
-            "yPercentOfSeries",
-            "ypercentofseries",
-            "Ypercentofseries",
-            "YPERCENTOFSERIES"
-        ]
+        "new": "yPercentOfSeries"
     },
     {
         "literal": "anychart.enums.Statistics.Y_PERCENT_OF_TOTAL",
-        "new": "yPercentOfTotal",
-        "old": [
-            "yPercentOfTotal",
-            "ypercentoftotal",
-            "Ypercentoftotal",
-            "YPERCENTOFTOTAL"
-        ]
+        "new": "yPercentOfTotal"
     },
     {
         "literal": "anychart.enums.Statistics.Y_VALUE",
-        "new": "yValue",
-        "old": [
-            "yValue",
-            "yvalue",
-            "Yvalue",
-            "YVALUE"
-        ]
+        "new": "yValue"
     },
     {
         "literal": "anychart.enums.Statistics.X_SCALES_MIN",
-        "new": "xScalesMin",
-        "old": [
-            "xScalesMin",
-            "xscalesmin",
-            "Xscalesmin",
-            "XSCALESMIN"
-        ]
+        "new": "xScalesMin"
     },
     {
         "literal": "anychart.enums.Statistics.X_SCALES_MAX",
-        "new": "xScalesMax",
-        "old": [
-            "xScalesMax",
-            "xscalesmax",
-            "Xscalesmax",
-            "XSCALESMAX"
-        ]
+        "new": "xScalesMax"
     },
     {
         "literal": "anychart.enums.Statistics.Y_SCALES_MIN",
-        "new": "yScalesMin",
-        "old": [
-            "yScalesMin",
-            "yscalesmin",
-            "Yscalesmin",
-            "YSCALESMIN"
-        ]
+        "new": "yScalesMin"
     },
     {
         "literal": "anychart.enums.Statistics.Y_SCALES_MAX",
-        "new": "yScalesMax",
-        "old": [
-            "yScalesMax",
-            "yscalesmax",
-            "Yscalesmax",
-            "YSCALESMAX"
-        ]
+        "new": "yScalesMax"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_SUM_ARR_",
-        "new": "catYSumArr_",
-        "old": [
-            "catYSumArr_",
-            "catysumarr_",
-            "Catysumarr_",
-            "CATYSUMARR_"
-        ]
+        "new": "catYSumArr_"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_MIN_ARR_",
-        "new": "catYMinArr_",
-        "old": [
-            "catYMinArr_",
-            "catyminarr_",
-            "Catyminarr_",
-            "CATYMINARR_"
-        ]
+        "new": "catYMinArr_"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_MAX_ARR_",
-        "new": "catYMaxArr_",
-        "old": [
-            "catYMaxArr_",
-            "catymaxarr_",
-            "Catymaxarr_",
-            "CATYMAXARR_"
-        ]
+        "new": "catYMaxArr_"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_AVG_ARR_",
-        "new": "catYAvgArr_",
-        "old": [
-            "catYAvgArr_",
-            "catyavgarr_",
-            "Catyavgarr_",
-            "CATYAVGARR_"
-        ]
+        "new": "catYAvgArr_"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_MEDIAN_ARR_",
-        "new": "catYMedianArr_",
-        "old": [
-            "catYMedianArr_",
-            "catymedianarr_",
-            "Catymedianarr_",
-            "CATYMEDIANARR_"
-        ]
+        "new": "catYMedianArr_"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_MODE_ARR_",
-        "new": "catYModeArr_",
-        "old": [
-            "catYModeArr_",
-            "catymodearr_",
-            "Catymodearr_",
-            "CATYMODEARR_"
-        ]
+        "new": "catYModeArr_"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_SUM_ARR_",
-        "new": "catYRangeSumArr_",
-        "old": [
-            "catYRangeSumArr_",
-            "catyrangesumarr_",
-            "Catyrangesumarr_",
-            "CATYRANGESUMARR_"
-        ]
+        "new": "catYRangeSumArr_"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_MIN_ARR_",
-        "new": "catYRangeMinArr_",
-        "old": [
-            "catYRangeMinArr_",
-            "catyrangeminarr_",
-            "Catyrangeminarr_",
-            "CATYRANGEMINARR_"
-        ]
+        "new": "catYRangeMinArr_"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_MAX_ARR_",
-        "new": "catYRangeMaxArr_",
-        "old": [
-            "catYRangeMaxArr_",
-            "catyrangemaxarr_",
-            "Catyrangemaxarr_",
-            "CATYRANGEMAXARR_"
-        ]
+        "new": "catYRangeMaxArr_"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_AVG_ARR_",
-        "new": "catYRangeAvgArr_",
-        "old": [
-            "catYRangeAvgArr_",
-            "catyrangeavgarr_",
-            "Catyrangeavgarr_",
-            "CATYRANGEAVGARR_"
-        ]
+        "new": "catYRangeAvgArr_"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_MEDIAN_ARR_",
-        "new": "catYRangeMedianArr_",
-        "old": [
-            "catYRangeMedianArr_",
-            "catyrangemedianarr_",
-            "Catyrangemedianarr_",
-            "CATYRANGEMEDIANARR_"
-        ]
+        "new": "catYRangeMedianArr_"
     },
     {
         "literal": "anychart.enums.Statistics.CATEGORY_Y_RANGE_MODE_ARR_",
-        "new": "catYRangeModeArr_",
-        "old": [
-            "catYRangeModeArr_",
-            "catyrangemodearr_",
-            "Catyrangemodearr_",
-            "CATYRANGEMODEARR_"
-        ]
+        "new": "catYRangeModeArr_"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.AVERAGE",
-        "new": "average",
-        "old": [
-            "average",
-            "Average",
-            "AVERAGE"
-        ]
+        "new": "average"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.BUBBLE_SIZE",
-        "new": "bubblesize",
-        "old": [
-            "bubblesize",
-            "Bubblesize",
-            "BUBBLESIZE"
-        ]
+        "new": "bubblesize"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.BUBBLE_SIZE_PERCENT_OF_CATEGORY",
-        "new": "bubblesizepercentofcategory",
-        "old": [
-            "bubblesizepercentofcategory",
-            "Bubblesizepercentofcategory",
-            "BUBBLESIZEPERCENTOFCATEGORY"
-        ]
+        "new": "bubblesizepercentofcategory"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.BUBBLE_SIZE_PERCENT_OF_SERIES",
-        "new": "bubblesizepercentofseries",
-        "old": [
-            "bubblesizepercentofseries",
-            "Bubblesizepercentofseries",
-            "BUBBLESIZEPERCENTOFSERIES"
-        ]
+        "new": "bubblesizepercentofseries"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.BUBBLE_SIZE_PERCENT_OF_TOTAL",
-        "new": "bubblesizepercentoftotal",
-        "old": [
-            "bubblesizepercentoftotal",
-            "Bubblesizepercentoftotal",
-            "BUBBLESIZEPERCENTOFTOTAL"
-        ]
+        "new": "bubblesizepercentoftotal"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_NAME",
-        "new": "categoryname",
-        "old": [
-            "categoryname",
-            "Categoryname",
-            "CATEGORYNAME"
-        ]
+        "new": "categoryname"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_AVERAGE",
-        "new": "categoryyaverage",
-        "old": [
-            "categoryyaverage",
-            "Categoryyaverage",
-            "CATEGORYYAVERAGE"
-        ]
+        "new": "categoryyaverage"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_MAX",
-        "new": "categoryymax",
-        "old": [
-            "categoryymax",
-            "Categoryymax",
-            "CATEGORYYMAX"
-        ]
+        "new": "categoryymax"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_MEDIAN",
-        "new": "categoryymedian",
-        "old": [
-            "categoryymedian",
-            "Categoryymedian",
-            "CATEGORYYMEDIAN"
-        ]
+        "new": "categoryymedian"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_MIN",
-        "new": "categoryymin",
-        "old": [
-            "categoryymin",
-            "Categoryymin",
-            "CATEGORYYMIN"
-        ]
+        "new": "categoryymin"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_MODE",
-        "new": "categoryymode",
-        "old": [
-            "categoryymode",
-            "Categoryymode",
-            "CATEGORYYMODE"
-        ]
+        "new": "categoryymode"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_PERCENT_OF_TOTAL",
-        "new": "categoryypercentoftotal",
-        "old": [
-            "categoryypercentoftotal",
-            "Categoryypercentoftotal",
-            "CATEGORYYPERCENTOFTOTAL"
-        ]
+        "new": "categoryypercentoftotal"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_AVERAGE",
-        "new": "categoryyrangeaverage",
-        "old": [
-            "categoryyrangeaverage",
-            "Categoryyrangeaverage",
-            "CATEGORYYRANGEAVERAGE"
-        ]
+        "new": "categoryyrangeaverage"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_MAX",
-        "new": "categoryyrangemax",
-        "old": [
-            "categoryyrangemax",
-            "Categoryyrangemax",
-            "CATEGORYYRANGEMAX"
-        ]
+        "new": "categoryyrangemax"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_MEDIAN",
-        "new": "categoryyrangemedian",
-        "old": [
-            "categoryyrangemedian",
-            "Categoryyrangemedian",
-            "CATEGORYYRANGEMEDIAN"
-        ]
+        "new": "categoryyrangemedian"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_MIN",
-        "new": "categoryyrangemin",
-        "old": [
-            "categoryyrangemin",
-            "Categoryyrangemin",
-            "CATEGORYYRANGEMIN"
-        ]
+        "new": "categoryyrangemin"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_MODE",
-        "new": "categoryyrangemode",
-        "old": [
-            "categoryyrangemode",
-            "Categoryyrangemode",
-            "CATEGORYYRANGEMODE"
-        ]
+        "new": "categoryyrangemode"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_PERCENT_OF_TOTAL",
-        "new": "categoryyrangepercentoftotal",
-        "old": [
-            "categoryyrangepercentoftotal",
-            "Categoryyrangepercentoftotal",
-            "CATEGORYYRANGEPERCENTOFTOTAL"
-        ]
+        "new": "categoryyrangepercentoftotal"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_SUM",
-        "new": "categoryyrangesum",
-        "old": [
-            "categoryyrangesum",
-            "Categoryyrangesum",
-            "CATEGORYYRANGESUM"
-        ]
+        "new": "categoryyrangesum"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_SUM",
-        "new": "categoryysum",
-        "old": [
-            "categoryysum",
-            "Categoryysum",
-            "CATEGORYYSUM"
-        ]
+        "new": "categoryysum"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CLOSE",
-        "new": "close",
-        "old": [
-            "close",
-            "Close",
-            "CLOSE"
-        ]
+        "new": "close"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.COUNT",
-        "new": "count",
-        "old": [
-            "count",
-            "Count",
-            "COUNT"
-        ]
+        "new": "count"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_BUBBLE_MAX_SIZE",
-        "new": "dataplotbubblemaxsize",
-        "old": [
-            "dataplotbubblemaxsize",
-            "Dataplotbubblemaxsize",
-            "DATAPLOTBUBBLEMAXSIZE"
-        ]
+        "new": "dataplotbubblemaxsize"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_BUBBLE_MIN_SIZE",
-        "new": "dataplotbubbleminsize",
-        "old": [
-            "dataplotbubbleminsize",
-            "Dataplotbubbleminsize",
-            "DATAPLOTBUBBLEMINSIZE"
-        ]
+        "new": "dataplotbubbleminsize"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_BUBBLE_SIZE_AVERAGE",
-        "new": "dataplotbubblesizeaverage",
-        "old": [
-            "dataplotbubblesizeaverage",
-            "Dataplotbubblesizeaverage",
-            "DATAPLOTBUBBLESIZEAVERAGE"
-        ]
+        "new": "dataplotbubblesizeaverage"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_BUBBLE_SIZE_SUM",
-        "new": "dataplotbubblesizesum",
-        "old": [
-            "dataplotbubblesizesum",
-            "Dataplotbubblesizesum",
-            "DATAPLOTBUBBLESIZESUM"
-        ]
+        "new": "dataplotbubblesizesum"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_MAX_X_SUM_SERIES_NAME",
-        "new": "dataplotmaxxsumseriesname",
-        "old": [
-            "dataplotmaxxsumseriesname",
-            "Dataplotmaxxsumseriesname",
-            "DATAPLOTMAXXSUMSERIESNAME"
-        ]
+        "new": "dataplotmaxxsumseriesname"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_MAX_Y_SUM_SERIES_NAME",
-        "new": "dataplotmaxysumseriesname",
-        "old": [
-            "dataplotmaxysumseriesname",
-            "Dataplotmaxysumseriesname",
-            "DATAPLOTMAXYSUMSERIESNAME"
-        ]
+        "new": "dataplotmaxysumseriesname"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_MAX_X_VALUE_POINT_SERIES_NAME",
-        "new": "dataplotmaxxvaluepointseriesname",
-        "old": [
-            "dataplotmaxxvaluepointseriesname",
-            "Dataplotmaxxvaluepointseriesname",
-            "DATAPLOTMAXXVALUEPOINTSERIESNAME"
-        ]
+        "new": "dataplotmaxxvaluepointseriesname"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_MAX_Y_VALUE_POINT_SERIES_NAME",
-        "new": "dataplotmaxyvaluepointseriesname",
-        "old": [
-            "dataplotmaxyvaluepointseriesname",
-            "Dataplotmaxyvaluepointseriesname",
-            "DATAPLOTMAXYVALUEPOINTSERIESNAME"
-        ]
+        "new": "dataplotmaxyvaluepointseriesname"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_MIN_X_SUM_SERIES_NAME",
-        "new": "dataplotminxsumseriesname",
-        "old": [
-            "dataplotminxsumseriesname",
-            "Dataplotminxsumseriesname",
-            "DATAPLOTMINXSUMSERIESNAME"
-        ]
+        "new": "dataplotminxsumseriesname"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_MIN_Y_SUM_SERIES_NAME",
-        "new": "dataplotminysumseriesname",
-        "old": [
-            "dataplotminysumseriesname",
-            "Dataplotminysumseriesname",
-            "DATAPLOTMINYSUMSERIESNAME"
-        ]
+        "new": "dataplotminysumseriesname"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_MIN_X_VALUE_POINT_SERIES_NAME",
-        "new": "dataplotminxvaluepointseriesname",
-        "old": [
-            "dataplotminxvaluepointseriesname",
-            "Dataplotminxvaluepointseriesname",
-            "DATAPLOTMINXVALUEPOINTSERIESNAME"
-        ]
+        "new": "dataplotminxvaluepointseriesname"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_MIN_Y_VALUE_POINT_SERIES_NAME",
-        "new": "dataplotminyvaluepointseriesname",
-        "old": [
-            "dataplotminyvaluepointseriesname",
-            "Dataplotminyvaluepointseriesname",
-            "DATAPLOTMINYVALUEPOINTSERIESNAME"
-        ]
+        "new": "dataplotminyvaluepointseriesname"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_POINT_COUNT",
-        "new": "dataplotpointcount",
-        "old": [
-            "dataplotpointcount",
-            "Dataplotpointcount",
-            "DATAPLOTPOINTCOUNT"
-        ]
+        "new": "dataplotpointcount"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_SERIES_COUNT",
-        "new": "dataplotseriescount",
-        "old": [
-            "dataplotseriescount",
-            "Dataplotseriescount",
-            "DATAPLOTSERIESCOUNT"
-        ]
+        "new": "dataplotseriescount"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_X_AVERAGE",
-        "new": "dataplotxaverage",
-        "old": [
-            "dataplotxaverage",
-            "Dataplotxaverage",
-            "DATAPLOTXAVERAGE"
-        ]
+        "new": "dataplotxaverage"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_X_MAX",
-        "new": "dataplotxmax",
-        "old": [
-            "dataplotxmax",
-            "Dataplotxmax",
-            "DATAPLOTXMAX"
-        ]
+        "new": "dataplotxmax"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_X_MIN",
-        "new": "dataplotxmin",
-        "old": [
-            "dataplotxmin",
-            "Dataplotxmin",
-            "DATAPLOTXMIN"
-        ]
+        "new": "dataplotxmin"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_X_SUM",
-        "new": "dataplotxsum",
-        "old": [
-            "dataplotxsum",
-            "Dataplotxsum",
-            "DATAPLOTXSUM"
-        ]
+        "new": "dataplotxsum"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_Y_AVERAGE",
-        "new": "dataplotyaverage",
-        "old": [
-            "dataplotyaverage",
-            "Dataplotyaverage",
-            "DATAPLOTYAVERAGE"
-        ]
+        "new": "dataplotyaverage"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_Y_MAX",
-        "new": "dataplotymax",
-        "old": [
-            "dataplotymax",
-            "Dataplotymax",
-            "DATAPLOTYMAX"
-        ]
+        "new": "dataplotymax"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_Y_MIN",
-        "new": "dataplotymin",
-        "old": [
-            "dataplotymin",
-            "Dataplotymin",
-            "DATAPLOTYMIN"
-        ]
+        "new": "dataplotymin"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_Y_RANGE_MAX",
-        "new": "dataplotyrangemax",
-        "old": [
-            "dataplotyrangemax",
-            "Dataplotyrangemax",
-            "DATAPLOTYRANGEMAX"
-        ]
+        "new": "dataplotyrangemax"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_Y_RANGE_MIN",
-        "new": "dataplotyrangemin",
-        "old": [
-            "dataplotyrangemin",
-            "Dataplotyrangemin",
-            "DATAPLOTYRANGEMIN"
-        ]
+        "new": "dataplotyrangemin"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_Y_RANGE_SUM",
-        "new": "dataplotyrangesum",
-        "old": [
-            "dataplotyrangesum",
-            "Dataplotyrangesum",
-            "DATAPLOTYRANGESUM"
-        ]
+        "new": "dataplotyrangesum"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.DATA_PLOT_Y_SUM",
-        "new": "dataplotysum",
-        "old": [
-            "dataplotysum",
-            "Dataplotysum",
-            "DATAPLOTYSUM"
-        ]
+        "new": "dataplotysum"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.HIGH",
-        "new": "high",
-        "old": [
-            "high",
-            "High",
-            "HIGH"
-        ]
+        "new": "high"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.INDEX",
-        "new": "index",
-        "old": [
-            "index",
-            "Index",
-            "INDEX"
-        ]
+        "new": "index"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.LOW",
-        "new": "low",
-        "old": [
-            "low",
-            "Low",
-            "LOW"
-        ]
+        "new": "low"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.MAX",
-        "new": "max",
-        "old": [
-            "max",
-            "Max",
-            "MAX"
-        ]
+        "new": "max"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.MIN",
-        "new": "min",
-        "old": [
-            "min",
-            "Min",
-            "MIN"
-        ]
+        "new": "min"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.NAME",
-        "new": "name",
-        "old": [
-            "name",
-            "Name",
-            "NAME"
-        ]
+        "new": "name"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.OPEN",
-        "new": "open",
-        "old": [
-            "open",
-            "Open",
-            "OPEN"
-        ]
+        "new": "open"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.POINTS_COUNT",
-        "new": "pointscount",
-        "old": [
-            "pointscount",
-            "Pointscount",
-            "POINTSCOUNT"
-        ]
+        "new": "pointscount"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.PERT_CHART_CRITICAL_PATH_STANDARD_DEVIATION",
-        "new": "pertchartcriticalpathstandarddeviation",
-        "old": [
-            "pertchartcriticalpathstandarddeviation",
-            "Pertchartcriticalpathstandarddeviation",
-            "PERTCHARTCRITICALPATHSTANDARDDEVIATION"
-        ]
+        "new": "pertchartcriticalpathstandarddeviation"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.PERT_CHART_PROJECT_DURATION",
-        "new": "pertchartprojectduration",
-        "old": [
-            "pertchartprojectduration",
-            "Pertchartprojectduration",
-            "PERTCHARTPROJECTDURATION"
-        ]
+        "new": "pertchartprojectduration"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.RANGE",
-        "new": "range",
-        "old": [
-            "range",
-            "Range",
-            "RANGE"
-        ]
+        "new": "range"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.RANGE_END",
-        "new": "rangeend",
-        "old": [
-            "rangeend",
-            "Rangeend",
-            "RANGEEND"
-        ]
+        "new": "rangeend"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.RANGE_START",
-        "new": "rangestart",
-        "old": [
-            "rangestart",
-            "Rangestart",
-            "RANGESTART"
-        ]
+        "new": "rangestart"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_AVERAGE",
-        "new": "seriesaverage",
-        "old": [
-            "seriesaverage",
-            "Seriesaverage",
-            "SERIESAVERAGE"
-        ]
+        "new": "seriesaverage"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_BUBBLE_MAX_SIZE",
-        "new": "seriesbubblemaxsize",
-        "old": [
-            "seriesbubblemaxsize",
-            "Seriesbubblemaxsize",
-            "SERIESBUBBLEMAXSIZE"
-        ]
+        "new": "seriesbubblemaxsize"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_BUBBLE_MIN_SIZE",
-        "new": "seriesbubbleminsize",
-        "old": [
-            "seriesbubbleminsize",
-            "Seriesbubbleminsize",
-            "SERIESBUBBLEMINSIZE"
-        ]
+        "new": "seriesbubbleminsize"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_BUBBLE_SIZE_AVERAGE",
-        "new": "seriesbubblesizeaverage",
-        "old": [
-            "seriesbubblesizeaverage",
-            "Seriesbubblesizeaverage",
-            "SERIESBUBBLESIZEAVERAGE"
-        ]
+        "new": "seriesbubblesizeaverage"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_BUBBLE_SIZE_MEDIAN",
-        "new": "seriesbubblesizemedian",
-        "old": [
-            "seriesbubblesizemedian",
-            "Seriesbubblesizemedian",
-            "SERIESBUBBLESIZEMEDIAN"
-        ]
+        "new": "seriesbubblesizemedian"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_BUBBLE_SIZE_MODE",
-        "new": "seriesbubblesizemode",
-        "old": [
-            "seriesbubblesizemode",
-            "Seriesbubblesizemode",
-            "SERIESBUBBLESIZEMODE"
-        ]
+        "new": "seriesbubblesizemode"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_BUBBLE_SIZE_SUM",
-        "new": "seriesbubblesizesum",
-        "old": [
-            "seriesbubblesizesum",
-            "Seriesbubblesizesum",
-            "SERIESBUBBLESIZESUM"
-        ]
+        "new": "seriesbubblesizesum"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_FIRST_X_VALUE",
-        "new": "seriesfirstxvalue",
-        "old": [
-            "seriesfirstxvalue",
-            "Seriesfirstxvalue",
-            "SERIESFIRSTXVALUE"
-        ]
+        "new": "seriesfirstxvalue"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_FIRST_Y_VALUE",
-        "new": "seriesfirstyvalue",
-        "old": [
-            "seriesfirstyvalue",
-            "Seriesfirstyvalue",
-            "SERIESFIRSTYVALUE"
-        ]
+        "new": "seriesfirstyvalue"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_LAST_X_VALUE",
-        "new": "serieslastxvalue",
-        "old": [
-            "serieslastxvalue",
-            "Serieslastxvalue",
-            "SERIESLASTXVALUE"
-        ]
+        "new": "serieslastxvalue"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_LAST_Y_VALUE",
-        "new": "serieslastyvalue",
-        "old": [
-            "serieslastyvalue",
-            "Serieslastyvalue",
-            "SERIESLASTYVALUE"
-        ]
+        "new": "serieslastyvalue"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_MAX",
-        "new": "seriesmax",
-        "old": [
-            "seriesmax",
-            "Seriesmax",
-            "SERIESMAX"
-        ]
+        "new": "seriesmax"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_MIN",
-        "new": "seriesmin",
-        "old": [
-            "seriesmin",
-            "Seriesmin",
-            "SERIESMIN"
-        ]
+        "new": "seriesmin"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_NAME",
-        "new": "seriesname",
-        "old": [
-            "seriesname",
-            "Seriesname",
-            "SERIESNAME"
-        ]
+        "new": "seriesname"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_POINT_COUNT",
-        "new": "seriespointcount",
-        "old": [
-            "seriespointcount",
-            "Seriespointcount",
-            "SERIESPOINTCOUNT"
-        ]
+        "new": "seriespointcount"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_POINTS_COUNT",
-        "new": "seriespointscount",
-        "old": [
-            "seriespointscount",
-            "Seriespointscount",
-            "SERIESPOINTSCOUNT"
-        ]
+        "new": "seriespointscount"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_SUM",
-        "new": "seriessum",
-        "old": [
-            "seriessum",
-            "Seriessum",
-            "SERIESSUM"
-        ]
+        "new": "seriessum"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_X_AVERAGE",
-        "new": "seriesxaverage",
-        "old": [
-            "seriesxaverage",
-            "Seriesxaverage",
-            "SERIESXAVERAGE"
-        ]
+        "new": "seriesxaverage"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_X_MAX",
-        "new": "seriesxmax",
-        "old": [
-            "seriesxmax",
-            "Seriesxmax",
-            "SERIESXMAX"
-        ]
+        "new": "seriesxmax"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_X_MEDIAN",
-        "new": "seriesxmedian",
-        "old": [
-            "seriesxmedian",
-            "Seriesxmedian",
-            "SERIESXMEDIAN"
-        ]
+        "new": "seriesxmedian"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_X_MIN",
-        "new": "seriesxmin",
-        "old": [
-            "seriesxmin",
-            "Seriesxmin",
-            "SERIESXMIN"
-        ]
+        "new": "seriesxmin"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_X_MODE",
-        "new": "seriesxmode",
-        "old": [
-            "seriesxmode",
-            "Seriesxmode",
-            "SERIESXMODE"
-        ]
+        "new": "seriesxmode"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_X_SUM",
-        "new": "seriesxsum",
-        "old": [
-            "seriesxsum",
-            "Seriesxsum",
-            "SERIESXSUM"
-        ]
+        "new": "seriesxsum"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_Y_AVERAGE",
-        "new": "seriesyaverage",
-        "old": [
-            "seriesyaverage",
-            "Seriesyaverage",
-            "SERIESYAVERAGE"
-        ]
+        "new": "seriesyaverage"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_Y_MAX",
-        "new": "seriesymax",
-        "old": [
-            "seriesymax",
-            "Seriesymax",
-            "SERIESYMAX"
-        ]
+        "new": "seriesymax"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_Y_MEDIAN",
-        "new": "seriesymedian",
-        "old": [
-            "seriesymedian",
-            "Seriesymedian",
-            "SERIESYMEDIAN"
-        ]
+        "new": "seriesymedian"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_Y_MIN",
-        "new": "seriesymin",
-        "old": [
-            "seriesymin",
-            "Seriesymin",
-            "SERIESYMIN"
-        ]
+        "new": "seriesymin"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_Y_MODE",
-        "new": "seriesymode",
-        "old": [
-            "seriesymode",
-            "Seriesymode",
-            "SERIESYMODE"
-        ]
+        "new": "seriesymode"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_Y_RANGE_AVERAGE",
-        "new": "seriesyrangeaverage",
-        "old": [
-            "seriesyrangeaverage",
-            "Seriesyrangeaverage",
-            "SERIESYRANGEAVERAGE"
-        ]
+        "new": "seriesyrangeaverage"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_Y_RANGE_MAX",
-        "new": "seriesyrangemax",
-        "old": [
-            "seriesyrangemax",
-            "Seriesyrangemax",
-            "SERIESYRANGEMAX"
-        ]
+        "new": "seriesyrangemax"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_Y_RANGE_MEDIAN",
-        "new": "seriesyrangemedian",
-        "old": [
-            "seriesyrangemedian",
-            "Seriesyrangemedian",
-            "SERIESYRANGEMEDIAN"
-        ]
+        "new": "seriesyrangemedian"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_Y_RANGE_MIN",
-        "new": "seriesyrangemin",
-        "old": [
-            "seriesyrangemin",
-            "Seriesyrangemin",
-            "SERIESYRANGEMIN"
-        ]
+        "new": "seriesyrangemin"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_Y_RANGE_MODE",
-        "new": "seriesyrangemode",
-        "old": [
-            "seriesyrangemode",
-            "Seriesyrangemode",
-            "SERIESYRANGEMODE"
-        ]
+        "new": "seriesyrangemode"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_Y_RANGE_SUM",
-        "new": "seriesyrangesum",
-        "old": [
-            "seriesyrangesum",
-            "Seriesyrangesum",
-            "SERIESYRANGESUM"
-        ]
+        "new": "seriesyrangesum"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SERIES_Y_SUM",
-        "new": "seriesysum",
-        "old": [
-            "seriesysum",
-            "Seriesysum",
-            "SERIESYSUM"
-        ]
+        "new": "seriesysum"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.SUM",
-        "new": "sum",
-        "old": [
-            "sum",
-            "Sum",
-            "SUM"
-        ]
+        "new": "sum"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.VALUE",
-        "new": "value",
-        "old": [
-            "value",
-            "Value",
-            "VALUE"
-        ]
+        "new": "value"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.PERCENT_VALUE",
-        "new": "percentvalue",
-        "old": [
-            "percentvalue",
-            "Percentvalue",
-            "PERCENTVALUE"
-        ]
+        "new": "percentvalue"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.X_PERCENT_OF_SERIES",
-        "new": "xpercentofseries",
-        "old": [
-            "xpercentofseries",
-            "Xpercentofseries",
-            "XPERCENTOFSERIES"
-        ]
+        "new": "xpercentofseries"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.X_PERCENT_OF_TOTAL",
-        "new": "xpercentoftotal",
-        "old": [
-            "xpercentoftotal",
-            "Xpercentoftotal",
-            "XPERCENTOFTOTAL"
-        ]
+        "new": "xpercentoftotal"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.X_VALUE",
-        "new": "xvalue",
-        "old": [
-            "xvalue",
-            "Xvalue",
-            "XVALUE"
-        ]
+        "new": "xvalue"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.Y_PERCENT_OF_CATEGORY",
-        "new": "ypercentofcategory",
-        "old": [
-            "ypercentofcategory",
-            "Ypercentofcategory",
-            "YPERCENTOFCATEGORY"
-        ]
+        "new": "ypercentofcategory"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.Y_PERCENT_OF_SERIES",
-        "new": "ypercentofseries",
-        "old": [
-            "ypercentofseries",
-            "Ypercentofseries",
-            "YPERCENTOFSERIES"
-        ]
+        "new": "ypercentofseries"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.Y_PERCENT_OF_TOTAL",
-        "new": "ypercentoftotal",
-        "old": [
-            "ypercentoftotal",
-            "Ypercentoftotal",
-            "YPERCENTOFTOTAL"
-        ]
+        "new": "ypercentoftotal"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.Y_VALUE",
-        "new": "yvalue",
-        "old": [
-            "yvalue",
-            "Yvalue",
-            "YVALUE"
-        ]
+        "new": "yvalue"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.X_SCALES_MIN",
-        "new": "xscalesmin",
-        "old": [
-            "xscalesmin",
-            "Xscalesmin",
-            "XSCALESMIN"
-        ]
+        "new": "xscalesmin"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.X_SCALES_MAX",
-        "new": "xscalesmax",
-        "old": [
-            "xscalesmax",
-            "Xscalesmax",
-            "XSCALESMAX"
-        ]
+        "new": "xscalesmax"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.Y_SCALES_MIN",
-        "new": "yscalesmin",
-        "old": [
-            "yscalesmin",
-            "Yscalesmin",
-            "YSCALESMIN"
-        ]
+        "new": "yscalesmin"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.Y_SCALES_MAX",
-        "new": "yscalesmax",
-        "old": [
-            "yscalesmax",
-            "Yscalesmax",
-            "YSCALESMAX"
-        ]
+        "new": "yscalesmax"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_SUM_ARR_",
-        "new": "catysumarr_",
-        "old": [
-            "catysumarr_",
-            "Catysumarr_",
-            "CATYSUMARR_"
-        ]
+        "new": "catysumarr_"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_MIN_ARR_",
-        "new": "catyminarr_",
-        "old": [
-            "catyminarr_",
-            "Catyminarr_",
-            "CATYMINARR_"
-        ]
+        "new": "catyminarr_"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_MAX_ARR_",
-        "new": "catymaxarr_",
-        "old": [
-            "catymaxarr_",
-            "Catymaxarr_",
-            "CATYMAXARR_"
-        ]
+        "new": "catymaxarr_"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_AVG_ARR_",
-        "new": "catyavgarr_",
-        "old": [
-            "catyavgarr_",
-            "Catyavgarr_",
-            "CATYAVGARR_"
-        ]
+        "new": "catyavgarr_"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_MEDIAN_ARR_",
-        "new": "catymedianarr_",
-        "old": [
-            "catymedianarr_",
-            "Catymedianarr_",
-            "CATYMEDIANARR_"
-        ]
+        "new": "catymedianarr_"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_MODE_ARR_",
-        "new": "catymodearr_",
-        "old": [
-            "catymodearr_",
-            "Catymodearr_",
-            "CATYMODEARR_"
-        ]
+        "new": "catymodearr_"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_SUM_ARR_",
-        "new": "catyrangesumarr_",
-        "old": [
-            "catyrangesumarr_",
-            "Catyrangesumarr_",
-            "CATYRANGESUMARR_"
-        ]
+        "new": "catyrangesumarr_"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_MIN_ARR_",
-        "new": "catyrangeminarr_",
-        "old": [
-            "catyrangeminarr_",
-            "Catyrangeminarr_",
-            "CATYRANGEMINARR_"
-        ]
+        "new": "catyrangeminarr_"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_MAX_ARR_",
-        "new": "catyrangemaxarr_",
-        "old": [
-            "catyrangemaxarr_",
-            "Catyrangemaxarr_",
-            "CATYRANGEMAXARR_"
-        ]
+        "new": "catyrangemaxarr_"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_AVG_ARR_",
-        "new": "catyrangeavgarr_",
-        "old": [
-            "catyrangeavgarr_",
-            "Catyrangeavgarr_",
-            "CATYRANGEAVGARR_"
-        ]
+        "new": "catyrangeavgarr_"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_MEDIAN_ARR_",
-        "new": "catyrangemedianarr_",
-        "old": [
-            "catyrangemedianarr_",
-            "Catyrangemedianarr_",
-            "CATYRANGEMEDIANARR_"
-        ]
+        "new": "catyrangemedianarr_"
     },
     {
         "literal": "anychart.enums.StatisticsLowerCase.CATEGORY_Y_RANGE_MODE_ARR_",
-        "new": "catyrangemodearr_",
-        "old": [
-            "catyrangemodearr_",
-            "Catyrangemodearr_",
-            "CATYRANGEMODEARR_"
-        ]
+        "new": "catyrangemodearr_"
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.BASE",
-        "new": 0,
-        "old": [
-            0
-        ]
+        "new": 0
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.AREA",
-        "new": 1,
-        "old": [
-            1
-        ]
+        "new": 1
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.AREA_3D",
-        "new": 2,
-        "old": [
-            2
-        ]
+        "new": 2
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.BOX",
-        "new": 3,
-        "old": [
-            3
-        ]
+        "new": 3
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.BUBBLE",
-        "new": 4,
-        "old": [
-            4
-        ]
+        "new": 4
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.CANDLESTICK",
-        "new": 5,
-        "old": [
-            5
-        ]
+        "new": 5
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.COLUMN",
-        "new": 6,
-        "old": [
-            6
-        ]
+        "new": 6
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.COLUMN_3D",
-        "new": 7,
-        "old": [
-            7
-        ]
+        "new": 7
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.LINE",
-        "new": 8,
-        "old": [
-            8
-        ]
+        "new": 8
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.MARKER",
-        "new": 9,
-        "old": [
-            9
-        ]
+        "new": 9
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.OHLC",
-        "new": 10,
-        "old": [
-            10
-        ]
+        "new": 10
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.RANGE_AREA",
-        "new": 11,
-        "old": [
-            11
-        ]
+        "new": 11
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.RANGE_COLUMN",
-        "new": 12,
-        "old": [
-            12
-        ]
+        "new": 12
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.RANGE_SPLINE_AREA",
-        "new": 13,
-        "old": [
-            13
-        ]
+        "new": 13
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.RANGE_STEP_AREA",
-        "new": 14,
-        "old": [
-            14
-        ]
+        "new": 14
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.SPLINE",
-        "new": 15,
-        "old": [
-            15
-        ]
+        "new": 15
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.SPLINE_AREA",
-        "new": 16,
-        "old": [
-            16
-        ]
+        "new": 16
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.STEP_AREA",
-        "new": 17,
-        "old": [
-            17
-        ]
+        "new": 17
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.STEP_LINE",
-        "new": 18,
-        "old": [
-            18
-        ]
+        "new": 18
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.JUMP_LINE",
-        "new": 19,
-        "old": [
-            19
-        ]
+        "new": 19
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.STICK",
-        "new": 20,
-        "old": [
-            20
-        ]
+        "new": 20
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.CONNECTOR",
-        "new": 21,
-        "old": [
-            21
-        ]
+        "new": 21
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.MAP_MARKER",
-        "new": 22,
-        "old": [
-            22
-        ]
+        "new": 22
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.MAP_BUBBLE",
-        "new": 23,
-        "old": [
-            23
-        ]
+        "new": 23
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.CHOROPLETH",
-        "new": 24,
-        "old": [
-            24
-        ]
+        "new": 24
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.POLAR_LINE",
-        "new": 25,
-        "old": [
-            25
-        ]
+        "new": 25
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.POLAR_AREA",
-        "new": 26,
-        "old": [
-            26
-        ]
+        "new": 26
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.POLAR_COLUMN",
-        "new": 27,
-        "old": [
-            27
-        ]
+        "new": 27
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.POLAR_RANGE_COLUMN",
-        "new": 28,
-        "old": [
-            28
-        ]
+        "new": 28
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.MEKKO",
-        "new": 29,
-        "old": [
-            29
-        ]
+        "new": 29
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.HEAT_MAP",
-        "new": 30,
-        "old": [
-            30
-        ]
+        "new": 30
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.RANGE_STICK",
-        "new": 31,
-        "old": [
-            31
-        ]
+        "new": 31
     },
     {
         "literal": "anychart.enums.SeriesDrawerTypes.WATERFALL",
-        "new": 32,
-        "old": [
-            32
-        ]
+        "new": 32
     },
     {
         "literal": "anychart.enums.ShapeManagerTypes.PER_SERIES",
-        "new": 1,
-        "old": [
-            1
-        ]
+        "new": 1
     },
     {
         "literal": "anychart.enums.ShapeManagerTypes.PER_POINT",
-        "new": 2,
-        "old": [
-            2
-        ]
+        "new": 2
     },
     {
         "literal": "anychart.enums.ShapeType.PATH",
-        "new": "path",
-        "old": [
-            "path",
-            "Path",
-            "PATH"
-        ]
+        "new": "path"
     },
     {
         "literal": "anychart.enums.ShapeType.CIRCLE",
-        "new": "circle",
-        "old": [
-            "circle",
-            "Circle",
-            "CIRCLE"
-        ]
+        "new": "circle"
     },
     {
         "literal": "anychart.enums.ShapeType.RECT",
-        "new": "rect",
-        "old": [
-            "rect",
-            "Rect",
-            "RECT"
-        ]
+        "new": "rect"
     },
     {
         "literal": "anychart.enums.ShapeType.ELLIPSE",
-        "new": "ellipse",
-        "old": [
-            "ellipse",
-            "Ellipse",
-            "ELLIPSE"
-        ]
+        "new": "ellipse"
     },
     {
         "literal": "anychart.enums.ShapeType.NONE",
-        "new": "none",
-        "old": [
-            "none",
-            "None",
-            "NONE"
-        ]
+        "new": "none"
     },
     {
         "literal": "anychart.enums.ColorType.FILL",
-        "new": 1,
-        "old": [
-            1
-        ]
+        "new": 1
     },
     {
         "literal": "anychart.enums.ColorType.STROKE",
-        "new": 2,
-        "old": [
-            2
-        ]
+        "new": 2
     },
     {
         "literal": "anychart.enums.ColorType.HATCH_FILL",
-        "new": 3,
-        "old": [
-            3
-        ]
+        "new": 3
     },
     {
         "literal": "anychart.enums.PropertyHandlerType.SINGLE_ARG",
-        "new": 0,
-        "old": [
-            0
-        ]
+        "new": 0
     },
     {
         "literal": "anychart.enums.PropertyHandlerType.MULTI_ARG",
-        "new": 1,
-        "old": [
-            1
-        ]
+        "new": 1
     },
     {
         "literal": "anychart.enums.PropertyHandlerType.SINGLE_ARG_DEPRECATED",
-        "new": 2,
-        "old": [
-            2
-        ]
+        "new": 2
     },
     {
         "literal": "anychart.enums.PropertyHandlerType.MULTI_ARG_DEPRECATED",
-        "new": 3,
-        "old": [
-            3
-        ]
+        "new": 3
     },
     {
         "literal": "anychart.enums.A11yMode.CHART_ELEMENTS",
@@ -10881,12 +7110,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.AnnotationTypes.RAY",
-        "new": "ray",
-        "old": [
-            "ray",
-            "Ray",
-            "RAY"
-        ]
+        "new": "ray"
     },
     {
         "literal": "anychart.enums.PaperSize.US_LETTER",
@@ -10900,77 +7124,39 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.PaperSize.A0",
-        "new": "a0",
-        "old": [
-            "a0",
-            "A0"
-        ]
+        "new": "a0"
     },
     {
         "literal": "anychart.enums.PaperSize.A1",
-        "new": "a1",
-        "old": [
-            "a1",
-            "A1"
-        ]
+        "new": "a1"
     },
     {
         "literal": "anychart.enums.PaperSize.A2",
-        "new": "a2",
-        "old": [
-            "a2",
-            "A2"
-        ]
+        "new": "a2"
     },
     {
         "literal": "anychart.enums.PaperSize.A3",
-        "new": "a3",
-        "old": [
-            "a3",
-            "A3"
-        ]
+        "new": "a3"
     },
     {
         "literal": "anychart.enums.PaperSize.A4",
-        "new": "a4",
-        "old": [
-            "a4",
-            "A4"
-        ]
+        "new": "a4"
     },
     {
         "literal": "anychart.enums.PaperSize.A5",
-        "new": "a5",
-        "old": [
-            "a5",
-            "A5"
-        ]
+        "new": "a5"
     },
     {
         "literal": "anychart.enums.PaperSize.A6",
-        "new": "a6",
-        "old": [
-            "a6",
-            "A6"
-        ]
+        "new": "a6"
     },
     {
         "literal": "anychart.enums.MilestoneShape.CIRCLE",
-        "new": "circle",
-        "old": [
-            "circle",
-            "Circle",
-            "CIRCLE"
-        ]
+        "new": "circle"
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.YEAR",
-        "new": "year",
-        "old": [
-            "year",
-            "Year",
-            "YEAR"
-        ]
+        "new": "year"
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.YEAR_SEMESTER",
@@ -11084,12 +7270,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.SEMESTER",
-        "new": "semester",
-        "old": [
-            "semester",
-            "Semester",
-            "SEMESTER"
-        ]
+        "new": "semester"
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.SEMESTER_QUARTER",
@@ -11192,12 +7373,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.QUARTER",
-        "new": "quarter",
-        "old": [
-            "quarter",
-            "Quarter",
-            "QUARTER"
-        ]
+        "new": "quarter"
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.QUARTER_MONTH",
@@ -11289,12 +7465,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.MONTH",
-        "new": "month",
-        "old": [
-            "month",
-            "Month",
-            "MONTH"
-        ]
+        "new": "month"
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.MONTH_THIRD_OF_MONTH",
@@ -11452,12 +7623,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.WEEK",
-        "new": "week",
-        "old": [
-            "week",
-            "Week",
-            "WEEK"
-        ]
+        "new": "week"
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.WEEK_DAY",
@@ -11516,12 +7682,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.DAY",
-        "new": "day",
-        "old": [
-            "day",
-            "Day",
-            "DAY"
-        ]
+        "new": "day"
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.DAY_HOUR",
@@ -11569,12 +7730,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.HOUR",
-        "new": "hour",
-        "old": [
-            "hour",
-            "Hour",
-            "HOUR"
-        ]
+        "new": "hour"
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.HOUR_MINUTE",
@@ -11611,12 +7767,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.MINUTE",
-        "new": "minute",
-        "old": [
-            "minute",
-            "Minute",
-            "MINUTE"
-        ]
+        "new": "minute"
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.MINUTE_SECOND",
@@ -11642,12 +7793,7 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.SECOND",
-        "new": "second",
-        "old": [
-            "second",
-            "Second",
-            "SECOND"
-        ]
+        "new": "second"
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.SECOND_MILLISECOND",
@@ -11662,37 +7808,19 @@ exports.normalized = [
     },
     {
         "literal": "anychart.enums.LocaleDateTimeFormat.MILLISECOND",
-        "new": "millisecond",
-        "old": [
-            "millisecond",
-            "Millisecond",
-            "MILLISECOND"
-        ]
+        "new": "millisecond"
     },
     {
         "literal": "anychart.enums.IntervalFormatPrefix.NONE",
-        "new": "",
-        "old": [
-            ""
-        ]
+        "new": ""
     },
     {
         "literal": "anychart.enums.IntervalFormatPrefix.FULL",
-        "new": "full",
-        "old": [
-            "full",
-            "Full",
-            "FULL"
-        ]
+        "new": "full"
     },
     {
         "literal": "anychart.enums.AvailabilityPeriod.NONE",
-        "new": "none",
-        "old": [
-            "none",
-            "None",
-            "NONE"
-        ]
+        "new": "none"
     },
     {
         "literal": "anychart.enums.TimeTrackingMode.AVAILABILITY_PER_CHART",
@@ -11736,458 +7864,207 @@ exports.normalized = [
     },
     {
         "literal": "acgraph.StageType.SVG",
-        "new": "svg",
-        "old": [
-            "svg",
-            "Svg",
-            "SVG"
-        ]
+        "new": "svg"
     },
     {
         "literal": "acgraph.StageType.VML",
-        "new": "vml",
-        "old": [
-            "vml",
-            "Vml",
-            "VML"
-        ]
+        "new": "vml"
     },
     {
         "literal": "acgraph.events.EventType.CLICK",
-        "new": "click",
-        "old": [
-            "click",
-            "Click",
-            "CLICK"
-        ]
+        "new": "click"
     },
     {
         "literal": "acgraph.events.EventType.DBLCLICK",
-        "new": "dblclick",
-        "old": [
-            "dblclick",
-            "Dblclick",
-            "DBLCLICK"
-        ]
+        "new": "dblclick"
     },
     {
         "literal": "acgraph.events.EventType.MOUSEUP",
-        "new": "mouseup",
-        "old": [
-            "mouseup",
-            "Mouseup",
-            "MOUSEUP"
-        ]
+        "new": "mouseup"
     },
     {
         "literal": "acgraph.events.EventType.MOUSEDOWN",
-        "new": "mousedown",
-        "old": [
-            "mousedown",
-            "Mousedown",
-            "MOUSEDOWN"
-        ]
+        "new": "mousedown"
     },
     {
         "literal": "acgraph.events.EventType.MOUSEOVER",
-        "new": "mouseover",
-        "old": [
-            "mouseover",
-            "Mouseover",
-            "MOUSEOVER"
-        ]
+        "new": "mouseover"
     },
     {
         "literal": "acgraph.events.EventType.MOUSEOUT",
-        "new": "mouseout",
-        "old": [
-            "mouseout",
-            "Mouseout",
-            "MOUSEOUT"
-        ]
+        "new": "mouseout"
     },
     {
         "literal": "acgraph.events.EventType.MOUSEMOVE",
-        "new": "mousemove",
-        "old": [
-            "mousemove",
-            "Mousemove",
-            "MOUSEMOVE"
-        ]
+        "new": "mousemove"
     },
     {
         "literal": "acgraph.events.EventType.TOUCHSTART",
-        "new": "touchstart",
-        "old": [
-            "touchstart",
-            "Touchstart",
-            "TOUCHSTART"
-        ]
+        "new": "touchstart"
     },
     {
         "literal": "acgraph.events.EventType.TOUCHEND",
-        "new": "touchend",
-        "old": [
-            "touchend",
-            "Touchend",
-            "TOUCHEND"
-        ]
+        "new": "touchend"
     },
     {
         "literal": "acgraph.events.EventType.TOUCHCANCEL",
-        "new": "touchcancel",
-        "old": [
-            "touchcancel",
-            "Touchcancel",
-            "TOUCHCANCEL"
-        ]
+        "new": "touchcancel"
     },
     {
         "literal": "acgraph.events.EventType.TOUCHMOVE",
-        "new": "touchmove",
-        "old": [
-            "touchmove",
-            "Touchmove",
-            "TOUCHMOVE"
-        ]
+        "new": "touchmove"
     },
     {
         "literal": "acgraph.events.EventType.TAP",
-        "new": "tap",
-        "old": [
-            "tap",
-            "Tap",
-            "TAP"
-        ]
+        "new": "tap"
     },
     {
         "literal": "acgraph.events.EventType.DRAG",
-        "new": "drag",
-        "old": [
-            "drag",
-            "Drag",
-            "DRAG"
-        ]
+        "new": "drag"
     },
     {
         "literal": "acgraph.events.EventType.DRAG_START",
-        "new": "start",
-        "old": [
-            "start",
-            "Start",
-            "START"
-        ]
+        "new": "start"
     },
     {
         "literal": "acgraph.events.EventType.DRAG_END",
-        "new": "end",
-        "old": [
-            "end",
-            "End",
-            "END"
-        ]
+        "new": "end"
     },
     {
         "literal": "acgraph.events.EventType.DRAG_EARLY_CANCEL",
-        "new": "earlycancel",
-        "old": [
-            "earlycancel",
-            "Earlycancel",
-            "EARLYCANCEL"
-        ]
+        "new": "earlycancel"
     },
     {
         "literal": "acgraph.events.EventType.DRAG_BEFORE",
-        "new": "beforedrag",
-        "old": [
-            "beforedrag",
-            "Beforedrag",
-            "BEFOREDRAG"
-        ]
+        "new": "beforedrag"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.HORIZONTAL",
-        "new": "horizontal",
-        "old": [
-            "horizontal",
-            "Horizontal",
-            "HORIZONTAL"
-        ]
+        "new": "horizontal"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.VERTICAL",
-        "new": "vertical",
-        "old": [
-            "vertical",
-            "Vertical",
-            "VERTICAL"
-        ]
+        "new": "vertical"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.GRID",
-        "new": "grid",
-        "old": [
-            "grid",
-            "Grid",
-            "GRID"
-        ]
+        "new": "grid"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.DIVOT",
-        "new": "divot",
-        "old": [
-            "divot",
-            "Divot",
-            "DIVOT"
-        ]
+        "new": "divot"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.CONFETTI",
-        "new": "confetti",
-        "old": [
-            "confetti",
-            "Confetti",
-            "CONFETTI"
-        ]
+        "new": "confetti"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PLAID",
-        "new": "plaid",
-        "old": [
-            "plaid",
-            "Plaid",
-            "PLAID"
-        ]
+        "new": "plaid"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.WEAVE",
-        "new": "weave",
-        "old": [
-            "weave",
-            "Weave",
-            "WEAVE"
-        ]
+        "new": "weave"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PERCENT_05",
-        "new": "percent05",
-        "old": [
-            "percent05",
-            "Percent05",
-            "PERCENT05"
-        ]
+        "new": "percent05"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PERCENT_10",
-        "new": "percent10",
-        "old": [
-            "percent10",
-            "Percent10",
-            "PERCENT10"
-        ]
+        "new": "percent10"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PERCENT_20",
-        "new": "percent20",
-        "old": [
-            "percent20",
-            "Percent20",
-            "PERCENT20"
-        ]
+        "new": "percent20"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PERCENT_25",
-        "new": "percent25",
-        "old": [
-            "percent25",
-            "Percent25",
-            "PERCENT25"
-        ]
+        "new": "percent25"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PERCENT_30",
-        "new": "percent30",
-        "old": [
-            "percent30",
-            "Percent30",
-            "PERCENT30"
-        ]
+        "new": "percent30"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PERCENT_40",
-        "new": "percent40",
-        "old": [
-            "percent40",
-            "Percent40",
-            "PERCENT40"
-        ]
+        "new": "percent40"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PERCENT_50",
-        "new": "percent50",
-        "old": [
-            "percent50",
-            "Percent50",
-            "PERCENT50"
-        ]
+        "new": "percent50"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PERCENT_60",
-        "new": "percent60",
-        "old": [
-            "percent60",
-            "Percent60",
-            "PERCENT60"
-        ]
+        "new": "percent60"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PERCENT_70",
-        "new": "percent70",
-        "old": [
-            "percent70",
-            "Percent70",
-            "PERCENT70"
-        ]
+        "new": "percent70"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PERCENT_75",
-        "new": "percent75",
-        "old": [
-            "percent75",
-            "Percent75",
-            "PERCENT75"
-        ]
+        "new": "percent75"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PERCENT_80",
-        "new": "percent80",
-        "old": [
-            "percent80",
-            "Percent80",
-            "PERCENT80"
-        ]
+        "new": "percent80"
     },
     {
         "literal": "acgraph.vector.HatchFill.HatchFillType.PERCENT_90",
-        "new": "percent90",
-        "old": [
-            "percent90",
-            "Percent90",
-            "PERCENT90"
-        ]
+        "new": "percent90"
     },
     {
         "literal": "acgraph.vector.Image.Fitting.MEET",
-        "new": "meet",
-        "old": [
-            "meet",
-            "Meet",
-            "MEET"
-        ]
+        "new": "meet"
     },
     {
         "literal": "acgraph.vector.Image.Fitting.SLICE",
-        "new": "slice",
-        "old": [
-            "slice",
-            "Slice",
-            "SLICE"
-        ]
+        "new": "slice"
     },
     {
         "literal": "acgraph.vector.Image.Align.NONE",
-        "new": "none",
-        "old": [
-            "none",
-            "None",
-            "NONE"
-        ]
+        "new": "none"
     },
     {
         "literal": "acgraph.events.EventType.RENDER_START",
-        "new": "renderstart",
-        "old": [
-            "renderstart",
-            "Renderstart",
-            "RENDERSTART"
-        ]
+        "new": "renderstart"
     },
     {
         "literal": "acgraph.events.EventType.RENDER_FINISH",
-        "new": "renderfinish",
-        "old": [
-            "renderfinish",
-            "Renderfinish",
-            "RENDERFINISH"
-        ]
+        "new": "renderfinish"
     },
     {
         "literal": "acgraph.vector.Stage.EventType.STAGE_RESIZE",
-        "new": "stageresize",
-        "old": [
-            "stageresize",
-            "Stageresize",
-            "STAGERESIZE"
-        ]
+        "new": "stageresize"
     },
     {
         "literal": "acgraph.vector.Stage.EventType.STAGE_RENDERED",
-        "new": "stagerendered",
-        "old": [
-            "stagerendered",
-            "Stagerendered",
-            "STAGERENDERED"
-        ]
+        "new": "stagerendered"
     },
     {
         "literal": "acgraph.vector.Text.TextOverflow.CLIP",
-        "new": "",
-        "old": [
-            ""
-        ]
+        "new": ""
     },
     {
         "literal": "acgraph.vector.Text.TextOverflow.ELLIPSIS",
-        "new": "...",
-        "old": [
-            "..."
-        ]
+        "new": "..."
     },
     {
         "literal": "acgraph.vector.Text.FontStyle.ITALIC",
-        "new": "italic",
-        "old": [
-            "italic",
-            "Italic",
-            "ITALIC"
-        ]
+        "new": "italic"
     },
     {
         "literal": "acgraph.vector.Text.FontStyle.NORMAL",
-        "new": "normal",
-        "old": [
-            "normal",
-            "Normal",
-            "NORMAL"
-        ]
+        "new": "normal"
     },
     {
         "literal": "acgraph.vector.Text.FontStyle.OBLIQUE",
-        "new": "oblique",
-        "old": [
-            "oblique",
-            "Oblique",
-            "OBLIQUE"
-        ]
+        "new": "oblique"
     },
     {
         "literal": "acgraph.vector.Text.FontVariant.NORMAL",
-        "new": "normal",
-        "old": [
-            "normal",
-            "Normal",
-            "NORMAL"
-        ]
+        "new": "normal"
     },
     {
         "literal": "acgraph.vector.Text.FontVariant.SMALL_CAP",
@@ -12202,30 +8079,15 @@ exports.normalized = [
     },
     {
         "literal": "acgraph.vector.Text.Direction.LTR",
-        "new": "ltr",
-        "old": [
-            "ltr",
-            "Ltr",
-            "LTR"
-        ]
+        "new": "ltr"
     },
     {
         "literal": "acgraph.vector.Text.Direction.RTL",
-        "new": "rtl",
-        "old": [
-            "rtl",
-            "Rtl",
-            "RTL"
-        ]
+        "new": "rtl"
     },
     {
         "literal": "acgraph.vector.Text.Decoration.BLINK",
-        "new": "blink",
-        "old": [
-            "blink",
-            "Blink",
-            "BLINK"
-        ]
+        "new": "blink"
     },
     {
         "literal": "acgraph.vector.Text.Decoration.LINE_THROUGH",
@@ -12240,165 +8102,75 @@ exports.normalized = [
     },
     {
         "literal": "acgraph.vector.Text.Decoration.OVERLINE",
-        "new": "overline",
-        "old": [
-            "overline",
-            "Overline",
-            "OVERLINE"
-        ]
+        "new": "overline"
     },
     {
         "literal": "acgraph.vector.Text.Decoration.UNDERLINE",
-        "new": "underline",
-        "old": [
-            "underline",
-            "Underline",
-            "UNDERLINE"
-        ]
+        "new": "underline"
     },
     {
         "literal": "acgraph.vector.Text.Decoration.NONE",
-        "new": "none",
-        "old": [
-            "none",
-            "None",
-            "NONE"
-        ]
+        "new": "none"
     },
     {
         "literal": "acgraph.vector.Text.HAlign.START",
-        "new": "start",
-        "old": [
-            "start",
-            "Start",
-            "START"
-        ]
+        "new": "start"
     },
     {
         "literal": "acgraph.vector.Text.HAlign.LEFT",
-        "new": "left",
-        "old": [
-            "left",
-            "Left",
-            "LEFT"
-        ]
+        "new": "left"
     },
     {
         "literal": "acgraph.vector.Text.HAlign.CENTER",
-        "new": "center",
-        "old": [
-            "center",
-            "Center",
-            "CENTER"
-        ]
+        "new": "center"
     },
     {
         "literal": "acgraph.vector.Text.HAlign.END",
-        "new": "end",
-        "old": [
-            "end",
-            "End",
-            "END"
-        ]
+        "new": "end"
     },
     {
         "literal": "acgraph.vector.Text.HAlign.RIGHT",
-        "new": "right",
-        "old": [
-            "right",
-            "Right",
-            "RIGHT"
-        ]
+        "new": "right"
     },
     {
         "literal": "acgraph.vector.Text.VAlign.TOP",
-        "new": "top",
-        "old": [
-            "top",
-            "Top",
-            "TOP"
-        ]
+        "new": "top"
     },
     {
         "literal": "acgraph.vector.Text.VAlign.MIDDLE",
-        "new": "middle",
-        "old": [
-            "middle",
-            "Middle",
-            "MIDDLE"
-        ]
+        "new": "middle"
     },
     {
         "literal": "acgraph.vector.Text.VAlign.BOTTOM",
-        "new": "bottom",
-        "old": [
-            "bottom",
-            "Bottom",
-            "BOTTOM"
-        ]
+        "new": "bottom"
     },
     {
         "literal": "acgraph.vector.Cursor.DEFAULT",
-        "new": "default",
-        "old": [
-            "default",
-            "Default",
-            "DEFAULT"
-        ]
+        "new": "default"
     },
     {
         "literal": "acgraph.vector.Cursor.CROSSHAIR",
-        "new": "crosshair",
-        "old": [
-            "crosshair",
-            "Crosshair",
-            "CROSSHAIR"
-        ]
+        "new": "crosshair"
     },
     {
         "literal": "acgraph.vector.Cursor.POINTER",
-        "new": "pointer",
-        "old": [
-            "pointer",
-            "Pointer",
-            "POINTER"
-        ]
+        "new": "pointer"
     },
     {
         "literal": "acgraph.vector.Cursor.MOVE",
-        "new": "move",
-        "old": [
-            "move",
-            "Move",
-            "MOVE"
-        ]
+        "new": "move"
     },
     {
         "literal": "acgraph.vector.Cursor.TEXT",
-        "new": "text",
-        "old": [
-            "text",
-            "Text",
-            "TEXT"
-        ]
+        "new": "text"
     },
     {
         "literal": "acgraph.vector.Cursor.WAIT",
-        "new": "wait",
-        "old": [
-            "wait",
-            "Wait",
-            "WAIT"
-        ]
+        "new": "wait"
     },
     {
         "literal": "acgraph.vector.Cursor.HELP",
-        "new": "help",
-        "old": [
-            "help",
-            "Help",
-            "HELP"
-        ]
+        "new": "help"
     },
     {
         "literal": "acgraph.vector.Cursor.N_RESIZE",
@@ -12490,614 +8262,279 @@ exports.normalized = [
     },
     {
         "literal": "acgraph.vector.StrokeLineJoin.MITER",
-        "new": "miter",
-        "old": [
-            "miter",
-            "Miter",
-            "MITER"
-        ]
+        "new": "miter"
     },
     {
         "literal": "acgraph.vector.StrokeLineJoin.ROUND",
-        "new": "round",
-        "old": [
-            "round",
-            "Round",
-            "ROUND"
-        ]
+        "new": "round"
     },
     {
         "literal": "acgraph.vector.StrokeLineJoin.BEVEL",
-        "new": "bevel",
-        "old": [
-            "bevel",
-            "Bevel",
-            "BEVEL"
-        ]
+        "new": "bevel"
     },
     {
         "literal": "acgraph.vector.StrokeLineCap.BUTT",
-        "new": "butt",
-        "old": [
-            "butt",
-            "Butt",
-            "BUTT"
-        ]
+        "new": "butt"
     },
     {
         "literal": "acgraph.vector.StrokeLineCap.ROUND",
-        "new": "round",
-        "old": [
-            "round",
-            "Round",
-            "ROUND"
-        ]
+        "new": "round"
     },
     {
         "literal": "acgraph.vector.StrokeLineCap.SQUARE",
-        "new": "square",
-        "old": [
-            "square",
-            "Square",
-            "SQUARE"
-        ]
+        "new": "square"
     },
     {
         "literal": "acgraph.vector.ImageFillMode.FIT",
-        "new": "fit",
-        "old": [
-            "fit",
-            "Fit",
-            "FIT"
-        ]
+        "new": "fit"
     },
     {
         "literal": "acgraph.vector.ImageFillMode.FIT_MAX",
-        "new": "fitMax",
-        "old": [
-            "fitMax",
-            "fitmax",
-            "Fitmax",
-            "FITMAX"
-        ]
+        "new": "fitMax"
     },
     {
         "literal": "acgraph.vector.ImageFillMode.STRETCH",
-        "new": "stretch",
-        "old": [
-            "stretch",
-            "Stretch",
-            "STRETCH"
-        ]
+        "new": "stretch"
     },
     {
         "literal": "acgraph.vector.ImageFillMode.TILE",
-        "new": "tile",
-        "old": [
-            "tile",
-            "Tile",
-            "TILE"
-        ]
+        "new": "tile"
     },
     {
         "literal": "acgraph.vector.PaperSize.US_LETTER",
-        "new": "usletter",
-        "old": [
-            "usletter",
-            "Usletter",
-            "USLETTER"
-        ]
+        "new": "usletter"
     },
     {
         "literal": "acgraph.vector.PaperSize.A0",
-        "new": "a0",
-        "old": [
-            "a0",
-            "A0"
-        ]
+        "new": "a0"
     },
     {
         "literal": "acgraph.vector.PaperSize.A1",
-        "new": "a1",
-        "old": [
-            "a1",
-            "A1"
-        ]
+        "new": "a1"
     },
     {
         "literal": "acgraph.vector.PaperSize.A2",
-        "new": "a2",
-        "old": [
-            "a2",
-            "A2"
-        ]
+        "new": "a2"
     },
     {
         "literal": "acgraph.vector.PaperSize.A3",
-        "new": "a3",
-        "old": [
-            "a3",
-            "A3"
-        ]
+        "new": "a3"
     },
     {
         "literal": "acgraph.vector.PaperSize.A4",
-        "new": "a4",
-        "old": [
-            "a4",
-            "A4"
-        ]
+        "new": "a4"
     },
     {
         "literal": "acgraph.vector.PaperSize.A5",
-        "new": "a5",
-        "old": [
-            "a5",
-            "A5"
-        ]
+        "new": "a5"
     },
     {
         "literal": "acgraph.vector.PaperSize.A6",
-        "new": "a6",
-        "old": [
-            "a6",
-            "A6"
-        ]
+        "new": "a6"
     },
     {
         "literal": "anychart.graphics.StageType.SVG",
-        "new": "svg",
-        "old": [
-            "svg",
-            "Svg",
-            "SVG"
-        ]
+        "new": "svg"
     },
     {
         "literal": "anychart.graphics.StageType.VML",
-        "new": "vml",
-        "old": [
-            "vml",
-            "Vml",
-            "VML"
-        ]
+        "new": "vml"
     },
     {
         "literal": "anychart.graphics.events.EventType.CLICK",
-        "new": "click",
-        "old": [
-            "click",
-            "Click",
-            "CLICK"
-        ]
+        "new": "click"
     },
     {
         "literal": "anychart.graphics.events.EventType.DBLCLICK",
-        "new": "dblclick",
-        "old": [
-            "dblclick",
-            "Dblclick",
-            "DBLCLICK"
-        ]
+        "new": "dblclick"
     },
     {
         "literal": "anychart.graphics.events.EventType.MOUSEUP",
-        "new": "mouseup",
-        "old": [
-            "mouseup",
-            "Mouseup",
-            "MOUSEUP"
-        ]
+        "new": "mouseup"
     },
     {
         "literal": "anychart.graphics.events.EventType.MOUSEDOWN",
-        "new": "mousedown",
-        "old": [
-            "mousedown",
-            "Mousedown",
-            "MOUSEDOWN"
-        ]
+        "new": "mousedown"
     },
     {
         "literal": "anychart.graphics.events.EventType.MOUSEOVER",
-        "new": "mouseover",
-        "old": [
-            "mouseover",
-            "Mouseover",
-            "MOUSEOVER"
-        ]
+        "new": "mouseover"
     },
     {
         "literal": "anychart.graphics.events.EventType.MOUSEOUT",
-        "new": "mouseout",
-        "old": [
-            "mouseout",
-            "Mouseout",
-            "MOUSEOUT"
-        ]
+        "new": "mouseout"
     },
     {
         "literal": "anychart.graphics.events.EventType.MOUSEMOVE",
-        "new": "mousemove",
-        "old": [
-            "mousemove",
-            "Mousemove",
-            "MOUSEMOVE"
-        ]
+        "new": "mousemove"
     },
     {
         "literal": "anychart.graphics.events.EventType.TOUCHSTART",
-        "new": "touchstart",
-        "old": [
-            "touchstart",
-            "Touchstart",
-            "TOUCHSTART"
-        ]
+        "new": "touchstart"
     },
     {
         "literal": "anychart.graphics.events.EventType.TOUCHEND",
-        "new": "touchend",
-        "old": [
-            "touchend",
-            "Touchend",
-            "TOUCHEND"
-        ]
+        "new": "touchend"
     },
     {
         "literal": "anychart.graphics.events.EventType.TOUCHCANCEL",
-        "new": "touchcancel",
-        "old": [
-            "touchcancel",
-            "Touchcancel",
-            "TOUCHCANCEL"
-        ]
+        "new": "touchcancel"
     },
     {
         "literal": "anychart.graphics.events.EventType.TOUCHMOVE",
-        "new": "touchmove",
-        "old": [
-            "touchmove",
-            "Touchmove",
-            "TOUCHMOVE"
-        ]
+        "new": "touchmove"
     },
     {
         "literal": "anychart.graphics.events.EventType.TAP",
-        "new": "tap",
-        "old": [
-            "tap",
-            "Tap",
-            "TAP"
-        ]
+        "new": "tap"
     },
     {
         "literal": "anychart.graphics.events.EventType.DRAG",
-        "new": "drag",
-        "old": [
-            "drag",
-            "Drag",
-            "DRAG"
-        ]
+        "new": "drag"
     },
     {
         "literal": "anychart.graphics.events.EventType.DRAG_START",
-        "new": "start",
-        "old": [
-            "start",
-            "Start",
-            "START"
-        ]
+        "new": "start"
     },
     {
         "literal": "anychart.graphics.events.EventType.DRAG_END",
-        "new": "end",
-        "old": [
-            "end",
-            "End",
-            "END"
-        ]
+        "new": "end"
     },
     {
         "literal": "anychart.graphics.events.EventType.DRAG_EARLY_CANCEL",
-        "new": "earlycancel",
-        "old": [
-            "earlycancel",
-            "Earlycancel",
-            "EARLYCANCEL"
-        ]
+        "new": "earlycancel"
     },
     {
         "literal": "anychart.graphics.events.EventType.DRAG_BEFORE",
-        "new": "beforedrag",
-        "old": [
-            "beforedrag",
-            "Beforedrag",
-            "BEFOREDRAG"
-        ]
+        "new": "beforedrag"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.HORIZONTAL",
-        "new": "horizontal",
-        "old": [
-            "horizontal",
-            "Horizontal",
-            "HORIZONTAL"
-        ]
+        "new": "horizontal"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.VERTICAL",
-        "new": "vertical",
-        "old": [
-            "vertical",
-            "Vertical",
-            "VERTICAL"
-        ]
+        "new": "vertical"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.GRID",
-        "new": "grid",
-        "old": [
-            "grid",
-            "Grid",
-            "GRID"
-        ]
+        "new": "grid"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.DIVOT",
-        "new": "divot",
-        "old": [
-            "divot",
-            "Divot",
-            "DIVOT"
-        ]
+        "new": "divot"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.CONFETTI",
-        "new": "confetti",
-        "old": [
-            "confetti",
-            "Confetti",
-            "CONFETTI"
-        ]
+        "new": "confetti"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PLAID",
-        "new": "plaid",
-        "old": [
-            "plaid",
-            "Plaid",
-            "PLAID"
-        ]
+        "new": "plaid"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.WEAVE",
-        "new": "weave",
-        "old": [
-            "weave",
-            "Weave",
-            "WEAVE"
-        ]
+        "new": "weave"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PERCENT_05",
-        "new": "percent05",
-        "old": [
-            "percent05",
-            "Percent05",
-            "PERCENT05"
-        ]
+        "new": "percent05"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PERCENT_10",
-        "new": "percent10",
-        "old": [
-            "percent10",
-            "Percent10",
-            "PERCENT10"
-        ]
+        "new": "percent10"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PERCENT_20",
-        "new": "percent20",
-        "old": [
-            "percent20",
-            "Percent20",
-            "PERCENT20"
-        ]
+        "new": "percent20"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PERCENT_25",
-        "new": "percent25",
-        "old": [
-            "percent25",
-            "Percent25",
-            "PERCENT25"
-        ]
+        "new": "percent25"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PERCENT_30",
-        "new": "percent30",
-        "old": [
-            "percent30",
-            "Percent30",
-            "PERCENT30"
-        ]
+        "new": "percent30"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PERCENT_40",
-        "new": "percent40",
-        "old": [
-            "percent40",
-            "Percent40",
-            "PERCENT40"
-        ]
+        "new": "percent40"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PERCENT_50",
-        "new": "percent50",
-        "old": [
-            "percent50",
-            "Percent50",
-            "PERCENT50"
-        ]
+        "new": "percent50"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PERCENT_60",
-        "new": "percent60",
-        "old": [
-            "percent60",
-            "Percent60",
-            "PERCENT60"
-        ]
+        "new": "percent60"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PERCENT_70",
-        "new": "percent70",
-        "old": [
-            "percent70",
-            "Percent70",
-            "PERCENT70"
-        ]
+        "new": "percent70"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PERCENT_75",
-        "new": "percent75",
-        "old": [
-            "percent75",
-            "Percent75",
-            "PERCENT75"
-        ]
+        "new": "percent75"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PERCENT_80",
-        "new": "percent80",
-        "old": [
-            "percent80",
-            "Percent80",
-            "PERCENT80"
-        ]
+        "new": "percent80"
     },
     {
         "literal": "anychart.graphics.vector.HatchFill.HatchFillType.PERCENT_90",
-        "new": "percent90",
-        "old": [
-            "percent90",
-            "Percent90",
-            "PERCENT90"
-        ]
+        "new": "percent90"
     },
     {
         "literal": "anychart.graphics.vector.Image.Fitting.MEET",
-        "new": "meet",
-        "old": [
-            "meet",
-            "Meet",
-            "MEET"
-        ]
+        "new": "meet"
     },
     {
         "literal": "anychart.graphics.vector.Image.Fitting.SLICE",
-        "new": "slice",
-        "old": [
-            "slice",
-            "Slice",
-            "SLICE"
-        ]
+        "new": "slice"
     },
     {
         "literal": "anychart.graphics.vector.Image.Align.NONE",
-        "new": "none",
-        "old": [
-            "none",
-            "None",
-            "NONE"
-        ]
+        "new": "none"
     },
     {
         "literal": "anychart.graphics.events.EventType.RENDER_START",
-        "new": "renderstart",
-        "old": [
-            "renderstart",
-            "Renderstart",
-            "RENDERSTART"
-        ]
+        "new": "renderstart"
     },
     {
         "literal": "anychart.graphics.events.EventType.RENDER_FINISH",
-        "new": "renderfinish",
-        "old": [
-            "renderfinish",
-            "Renderfinish",
-            "RENDERFINISH"
-        ]
+        "new": "renderfinish"
     },
     {
         "literal": "anychart.graphics.vector.Stage.EventType.STAGE_RESIZE",
-        "new": "stageresize",
-        "old": [
-            "stageresize",
-            "Stageresize",
-            "STAGERESIZE"
-        ]
+        "new": "stageresize"
     },
     {
         "literal": "anychart.graphics.vector.Stage.EventType.STAGE_RENDERED",
-        "new": "stagerendered",
-        "old": [
-            "stagerendered",
-            "Stagerendered",
-            "STAGERENDERED"
-        ]
+        "new": "stagerendered"
     },
     {
         "literal": "anychart.graphics.vector.Text.TextOverflow.CLIP",
-        "new": "",
-        "old": [
-            ""
-        ]
+        "new": ""
     },
     {
         "literal": "anychart.graphics.vector.Text.TextOverflow.ELLIPSIS",
-        "new": "...",
-        "old": [
-            "..."
-        ]
+        "new": "..."
     },
     {
         "literal": "anychart.graphics.vector.Text.FontStyle.ITALIC",
-        "new": "italic",
-        "old": [
-            "italic",
-            "Italic",
-            "ITALIC"
-        ]
+        "new": "italic"
     },
     {
         "literal": "anychart.graphics.vector.Text.FontStyle.NORMAL",
-        "new": "normal",
-        "old": [
-            "normal",
-            "Normal",
-            "NORMAL"
-        ]
+        "new": "normal"
     },
     {
         "literal": "anychart.graphics.vector.Text.FontStyle.OBLIQUE",
-        "new": "oblique",
-        "old": [
-            "oblique",
-            "Oblique",
-            "OBLIQUE"
-        ]
+        "new": "oblique"
     },
     {
         "literal": "anychart.graphics.vector.Text.FontVariant.NORMAL",
-        "new": "normal",
-        "old": [
-            "normal",
-            "Normal",
-            "NORMAL"
-        ]
+        "new": "normal"
     },
     {
         "literal": "anychart.graphics.vector.Text.FontVariant.SMALL_CAP",
@@ -13112,30 +8549,15 @@ exports.normalized = [
     },
     {
         "literal": "anychart.graphics.vector.Text.Direction.LTR",
-        "new": "ltr",
-        "old": [
-            "ltr",
-            "Ltr",
-            "LTR"
-        ]
+        "new": "ltr"
     },
     {
         "literal": "anychart.graphics.vector.Text.Direction.RTL",
-        "new": "rtl",
-        "old": [
-            "rtl",
-            "Rtl",
-            "RTL"
-        ]
+        "new": "rtl"
     },
     {
         "literal": "anychart.graphics.vector.Text.Decoration.BLINK",
-        "new": "blink",
-        "old": [
-            "blink",
-            "Blink",
-            "BLINK"
-        ]
+        "new": "blink"
     },
     {
         "literal": "anychart.graphics.vector.Text.Decoration.LINE_THROUGH",
@@ -13150,165 +8572,75 @@ exports.normalized = [
     },
     {
         "literal": "anychart.graphics.vector.Text.Decoration.OVERLINE",
-        "new": "overline",
-        "old": [
-            "overline",
-            "Overline",
-            "OVERLINE"
-        ]
+        "new": "overline"
     },
     {
         "literal": "anychart.graphics.vector.Text.Decoration.UNDERLINE",
-        "new": "underline",
-        "old": [
-            "underline",
-            "Underline",
-            "UNDERLINE"
-        ]
+        "new": "underline"
     },
     {
         "literal": "anychart.graphics.vector.Text.Decoration.NONE",
-        "new": "none",
-        "old": [
-            "none",
-            "None",
-            "NONE"
-        ]
+        "new": "none"
     },
     {
         "literal": "anychart.graphics.vector.Text.HAlign.START",
-        "new": "start",
-        "old": [
-            "start",
-            "Start",
-            "START"
-        ]
+        "new": "start"
     },
     {
         "literal": "anychart.graphics.vector.Text.HAlign.LEFT",
-        "new": "left",
-        "old": [
-            "left",
-            "Left",
-            "LEFT"
-        ]
+        "new": "left"
     },
     {
         "literal": "anychart.graphics.vector.Text.HAlign.CENTER",
-        "new": "center",
-        "old": [
-            "center",
-            "Center",
-            "CENTER"
-        ]
+        "new": "center"
     },
     {
         "literal": "anychart.graphics.vector.Text.HAlign.END",
-        "new": "end",
-        "old": [
-            "end",
-            "End",
-            "END"
-        ]
+        "new": "end"
     },
     {
         "literal": "anychart.graphics.vector.Text.HAlign.RIGHT",
-        "new": "right",
-        "old": [
-            "right",
-            "Right",
-            "RIGHT"
-        ]
+        "new": "right"
     },
     {
         "literal": "anychart.graphics.vector.Text.VAlign.TOP",
-        "new": "top",
-        "old": [
-            "top",
-            "Top",
-            "TOP"
-        ]
+        "new": "top"
     },
     {
         "literal": "anychart.graphics.vector.Text.VAlign.MIDDLE",
-        "new": "middle",
-        "old": [
-            "middle",
-            "Middle",
-            "MIDDLE"
-        ]
+        "new": "middle"
     },
     {
         "literal": "anychart.graphics.vector.Text.VAlign.BOTTOM",
-        "new": "bottom",
-        "old": [
-            "bottom",
-            "Bottom",
-            "BOTTOM"
-        ]
+        "new": "bottom"
     },
     {
         "literal": "anychart.graphics.vector.Cursor.DEFAULT",
-        "new": "default",
-        "old": [
-            "default",
-            "Default",
-            "DEFAULT"
-        ]
+        "new": "default"
     },
     {
         "literal": "anychart.graphics.vector.Cursor.CROSSHAIR",
-        "new": "crosshair",
-        "old": [
-            "crosshair",
-            "Crosshair",
-            "CROSSHAIR"
-        ]
+        "new": "crosshair"
     },
     {
         "literal": "anychart.graphics.vector.Cursor.POINTER",
-        "new": "pointer",
-        "old": [
-            "pointer",
-            "Pointer",
-            "POINTER"
-        ]
+        "new": "pointer"
     },
     {
         "literal": "anychart.graphics.vector.Cursor.MOVE",
-        "new": "move",
-        "old": [
-            "move",
-            "Move",
-            "MOVE"
-        ]
+        "new": "move"
     },
     {
         "literal": "anychart.graphics.vector.Cursor.TEXT",
-        "new": "text",
-        "old": [
-            "text",
-            "Text",
-            "TEXT"
-        ]
+        "new": "text"
     },
     {
         "literal": "anychart.graphics.vector.Cursor.WAIT",
-        "new": "wait",
-        "old": [
-            "wait",
-            "Wait",
-            "WAIT"
-        ]
+        "new": "wait"
     },
     {
         "literal": "anychart.graphics.vector.Cursor.HELP",
-        "new": "help",
-        "old": [
-            "help",
-            "Help",
-            "HELP"
-        ]
+        "new": "help"
     },
     {
         "literal": "anychart.graphics.vector.Cursor.N_RESIZE",
@@ -13400,66 +8732,31 @@ exports.normalized = [
     },
     {
         "literal": "anychart.graphics.vector.StrokeLineJoin.MITER",
-        "new": "miter",
-        "old": [
-            "miter",
-            "Miter",
-            "MITER"
-        ]
+        "new": "miter"
     },
     {
         "literal": "anychart.graphics.vector.StrokeLineJoin.ROUND",
-        "new": "round",
-        "old": [
-            "round",
-            "Round",
-            "ROUND"
-        ]
+        "new": "round"
     },
     {
         "literal": "anychart.graphics.vector.StrokeLineJoin.BEVEL",
-        "new": "bevel",
-        "old": [
-            "bevel",
-            "Bevel",
-            "BEVEL"
-        ]
+        "new": "bevel"
     },
     {
         "literal": "anychart.graphics.vector.StrokeLineCap.BUTT",
-        "new": "butt",
-        "old": [
-            "butt",
-            "Butt",
-            "BUTT"
-        ]
+        "new": "butt"
     },
     {
         "literal": "anychart.graphics.vector.StrokeLineCap.ROUND",
-        "new": "round",
-        "old": [
-            "round",
-            "Round",
-            "ROUND"
-        ]
+        "new": "round"
     },
     {
         "literal": "anychart.graphics.vector.StrokeLineCap.SQUARE",
-        "new": "square",
-        "old": [
-            "square",
-            "Square",
-            "SQUARE"
-        ]
+        "new": "square"
     },
     {
         "literal": "anychart.graphics.vector.ImageFillMode.FIT",
-        "new": "fit",
-        "old": [
-            "fit",
-            "Fit",
-            "FIT"
-        ]
+        "new": "fit"
     },
     {
         "literal": "anychart.graphics.vector.ImageFillMode.FIT_MAX",
@@ -13473,86 +8770,43 @@ exports.normalized = [
     },
     {
         "literal": "anychart.graphics.vector.ImageFillMode.STRETCH",
-        "new": "stretch",
-        "old": [
-            "stretch",
-            "Stretch",
-            "STRETCH"
-        ]
+        "new": "stretch"
     },
     {
         "literal": "anychart.graphics.vector.ImageFillMode.TILE",
-        "new": "tile",
-        "old": [
-            "tile",
-            "Tile",
-            "TILE"
-        ]
+        "new": "tile"
     },
     {
         "literal": "anychart.graphics.vector.PaperSize.US_LETTER",
-        "new": "usletter",
-        "old": [
-            "usletter",
-            "Usletter",
-            "USLETTER"
-        ]
+        "new": "usletter"
     },
     {
         "literal": "anychart.graphics.vector.PaperSize.A0",
-        "new": "a0",
-        "old": [
-            "a0",
-            "A0"
-        ]
+        "new": "a0"
     },
     {
         "literal": "anychart.graphics.vector.PaperSize.A1",
-        "new": "a1",
-        "old": [
-            "a1",
-            "A1"
-        ]
+        "new": "a1"
     },
     {
         "literal": "anychart.graphics.vector.PaperSize.A2",
-        "new": "a2",
-        "old": [
-            "a2",
-            "A2"
-        ]
+        "new": "a2"
     },
     {
         "literal": "anychart.graphics.vector.PaperSize.A3",
-        "new": "a3",
-        "old": [
-            "a3",
-            "A3"
-        ]
+        "new": "a3"
     },
     {
         "literal": "anychart.graphics.vector.PaperSize.A4",
-        "new": "a4",
-        "old": [
-            "a4",
-            "A4"
-        ]
+        "new": "a4"
     },
     {
         "literal": "anychart.graphics.vector.PaperSize.A5",
-        "new": "a5",
-        "old": [
-            "a5",
-            "A5"
-        ]
+        "new": "a5"
     },
     {
         "literal": "anychart.graphics.vector.PaperSize.A6",
-        "new": "a6",
-        "old": [
-            "a6",
-            "A6"
-        ]
+        "new": "a6"
     }
 ];
 

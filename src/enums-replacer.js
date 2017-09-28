@@ -196,24 +196,26 @@ exports.init = function (res, wrapMark) {
 
     // replace with out methods
     for (i = 0; i < enumsWithOutMethods.length; i++) {
-        for (j = 0; j < enumsWithOutMethods[i].old.length; j++) {
-            var replaceByOldValue = new RegExp("'" + enumsWithOutMethods[i].old[j] + "'", 'g');
-            var _replaceByOldValue = new RegExp('"' + enumsWithOutMethods[i].old[j] + '"', 'g');
-            var q_mark = inputCode.match(replaceByOldValue) ? "'" : '"';
+        if (enumsWithOutMethods.old) {
+            for (j = 0; j < enumsWithOutMethods[i].old.length; j++) {
+                var replaceByOldValue = new RegExp("'" + enumsWithOutMethods[i].old[j] + "'", 'g');
+                var _replaceByOldValue = new RegExp('"' + enumsWithOutMethods[i].old[j] + '"', 'g');
+                var q_mark = inputCode.match(replaceByOldValue) ? "'" : '"';
 
-            if ((inputCode.match(replaceByOldValue) || inputCode.match(_replaceByOldValue)) &&
-                enumsWithOutMethods[i].old[j] && enumsWithOutMethods[i].old[j] !== enumsWithOutMethods[i].new &&
-                '%' + enumsWithOutMethods[i].old[j] !== enumsWithOutMethods[i].new) {
+                if ((inputCode.match(replaceByOldValue) || inputCode.match(_replaceByOldValue)) &&
+                    enumsWithOutMethods[i].old[j] && enumsWithOutMethods[i].old[j] !== enumsWithOutMethods[i].new &&
+                    '%' + enumsWithOutMethods[i].old[j] !== enumsWithOutMethods[i].new) {
 
-                key = [];
+                    key = [];
 
-                for (k = 0; k < enumsWithOutMethods[i].old[j].length; k++) {
-                    key.push(uuid.v4());
+                    for (k = 0; k < enumsWithOutMethods[i].old[j].length; k++) {
+                        key.push(uuid.v4());
+                    }
+
+                    keys[key] = q_mark + enumsWithOutMethods[i].new + q_mark;
+
+                    inputCode = outputCode = inputCode.replace(replaceByOldValue, key).replace(_replaceByOldValue, key);
                 }
-
-                keys[key] = q_mark + enumsWithOutMethods[i].new + q_mark;
-
-                inputCode = outputCode = inputCode.replace(replaceByOldValue, key).replace(_replaceByOldValue, key);
             }
         }
     }
