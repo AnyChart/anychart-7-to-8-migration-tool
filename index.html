@@ -250,7 +250,7 @@
                             });
 
                             if (enumsWarning) {
-                                $log.append('<div class="alert alert-warning enums-warning"><strong>Be Careful!</strong> Enums Warning. Проверьте правильность данной замены, так как данный метод может иметь множество значений, которые зависят от Ваше кода. Мы не гарантируем правильность данной замены.</div>');
+                                $log.append('<div class="alert alert-warning enums-warning"><strong>Warning: Enums!</strong>  Check if this replacement is correct, this method can not be analyzed. We do not guarantee this replacement is correct.</div>');
 
                                 enumsWarning.sort(function (a, b) {
                                     return a.line - b.line
@@ -272,9 +272,9 @@
                                 $log.append('<div class="alert alert-warning grid-warning"></div>');
 
                                 if (!gridWarning.exceptions) {
-                                    $('.grid-warning').html('<strong>Be Careful!</strong> Grid Warning. Exception, the grid() method can not be replaced. В коде было найдено исключение для замены метода grid()/minorGrid(). Замена grid()/minorGrid() не была произведена.');
+                                    $('.grid-warning').html('<strong>Warning: Grid!</strong> Exception! The grid() method can not be replaced. The grid()/minorGrid() methods are found but can not be automatically replaced.');
                                 } else {
-                                    $('.grid-warning').html('<strong>Be Careful!</strong> Grid Warning. Мы не гарантируем правильность данной замены.');
+                                    $('.grid-warning').html('<strong>Warning: Grid!</strong> We do not guarantee this replacement is correct.');
                                 }
 
                                 if (!gridWarning[0].exceptions) {
@@ -296,7 +296,7 @@
                             }
 
                             if (stateWarning) {
-                                $log.append('<div class="alert alert-warning state-warning"><strong>Be Careful!</strong> Interactivity State Warning. Мы не гарантируем правильность данной замены.</div>');
+                                $log.append('<div class="alert alert-warning state-warning"><strong>Warning: Interactivity State!</strong> We do not guarantee this replacement is correct.</div>');
 
                                 stateWarning.sort(function (a, b) {
                                     return a.line - b.line
