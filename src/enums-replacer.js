@@ -196,7 +196,7 @@ exports.init = function (res, wrapMark) {
 
     // replace with out methods
     for (i = 0; i < enumsWithOutMethods.length; i++) {
-        if (enumsWithOutMethods.old) {
+        if (enumsWithOutMethods[i].old) {
             for (j = 0; j < enumsWithOutMethods[i].old.length; j++) {
                 var replaceByOldValue = new RegExp("'" + enumsWithOutMethods[i].old[j] + "'", 'g');
                 var _replaceByOldValue = new RegExp('"' + enumsWithOutMethods[i].old[j] + '"', 'g');
