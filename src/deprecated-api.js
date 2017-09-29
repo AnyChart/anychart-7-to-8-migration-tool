@@ -50,10 +50,6 @@ exports.normalized = [
         "old": ["colorAt\\(", "markerAt\\("],
         "new": "itemAt("
     },
-    {
-        "old": ["colors\\(", "markers\\("],
-        "new": "items("
-    },
     /**/
 
     /*Misc*/

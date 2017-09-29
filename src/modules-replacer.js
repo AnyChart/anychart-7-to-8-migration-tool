@@ -11,7 +11,7 @@ exports.init = function (res, wrapMark) {
 
     var code = res.code;
 
-    var cdnAnyChart = 'https://cdn.anychart.com';
+    var cdnAnyChart = 'https://cdn.anychart.com/releases/';
     
     var acProductScripts = [
         'anychart-bundle.min.js',
@@ -48,21 +48,21 @@ exports.init = function (res, wrapMark) {
 
     var path = argv.l;
 
-    var scriptComponent = !path ? '<script src="' + cdnAnyChart + '/js/_AC-VERSION_/_FILE_"></script>' :
+    var scriptComponent = !path ? '<script src="' + cdnAnyChart + '_AC-VERSION_/js/_FILE_"></script>' :
         '<script src="_LOCAL-PATH_/_FILE_"></script>';
 
     if (argv.f) {
         scriptComponent = scriptComponent.replace('></script>', ' data-export="true"></script>');
     }
 
-    var scriptTheme =!path ? '<script src="' + cdnAnyChart + '/themes/_AC-VERSION_/_FILE_"></script>' :
+    var scriptTheme =!path ? '<script src="' + cdnAnyChart + '_AC-VERSION_/themes/_FILE_"></script>' :
         '<script src="_LOCAL-PATH_/_FILE_"></script>';
 
     if (argv.f) {
         scriptTheme = scriptTheme.replace('></script>', ' data-export="true"></script>');
     }
 
-    var link  = !path ? '<link href="' + cdnAnyChart + '/css/_AC-VERSION_/_FILE_">' :
+    var link  = !path ? '<link rel="stylesheet" href="' + cdnAnyChart + '_AC-VERSION_/css/_FILE_">' :
         '<link rel="stylesheet" href="_LOCAL-PATH_/_FILE_">';
 
     var acBase = 'anychart-base.min.js';
@@ -84,7 +84,7 @@ exports.init = function (res, wrapMark) {
         for (var j = 0; j < modules[i].keys.length; j++) {
             if (~code.indexOf(modules[i].keys[j])) {
                 for (var k = 0; k < modules[i].module.length; k++) {
-                    module = !path ? '\n\t<script src="' + cdnAnyChart + '/js/_AC-VERSION_/' + modules[i].module[k] + '.min.js"></script>' :
+                    module = !path ? '\n\t<script src="' + cdnAnyChart + '_AC-VERSION_/js/' + modules[i].module[k] + '.min.js"></script>' :
                     '\n\t<script src="_LOCAL-PATH_/' + modules[i].module[k] + '.min.js"></script>';
 
                     if (argv.f) {
@@ -122,6 +122,23 @@ exports.init = function (res, wrapMark) {
         }
 
         acModules.push(module);
+    }
+    /**/
+
+    /*remove data-table module if stock module was added*/
+    var removeTableModule = false;
+    for (i = 0; i < acModules.length; i++) {
+        if (~acModules[i].indexOf('anychart-stock')) {
+            removeTableModule = true;
+        }
+    }
+
+    if (removeTableModule) {
+        for (i = 0; i < acModules.length; i++) {
+            if (~acModules[i].indexOf('anychart-table')) {
+                acModules.splice(i, 1);
+            }
+        }
     }
     /**/
 

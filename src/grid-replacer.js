@@ -6,20 +6,36 @@ exports.init = function (res, wrapMark) {
 
     var gridNormalize = [
         {
-            "old": ["\\.grid\\(1\\)", "\\.grid\\(2\\)"],
-            "new": ".xGrid()"
+            "old": ["\\.grid\\(1"],
+            "new": ".xGrid(1"
         },
         {
-            "old": ["\\.grid\\(\\)", "\\.grid\\(0\\)"],
+            "old": ["\\.grid\\(2"],
+            "new": ".xGrid(2"
+        },
+        {
+            "old": ["\\.grid\\(\\)"],
             "new": ".yGrid()"
         },
         {
-            "old": ["\\.minorGrid\\(1\\)", "\\.minorGrid\\(2\\)"],
-            "new": ".yMinorGrid()"
+            "old": ["\\.grid\\(0"],
+            "new": ".yGrid(0"
         },
         {
-            "old": ["\\.minorGrid\\(\\)", "\\.minorGrid\\(0\\)"],
+            "old": ["\\.minorGrid\\(1"],
+            "new": ".yMinorGrid(1"
+        },
+        {
+            "old": ["\\.minorGrid\\(2"],
+            "new": ".yMinorGrid(2"
+        },
+        {
+            "old": ["\\.minorGrid\\(\\)"],
             "new": ".xMinorGrid()"
+        },
+        {
+            "old": ["\\.minorGrid\\(0"],
+            "new": ".xMinorGrid(0"
         },
         {
             "old": ["\\.grid\\("],
@@ -65,35 +81,35 @@ exports.init = function (res, wrapMark) {
                 }
             }
         }
-    }
 
-    var inputCodeLines = inputCode.split('\n');
-    var outputCodeLines = code.split('\n');
-    var isAdded = false;
-    inputCodeLines.map(function (item, index) {
-        for (i = 0; i < log.length; i++) {
-            isAdded = false;
+        var inputCodeLines = inputCode.split('\n');
+        var outputCodeLines = code.split('\n');
+        var isAdded = false;
+        inputCodeLines.map(function (item, index) {
+            for (i = 0; i < log.length; i++) {
+                isAdded = false;
 
-            if (item.indexOf(log[i].old) !== -1 && outputCodeLines[index].indexOf(log[i].new) !== -1) {
-                for (var j = 0; j < log.length; j++) {
-                    if (log[j].line === index + 1) {
-                        isAdded = true;
-                        break;
+                if (item.indexOf(log[i].old) !== -1 && outputCodeLines[index].indexOf(log[i].new) !== -1) {
+                    for (var j = 0; j < log.length; j++) {
+                        if (log[j].line === index + 1) {
+                            isAdded = true;
+                            break;
+                        }
+                    }
+
+                    if (!log[i].hasOwnProperty('line') && !isAdded) {
+                        log[i].line = index + 1;
                     }
                 }
-
-                if (!log[i].hasOwnProperty('line') && !isAdded) {
-                    log[i].line = index + 1;
-                }
             }
-        }
-    });
+        });
 
-    log = log.filter(function (item) {
-        if (item.line) {
-            return item
-        }
-    });
+        log = log.filter(function (item) {
+            if (item.line) {
+                return item
+            }
+        });
+    }
 
     res.code = code;
 
