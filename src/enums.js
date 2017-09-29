@@ -1307,7 +1307,8 @@ exports.normalized = [
         ],
         "new": "first-date",
         "methods": [
-            "zoomTo"
+            "zoomTo",
+            "anchor"
         ]
     },
     {
@@ -1319,7 +1320,8 @@ exports.normalized = [
         ],
         "new": "first-visible-date",
         "methods": [
-            "zoomTo"
+            "zoomTo",
+            "anchor"
         ]
     },
     {
@@ -1331,7 +1333,8 @@ exports.normalized = [
         ],
         "new": "last-visible-date",
         "methods": [
-            "zoomTo"
+            "zoomTo",
+            "anchor"
         ]
     },
     {
@@ -1343,7 +1346,8 @@ exports.normalized = [
         ],
         "new": "last-date",
         "methods": [
-            "zoomTo"
+            "zoomTo",
+            "anchor"
         ]
     },
     {
