@@ -108,10 +108,10 @@ exports.init = function (res, wrapMark) {
             }
         }
     }
-
+    
     if (~code.indexOf('anychart.data.tree') && !treeDataModuleWasAdded) {
-        module = !path ? '\n\t<script src="' + cdnAnyChart + '/js/_AC-VERSION_/' + 'anychart-treemap' + '.min.js"></script>' :
-        '\n\t<script src="_LOCAL-PATH_/' + 'anychart-treemap' + '.min.js"></script>';
+        module = !path ? '\n\t<script src="' + cdnAnyChart + '_AC-VERSION_/js/' + 'anychart-treemap.min.js"></script>' :
+        '\n\t<script src="_LOCAL-PATH_/' + 'anychart-treemap.min.js"></script>';
 
         if (argv.f) {
             module = module.replace('></script>', ' data-export="true"></script>');
@@ -154,7 +154,7 @@ exports.init = function (res, wrapMark) {
             }
 
             if (!isAddedModule) {
-                module = !path ? '\n\t<script src="' + cdnAnyChart + '/js/_AC-VERSION_/' + forceModules[i] + '.min.js"></script>' :
+                module = !path ? '\n\t<script src="' + cdnAnyChart + '_AC-VERSION_/js/' + forceModules[i] + '.min.js"></script>' :
                 '\n\t<script src="_LOCAL-PATH_/' + forceModules[i] + '.min.js"></script>';
 
                 if (argv.f) {
