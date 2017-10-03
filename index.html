@@ -102,14 +102,13 @@
         .log-section > div {
             margin-bottom: 20px;
         }
-
     </style>
 
     <script>
         $(document).ready(function () {
             $('pre.copytoclipboard').each(function () {
                 $this = $(this);
-                $button = $('<button style="font-size: 12px;">Copy</button>');
+                $button = $('<button type="button" style="font-size: 12px;">Copy</button>');
                 $this.wrap('<div/>').removeClass('copytoclipboard');
                 $wrapper = $this.parent();
                 $wrapper.addClass('copytoclipboard-wrapper').css({position: 'relative'});
@@ -117,7 +116,7 @@
                     position: 'absolute',
                     top: 10,
                     right: 10
-                }).appendTo($wrapper).addClass('copytoclipboard btn btn-default');
+                }).appendTo($wrapper).addClass('copytoclipboard btn btn-default disabled');
                 /* */
                 var copyCode = new Clipboard('button.copytoclipboard', {
                     target: function (trigger) {
@@ -125,6 +124,10 @@
                     }
                 });
                 copyCode.on('success', function (event) {
+                    if (this.$button.hasClass('disabled')) {
+                        return
+                    }
+
                     event.clearSelection();
                     event.trigger.textContent = 'Copied';
                     window.setTimeout(function () {
@@ -132,6 +135,10 @@
                     }, 2000);
                 });
                 copyCode.on('error', function (event) {
+                    if (this.$button.hasClass('disabled')) {
+                        return
+                    }
+
                     event.trigger.textContent = 'Press "Ctrl + C" to copy';
                     window.setTimeout(function () {
                         event.trigger.textContent = 'Copy';
@@ -175,11 +182,15 @@
 
                 var $output = $('#output-code');
                 var code = $('#input-code').val();
+                var $btnCopy = $output.find('.btn');
 
                 if (!code) {
                     $output.find('code').text('');
                     return
                 }
+
+                // enabled copy btn
+                $btnCopy.removeClass('disabled');
 
                 /*get parametrs*/
                 var isBundle = $(this).find('input[name="is-bundle"]:checked').val() === 'true';
@@ -400,9 +411,9 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label class="radio-inline"><input type="radio" name="is-cdn" value="true"
-                                                                       checked>Yes</label>
+                                                                       checked>CDN</label>
                                     <label class="radio-inline"><input type="radio" name="is-cdn"
-                                                                       value="false">No</label>
+                                                                       value="false">Path</label>
                                 </div>
                             </div>
                         </div>
