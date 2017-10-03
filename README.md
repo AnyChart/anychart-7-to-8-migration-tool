@@ -20,7 +20,7 @@ We did our best to create this tool but it is not a panacea. If you don't want t
 
 AnyChart migration tool is available in three ways
 
-* Online script at [https://www.anychart.com/migration/7to8/](https://www.anychart.com/migration/7to8/)
+* Online script at [https://migration.anychart.com/](https://migration.anychart.com/)
 
 * You own Web-Server that does the same as the script above but it is deployed on your side.
 
