@@ -26,7 +26,7 @@ exports.init = function (res, wrapMark) {
     // replace with method
     for (i = 0; i < interactivityState.length; i++) {
         for (j = 0; j < statePrefix.length; j++) {
-            var state = toCamelCase('\\.' + statePrefix[j].old, interactivityState[i]);
+            var state = toCamelCase('.' + statePrefix[j].old, interactivityState[i]);
             regExp = new RegExp(state);
 
             while (code.match(regExp)) {
