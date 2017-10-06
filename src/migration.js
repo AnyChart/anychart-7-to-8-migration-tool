@@ -16,7 +16,7 @@ exports.migrate = function (code) {
         if (~argv.t.indexOf('modules')) {
             code = modulesReplacer.init(code, wrapMark);
         }
-        
+
         if (~argv.t.indexOf('enums')) {
             code = enumsReplacer.init(code, wrapMark);
         }

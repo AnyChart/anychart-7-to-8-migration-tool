@@ -79,6 +79,13 @@ exports.init = function (res, wrapMark) {
     var modulesTreeData = ['anychart-gantt', 'anychart-treemap', 'anychart-pert'];
     var treeDataModuleWasAdded = false;
 
+    // if not found anychart script then return source code
+    if (!code.match(new RegExp(acProductScripts.join('|')))) {
+        res.code = code;
+
+        return res;
+    }
+
     /*get modules list from code*/
     for (var i = 0; i < modules.length; i++) {
         for (var j = 0; j < modules[i].keys.length; j++) {

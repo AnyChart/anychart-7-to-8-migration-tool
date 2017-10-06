@@ -50,6 +50,14 @@ exports.normalized = [
         "old": ["colorAt\\(", "markerAt\\("],
         "new": "itemAt("
     },
+    {
+        "old": ["colors\\("],
+        "new": "items(",
+        "warning": "true",
+        "regExp": ".linearColor|.ordinalColor",
+        "negative": "items(",
+        "positive": "colors("
+    },
     /**/
 
     /*Misc*/
@@ -66,7 +74,8 @@ exports.normalized = [
     /*Gantt Data Grid*/
     {
         "old": ["cellFill\\("],
-        "new": "rowFill("
+        "new": "rowFill(",
+        "warning": "true"
     },
     {
         "old": ["cellOddFill\\("],

@@ -20,8 +20,7 @@ exports.init = function (res, wrapMark) {
     var log = [];
 
     // replace selected state in data
-    regExp = new RegExp('selected: true', 'g');
-    code = code.replace(regExp, wrapMark('state: \'selected\''));
+    code = code.replace(/('|"|)selected('|"|)\s*:\s*('|"|)\s*true\s*('|"|)/g, wrapMark('state: \'selected\''));
 
     // replace with method
     for (i = 0; i < interactivityState.length; i++) {

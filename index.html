@@ -226,6 +226,7 @@
                         var enumsWarning = res['enums-warning'];
                         var gridWarning = res['grid-warning'];
                         var stateWarning = res['state-warning'];
+                        var deprecatedApiWarning = res['deprecated-api-warning'];
 
                         var $log = $('#log');
 
@@ -253,7 +254,7 @@
 
                         var i;
 
-                        if (enumsWarning || gridWarning || stateWarning) {
+                        if (enumsWarning || gridWarning || stateWarning || deprecatedApiWarning) {
                             $('#alert-message').fadeIn('fast', function () {
                                 setTimeout(function () {
                                     $('#alert-message').fadeOut('slow');
@@ -316,6 +317,20 @@
                                 for (i = 0; i < stateWarning.length; i++) {
                                     $('.state-warning').append('<span>' +
                                             '<br>' + stateWarning[i].old + ' => ' + stateWarning[i].new + ', line: ' + stateWarning[i].line +
+                                            '</span>')
+                                }
+                            }
+
+                            if (deprecatedApiWarning) {
+                                $log.append('<div class="alert alert-warning deprecated-api-warning"><strong>Warning: Deprecated API!</strong> We do not guarantee this replacement is correct.</div>');
+
+                                deprecatedApiWarning.sort(function (a, b) {
+                                    return a.line - b.line
+                                });
+
+                                for (i = 0; i < deprecatedApiWarning.length; i++) {
+                                    $('.deprecated-api-warning').append('<span>' +
+                                            '<br>' + deprecatedApiWarning[i].old + ' => ' + deprecatedApiWarning[i].new + ', line: ' + deprecatedApiWarning[i].line +
                                             '</span>')
                                 }
                             }
