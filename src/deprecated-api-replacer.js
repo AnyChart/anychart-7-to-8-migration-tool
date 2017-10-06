@@ -7,6 +7,12 @@ exports.init = function (res, wrapMark) {
     var regExp;
     var log = [];
 
+    /*text wrap warning*/
+    if (code.match('.textWrap')) {
+        res['text-wrap-warning'] = true;
+    }
+    /**/
+
     // replace deprecated api
     for (i = 0; i < deprecatedApi.length; i++) {
         for (j = 0; j < deprecatedApi[i].old.length; j++) {

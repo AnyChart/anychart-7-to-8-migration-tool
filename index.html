@@ -227,6 +227,7 @@
                         var gridWarning = res['grid-warning'];
                         var stateWarning = res['state-warning'];
                         var deprecatedApiWarning = res['deprecated-api-warning'];
+                        var deprecatedApiTextWrap = res['text-wrap-warning'];
 
                         var $log = $('#log');
 
@@ -254,7 +255,7 @@
 
                         var i;
 
-                        if (enumsWarning || gridWarning || stateWarning || deprecatedApiWarning) {
+                        if (enumsWarning || gridWarning || stateWarning || deprecatedApiWarning || deprecatedApiTextWrap) {
                             $('#alert-message').fadeIn('fast', function () {
                                 setTimeout(function () {
                                     $('#alert-message').fadeOut('slow');
@@ -334,6 +335,13 @@
                                             '</span>')
                                 }
                             }
+
+                            if (deprecatedApiTextWrap) {
+                                $log.append('<div class="alert alert-warning deprecated-api-warning"><strong>Warning: Deprecated API!</strong> ' +
+                                        'The textWrap() method is deprecated, use ' +
+                                        '<a href="https://api.anychart.com/8.0.0/anychart.core.Text#wordBreak" target="_blank">wordBreak()</a> and ' +
+                                        '<a href="https://api.anychart.com/8.0.0/anychart.core.Text#wordWrap" target="_blank">wordWrap()</a> methods instead.');
+                            }
                         }
 
                         // button position
@@ -345,31 +353,17 @@
             });
         });
     </script>
-
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(), event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5B8NXZ');</script>
-    <!-- End Google Tag Manager -->
 </head>
-<body>
 
+<body>
 <div id="alert-message" class="alert alert-warning" style="display: none;">
     <strong>Warning!</strong> See warning <a href="#log">section</a>.
 </div>
 
 <div class="container">
     <h1>AnyChart 7.x to 8.x Migration Tool</h1>
-    <p> AnyChart migration tool is a helper script that assists with the migration of JavaScript code of AnyChart 7.14.x to AnyChart
+    <p> AnyChart migration tool is a helper script that assists with the migration of JavaScript code of AnyChart 7.14.x
+        to AnyChart
         8.x.</p>
     <form class="migrate-form" action="/migrate" method="POST" id="migrate-form">
         <div class="row">
@@ -454,7 +448,7 @@
                     <h3 class="dark-grey">Description</h3>
                     <br>
 
-                    <p><b>Replacers</b> - Choose migration replacement options. 
+                    <p><b>Replacers</b> - Choose migration replacement options.
                         By default all replacers are applied.
                     </p>
 
@@ -464,7 +458,7 @@
                         of anychart-bundle.min.js.
                     </p>
                     <p>
-                        <b>Path</b> - works only with "Local path". Specify 
+                        <b>Path</b> - works only with "Local path". Specify
                         path to files of needed.
                     </p>
                     <p>
@@ -479,12 +473,5 @@
     </form>
     <div class="log-section" id="log"></div>
 </div>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B8NXZ"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
 </body>
 </html>

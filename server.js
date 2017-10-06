@@ -3,13 +3,19 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
+var fs = require('fs');
 var migrate = require('./src/migration').migrate;
 var program = require('commander');
 var argv = require('minimist')(process.argv.slice(2));
 var optionsMap = require('./src/options-map').options;
 
 program.option('-p, --port <number>', 'server port')
-    .parse(process.argv);
+    .option('-t, --tag-manager', 'add google tag manager to page')
+    .action(function(cmd, options){
+        console.log('exec "%s" using %s mode', cmd, options.exec_mode);
+    });
+
+program.parse(process.argv);
 
 if (!process.argv.slice(2).length) {
     program.outputHelp()
@@ -23,7 +29,19 @@ function init() {
     app.use(bodyParser.urlencoded({extended: false}));
 
     app.get('/', function (req, res) {
-        res.sendFile(path.join(__dirname, 'index.html'));
+        var normalPath = path.normalize(__dirname + '/index.html');
+
+        // html content
+        var content = fs.readFileSync(normalPath, 'utf-8');
+
+        // add tag manager
+        if (argv.t) {
+            content = addTagManager(content);
+        }
+
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.write(content);
+        res.end();
     });
 
     app.post('/migrate', function (req, res) {
@@ -62,4 +80,14 @@ function init() {
     app.listen(argv.p, function () {
         console.log('Start server on port: ' + argv.p);
     });
+}
+
+function addTagManager(code) {
+    var tagManager = "<script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0],j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src ='https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-5B8NXZ');</script>"
+    var _tagManager = '<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B8NXZ"  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>';
+
+    code = code.replace('</head>', tagManager + '</head>');
+    code = code.replace('<body>', '<body>' + _tagManager);
+
+    return code
 }
