@@ -45,6 +45,8 @@ function init() {
     });
 
     app.post('/migrate', function (req, res) {
+        var code;
+        
         for (option in optionsMap) {
             if (optionsMap.hasOwnProperty(option)) {
                 if (req.body[option]) {
@@ -55,7 +57,13 @@ function init() {
             }
         }
 
-        var code = migrate(req.body.code);
+        try {
+            code = migrate(req.body.code);
+        } catch (err) {
+            code = {};
+            code.code = req.body.code;
+            code.error = true;
+        }
 
         // response
         res.send(code);

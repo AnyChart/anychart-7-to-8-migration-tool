@@ -40,7 +40,7 @@
             transition: all 0.25s ease-out;
         }
 
-        #alert-message {
+        #alert-message, #error-message {
             position: fixed;
             right: 10px;
             top: 10px;
@@ -222,6 +222,11 @@
                     url: '/migrate',
                     data: data,
                     success: function (res) {
+                        if (res.error) {
+                            showAlert($('#error-message'));
+                            return
+                        }
+
                         var code = res.code;
                         var enumsWarning = res['enums-warning'];
                         var gridWarning = res['grid-warning'];
@@ -256,11 +261,7 @@
                         var i;
 
                         if (enumsWarning || gridWarning || stateWarning || deprecatedApiWarning || deprecatedApiTextWrap) {
-                            $('#alert-message').fadeIn('fast', function () {
-                                setTimeout(function () {
-                                    $('#alert-message').fadeOut('slow');
-                                }, 5000)
-                            });
+                            showAlert($('#alert-message'));
 
                             if (enumsWarning) {
                                 $log.append('<div class="alert alert-warning enums-warning"><strong>Warning: Enums!</strong>  Check if this replacement is correct, this method can not be analyzed. We do not guarantee this replacement is correct.</div>');
@@ -348,6 +349,14 @@
                         $('button.copytoclipboard').css({
                             right: $output.find('code')[0].scrollHeight > $output.find('code').height() ? 25 : 10
                         });
+
+                        function showAlert($el) {
+                            $el.fadeIn('fast', function () {
+                                setTimeout(function () {
+                                    $el.fadeOut('slow');
+                                }, 5000)
+                            });
+                        }
                     }
                 });
             });
@@ -358,6 +367,10 @@
 <body>
 <div id="alert-message" class="alert alert-warning" style="display: none;">
     <strong>Warning!</strong> See warning <a href="#log">section</a>.
+</div>
+
+<div id="error-message" class="alert alert-warning" style="display: none;">
+    We're sorry, but something went wrong.
 </div>
 
 <div class="container">

@@ -18,8 +18,7 @@ exports.normalized = [
             "none",
             "null",
             "false",
-            "0",
-            "hide"
+            "0"
         ],
         "new": "hide",
         "methods": [
@@ -56,8 +55,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.HoverMode.SINGLE",
         "old": [
-            "s",
-            "single"
+            "s"
         ],
         "new": "single",
         "methods": [
@@ -71,8 +69,7 @@ exports.normalized = [
             "null",
             "false",
             "n",
-            "no",
-            "none"
+            "no"
         ],
         "new": "none",
         "methods": [
@@ -127,8 +124,7 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.DEFAULT",
         "old": [
             "def",
-            "d",
-            "default"
+            "d"
         ],
         "new": "default",
         "methods": [
@@ -140,8 +136,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.Cursor.CROSSHAIR",
         "old": [
-            "cross",
-            "crosshair"
+            "cross"
         ],
         "new": "crosshair",
         "methods": [
@@ -153,8 +148,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.Cursor.POINTER",
         "old": [
-            "point",
-            "pointer"
+            "point"
         ],
         "new": "pointer",
         "methods": [
@@ -167,8 +161,7 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.N_RESIZE",
         "old": [
             "north",
-            "n",
-            "n-resize"
+            "n"
         ],
         "new": "n-resize",
         "methods": [
@@ -181,8 +174,7 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.NE_RESIZE",
         "old": [
             "northeast",
-            "ne",
-            "ne-resize"
+            "ne"
         ],
         "new": "ne-resize",
         "methods": [
@@ -195,8 +187,7 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.E_RESIZE",
         "old": [
             "east",
-            "e",
-            "e-resize"
+            "e"
         ],
         "new": "e-resize",
         "methods": [
@@ -209,8 +200,7 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.SE_RESIZE",
         "old": [
             "southeast",
-            "se",
-            "se-resize"
+            "se"
         ],
         "new": "se-resize",
         "methods": [
@@ -223,8 +213,7 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.S_RESIZE",
         "old": [
             "south",
-            "s",
-            "s-resize"
+            "s"
         ],
         "new": "s-resize",
         "methods": [
@@ -237,8 +226,7 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.SW_RESIZE",
         "old": [
             "southwest",
-            "sw",
-            "sw-resize"
+            "sw"
         ],
         "new": "sw-resize",
         "methods": [
@@ -251,8 +239,7 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.W_RESIZE",
         "old": [
             "west",
-            "w",
-            "w-resize"
+            "w"
         ],
         "new": "w-resize",
         "methods": [
@@ -265,8 +252,7 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.NW_RESIZE",
         "old": [
             "northwest",
-            "nw",
-            "nw-resize"
+            "nw"
         ],
         "new": "nw-resize",
         "methods": [
@@ -339,8 +325,7 @@ exports.normalized = [
         "literal": "anychart.enums.Anchor.CENTER",
         "old": [
             "centercenter",
-            "c",
-            "center"
+            "c"
         ],
         "new": "center",
         "methods": [
@@ -410,8 +395,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.Anchor.AUTO",
         "old": [
-            "null",
-            "auto"
+            "null"
         ],
         "new": "auto",
         "methods": [
@@ -455,8 +439,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.Align.CENTER",
         "old": [
-            "middle",
-            "center"
+            "middle"
         ],
         "new": "center",
         "methods": [
@@ -467,8 +450,7 @@ exports.normalized = [
         "literal": "anychart.enums.Layout.VERTICAL",
         "old": [
             "v",
-            "vert",
-            "vertical"
+            "vert"
         ],
         "new": "vertical",
         "methods": [
@@ -480,8 +462,7 @@ exports.normalized = [
         "old": [
             "h",
             "horz",
-            "horiz",
-            "horizontal"
+            "horiz"
         ],
         "new": "horizontal",
         "methods": [
@@ -492,8 +473,7 @@ exports.normalized = [
         "literal": "anychart.enums.LegendLayout.VERTICAL",
         "old": [
             "v",
-            "vert",
-            "vertical"
+            "vert"
         ],
         "new": "vertical",
         "methods": [
@@ -505,8 +485,7 @@ exports.normalized = [
         "old": [
             "h",
             "horz",
-            "horiz",
-            "horizontal"
+            "horiz"
         ],
         "new": "horizontal",
         "methods": [
@@ -546,8 +525,7 @@ exports.normalized = [
         "literal": "anychart.enums.RadialGridLayout.RADIAL",
         "old": [
             "r",
-            "rad",
-            "radial"
+            "rad"
         ],
         "new": "radial",
         "methods": [
@@ -558,8 +536,7 @@ exports.normalized = [
         "literal": "anychart.enums.RadialGridLayout.CIRCUIT",
         "old": [
             "c",
-            "cir",
-            "circuit"
+            "cir"
         ],
         "new": "circuit",
         "methods": [
@@ -573,8 +550,7 @@ exports.normalized = [
             "topcenter",
             "t",
             "up",
-            "u",
-            "top"
+            "u"
         ],
         "new": "top",
         "methods": [
@@ -586,8 +562,7 @@ exports.normalized = [
         "old": [
             "rightcenter",
             "centerright",
-            "r",
-            "right"
+            "r"
         ],
         "new": "right",
         "methods": [
@@ -601,8 +576,7 @@ exports.normalized = [
             "centerbottom",
             "b",
             "down",
-            "d",
-            "bottom"
+            "d"
         ],
         "new": "bottom",
         "methods": [
@@ -614,8 +588,7 @@ exports.normalized = [
         "old": [
             "leftcenter",
             "centerleft",
-            "l",
-            "left"
+            "l"
         ],
         "new": "left",
         "methods": [
@@ -631,8 +604,7 @@ exports.normalized = [
             "straight",
             "s",
             "yes",
-            "y",
-            "asc"
+            "y"
         ],
         "new": "asc",
         "methods": [
@@ -647,8 +619,7 @@ exports.normalized = [
             "b",
             "reversed",
             "reverse",
-            "r",
-            "desc"
+            "r"
         ],
         "new": "desc",
         "methods": [
@@ -660,8 +631,7 @@ exports.normalized = [
         "old": [
             "null",
             "no",
-            "nosort",
-            "none"
+            "nosort"
         ],
         "new": "none",
         "methods": [
@@ -671,8 +641,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.MarkerType.TRAPEZIUM",
         "old": [
-            "trapezoid",
-            "trapezium"
+            "trapezoid"
         ],
         "new": "trapezium",
         "methods": [
@@ -688,8 +657,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.MarkerType.ARROWHEAD",
         "old": [
-            "arrow",
-            "arrowhead"
+            "arrow"
         ],
         "new": "arrowhead",
         "methods": [
@@ -877,8 +845,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.LegendItemIconType.TRAPEZIUM",
         "old": [
-            "trapezoid",
-            "trapezium"
+            "trapezoid"
         ],
         "new": "trapezium",
         "methods": [
@@ -888,8 +855,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.LegendItemIconType.ARROWHEAD",
         "old": [
-            "arrow",
-            "arrowhead"
+            "arrow"
         ],
         "new": "arrowhead",
         "methods": [
@@ -911,8 +877,7 @@ exports.normalized = [
         "literal": "anychart.enums.LegendItemsSourceMode.DEFAULT",
         "old": [
             "d",
-            "def",
-            "default"
+            "def"
         ],
         "new": "default",
         "methods": [
@@ -923,8 +888,7 @@ exports.normalized = [
         "literal": "anychart.enums.LegendItemsSourceMode.CATEGORIES",
         "old": [
             "c",
-            "cat",
-            "categories"
+            "cat"
         ],
         "new": "categories",
         "methods": [
@@ -936,8 +900,7 @@ exports.normalized = [
         "old": [
             "in",
             "i",
-            "inner",
-            "inside"
+            "inner"
         ],
         "new": "inside",
         "methods": [
@@ -951,8 +914,7 @@ exports.normalized = [
             "c",
             "middle",
             "mid",
-            "m",
-            "center"
+            "m"
         ],
         "new": "center",
         "methods": [
@@ -964,8 +926,7 @@ exports.normalized = [
         "old": [
             "out",
             "o",
-            "outer",
-            "outside"
+            "outer"
         ],
         "new": "outside",
         "methods": [
@@ -977,8 +938,7 @@ exports.normalized = [
         "old": [
             "in",
             "i",
-            "inner",
-            "inside"
+            "inner"
         ],
         "new": "inside",
         "methods": [
@@ -990,8 +950,7 @@ exports.normalized = [
         "old": [
             "out",
             "o",
-            "outer",
-            "outside"
+            "outer"
         ],
         "new": "outside",
         "methods": [
@@ -1004,8 +963,7 @@ exports.normalized = [
             "middle",
             "mid",
             "m",
-            "c",
-            "center"
+            "c"
         ],
         "new": "center",
         "methods": [
@@ -1017,8 +975,7 @@ exports.normalized = [
         "old": [
             "in",
             "i",
-            "inner",
-            "inside"
+            "inner"
         ],
         "new": "inside",
         "methods": [
@@ -1109,8 +1066,7 @@ exports.normalized = [
             "yes",
             "y",
             "t",
-            "1",
-            "value"
+            "1"
         ],
         "new": "value",
         "methods": [
@@ -1124,8 +1080,7 @@ exports.normalized = [
             "ratio",
             "relative",
             "p",
-            "r",
-            "percent"
+            "r"
         ],
         "new": "percent",
         "methods": [
@@ -1141,8 +1096,7 @@ exports.normalized = [
             "false",
             "f",
             "0",
-            "n",
-            "none"
+            "n"
         ],
         "new": "none",
         "methods": [
@@ -1181,8 +1135,7 @@ exports.normalized = [
         "old": [
             "are",
             "ar",
-            "a",
-            "area"
+            "a"
         ],
         "new": "area",
         "methods": [
@@ -1193,8 +1146,7 @@ exports.normalized = [
         "literal": "anychart.enums.SparklineSeriesType.COLUMN",
         "old": [
             "col",
-            "c",
-            "column"
+            "c"
         ],
         "new": "column",
         "methods": [
@@ -1205,8 +1157,7 @@ exports.normalized = [
         "literal": "anychart.enums.SparklineSeriesType.LINE",
         "old": [
             "lin",
-            "l",
-            "line"
+            "l"
         ],
         "new": "line",
         "methods": [
@@ -1231,8 +1182,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.LinearGaugePointerType.BAR",
         "old": [
-            "b",
-            "bar"
+            "b"
         ],
         "new": "bar",
         "methods": [
@@ -1256,8 +1206,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.LinearGaugePointerType.MARKER",
         "old": [
-            "m",
-            "marker"
+            "m"
         ],
         "new": "marker",
         "methods": [
@@ -1268,8 +1217,7 @@ exports.normalized = [
         "literal": "anychart.enums.LinearGaugePointerType.THERMOMETER",
         "old": [
             "ther",
-            "th",
-            "thermometer"
+            "th"
         ],
         "new": "thermometer",
         "methods": [
@@ -1279,8 +1227,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.LinearGaugePointerType.TANK",
         "old": [
-            "t",
-            "tank"
+            "t"
         ],
         "new": "tank",
         "methods": [
@@ -1290,8 +1237,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.LinearGaugePointerType.LED",
         "old": [
-            "l",
-            "led"
+            "l"
         ],
         "new": "led",
         "methods": [
@@ -1353,8 +1299,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.GaugeScaleTypes.LINEAR",
         "old": [
-            "lin",
-            "linear"
+            "lin"
         ],
         "new": "linear",
         "methods": [
@@ -1364,8 +1309,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.GaugeScaleTypes.LOG",
         "old": [
-            "logarithmic",
-            "log"
+            "logarithmic"
         ],
         "new": "log",
         "methods": [
@@ -1376,8 +1320,7 @@ exports.normalized = [
         "literal": "anychart.enums.ErrorMode.NONE",
         "old": [
             "false",
-            "null",
-            "none"
+            "null"
         ],
         "new": "none",
         "methods": [
@@ -1387,8 +1330,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.ErrorMode.VALUE",
         "old": [
-            "y",
-            "value"
+            "y"
         ],
         "new": "value",
         "methods": [
@@ -1398,8 +1340,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.ErrorMode.BOTH",
         "old": [
-            "true",
-            "both"
+            "true"
         ],
         "new": "both",
         "methods": [
@@ -1409,8 +1350,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.HAlign.LEFT",
         "old": [
-            "l",
-            "left"
+            "l"
         ],
         "new": "left",
         "methods": [
@@ -1420,8 +1360,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.HAlign.RIGHT",
         "old": [
-            "r",
-            "right"
+            "r"
         ],
         "new": "right",
         "methods": [
@@ -1433,8 +1372,7 @@ exports.normalized = [
         "old": [
             "middle",
             "c",
-            "m",
-            "center"
+            "m"
         ],
         "new": "center",
         "methods": [
@@ -1444,8 +1382,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.HAlign.START",
         "old": [
-            "s",
-            "start"
+            "s"
         ],
         "new": "start",
         "methods": [
@@ -1455,8 +1392,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.HAlign.END",
         "old": [
-            "e",
-            "end"
+            "e"
         ],
         "new": "end",
         "methods": [
@@ -1466,8 +1402,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.VAlign.TOP",
         "old": [
-            "t",
-            "top"
+            "t"
         ],
         "new": "top",
         "methods": [
@@ -1477,8 +1412,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.VAlign.BOTTOM",
         "old": [
-            "b",
-            "bottom"
+            "b"
         ],
         "new": "bottom",
         "methods": [
@@ -1490,8 +1424,7 @@ exports.normalized = [
         "old": [
             "center",
             "c",
-            "m",
-            "middle"
+            "m"
         ],
         "new": "middle",
         "methods": [
@@ -1501,8 +1434,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.TextDecoration.BLINK",
         "old": [
-            "b",
-            "blink"
+            "b"
         ],
         "new": "blink",
         "methods": [
@@ -1515,8 +1447,7 @@ exports.normalized = [
             "line_through",
             "linethrough",
             "line",
-            "l",
-            "line-through"
+            "l"
         ],
         "new": "line-through",
         "methods": [
@@ -1527,8 +1458,7 @@ exports.normalized = [
         "literal": "anychart.enums.TextDecoration.OVERLINE",
         "old": [
             "over",
-            "o",
-            "overline"
+            "o"
         ],
         "new": "overline",
         "methods": [
@@ -1539,8 +1469,7 @@ exports.normalized = [
         "literal": "anychart.enums.TextDecoration.UNDERLINE",
         "old": [
             "under",
-            "u",
-            "underline"
+            "u"
         ],
         "new": "underline",
         "methods": [
@@ -1550,8 +1479,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.TextDecoration.NONE",
         "old": [
-            "n",
-            "none"
+            "n"
         ],
         "new": "none",
         "methods": [
@@ -1561,8 +1489,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.FontStyle.NORMAL",
         "old": [
-            "n",
-            "normal"
+            "n"
         ],
         "new": "normal",
         "methods": [
@@ -1572,8 +1499,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.FontStyle.ITALIC",
         "old": [
-            "i",
-            "italic"
+            "i"
         ],
         "new": "italic",
         "methods": [
@@ -1583,8 +1509,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.FontStyle.OBLIQUE",
         "old": [
-            "o",
-            "oblique"
+            "o"
         ],
         "new": "oblique",
         "methods": [
@@ -1594,8 +1519,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.FontVariant.NORMAL",
         "old": [
-            "n",
-            "normal"
+            "n"
         ],
         "new": "normal",
         "methods": [
@@ -1611,8 +1535,7 @@ exports.normalized = [
             "caps",
             "sc",
             "s",
-            "c",
-            "small-caps"
+            "c"
         ],
         "new": "small-caps",
         "methods": [
@@ -1622,8 +1545,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.TextDirection.LTR",
         "old": [
-            "l",
-            "ltr"
+            "l"
         ],
         "new": "ltr",
         "methods": [
@@ -1633,8 +1555,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.TextDirection.RTL",
         "old": [
-            "r",
-            "rtl"
+            "r"
         ],
         "new": "rtl",
         "methods": [
@@ -1644,8 +1565,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.TableSearchMode.EXACT",
         "old": [
-            "e",
-            "exact"
+            "e"
         ],
         "new": "exact",
         "methods": [
@@ -1684,8 +1604,7 @@ exports.normalized = [
             "near",
             "closest",
             "close",
-            "c",
-            "nearest"
+            "c"
         ],
         "new": "nearest",
         "methods": [
@@ -1754,8 +1673,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.TooltipDisplayMode.UNION",
         "old": [
-            "u",
-            "union"
+            "u"
         ],
         "new": "union",
         "methods": [
@@ -1765,8 +1683,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.TooltipDisplayMode.SEPARATED",
         "old": [
-            "sp",
-            "separated"
+            "sp"
         ],
         "new": "separated",
         "methods": [
@@ -1776,8 +1693,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.TooltipDisplayMode.SINGLE",
         "old": [
-            "s",
-            "single"
+            "s"
         ],
         "new": "single",
         "methods": [
@@ -1787,8 +1703,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.TooltipPositionMode.FLOAT",
         "old": [
-            "fl",
-            "float"
+            "fl"
         ],
         "new": "float",
         "methods": [
@@ -1799,8 +1714,7 @@ exports.normalized = [
         "literal": "anychart.enums.TooltipPositionMode.POINT",
         "old": [
             "pt",
-            "p",
-            "point"
+            "p"
         ],
         "new": "point",
         "methods": [
@@ -1811,8 +1725,7 @@ exports.normalized = [
         "literal": "anychart.enums.TooltipPositionMode.CHART",
         "old": [
             "ch",
-            "c",
-            "chart"
+            "c"
         ],
         "new": "chart",
         "methods": [
@@ -1823,8 +1736,7 @@ exports.normalized = [
         "literal": "anychart.enums.CrosshairDisplayMode.FLOAT",
         "old": [
             "fl",
-            "f",
-            "float"
+            "f"
         ],
         "new": "float",
         "methods": [
@@ -1835,8 +1747,7 @@ exports.normalized = [
         "literal": "anychart.enums.CrosshairDisplayMode.STICKY",
         "old": [
             "st",
-            "s",
-            "sticky"
+            "s"
         ],
         "new": "sticky",
         "methods": [
@@ -1846,8 +1757,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.LabelsDisplayMode.CLIP",
         "old": [
-            "c",
-            "clip"
+            "c"
         ],
         "new": "clip",
         "methods": [
@@ -1858,8 +1768,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.LabelsDisplayMode.DROP",
         "old": [
-            "d",
-            "drop"
+            "d"
         ],
         "new": "drop",
         "methods": [
@@ -1891,8 +1800,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.AdjustFontSizeMode.SAME",
         "old": [
-            "s",
-            "same"
+            "s"
         ],
         "new": "same",
         "methods": [
@@ -1903,8 +1811,7 @@ exports.normalized = [
         "literal": "anychart.enums.AdjustFontSizeMode.DIFFERENT",
         "old": [
             "diff",
-            "d",
-            "different"
+            "d"
         ],
         "new": "different",
         "methods": [
@@ -1915,8 +1822,7 @@ exports.normalized = [
         "literal": "anychart.enums.StepDirection.FORWARD",
         "old": [
             "fwd",
-            "f",
-            "forward"
+            "f"
         ],
         "new": "forward",
         "methods": [
@@ -1927,8 +1833,7 @@ exports.normalized = [
         "literal": "anychart.enums.StepDirection.BACKWARD",
         "old": [
             "bwd",
-            "b",
-            "backward"
+            "b"
         ],
         "new": "backward",
         "methods": [
@@ -1938,8 +1843,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.AnnotationTypes.LINE",
         "old": [
-            "interval",
-            "line"
+            "interval"
         ],
         "new": "line",
         "methods": [
@@ -1985,8 +1889,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.AnnotationTypes.RECTANGLE",
         "old": [
-            "rect",
-            "rectangle"
+            "rect"
         ],
         "new": "rectangle",
         "methods": [
@@ -1996,8 +1899,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.AnnotationTypes.ELLIPSE",
         "old": [
-            "circle",
-            "ellipse"
+            "circle"
         ],
         "new": "ellipse",
         "methods": [
@@ -2007,8 +1909,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.AnnotationTypes.TRIANGLE",
         "old": [
-            "tri",
-            "triangle"
+            "tri"
         ],
         "new": "triangle",
         "methods": [
@@ -2099,8 +2000,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.AnnotationTypes.MARKER",
         "old": [
-            "arrow",
-            "marker"
+            "arrow"
         ],
         "new": "marker",
         "methods": [
@@ -2110,8 +2010,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.MilestoneShape.RHOMBUS",
         "old": [
-            "rhomb",
-            "rhombus"
+            "rhomb"
         ],
         "new": "rhombus",
         "methods": [
@@ -2121,8 +2020,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.MilestoneShape.RECTANGLE",
         "old": [
-            "rect",
-            "rectangle"
+            "rect"
         ],
         "new": "rectangle",
         "methods": [
@@ -2132,8 +2030,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.AvailabilityPeriod.YEAR",
         "old": [
-            "y",
-            "year"
+            "y"
         ],
         "new": "year",
         "methods": [
@@ -2143,8 +2040,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.AvailabilityPeriod.WEEK",
         "old": [
-            "w",
-            "week"
+            "w"
         ],
         "new": "week",
         "methods": [
@@ -2154,8 +2050,7 @@ exports.normalized = [
     {
         "literal": "anychart.enums.AvailabilityPeriod.DAY",
         "old": [
-            "d",
-            "day"
+            "d"
         ],
         "new": "day",
         "methods": [
@@ -3237,7 +3132,6 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.NS_RESIZE",
         "new": "ns-resize",
         "old": [
-            "ns-resize",
             "nsResize",
             "NsResize",
             "nsresize",
@@ -3248,7 +3142,6 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.EW_RESIZE",
         "new": "ew-resize",
         "old": [
-            "ew-resize",
             "ewResize",
             "EwResize",
             "ewresize",
@@ -3259,7 +3152,6 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.NWSE_RESIZE",
         "new": "nwse-resize",
         "old": [
-            "nwse-resize",
             "nwseResize",
             "NwseResize",
             "nwseresize",
@@ -3270,7 +3162,6 @@ exports.normalized = [
         "literal": "anychart.enums.Cursor.NESW_RESIZE",
         "new": "nesw-resize",
         "old": [
-            "nesw-resize",
             "neswResize",
             "NeswResize",
             "neswresize",
@@ -3342,8 +3233,7 @@ exports.normalized = [
         "new": "center",
         "old": [
             "centercenter",
-            "c",
-            "center"
+            "c"
         ],
         "methods": [
             "position"
@@ -8074,7 +7964,6 @@ exports.normalized = [
         "literal": "acgraph.vector.Text.FontVariant.SMALL_CAP",
         "new": "small-caps",
         "old": [
-            "small-caps",
             "smallCaps",
             "SmallCaps",
             "smallcaps",
@@ -8097,7 +7986,6 @@ exports.normalized = [
         "literal": "acgraph.vector.Text.Decoration.LINE_THROUGH",
         "new": "line-through",
         "old": [
-            "line-through",
             "lineThrough",
             "LineThrough",
             "linethrough",
@@ -8180,7 +8068,6 @@ exports.normalized = [
         "literal": "acgraph.vector.Cursor.N_RESIZE",
         "new": "n-resize",
         "old": [
-            "n-resize",
             "nResize",
             "NResize",
             "nresize",
@@ -8191,7 +8078,6 @@ exports.normalized = [
         "literal": "acgraph.vector.Cursor.NE_RESIZE",
         "new": "ne-resize",
         "old": [
-            "ne-resize",
             "neResize",
             "NeResize",
             "neresize",
@@ -8202,7 +8088,6 @@ exports.normalized = [
         "literal": "acgraph.vector.Cursor.E_RESIZE",
         "new": "e-resize",
         "old": [
-            "e-resize",
             "eResize",
             "EResize",
             "eresize",
@@ -8213,7 +8098,6 @@ exports.normalized = [
         "literal": "acgraph.vector.Cursor.SE_RESIZE",
         "new": "se-resize",
         "old": [
-            "se-resize",
             "seResize",
             "SeResize",
             "seresize",
@@ -8224,7 +8108,6 @@ exports.normalized = [
         "literal": "acgraph.vector.Cursor.S_RESIZE",
         "new": "s-resize",
         "old": [
-            "s-resize",
             "sResize",
             "SResize",
             "sresize",
@@ -8235,7 +8118,6 @@ exports.normalized = [
         "literal": "acgraph.vector.Cursor.SW_RESIZE",
         "new": "sw-resize",
         "old": [
-            "sw-resize",
             "swResize",
             "SwResize",
             "swresize",
@@ -8246,7 +8128,6 @@ exports.normalized = [
         "literal": "acgraph.vector.Cursor.W_RESIZE",
         "new": "w-resize",
         "old": [
-            "w-resize",
             "wResize",
             "WResize",
             "wresize",
@@ -8257,7 +8138,6 @@ exports.normalized = [
         "literal": "acgraph.vector.Cursor.NW_RESIZE",
         "new": "nw-resize",
         "old": [
-            "nw-resize",
             "nwResize",
             "NwResize",
             "nwresize",
@@ -8544,7 +8424,6 @@ exports.normalized = [
         "literal": "anychart.graphics.vector.Text.FontVariant.SMALL_CAP",
         "new": "small-caps",
         "old": [
-            "small-caps",
             "smallCaps",
             "SmallCaps",
             "smallcaps",
@@ -8567,7 +8446,6 @@ exports.normalized = [
         "literal": "anychart.graphics.vector.Text.Decoration.LINE_THROUGH",
         "new": "line-through",
         "old": [
-            "line-through",
             "lineThrough",
             "LineThrough",
             "linethrough",
@@ -8650,7 +8528,6 @@ exports.normalized = [
         "literal": "anychart.graphics.vector.Cursor.N_RESIZE",
         "new": "n-resize",
         "old": [
-            "n-resize",
             "nResize",
             "NResize",
             "nresize",
@@ -8661,7 +8538,6 @@ exports.normalized = [
         "literal": "anychart.graphics.vector.Cursor.NE_RESIZE",
         "new": "ne-resize",
         "old": [
-            "ne-resize",
             "neResize",
             "NeResize",
             "neresize",
@@ -8672,7 +8548,6 @@ exports.normalized = [
         "literal": "anychart.graphics.vector.Cursor.E_RESIZE",
         "new": "e-resize",
         "old": [
-            "e-resize",
             "eResize",
             "EResize",
             "eresize",
@@ -8683,7 +8558,6 @@ exports.normalized = [
         "literal": "anychart.graphics.vector.Cursor.SE_RESIZE",
         "new": "se-resize",
         "old": [
-            "se-resize",
             "seResize",
             "SeResize",
             "seresize",
@@ -8694,7 +8568,6 @@ exports.normalized = [
         "literal": "anychart.graphics.vector.Cursor.S_RESIZE",
         "new": "s-resize",
         "old": [
-            "s-resize",
             "sResize",
             "SResize",
             "sresize",
@@ -8705,7 +8578,6 @@ exports.normalized = [
         "literal": "anychart.graphics.vector.Cursor.SW_RESIZE",
         "new": "sw-resize",
         "old": [
-            "sw-resize",
             "swResize",
             "SwResize",
             "swresize",
@@ -8716,7 +8588,6 @@ exports.normalized = [
         "literal": "anychart.graphics.vector.Cursor.W_RESIZE",
         "new": "w-resize",
         "old": [
-            "w-resize",
             "wResize",
             "WResize",
             "wresize",
@@ -8727,7 +8598,6 @@ exports.normalized = [
         "literal": "anychart.graphics.vector.Cursor.NW_RESIZE",
         "new": "nw-resize",
         "old": [
-            "nw-resize",
             "nwResize",
             "NwResize",
             "nwresize",
