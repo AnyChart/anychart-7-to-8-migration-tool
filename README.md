@@ -256,6 +256,11 @@ See the list of dropped methods and their replacement below:
 | markerAt() | itemAt() |
 | markers() | items() |
 
+#### Sparkline API
+
+| Old Version  | New Version  |
+| ------------- | ------------- |
+| [chart.type()](https://api.anychart.com/7.14.3/anychart.charts.Sparkline#type)  | [chart.seriesType()](https://api.anychart.com/8.0.0/anychart.charts.Sparkline#seriesType)  |
 
 #### Misc
 
