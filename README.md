@@ -121,26 +121,23 @@ See the [full list](https://api.anychart.com/8.0.1/anychart.core.StateSettings) 
 |  [hover](https://api.anychart.com/7.14.4/anychart.core.annotations.FibonacciFan#hoverGrid)/[selectGrid()](https://api.anychart.com/7.14.4/anychart.core.annotations.FibonacciFan#selectGrid)              |  [hovered](https://api.anychart.com/anychart.core.StateSettings#grid)/[selected().grid()](https://api.anychart.com/anychart.core.StateSettings#grid)               |
 |  [hover](https://api.anychart.com/7.14.4/anychart.core.linearGauge.pointers.Tank#hoverEmptyFill)/[selectEmptyFill()](https://api.anychart.com/7.14.4/anychart.core.linearGauge.pointers.Tank#selectEmptyFill)         |  [hovered](https://api.anychart.com/anychart.core.StateSettings#emptyFill)/[selected().emptyFill()](https://api.anychart.com/anychart.core.StateSettings#emptyFill)          |
 |  [hover](https://api.anychart.com/7.14.4/anychart.core.linearGauge.pointers.Tank#selectEmptyHatchFill)/[selectEmptyHatchFill()](https://api.anychart.com/7.14.4/anychart.core.linearGauge.pointers.Tank#selectEmptyHatchFill)    |  [hovered](https://api.anychart.com/anychart.core.StateSettings#emptyHatchFill)/[selected().emptyHatchFill()](https://api.anychart.com/anychart.core.StateSettings#emptyHatchFill)     |
-|  hover/selectFontFamily()        |  [hovered](https://api.anychart.com/anychart.core.StateSettings#fontFamily)/[selected().fontFamily()](https://api.anychart.com/anychart.core.StateSettings#fontFamily)         |
-|  hover/selectFontStyle()         |  [hovered](https://api.anychart.com/anychart.core.StateSettings#fontStyle)/[selected().fontStyle()](https://api.anychart.com/anychart.core.StateSettings#fontStyle)          |
-|  hover/selectFontVariant()       |  [hovered](https://api.anychart.com/anychart.core.StateSettings#fontVariant)/[selected().fontVariant()](https://api.anychart.com/anychart.core.StateSettings#fontVariant)        |
-|  hover/selectFontWeight()        |  [hovered](https://api.anychart.com/anychart.core.StateSettings#fontWeight)/[selected().fontWeight()](https://api.anychart.com/anychart.core.StateSettings#fontWeight)         |
-|  hover/selectFontSize()          |  [hovered](https://api.anychart.com/anychart.core.StateSettings#fontSize)/[selected().fontSize()](https://api.anychart.com/anychart.core.StateSettings#fontSize)           |
-|  hover/selectDummyFill()         |  [hovered](https://api.anychart.com/anychart.core.StateSettings#dummyFill)/[selected().dummyFill()](https://api.anychart.com/anychart.core.StateSettings#dummyFill)          |
-|  hover/selectDummyStroke()       |  [hovered](https://api.anychart.com/anychart.core.StateSettings#dummyStroke)/[selected().dummyStroke()](https://api.anychart.com/anychart.core.StateSettings#dummyStroke)        |
-|  hover/selectHeaders()	       |  [hovered](https://api.anychart.com/anychart.core.StateSettings#headers)/[selected().headers()](https://api.anychart.com/anychart.core.StateSettings#headers)            |
+|  -        |  [hovered](https://api.anychart.com/anychart.core.StateSettings#fontFamily)/[selected().fontFamily()](https://api.anychart.com/anychart.core.StateSettings#fontFamily)         |
+|  -         |  [hovered](https://api.anychart.com/anychart.core.StateSettings#fontStyle)/[selected().fontStyle()](https://api.anychart.com/anychart.core.StateSettings#fontStyle)          |
+|  -       |  [hovered](https://api.anychart.com/anychart.core.StateSettings#fontVariant)/[selected().fontVariant()](https://api.anychart.com/anychart.core.StateSettings#fontVariant)        |
+|  -        |  [hovered](https://api.anychart.com/anychart.core.StateSettings#fontWeight)/[selected().fontWeight()](https://api.anychart.com/anychart.core.StateSettings#fontWeight)         |
+|  -          |  [hovered](https://api.anychart.com/anychart.core.StateSettings#fontSize)/[selected().fontSize()](https://api.anychart.com/anychart.core.StateSettings#fontSize)           |
+|  -        |  [hovered](https://api.anychart.com/anychart.core.StateSettings#dummyFill)/[selected().dummyFill()](https://api.anychart.com/anychart.core.StateSettings#dummyFill)          |
+|  -       |  [hovered](https://api.anychart.com/anychart.core.StateSettings#dummyStroke)/[selected().dummyStroke()](https://api.anychart.com/anychart.core.StateSettings#dummyStroke)        |
+|  -	       |  [hovered](https://api.anychart.com/anychart.core.StateSettings#headers)/[selected().headers()](https://api.anychart.com/anychart.core.StateSettings#headers)            |
 |  [hover](https://api.anychart.com/7.14.4/anychart.core.pert.Tasks#hoverLowerLabels)/[selectLowerLabels()](https://api.anychart.com/7.14.4/anychart.core.pert.Tasks#selectLowerLabels)	   |  [hovered](https://api.anychart.com/anychart.core.StateSettings#lowerLabels)/[selected().lowerLabels()](https://api.anychart.com/anychart.core.StateSettings#lowerLabels)        |
 |  [hover](https://api.anychart.com/7.14.4/anychart.core.pert.Tasks#hoverUpperLabels)/[selectUpperLabels()](https://api.anychart.com/7.14.4/anychart.core.pert.Tasks#selectUpperLabels)	   |  [hovered](https://api.anychart.com/anychart.core.StateSettings#upperLabels)/[selected().upperLabels()](https://api.anychart.com/anychart.core.StateSettings#upperLabels)        |
 |  [hover](https://api.anychart.com/7.14.4/anychart.core.cartesian.series.Box#hoverOutlierMarkers)/[selectOutlierMarkers()](https://api.anychart.com/7.14.4/anychart.core.cartesian.series.Box#selectOutlierMarkers)	   |  [hovered](https://api.anychart.com/anychart.core.StateSettings#outlierMarkers)/[selected().outlierMarkers()](https://api.anychart.com/anychart.core.StateSettings#outlierMarkers)     |
 
 ### Grids API
 
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
-
 Grids API has been changed completely and can not be migrated automatically:
 
 1. Single [grid()](https://api.anychart.com/7.14.4/anychart.charts.Cartesian#grid) method is replaced with [xGrid()](https://api.anychart.com/anychart.charts.Cartesian#xGrid) and [yGrid()](https://api.anychart.com/anychart.charts.Cartesian#yGrid) methods.
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `ADD SAMPLE`
 
 #### 7.x Version Code
 
@@ -281,8 +278,6 @@ See the list of dropped methods and their replacement below:
 
 #### Text Formatting
 
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
-
 | 7.x Version  | 8.x Version  |
 | ------------- | ------------- |
 | [anychart.utils.formatDateTime()]()  | [anychart.format.dateTime()](https://api.anychart.com/8.0.1/anychart.format#dateTime)  |
@@ -290,14 +285,12 @@ See the list of dropped methods and their replacement below:
 | [itemsTextFormatter()](https://api.anychart.com/7.13.0/anychart.standalones.Legend#itemsTextFormatter)  | [itemsFormat()](https://api.anychart.com/8.0.1/anychart.standalones.Legend#itemsFormat)  |
 | [titleFormatter()](https://api.anychart.com/7.13.0/anychart.core.ui.Tooltip#titleFormatter)  | [titleFormat()](https://api.anychart.com/8.0.1/anychart.core.ui.Tooltip#titleFormat) |
 | [copyFormatter()](https://api.anychart.com/7.13.0/anychart.core.utils.MapInteractivity#copyFormatter)  | [copyFormat()](https://api.anychart.com/8.0.1/anychart.core.utils.MapInteractivity#copyFormat) |
-| [unionTextFormatter()](https://api.anychart.com/7.13.0/anychart.core.ui.Tooltip#unionTextFormatter)  | unionFormat() |
-| [getDataValue() | [getData()](https://api.anychart.com/8.0.1/anychart.format.Context#getData) |
-| [getTokenValue() | [getData()](https://api.anychart.com/8.0.1/anychart.format.Context#getData) |
-| [getSeriesMeta() | [getMeta()](https://api.anychart.com/8.0.1/anychart.format.Context#getMeta) |
+| [unionTextFormatter()](https://api.anychart.com/7.13.0/anychart.core.ui.Tooltip#unionTextFormatter)  | [unionFormat()](https://api.anychart.com/8.0.1/anychart.core.ui.Tooltip#unionFormat) |
+| [getDataValue()](https://api.anychart.com/7.13.0/anychart.core.utils.SeriesPointContextProvider#getDataValue) | [getData()](https://api.anychart.com/8.0.1/anychart.format.Context#getData) |
+| [getTokenValue()](https://api.anychart.com/7.13.0/anychart.core.utils.SeriesPointContextProvider#getTokenValue) | [getData()](https://api.anychart.com/8.0.1/anychart.format.Context#getData) |
+| [getSeriesMeta()](https://api.anychart.com/7.13.0/anychart.core.utils.SeriesPointContextProvider#getSeriesMeta) | [getMeta()](https://api.anychart.com/8.0.1/anychart.format.Context#getMeta) |
 
 #### Interactivity Settings
-
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
 
 | Old Version  | New Version  |
 | ------------- | ------------- |
@@ -306,8 +299,6 @@ See the list of dropped methods and their replacement below:
 | [mouseWheel()](https://api.anychart.com/7.10.1/anychart.core.utils.MapInteractivity#mouseWheel) | [zoomOnMOuseWheel()](https://api.anychart.com/8.0.1/anychart.core.utils.StockInteractivity#zoomOnMouseWheel) |
 
 #### Palettes
-
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
 
 | Old Version  | New Version  |
 | ------------- | ------------- |
@@ -324,16 +315,12 @@ See the list of dropped methods and their replacement below:
 
 #### Misc
 
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
-
 | Old Version  | New Version  |
 | ------------- | ------------- |
 | [anychart.server()](https://api.anychart.com/7.14.4/anychart.exports#server)  | [anychart.exports.server()](https://api.anychart.com/8.0.1/anychart.exports#server)  |
 | [getGroupingUnit()](https://api.anychart.com/7.9.1/anychart.scales.StockScatterDateTime#getGroupingUnit) | [getCurrentDataInterval()](https://api.anychart.com/8.0.1/anychart.core.stock.Grouping#getCurrentDataInterval) |
 
 #### Gantt Data Grid
-
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
 
 | Old Version  | New Version  |
 | ------------- | ------------- |
@@ -343,8 +330,6 @@ See the list of dropped methods and their replacement below:
 | [titleHeight()](https://api.anychart.com/7.7.0/anychart.core.ui.DataGrid#titleHeight)  | [headerHeight()](https://api.anychart.com/8.0.1/anychart.standalones.DataGrid#headerHeight)  |
 
 #### Constructors and Standalones 
-
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `LINK TO API` 
 
 | Old Version  | New Version  |
 | ------------- | ------------- |
