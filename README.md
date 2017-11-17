@@ -221,7 +221,7 @@ chart.contextMenu().itemsFormatter(function (items) {
         href: "https://docs.anychart.com/"
     };
 
-    return this;
+    return items;
 });
 ```
 
@@ -324,9 +324,9 @@ See the list of dropped methods and their replacement below:
 
 | Old Version  | New Version  |
 | ------------- | ------------- |
-| cellFill()  | [rowFill()](https://api.anychart.com/8.0.1/anychart.core.ui.DataGrid#rowFill)  |
-| cellOddFill()  | [rowOddFill()](https://api.anychart.com/8.0.1/anychart.core.ui.DataGrid#rowOddFill)  |
-| cellEvenFill()  | [rowEvenFill()](https://api.anychart.com/8.0.1/anychart.core.ui.DataGrid#rowEvenFill)  |
+| [cellFill()](https://api.anychart.com/7.3.1/anychart.core.ui.DataGrid#cellFill)  | [rowFill()](https://api.anychart.com/8.0.1/anychart.core.ui.DataGrid#rowFill)  |
+| [cellOddFill()](https://api.anychart.com/7.3.1/anychart.core.ui.DataGrid#cellOddFill)  | [rowOddFill()](https://api.anychart.com/8.0.1/anychart.core.ui.DataGrid#rowOddFill)  |
+| [cellEvenFill()](https://api.anychart.com/7.3.1/anychart.core.ui.DataGrid#cellEvenFill)  | [rowEvenFill()](https://api.anychart.com/8.0.1/anychart.core.ui.DataGrid#rowEvenFill)  |
 | [titleHeight()](https://api.anychart.com/7.7.0/anychart.core.ui.DataGrid#titleHeight)  | [headerHeight()](https://api.anychart.com/8.0.1/anychart.standalones.DataGrid#headerHeight)  |
 
 #### Constructors and Standalones 
