@@ -76,15 +76,15 @@ The ordering in which the series are stacked is changed and now goes in other di
 
 | 7.x Version  | 8.x Version  |
 | ------------- | ------------- |
-| chart.yScale()  |  [chart.yScale().stackDirection('reverse')](https://api.anychart.com/8.0.1/anychart.scales.Linear#stackDirection) |
+| chart.yScale()  |  [chart.yScale().stackDirection('reverse')](https://api.anychart.com/anychart.scales.Linear#stackDirection) |
 
 ### State Settings
 
-The API for select and hover settings has been refactored: methods like [hoverFill()](https://api.anychart.com/7.14.4/?entry=hoverFill) are replaced with [hovered().fill()](https://api.anychart.com/anychart.core.StateSettings), [selectFill()](https://api.anychart.com/7.14.4/?entry=selectFill) - with [selected().fill()](https://api.anychart.com/anychart.core.StateSettings) and so on. The order of the parameters and behaviour is the same.
+The API for select and hover settings has been refactored: methods like [hoverFill()](https://api.anychart.com/7.14.4/?entry=hoverFill) are replaced with [hovered().fill()](https://api.anychart.com/anychart.core.StateSettings), [selectFill()](https://api.anychart.com/7.14.4/?entry=selectFill) - with [selected().fill()](https://api.anychart.com/anychart.core.StateSettings) and so on. The order of the parameters and behavior is the same.
 
 These changes allow to clone/copy the settings from the state to state easily.
 
-See the [full list](https://api.anychart.com/8.0.1/anychart.core.StateSettings) of replaced methods:
+See the [full list](https://api.anychart.com/anychart.core.StateSettings) of replaced methods:
 
 #### Common API Methods
 
@@ -272,7 +272,7 @@ chart.legend().itemsLayout('horizontal-expandable');
 
 ### Deprecated API Drop
 
-Version 8.x drops a number of deprecated methods. Which means that you may have used these methods and the lirary only showed warnings. With upgrading to version 8.x using these methods is no longer possible.
+Version 8.x drops a number of deprecated methods. Which means that you may have used these methods and the library only showed warnings. With upgrading to version 8.x using these methods is no longer possible.
 
 See the list of dropped methods and their replacement below:
 
@@ -280,32 +280,32 @@ See the list of dropped methods and their replacement below:
 
 | 7.x Version  | 8.x Version  |
 | ------------- | ------------- |
-| [anychart.utils.formatDateTime()]()  | [anychart.format.dateTime()](https://api.anychart.com/8.0.1/anychart.format#dateTime)  |
-| [textFormatter()](https://api.anychart.com/7.13.0/anychart.standalones.LabelsFactory#textFormatter)/[contentFormatter()]()  | [format()](https://api.anychart.com/8.0.1/anychart.core.ui.LabelsFactory#format)  |
-| [itemsTextFormatter()](https://api.anychart.com/7.13.0/anychart.standalones.Legend#itemsTextFormatter)  | [itemsFormat()](https://api.anychart.com/8.0.1/anychart.standalones.Legend#itemsFormat)  |
-| [titleFormatter()](https://api.anychart.com/7.13.0/anychart.core.ui.Tooltip#titleFormatter)  | [titleFormat()](https://api.anychart.com/8.0.1/anychart.core.ui.Tooltip#titleFormat) |
-| [copyFormatter()](https://api.anychart.com/7.13.0/anychart.core.utils.MapInteractivity#copyFormatter)  | [copyFormat()](https://api.anychart.com/8.0.1/anychart.core.utils.MapInteractivity#copyFormat) |
-| [unionTextFormatter()](https://api.anychart.com/7.13.0/anychart.core.ui.Tooltip#unionTextFormatter)  | [unionFormat()](https://api.anychart.com/8.0.1/anychart.core.ui.Tooltip#unionFormat) |
-| [getDataValue()](https://api.anychart.com/7.13.0/anychart.core.utils.SeriesPointContextProvider#getDataValue) | [getData()](https://api.anychart.com/8.0.1/anychart.format.Context#getData) |
-| [getTokenValue()](https://api.anychart.com/7.13.0/anychart.core.utils.SeriesPointContextProvider#getTokenValue) | [getData()](https://api.anychart.com/8.0.1/anychart.format.Context#getData) |
-| [getSeriesMeta()](https://api.anychart.com/7.13.0/anychart.core.utils.SeriesPointContextProvider#getSeriesMeta) | [getMeta()](https://api.anychart.com/8.0.1/anychart.format.Context#getMeta) |
+| [anychart.utils.formatDateTime()]()  | [anychart.format.dateTime()](https://api.anychart.com/anychart.format#dateTime)  |
+| [textFormatter()](https://api.anychart.com/7.13.0/anychart.standalones.LabelsFactory#textFormatter)/[contentFormatter()]()  | [format()](https://api.anychart.com/anychart.core.ui.LabelsFactory#format)  |
+| [itemsTextFormatter()](https://api.anychart.com/7.13.0/anychart.standalones.Legend#itemsTextFormatter)  | [itemsFormat()](https://api.anychart.com/anychart.standalones.Legend#itemsFormat)  |
+| [titleFormatter()](https://api.anychart.com/7.13.0/anychart.core.ui.Tooltip#titleFormatter)  | [titleFormat()](https://api.anychart.com/anychart.core.ui.Tooltip#titleFormat) |
+| [copyFormatter()](https://api.anychart.com/7.13.0/anychart.core.utils.MapInteractivity#copyFormatter)  | [copyFormat()](https://api.anychart.com/anychart.core.utils.MapInteractivity#copyFormat) |
+| [unionTextFormatter()](https://api.anychart.com/7.13.0/anychart.core.ui.Tooltip#unionTextFormatter)  | [unionFormat()](https://api.anychart.com/anychart.core.ui.Tooltip#unionFormat) |
+| [getDataValue()](https://api.anychart.com/7.13.0/anychart.core.utils.SeriesPointContextProvider#getDataValue) | [getData()](https://api.anychart.com/anychart.format.Context#getData) |
+| [getTokenValue()](https://api.anychart.com/7.13.0/anychart.core.utils.SeriesPointContextProvider#getTokenValue) | [getData()](https://api.anychart.com/anychart.format.Context#getData) |
+| [getSeriesMeta()](https://api.anychart.com/7.13.0/anychart.core.utils.SeriesPointContextProvider#getSeriesMeta) | [getMeta()](https://api.anychart.com/anychart.format.Context#getMeta) |
 
 #### Interactivity Settings
 
 | Old Version  | New Version  |
 | ------------- | ------------- |
-| [allowPointsSelect()](https://api.anychart.com/7.12.0/anychart.core.map.series.Choropleth#allowPointsSelect)  | [selectionMode()](https://api.anychart.com/8.0.1/anychart.core.SeriesBase#selectionMode)  |
-| [isFloating()](https://api.anychart.com/7.6.0/anychart.core.ui.Tooltip#isFloating) | [positionMode()](https://api.anychart.com/8.0.1/anychart.core.ui.Tooltip#positionMode) |
-| [mouseWheel()](https://api.anychart.com/7.10.1/anychart.core.utils.MapInteractivity#mouseWheel) | [zoomOnMOuseWheel()](https://api.anychart.com/8.0.1/anychart.core.utils.StockInteractivity#zoomOnMouseWheel) |
+| [allowPointsSelect()](https://api.anychart.com/7.12.0/anychart.core.map.series.Choropleth#allowPointsSelect)  | [selectionMode()](https://api.anychart.com/anychart.core.SeriesBase#selectionMode)  |
+| [isFloating()](https://api.anychart.com/7.6.0/anychart.core.ui.Tooltip#isFloating) | [positionMode()](https://api.anychart.com/anychart.core.ui.Tooltip#positionMode) |
+| [mouseWheel()](https://api.anychart.com/7.10.1/anychart.core.utils.MapInteractivity#mouseWheel) | [zoomOnMouseWheel()](https://api.anychart.com/anychart.core.utils.StockInteractivity#zoomOnMouseWheel) |
 
 #### Palettes
 
 | Old Version  | New Version  |
 | ------------- | ------------- |
-| [colorAt()](https://api.anychart.com/7.6.0/anychart.palettes.RangeColors#colorAt) | [itemAt()](https://api.anychart.com/8.0.1/anychart.palettes.RangeColors#itemAt) |
-| [colors()](https://api.anychart.com/7.6.0/anychart.palettes.RangeColors#colors) | [items()](https://api.anychart.com/8.0.1/anychart.palettes.RangeColors#items) |
-| [markerAt()](https://api.anychart.com/7.6.0/anychart.palettes.Markers#markerAt) | [itemAt()](https://api.anychart.com/8.0.1/anychart.palettes.Markers#itemAt) |
-| [markers()](https://api.anychart.com/7.6.0/anychart.palettes.Markers#markers) | [items()](https://api.anychart.com/8.0.1/anychart.palettes.Markers#items) |
+| [colorAt()](https://api.anychart.com/7.6.0/anychart.palettes.RangeColors#colorAt) | [itemAt()](https://api.anychart.com/anychart.palettes.RangeColors#itemAt) |
+| [colors()](https://api.anychart.com/7.6.0/anychart.palettes.RangeColors#colors) | [items()](https://api.anychart.com/anychart.palettes.RangeColors#items) |
+| [markerAt()](https://api.anychart.com/7.6.0/anychart.palettes.Markers#markerAt) | [itemAt()](https://api.anychart.com/anychart.palettes.Markers#itemAt) |
+| [markers()](https://api.anychart.com/7.6.0/anychart.palettes.Markers#markers) | [items()](https://api.anychart.com/anychart.palettes.Markers#items) |
 
 #### Sparkline API
 
@@ -317,47 +317,47 @@ See the list of dropped methods and their replacement below:
 
 | Old Version  | New Version  |
 | ------------- | ------------- |
-| [anychart.server()](https://api.anychart.com/7.14.4/anychart.exports#server)  | [anychart.exports.server()](https://api.anychart.com/8.0.1/anychart.exports#server)  |
-| [getGroupingUnit()](https://api.anychart.com/7.9.1/anychart.scales.StockScatterDateTime#getGroupingUnit) | [getCurrentDataInterval()](https://api.anychart.com/8.0.1/anychart.core.stock.Grouping#getCurrentDataInterval) |
+| [anychart.server()](https://api.anychart.com/7.14.4/anychart.exports#server)  | [anychart.exports.server()](https://api.anychart.com/anychart.exports#server)  |
+| [getGroupingUnit()](https://api.anychart.com/7.9.1/anychart.scales.StockScatterDateTime#getGroupingUnit) | [getCurrentDataInterval()](https://api.anychart.com/anychart.core.stock.Grouping#getCurrentDataInterval) |
 
 #### Gantt Data Grid
 
 | Old Version  | New Version  |
 | ------------- | ------------- |
-| [cellFill()](https://api.anychart.com/7.3.1/anychart.core.ui.DataGrid#cellFill)  | [rowFill()](https://api.anychart.com/8.0.1/anychart.core.ui.DataGrid#rowFill)  |
-| [cellOddFill()](https://api.anychart.com/7.3.1/anychart.core.ui.DataGrid#cellOddFill)  | [rowOddFill()](https://api.anychart.com/8.0.1/anychart.core.ui.DataGrid#rowOddFill)  |
-| [cellEvenFill()](https://api.anychart.com/7.3.1/anychart.core.ui.DataGrid#cellEvenFill)  | [rowEvenFill()](https://api.anychart.com/8.0.1/anychart.core.ui.DataGrid#rowEvenFill)  |
-| [titleHeight()](https://api.anychart.com/7.7.0/anychart.core.ui.DataGrid#titleHeight)  | [headerHeight()](https://api.anychart.com/8.0.1/anychart.standalones.DataGrid#headerHeight)  |
+| [cellFill()](https://api.anychart.com/7.3.1/anychart.core.ui.DataGrid#cellFill)  | [rowFill()](https://api.anychart.com/anychart.core.ui.DataGrid#rowFill)  |
+| [cellOddFill()](https://api.anychart.com/7.3.1/anychart.core.ui.DataGrid#cellOddFill)  | [rowOddFill()](https://api.anychart.com/anychart.core.ui.DataGrid#rowOddFill)  |
+| [cellEvenFill()](https://api.anychart.com/7.3.1/anychart.core.ui.DataGrid#cellEvenFill)  | [rowEvenFill()](https://api.anychart.com/anychart.core.ui.DataGrid#rowEvenFill)  |
+| [titleHeight()](https://api.anychart.com/7.7.0/anychart.core.ui.DataGrid#titleHeight)  | [headerHeight()](https://api.anychart.com/anychart.standalones.DataGrid#headerHeight)  |
 
 #### Constructors and Standalones 
 
 | Old Version  | New Version  |
 | ------------- | ------------- |
-| [anychart.circularGauge()](https://api.anychart.com/7.10.1/anychart#circularGauge) | [anychart.gauges.circular()](https://api.anychart.com/8.0.1/anychart.gauges#circular) |
-| [anychart.ui.background()](https://api.anychart.com/7.11.1/anychart.ui#background) | [anychart.standalones.background()](https://api.anychart.com/8.0.1/anychart.standalones#background) |
-| [anychart.ui.colorRange()](https://api.anychart.com/7.11.1/anychart.core.ui.ColorRange) | [anychart.standalones.colorRange()](https://api.anychart.com/8.0.1/anychart.standalones#colorRange) |
-| [anychart.ui.dataGrid()](https://api.anychart.com/7.11.1/anychart.ui#dataGrid) | [anychart.standalones.dataGrid()](https://api.anychart.com/8.0.1/anychart.standalones#dataGrid) |
-| [anychart.ui.label()](https://api.anychart.com/7.11.1/anychart.ui#label) | [anychart.standalones.label()](https://api.anychart.com/8.0.1/anychart.standalones#label) |
-| [anychart.ui.labelsFactory()](https://api.anychart.com/7.11.1/anychart.ui#labelsFactory) | [anychart.standalones.labelsFactory()](https://api.anychart.com/8.0.1/anychart.standalones#labelsFactory) |
-| [anychart.ui.legend()](https://api.anychart.com/7.11.1/anychart.ui#legend) | [anychart.standalones.legend()](https://api.anychart.com/8.0.1/anychart.standalones#legend) |
-| [anychart.ui.markersFactory()](https://api.anychart.com/7.11.1/anychart.ui#markersFactory) | [anychart.standalones.markersFactory()](https://api.anychart.com/8.0.1/anychart.standalones#markersFactory) |
-| [anychart.ui.scroller()](https://api.anychart.com/7.11.1/anychart.ui#scroller) | [anychart.standalones.scroller()](https://api.anychart.com/8.0.1/anychart.standalones#scroller) |
-| [anychart.ui.table()](https://api.anychart.com/7.11.1/anychart.ui.Table) | [anychart.standalones.table()](https://api.anychart.com/8.0.1/anychart.standalones.Table) |
-| [anychart.ui.projectTimeline()](https://api.anychart.com/7.11.1/anychart.ui#projectTimeline) | [anychart.standalones.projectTimeline()](https://api.anychart.com/8.0.1/anychart.standalones#projectTimeline) |
-| [anychart.ui.resourceTimeline()](https://api.anychart.com/7.11.1/anychart.ui#resourceTimeline) | [anychart.standalones.resourceTimeline()](https://api.anychart.com/8.0.1/anychart.standalones#resourceTimeline) |
-| [anychart.ui.title()](https://api.anychart.com/7.11.1/anychart.ui#title) | [anychart.standalones.title()](https://api.anychart.com/8.0.1/anychart.standalones#title) |
-| [anychart.axes.linear()](https://api.anychart.com/7.11.1/anychart.axes#linear) | [anychart.standalones.axes.linear()](https://api.anychart.com/8.0.1/anychart.standalones.axes#linear) |
-| [anychart.axes.polar()](https://api.anychart.com/7.11.1/anychart.axes#polar) | [anychart.standalones.axes.polar()](https://api.anychart.com/8.0.1/anychart.standalones.axes#polar) |
-| [anychart.axes.radar()](https://api.anychart.com/7.11.1/anychart.axes#radar) | [anychart.standalones.axes.radar()](https://api.anychart.com/8.0.1/anychart.standalones.axes#radar) |
-| [anychart.axes.radial()](https://api.anychart.com/7.11.1/anychart.axes#radial) | [anychart.standalones.axes.radial()](https://api.anychart.com/8.0.1/anychart.standalones.axes#radial) |
-| [anychart.axisMarkers.line()](https://api.anychart.com/7.11.1/anychart.axisMarkers#line) | [anychart.standalones.axisMarkers.line()](https://api.anychart.com/8.0.1/anychart.standalones.axisMarkers.Line) |
-| [anychart.axisMarkers.range()](https://api.anychart.com/7.11.1/anychart.axisMarkers#range) | [anychart.standalones.axisMarkers.range()](https://api.anychart.com/8.0.1/anychart.standalones.axisMarkers.Range) |
-| [anychart.axisMarkers.text()](https://api.anychart.com/7.11.1/anychart.axisMarkers#text) | [anychart.standalones.axisMarkers.text()](https://api.anychart.com/8.0.1/anychart.standalones.axisMarkers#text) |
-| [anychart.grids.linear()](https://api.anychart.com/7.11.1/anychart.grids#linear) | [anychart.standalones.grids.linear()](https://api.anychart.com/8.0.1/anychart.standalones.grids.Linear) |
-| [anychart.grids.polar()](https://api.anychart.com/7.11.1/anychart.grids#polar) | [anychart.standalones.grids.polar()](https://api.anychart.com/8.0.1/anychart.standalones.grids.Polar) |
-| [anychart.grids.radar()](https://api.anychart.com/7.11.1/anychart.grids#radar) | [anychart.standalones.grids.radar()](https://api.anychart.com/8.0.1/anychart.standalones.grids.Radar) |
-| [anychart.ganttToolbar()](https://api.anychart.com/7.11.1/anychart#ganttToolbar) | [anychart.ui.ganttToolbar()](https://api.anychart.com/8.0.1/anychart.ui#ganttToolbar) |
-| [anychart.toolbar()](https://api.anychart.com/7.11.0/anychart#toolbar) | [anychart.ui.ganttToolbar()](https://api.anychart.com/8.0.1/anychart.ui#ganttToolbar) |
+| [anychart.circularGauge()](https://api.anychart.com/7.10.1/anychart#circularGauge) | [anychart.gauges.circular()](https://api.anychart.com/anychart.gauges#circular) |
+| [anychart.ui.background()](https://api.anychart.com/7.11.1/anychart.ui#background) | [anychart.standalones.background()](https://api.anychart.com/anychart.standalones#background) |
+| [anychart.ui.colorRange()](https://api.anychart.com/7.11.1/anychart.core.ui.ColorRange) | [anychart.standalones.colorRange()](https://api.anychart.com/anychart.standalones#colorRange) |
+| [anychart.ui.dataGrid()](https://api.anychart.com/7.11.1/anychart.ui#dataGrid) | [anychart.standalones.dataGrid()](https://api.anychart.com/anychart.standalones#dataGrid) |
+| [anychart.ui.label()](https://api.anychart.com/7.11.1/anychart.ui#label) | [anychart.standalones.label()](https://api.anychart.com/anychart.standalones#label) |
+| [anychart.ui.labelsFactory()](https://api.anychart.com/7.11.1/anychart.ui#labelsFactory) | [anychart.standalones.labelsFactory()](https://api.anychart.com/anychart.standalones#labelsFactory) |
+| [anychart.ui.legend()](https://api.anychart.com/7.11.1/anychart.ui#legend) | [anychart.standalones.legend()](https://api.anychart.com/anychart.standalones#legend) |
+| [anychart.ui.markersFactory()](https://api.anychart.com/7.11.1/anychart.ui#markersFactory) | [anychart.standalones.markersFactory()](https://api.anychart.com/anychart.standalones#markersFactory) |
+| [anychart.ui.scroller()](https://api.anychart.com/7.11.1/anychart.ui#scroller) | [anychart.standalones.scroller()](https://api.anychart.com/anychart.standalones#scroller) |
+| [anychart.ui.table()](https://api.anychart.com/7.11.1/anychart.ui.Table) | [anychart.standalones.table()](https://api.anychart.com/anychart.standalones.Table) |
+| [anychart.ui.projectTimeline()](https://api.anychart.com/7.11.1/anychart.ui#projectTimeline) | [anychart.standalones.projectTimeline()](https://api.anychart.com/anychart.standalones#projectTimeline) |
+| [anychart.ui.resourceTimeline()](https://api.anychart.com/7.11.1/anychart.ui#resourceTimeline) | [anychart.standalones.resourceTimeline()](https://api.anychart.com/anychart.standalones#resourceTimeline) |
+| [anychart.ui.title()](https://api.anychart.com/7.11.1/anychart.ui#title) | [anychart.standalones.title()](https://api.anychart.com/anychart.standalones#title) |
+| [anychart.axes.linear()](https://api.anychart.com/7.11.1/anychart.axes#linear) | [anychart.standalones.axes.linear()](https://api.anychart.com/anychart.standalones.axes#linear) |
+| [anychart.axes.polar()](https://api.anychart.com/7.11.1/anychart.axes#polar) | [anychart.standalones.axes.polar()](https://api.anychart.com/anychart.standalones.axes#polar) |
+| [anychart.axes.radar()](https://api.anychart.com/7.11.1/anychart.axes#radar) | [anychart.standalones.axes.radar()](https://api.anychart.com/anychart.standalones.axes#radar) |
+| [anychart.axes.radial()](https://api.anychart.com/7.11.1/anychart.axes#radial) | [anychart.standalones.axes.radial()](https://api.anychart.com/anychart.standalones.axes#radial) |
+| [anychart.axisMarkers.line()](https://api.anychart.com/7.11.1/anychart.axisMarkers#line) | [anychart.standalones.axisMarkers.line()](https://api.anychart.com/anychart.standalones.axisMarkers.Line) |
+| [anychart.axisMarkers.range()](https://api.anychart.com/7.11.1/anychart.axisMarkers#range) | [anychart.standalones.axisMarkers.range()](https://api.anychart.com/anychart.standalones.axisMarkers.Range) |
+| [anychart.axisMarkers.text()](https://api.anychart.com/7.11.1/anychart.axisMarkers#text) | [anychart.standalones.axisMarkers.text()](https://api.anychart.com/anychart.standalones.axisMarkers#text) |
+| [anychart.grids.linear()](https://api.anychart.com/7.11.1/anychart.grids#linear) | [anychart.standalones.grids.linear()](https://api.anychart.com/anychart.standalones.grids.Linear) |
+| [anychart.grids.polar()](https://api.anychart.com/7.11.1/anychart.grids#polar) | [anychart.standalones.grids.polar()](https://api.anychart.com/anychart.standalones.grids.Polar) |
+| [anychart.grids.radar()](https://api.anychart.com/7.11.1/anychart.grids#radar) | [anychart.standalones.grids.radar()](https://api.anychart.com/anychart.standalones.grids.Radar) |
+| [anychart.ganttToolbar()](https://api.anychart.com/7.11.1/anychart#ganttToolbar) | [anychart.ui.ganttToolbar()](https://api.anychart.com/anychart.ui#ganttToolbar) |
+| [anychart.toolbar()](https://api.anychart.com/7.11.0/anychart#toolbar) | [anychart.ui.ganttToolbar()](https://api.anychart.com/anychart.ui#ganttToolbar) |
 
 ## License
-[© AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart/anychart-v7-to-v8-migration-tool/blob/master/LICENSE).
+[?? AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart/anychart-v7-to-v8-migration-tool/blob/master/LICENSE).
